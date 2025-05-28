@@ -1,0 +1,406 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/xufeng_pth/general_replay_buffer_mol_logP_strict_102_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=102, constraint='strict', conversation_type='single', planner='rl_planner', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1C=Oc4ccccc4
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1C=Oc4ccc(OC)cc4
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1C=Oc4ccccc4C
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1C=Oc4ccccc4Cl
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1C=Oc4ccc(C)cc4
+Acc = 0/1
+Sim_hit = 0/1
+HV = 0*0/1
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Fluoroalkane with Chloroalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Fluoroalkane with Chloroalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(Cl)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(Cl)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(Cl)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(Cl)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(Cl)ccc1NC(=O)C(=O)NCCc1ccncc1C
+Acc = 1/2
+Sim_hit = 0.8032786885245902/2
+HV = 0.41312622950819705*1/2
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Fluoroalkane with Chloroalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Fluoroalkane with Chloroalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(Cl)cccc1Cl  
+- CCC[NH2+]Cc1ncoc1-c1c(Cl)ccc(Cl)c1  
+- CCC[NH2+]Cc1ncoc1-c1c(Cl)cc(Cl)cc1  
+- CCC[NH2+]Cc1ncoc1-c1c(Cl)c(Cl)ccc1  
+- CCC[NH2+]Cc1ncoc1-c1c(Cl)cccc1Cl
+Acc = 2/3
+Sim_hit = 1.5175644028103044/3
+HV = 1.1478405152224833*2/3
+----------------
+>>Sample 3
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=S)CSc2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1
+- CCc1ccc(NC(=S)CSCCC2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1
+- CCc1ccc(NC(=S)CSCC2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1
+- CCc1ccc(NC(=S)CSCCCC2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1
+- CCc1ccc(NC(=S)CSC2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1
+Acc = 2/4
+Sim_hit = 1.5175644028103044/4
+HV = 1.1478405152224833*2/4
+----------------
+>>Sample 4
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C=O  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C(=O)c4ccccc4  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C=Oc4ccccc4  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C(=O)c4ccc(Cl)cc4  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C=Oc4ccc(Cl)cc4
+Acc = 2/5
+Sim_hit = 1.5175644028103044/5
+HV = 1.1478405152224833*2/5
+----------------
+>>Sample 5
+RL Suggestion 0: Replace Chloroalkane with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Chloroalkane with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2cc3cc(Nc4ccccc4)ccc3n2C)C1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2cc3cc(Nc4ccc(C)cc4)ccc3n2C)C1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2cc3cc(Nc4ccc(OC)cc4)ccc3n2C)C1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2cc3cc(Nc4cccnc4)ccc3n2C)C1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2cc3cc(Nc4ccncc4)ccc3n2C)C1
+Acc = 3/6
+Sim_hit = 2.087008847254749/6
+HV = 2.113162737444707*3/6
+----------------
+>>Sample 6
+RL Suggestion 0: Replace Nitro Group with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2cc(Cl)ccc21
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2ccc(Cl)cc21
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2C
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2Cl
+Acc = 4/7
+Sim_hit = 2.796099756345658/7
+HV = 2.6415772828992528*4/7
+----------------
+>>Sample 7
+RL Suggestion 0: Replace Chloroalkane with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Chloroalkane with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Nc2ccccc2)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Nc2ccccc2Cl)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Nc2ccccc2Br)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Nc2ccccc2O)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Nc2ccccc2C)s1
+Acc = 5/8
+Sim_hit = 3.456477114836224/8
+HV = 3.361520679125669*5/8
+----------------
+>>Sample 8
+RL Suggestion 0: Replace Cyano with Bromoalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Cyano with Bromoalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(Br)CC  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(Br)C  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(Br)CCC  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(Br)C(C)C  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(Br)CCCC
+Acc = 5/9
+Sim_hit = 3.456477114836224/9
+HV = 3.361520679125669*5/9
+----------------
+>>Sample 9
+RL Suggestion 0: Replace Fluoroalkane with Chloroalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Fluoroalkane with Chloroalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1Cl  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cccc(Cl)c1  
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(Cl)cc1  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(Cl)ccc1  
+- Nc1c(NCc2ccccc2)ncnc1Nc1c(Cl)cccc1
+Acc = 6/10
+Sim_hit = 4.170762829121938/10
+HV = 3.7288778219828123*6/10
+----------------
+>>Sample 10
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=S)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1  
+- O=C(NCCC(=S)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1C  
+- O=C(NCCC(=S)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(Br)cc1  
+- O=C(NCCC(=S)N1CCCCC1)[C@H]1C[C@@H]1c1cc(Br)ccc1  
+- O=C(NCCC(=S)N1CCCCC1)[C@H]1C[C@@H]1c1c(Br)cccc1
+Acc = 7/11
+Sim_hit = 4.974684397749389/11
+HV = 4.372658214139677*7/11
+----------------
+>>Sample 11
+RL Suggestion 0: Replace Chloroalkane with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Chloroalkane with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(NH2)nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(NHCH3)nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(N(CH3)2)nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(NHC(=O)CH3)nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(NHPh)nn2)c1
+Acc = 7/12
+Sim_hit = 4.974684397749389/12
+HV = 4.372658214139677*7/12
+----------------
+>>Sample 12
+RL Suggestion 0: Replace Aliphatic Alcohol with Iodine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Aliphatic Alcohol with Iodine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](I)CN1CCOCC1  
+- CC(C)n1nccc1NC(=O)N(C)C[C@@H](I)CN1CCOCC1  
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](I)CN1CCOC1  
+- CC(C)n1nccc1NC(=O)N(C)C[C@@H](I)CN1CCOC1  
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](I)CN1CCN1
+Acc = 8/13
+Sim_hit = 5.767137227938068/13
+HV = 5.515929912252885*8/13
+----------------
+>>Sample 13
+RL Suggestion 0: Replace Chloroalkane with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Chloroalkane with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(Nc4ccccc4)ccc3N2)cc1  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Nc4ccccc4Cl)ccc3N2)cc1  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Nc4cccc(Cl)c4)ccc3N2)cc1  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Nc4cc(C)ccc4)ccc3N2)cc1  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Nc4cccc(C)c4)ccc3N2)cc1
+Acc = 9/14
+Sim_hit = 6.4271372279380685/14
+HV = 6.235461912252885*9/14
+----------------
+>>Sample 14
+RL Suggestion 0: Replace Fluoroalkane with Chloroalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Fluoroalkane with Chloroalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(Cl)cc23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3cc(Cl)ccc23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccccc3Cl)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(Cl)c(Cl)c23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3cc(Cl)c(F)cc23)c1
+Acc = 10/15
+Sim_hit = 7.267716938082996/15
+HV = 6.667772057180421*10/15
+----------------
+>>Sample 15
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=S)[C@H](C)n1c([S-])nnc1-c1cccs1
+- CSC(C)(C)CNC(=S)[C@H](C)n1c([S-])nnc1-c1ccc(S)s1
+- CSC(C)(C)CNC(=S)[C@H](C)n1c([S-])nnc1-c1cc(S)cs1
+- CSC(C)(C)CNC(=S)[C@H](C)n1c([S-])nnc1-c1ccs(S)c1
+- CSC(C)(C)CNC(=S)[C@H](C)n1c([S-])nnc1-c1c(S)ccs1
+Acc = 11/16
+Sim_hit = 8.067716938082997/16
+HV = 7.308412057180421*11/16
+----------------
+>>Sample 16
+RL Suggestion 0: Replace Aliphatic Amine with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Aliphatic Amine with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[PH2+]Cc1cncc(N2Cc3ccccc3C2)n1  
+- CC(C)[PH2+]Cc1cncc(N2Cc3cccc(C(F)(F)F)c3C2)n1  
+- CC(C)[PH2+]Cc1cncc(N2Cc3ccc(C(F)(F)F)cc3C2)n1  
+- CC(C)[PH2+]Cc1cncc(N2Cc3cc(C(F)(F)F)ccc3C2)n1  
+- CC(C)[PH2+]Cc1cncc(N2Cc3c(C(F)(F)F)cccc3C2)n1
+Acc = 12/17
+Sim_hit = 8.71216138252744/17
+HV = 8.498958723847089*12/17
+----------------
+>>Sample 17
+RL Suggestion 0: Replace Chloroalkane with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Chloroalkane with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(NH2)c1
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(NHMe)c1
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(NMe2)c1
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(NHPh)c1
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(NHCOMe)c1
+Acc = 12/18
+Sim_hit = 8.71216138252744/18
+HV = 8.498958723847089*12/18
+----------------
+>>Sample 18
+RL Suggestion 0: Replace Fluoroalkane with Chloroalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Fluoroalkane with Chloroalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(Cl)cc3C2=O)c1  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(Cl)cc3C2=O)c1C  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(Cl)cc3C2=O)c1Cl  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(Cl)cc3C2=O)c1Br  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(Cl)cc3C2=O)c1I
+Acc = 13/19
+Sim_hit = 9.47216138252744/19
+HV = 8.88982672384709*13/19
+----------------
+>>Sample 19
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1C=O  
+- C[NH2+][C@](C)(C(=O)[O-])c1cc(Cl)ccc1C=O  
+- C[NH2+][C@](C)(C(=O)[O-])c1c(Cl)cccc1C=O  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1C(=O)c2ccccc2  
+- C[NH2+][C@](C)(C(=O)[O-])c1cc(Cl)ccc1C(=O)c2ccccc2
+Acc = 13/20
+Sim_hit = 9.47216138252744/20
+HV = 8.88982672384709*13/20
+----------------
+>>Sample 20
+RL Suggestion 0: Replace Oxygen Atom with Iodine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Iodine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnc(I)c2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1
+- Cc1ccc(-c2nnc(I)c2)cc1NC(=O)N1CCOC@@H(c2ccccc2)C1
+- Cc1ccc(-c2nnc(I)c2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1I
+- Cc1ccc(-c2nnc(I)c2)cc1NC(=O)N1CCO[C@@H](c2ccccc2I)C1
+- Cc1ccc(-c2nnc(I)c2)cc1NC(=O)N1CCO[C@@H](c2cccc(I)c2)C1
+Acc = 13/21
+Sim_hit = 9.47216138252744/21
+HV = 8.88982672384709*13/21
+----------------
+>>Sample 21
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1C=O  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(C=O)s1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(C=O)cs1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1c(C=O)ccs1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(C=O)c(C)s1
+Acc = 13/22
+Sim_hit = 9.47216138252744/22
+HV = 8.88982672384709*13/22
+----------------
+>>Sample 22
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[NH2+]C1C(=O)c2ccccc2  
+- Cc1cccc(C)c1OC1C[NH2+]C1C(=O)c2ccc(C)cc2  
+- Cc1cccc(C)c1OC1C[NH2+]C1C(=O)c2cc(C)ccc2  
+- Cc1cccc(C)c1OC1C[NH2+]C1C(=O)c2cc(O)ccc2  
+- Cc1cccc(C)c1OC1C[NH2+]C1C(=O)c2ccc(O)c(C)c2
+Acc = 14/23
+Sim_hit = 9.90073281109887/23
+HV = 9.426183866704232*14/23
+----------------
+>>Sample 23
+RL Suggestion 0: Replace Chloroalkane with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Chloroalkane with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(NH2)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc(NHCH3)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc(N(CH3)2)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc(NHC(=O)CH3)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc(NHCH2CH3)cc1
+Acc = 14/24
+Sim_hit = 9.90073281109887/24
+HV = 9.426183866704232*14/24
+----------------
+>>Sample 24
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: • CC(=O)c1ccc(Oc2ccc(C(=O)SC3ccc4c(c3)COC4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)SCC3ccc4c(c3)COC4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)SCCCC3ccc4c(c3)COC4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)SC(C)C3ccc4c(c3)COC4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)SCC(C)C3ccc4c(c3)COC4)cc2)cc1
+Acc = 14/25
+Sim_hit = 9.90073281109887/25
+HV = 9.426183866704232*14/25
+----------------
+>>Sample 25
+RL Suggestion 0: Add a Iodoalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Iodoalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=N)S2)n1C(I)CC  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1CC(I)C  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C(I)C(C)C  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C(I)CCCC  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C(I)C(C)(C)C
+Acc = 14/26
+Sim_hit = 9.90073281109887/26
+HV = 9.426183866704232*14/26
+----------------
+>>Sample 26
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CSC(=O)C(=O)SCc2ccc(C(=O)OC)cc2)s1  
+- CCc1ccc(CSC(=O)C(=O)SCc2ccc(C(=O)OCC)cc2)s1  
+- CCc1ccc(CSC(=O)C(=O)SCc2ccc(C(=O)OCCC)cc2)s1  
+- CCc1ccc(CSC(=O)C(=O)SCc2ccc(C(=O)OCCCC)cc2)s1  
+- CCc1ccc(CSC(=O)C(=O)SCc2ccc(C(=O)OCCCCC)cc2)s1
+Acc = 15/27
+Sim_hit = 10.410536732667497/27
+HV = 10.42789759219443*15/27
+----------------
+>>Sample 27
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(SCC)C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(SCCC)C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(SC(C)C)C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(SC1CC1)C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(SCCCC)C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1
+Acc = 16/28
+Sim_hit = 11.077203399334163/28
+HV = 11.175697592194432*16/28
+----------------
+>>Sample 28
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)c(C=O)c1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)c(C=O)c(C)c1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)c(C=O)c(Cl)c1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)c(C=O)c(Br)c1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)c(C=O)c(F)c1
+Acc = 16/29
+Sim_hit = 11.077203399334163/29
+HV = 11.175697592194432*16/29
+----------------
+>>Sample 29
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Add a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCCC#N)CC2C3=CC=CC=C3C=O
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2C4=CC=C(C=C4)C=O
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2C5=CC=CC(C=O)=C5
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2C6=CC=CC=C6C(=O)C7=CC=CC=C7
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2C8=CC=C(C=O)C=C8
+Acc = 17/30
+Sim_hit = 11.658284480415244/30
+HV = 12.10327732192416*17/30
+----------------
+>>Sample 30
+RL Suggestion 0: Replace Ketone with Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Ketone with Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C=C[C@@H](C)c1ccncc1  
+- CC[C@H](C)C=C[C@H](C)c1ccncc1  
+- CC[C@H](C)C=CC(C)c1ccncc1  
+- CC[C@H](C)C=C[C@@H](C)c1ccc(CC)cc1  
+- CC[C@H](C)C=C[C@@H](C)c1cc(C)cc1
+Acc = 18/31
+Sim_hit = 12.090716912847675/31
+HV = 12.530131375978215*18/31
+----------------
+>>Sample 31
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=S)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O
+- COc1ccccc1NC(=S)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=S
+- COc1ccccc1NC(=S)Cn1ncc2c3ccccc3n(Cc3cc(C)ccc3)c2c1=O
+- COc1ccccc1NC(=S)Cn1ncc2c3ccccc3n(Cc3cc(Cl)ccc3)c2c1=O
+- COc1ccccc1NC(=S)Cn1ncc2c3ccccc3n(Cc3cc(Br)ccc3)c2c1=O
+Acc = 19/32
+Sim_hit = 12.910389043995217/32
+HV = 13.186524818601168*19/32
+----------------
+>>Sample 32
+RL Suggestion 0: Replace Fluoroalkane with Chloroalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Fluoroalkane with Chloroalkane.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(Cl)cc(Cl)cc2s1  
+- COc1nn(C)cc1C(=O)Nc1nc2c(Cl)cc(F)cc2s1  
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(Cl)cc2s1  
+- COc1nn(C)cc1C(=O)Nc1nc2c(Cl)cc([Cl])cc2s1  
+- COc1nn(C)cc1C(=O)Nc1nc2c([Cl])cc(Cl)cc2s1
+Acc = 20/33
+Sim_hit = 13.601298134904308/33
+HV = 13.897193909510259*20/33
+----------------
+>>Sample 33
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 less soluble in water and increase logP by at least 0.5. ? The output molecules should be similar to the input molecule. Replace Amide with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=S)N2CC(=S)Nc3cc(Br)ccc32)cn1  
+- Cc1ccc(C(=S)N2CC(=S)Sc3cc(Br)ccc32)cn1  
+- Cc1ccc(C(=S)N2CC(=S)Nc3cc(Br)ccc32)sn1  
+- Cc1ccc(C(=S)N2CC(=S)Sc3cc(Br)ccc32)sn1  
+- Cc1ccc(C(=S)N2CC(=S)Nc3cc(Br)ccc32)cn1S
+Acc = 21/34

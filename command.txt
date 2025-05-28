@@ -1,0 +1,349 @@
+### Gather Training Data ###
+
+(Default gather episode for each action: 50)
+
+Use ChatGPT:
+    python gather_buffer.py --llm='chatgpt'
+
+Use Deepseek:
+    python gather_buffer.py --llm='deepseek'
+    
+Use LLaMA:
+    python gather_buffer.py --llm='llama'
+
+--------------------------------------------------------------------------------------------------------------------------
+### Embed Replay Buffer ###
+
+(Default training data file name: 'general_replay_buffer_mol')
+
+Solubility (Task 101 or Task 102):
+    python process_buffer.py --prop_name='logP'
+
+Drug likeness (Task 103 or Task 104):
+    python process_buffer.py --prop_name='QED'
+
+Permeability (Task 105 or Task 106):
+    python process_buffer.py --prop_name='tPSA'
+
+Hydrogen Bond Acceptors (Task 107):
+    python process_buffer.py --prop_name='HBA'
+
+Hydrogen Bond Donors (Task 108):
+    python process_buffer.py --prop_name='HBD'
+
+Solubility & Hydrogen Bond Acceptors (Task 201 or Task 202):
+    python process_buffer.py --prop_name='logP_HBA'
+    
+Solubility & Hydrogen Bond Donors (Task 203 or Task 204):
+    python process_buffer.py --prop_name='logP_HBD'
+    
+Solubility & Permeability (Task 205 or Task 206)
+    python process_buffer.py --prop_name='logP_tPSA'
+
+--------------------------------------------------------------------------------------------------------------------------
+### Train RL ###
+
+Task 101 (more soluble in water):
+    loose threshold:
+        python train_rl.py --task_id=101 --replay_buffer_name='general_replay_buffer_mol_logP' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=101 --replay_buffer_name='general_replay_buffer_mol_logP' --constraint='strict'
+
+Task 102 (less soluble in water):
+    loose threshold:
+        python train_rl.py --task_id=102 --replay_buffer_name='general_replay_buffer_mol_logP' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=102 --replay_buffer_name='general_replay_buffer_mol_logP' --constraint='strict'
+
+Task 103 (more like a drug):
+    loose threshold:
+        python train_rl.py --task_id=103 --replay_buffer_name='general_replay_buffer_mol_epi_50' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=103 --replay_buffer_name='general_replay_buffer_mol_QED' --constraint='strict'
+
+Task 104 (less like a drug):
+    loose threshold:
+        python train_rl.py --task_id=104 --replay_buffer_name='general_replay_buffer_mol_QED' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=104 --replay_buffer_name='general_replay_buffer_mol_QED' --constraint='strict'
+
+Task 105 (higher permeability):
+    loose threshold:
+        python train_rl.py --task_id=105 --replay_buffer_name='general_replay_buffer_mol_tPSA' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=105 --replay_buffer_name='general_replay_buffer_mol_tPSA' --constraint='strict'
+
+Task 106 (lower permeability):
+    loose threshold:
+        python train_rl.py --task_id=106 --replay_buffer_name='general_replay_buffer_mol_tPSA' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=106 --replay_buffer_name='general_replay_buffer_mol_tPSA' --constraint='strict'
+
+Task 107 (more hydrogen bond acceptors):
+    loose threshold:
+        python train_rl.py --task_id=107 --replay_buffer_name='general_replay_buffer_mol' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=107 --replay_buffer_name='general_replay_buffer_mol' --constraint='strict'
+
+Task 108 (more hydrogen bond donors):
+    loose threshold:
+        python train_rl.py --task_id=108 --replay_buffer_name='general_replay_buffer_mol_HBD' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=108 --replay_buffer_name='general_replay_buffer_mol_HBD' --constraint='strict'
+
+Task 201 (more soluble in water and more hydrogen bond acceptors):
+    loose threshold:
+        python train_rl.py --task_id=201 --replay_buffer_name='general_replay_buffer_mol_llama' --constraint='loose' --alpha=
+    strict threshold:
+        python train_rl.py --task_id=201 --replay_buffer_name='general_replay_buffer_mol_llama' --constraint='strict'
+        
+Task 201 (more soluble in water and more hydrogen bond acceptors):
+    loose threshold:
+        python train_rl.py --task_id=201 --replay_buffer_name='general_replay_buffer_mol_llama' --constraint='loose'
+    strict threshold:
+        python train_rl.py --task_id=201 --replay_buffer_name='general_replay_buffer_mol_llama' --constraint='strict'
+
+--------------------------------------------------------------------------------------------------------------------------
+### Planning ###
+If use deepseek: --llm='deepseek'
+If use llama: --llm='llama'
+If use galactica: -llm='galactica'
+
+Task 101 (more soluble in water):
+    baseline:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='baseline' --constraint='loose' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='baseline' --constraint='loose' --conversation_type='multi'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='baseline' --constraint='strict' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='baseline' --constraint='strict' --conversation_type='multi'
+
+    LLM Planner:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='llm_planner' --constraint='loose' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='llm_planner' --constraint='loose' --conversation_type='multi'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='llm_planner' --constraint='strict' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='llm_planner' --constraint='strict' --conversation_type='multi'
+  
+    RL Planner:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='loose' --conversation_type='single' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_loose_101_best_reward.pth'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='loose' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_loose_101_best_reward.pth'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='strict' --conversation_type='single' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='strict' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth'
+
+Task 102 (less soluble in water):
+    baseline:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='baseline' --constraint='loose' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='baseline' --constraint='loose' --conversation_type='multi'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='baseline' --constraint='strict' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='baseline' --constraint='strict' --conversation_type='multi'
+
+    LLM Planner:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='llm_planner' --constraint='loose' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='llm_planner' --constraint='loose' --conversation_type='multi'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='llm_planner' --constraint='strict' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='llm_planner' --constraint='strict' --conversation_type='multi'
+  
+    RL Planner:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='rl_planner' --constraint='loose' --conversation_type='single' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_loose_102_best_reward.pth'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='rl_planner' --constraint='loose' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_loose_102_best_reward.pth'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='rl_planner' --constraint='strict' --conversation_type='single' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_102_best_reward.pth'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=102 --planner='rl_planner' --constraint='strict' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_102_best_reward.pth'
+
+Task 103 (more like a drug):
+    baseline:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='baseline' --constraint='loose' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='baseline' --constraint='loose' --conversation_type='multi'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='baseline' --constraint='strict' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='baseline' --constraint='strict' --conversation_type='multi'
+
+    LLM Planner:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='llm_planner' --constraint='loose' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='llm_planner' --constraint='loose' --conversation_type='multi'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='llm_planner' --constraint='strict' --conversation_type='single'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='chatgpt' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='llm_planner' --constraint='strict' --conversation_type='multi'
+  
+    RL Planner:
+        depth_3_gen_1_keep_1:
+            loose threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='rl_planner' --constraint='loose' --conversation_type='single' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_loose_103_best_reward.pth'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='rl_planner' --constraint='loose' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_loose_103_best_reward.pth'
+            strict threshold:
+                single round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='rl_planner' --constraint='strict' --conversation_type='single' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_103_best_reward.pth'
+                multi round conversation:
+                    python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='rl_planner' --constraint='strict' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_103_best_reward.pth'
+
+
+### ChatDrug ###
+
+If use chatgpt: --conversational_LLM='chatgpt'
+If use deepseek: --conversational_LLM='deepseek'
+If use llama: --conversational_LLM='llama'
+If use galactica: --conversational_LLM='galactica'
+
+Task 101 (more soluble in water):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=101 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=101 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+    single round:
+        python run_ChatDrug.py --task_id=101 --C=0 --constraint='strict' --conversational_LLM='deepseek' --conversation_type='single'
+
+Task 102 (less soluble in water):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=102 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=102 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+        
+Task 103 (more like a drug):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=103 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=103 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+
+Task 104 (less like a drug):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=104 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=104 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+
+Task 105 (higher permeability):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=105 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=105 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+
+Task 106 (lower permeability):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=106 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=106 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+
+Task 107 (more hydrogen bond acceptors):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=107 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=107 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+
+Task 108 (more hydrogen bond donors):
+    conversation_round 2:
+        loose threshold:
+            python run_ChatDrug.py --task_id=108 --C=2 --constraint='loose' --conversational_LLM='chatgpt'
+        strict threshold:
+            python run_ChatDrug.py --task_id=108 --C=2 --constraint='strict' --conversational_LLM='chatgpt'
+            
+
+
+### process results ###
+
+see draw_result.ipynb
+
+
+### Task Category ###
+
+Task 101: more soluble in water
+
+Task 102: less soluble in water
+
+Task 103: more like a drug
+
+Task 104: less like a drug
+
+Task 105: higher permeability
+
+Task 106: ower permeability
+
+Task 107: more hydrogen bond acceptors
+
+Task 108: more hydrogen bond donors
+
+Task 201: more soluble in water and more hydrogen bond acceptors
+
+Task 202: less soluble in water and more hydrogen bond acceptors
+
+Task 203: more soluble in water and more hydrogen bond donors
+
+Task 204: less soluble in water and more hydrogen bond donors
+
+Task 205: more soluble in water and higher permeability
+
+Task 206: more soluble in water and lower permeability
+
+Task 301: logP decrease in 20%
+
+Task 302: logP increase in 20%
+
+Task 303: QED increase in 20%
+
+Task 304: QED decrease in 20%
+
+Task 305: tPSA decrease in 20%
+
+Task 306: tPSA increase in 20%
+
+Task 307: Add 2 hydrogen bond acceptors
+
+Task 308: Add 2 hydrogen bond donors

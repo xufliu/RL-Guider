@@ -1,0 +1,14 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=201, constraint='loose', conversation_type='single', planner='baseline', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 more soluble in water and more hydrogen bond acceptors and decrease logP by at least 0. increase HBA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1. Start the modification from C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSC(CO)O3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC(O)O3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CSC(O)CO3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CSC(CO)CO3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC(O)CO3)no2)[NH2+]C1
+Acc = 1/1
+Sim_hit = 0.625/1
+HV = 1.051*1/1
+----------------
+>>Sample 1
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more soluble in water and more hydrogen bond acceptors and decrease logP by at least 0. increase HBA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C. Start the modification from C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]

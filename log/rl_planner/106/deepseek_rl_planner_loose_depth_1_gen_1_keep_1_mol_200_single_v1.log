@@ -1,0 +1,40 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/xufeng_pth/general_replay_buffer_mol_tPSA_loose_106_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=106, constraint='loose', conversation_type='single', planner='rl_planner', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Add a Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 lower permeability and increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. Add a Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OCC(=O)NO
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OC(=O)NO
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OCC(=O)N
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OC(=O)N
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OCC(N)=O
+Acc = 1/1
+Sim_hit = 0.5692307692307692/1
+HV = 33.334153846153846*1/1
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C lower permeability and increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Fluorine Atom with Carbamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(OC(=O)N)ccc1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1cc(OC(=O)NC)ccc1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1cc(OC(=O)NCC)ccc1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1cc(OC(=O)N(C)C)ccc1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1cc(OC(=O)N(CC)C)ccc1NC(=O)C(=O)NCCc1ccncc1C
+Acc = 2/2
+Sim_hit = 1.323076923076923/2
+HV = 72.77538461538461*2/2
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F lower permeability and increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Fluorine Atom with Carbamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(OC(=O)N)cccc1F  
+- CCC[NH2+]Cc1ncoc1-c1c(OC(=O)N)cccc1Cl  
+- CCC[NH2+]Cc1ncoc1-c1c(OC(=O)N)cccc1Br  
+- CCC[NH2+]Cc1ncoc1-c1c(OC(=O)N)cccc1I  
+- CCC[NH2+]Cc1ncoc1-c1c(OC(=O)N)cccc1OC(=O)N
+Acc = 3/3
+Sim_hit = 2.0373626373626372/3
+HV = 110.14681318681318*3/3
+----------------
+>>Sample 3
+RL Suggestion 0: Add a Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 lower permeability and increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. Add a Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]

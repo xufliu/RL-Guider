@@ -1,0 +1,2204 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=108, constraint='loose', conversation_type='single', planner='baseline', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH3+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH(CH3)]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]CC1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]CCC1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]CCCC1
+Acc = 0/1
+Sim_hit = 0/1
+HV = 0*0/1
+----------------
+>>Sample 1
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1N(C(=O)C(=O)NCCc1ccncc1C)C(O)C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)N(CCCc1ccncc1C)O
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NC(CCc1ccncc1C)N
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cc(N)ncc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1CO
+Acc = 0/2
+Sim_hit = 0/2
+HV = 0*0/2
+----------------
+>>Sample 2
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH3+]Cc1ncoc1-c1c(F)cccc1F
+- CCC[NH2+]Cc1ncc(N)c1-c1c(F)cccc1F
+- CCC[NH2+]Cc1ncoc1-c1c(F)c(O)c(O)c(F)c1
+- CCC[NH2+]Cc1ncoc1-c1c(F)c(OH)c(OH)c1
+- CCC[NH2+]Cc1ncoc1-c1c(F)c(NH2)c(OH)c1
+Acc = 0/3
+Sim_hit = 0/3
+HV = 0*0/3
+----------------
+>>Sample 3
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3cc(O)ccc32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC(CO)C2=O)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC(CN)C2=O)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC(C(C)C)C2=O)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC(C(C)(C)C)C2=O)cc1
+Acc = 1/4
+Sim_hit = 0.8103448275862069/4
+HV = 0.8103448275862069*1/4
+----------------
+>>Sample 4
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cc(O)cs3)c2C(NH2)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(NH2)=O)C1(O)
+- CCC[C@H]1CCc2c(sc(NC(=O)c3ccc(O)s3)c2C(NH2)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(NH2)=O)C1N
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(NH2)=O)C1(OH)
+Acc = 1/5
+Sim_hit = 0.8103448275862069/5
+HV = 0.8103448275862069*1/5
+----------------
+>>Sample 5
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(O)ccc3n2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3[nH]2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(O)ccc3[nH]2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3ccc(O)c3n2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3[nH]2C)C1
+Acc = 2/6
+Sim_hit = 1.6270114942528735/6
+HV = 1.6270114942528735*2/6
+----------------
+>>Sample 6
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(c2ccccc2)N1
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(c2ccccc2)C(O)O
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(c2ccccc2)C(O)N
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(c2ccccc2)NC(=O)NH2
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(c2ccccc2)NC(=O)NHOH
+Acc = 2/7
+Sim_hit = 1.6270114942528735/7
+HV = 1.6270114942528735*2/7
+----------------
+>>Sample 7
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(O)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(NH2)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(NH)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(NHCH3)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(N)s1
+Acc = 3/8
+Sim_hit = 2.371692345316703/8
+HV = 2.371692345316703*3/8
+----------------
+>>Sample 8
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC(C)C2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(O)C2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(N)C2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(S(=O)(=O)N)C2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(N(C)C)C2
+Acc = 3/9
+Sim_hit = 2.371692345316703/9
+HV = 2.371692345316703*3/9
+----------------
+>>Sample 9
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1ccc(O)c(O)c1F
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(SO2NH2)c(F)c1
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(NH2)c(F)c1
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(NHCH3)c(F)c1
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(OH)c(F)c1
+Acc = 4/10
+Sim_hit = 3.0312668134018095/10
+HV = 3.690841281486916*4/10
+----------------
+>>Sample 10
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H](O)C1c1cccc(Br)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H](O)C1c1ccc(O)c(Br)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H](O)C1c1cc(O)cc(Br)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H](O)C1c1ccc(Br)c(O)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H](O)C1c1cc(Br)c(O)c1
+Acc = 5/11
+Sim_hit = 3.819728351863348/11
+HV = 4.479302819948455*5/11
+----------------
+>>Sample 11
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(OH)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(NH2)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(NHMe)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(SO2NH2)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(n3cnnc3N)nn2)c1
+Acc = 5/12
+Sim_hit = 3.819728351863348/12
+HV = 4.479302819948455*5/12
+----------------
+>>Sample 12
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC(O)CC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@@H](O)CN1CC(O)CC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC(N)OCC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC(O)C(O)C1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC(N)OC1
+Acc = 6/13
+Sim_hit = 4.539026597477383/13
+HV = 5.19860106556249*6/13
+----------------
+>>Sample 13
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOC3CC(Cl)CCC3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3ccc(O)cc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3ccc(S)cc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3ccc(N)cc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3ccc(CO)cc3N2)cc1
+Acc = 6/14
+Sim_hit = 4.539026597477383/14
+HV = 5.19860106556249*6/14
+----------------
+>>Sample 14
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(O)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(S)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(N)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OCC)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(NH2)cc23)c1
+Acc = 7/15
+Sim_hit = 5.404698239268428/15
+HV = 6.064272707353535*7/15
+----------------
+>>Sample 15
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])n(N)n-c1cccs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1cc(O)cs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1cccs1(O)
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1ccc(O)s1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1cccs1N
+Acc = 7/16
+Sim_hit = 5.404698239268428/16
+HV = 6.064272707353535*7/16
+----------------
+>>Sample 16
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[NH3+]Cc1cncc(N2Cc3ccccc3C2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)nc2n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1O
+- CC(C)[NH2+]Cc1cnc(N2Cc3ccccc3C2)ncc1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1N
+Acc = 7/17
+Sim_hit = 5.404698239268428/17
+HV = 6.064272707353535*7/17
+----------------
+>>Sample 17
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCC(O)c1ccnc(OC)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccc(O)nc(OC)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccn(O)c(OC)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccnc(O)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1ccc(O)c(Cl)c1
+Acc = 8/18
+Sim_hit = 6.133511798590462/18
+HV = 6.7930862666755685*8/18
+----------------
+>>Sample 18
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Sc1ccc(O)c(CN2C(=O)c3ccc(F)cc3C2=O)c1
+- CN(C)C(=O)Sc1ccc(OH)c(CN2C(=O)c3ccc(F)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(O)cc3C2=O)c1
+- CN(C)C(=O)Sc1ccc(OH)cc(CN2C(=O)c3ccc(F)cc3C2=O)c1
+- CN(C)C(=O)Sc1ccc(O)c(CN2C(=O)c3ccc(O)cc3C2=O)c1
+Acc = 9/19
+Sim_hit = 6.845050260128923/19
+HV = 7.50462472821403*9/19
+----------------
+>>Sample 19
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH3+][C@](C)(C(=O)[O-])c1cccc(Cl)c1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(O)c(Cl)c1
+- C[NH2+][C@](C)(C(=O)[O-])c1cc(O)c(Cl)cc1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(NH2)c(Cl)c1
+- C[NH2+][C@](C)(C(=O)[O-])c1cc(NH2)c(Cl)cc1
+Acc = 9/20
+Sim_hit = 6.845050260128923/20
+HV = 7.50462472821403*9/20
+----------------
+>>Sample 20
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(OH)[C@@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(O)
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)[C@@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(N)
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(NH2)
+Acc = 9/21
+Sim_hit = 6.845050260128923/21
+HV = 7.50462472821403*9/21
+----------------
+>>Sample 21
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(NH)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)cs1
+- COc1cc(Br)c(S(NH)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(O)cs1
+- COc1cc(Br)c(S(NH)(=O)=O)cc1C(=O)N[C@@H](CO)Cc1cccs1
+- COc1cc(Br)c(S(NH)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(N)cs1
+- COc1cc(Br)c(S(NH)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(SO2NH2)cs1
+Acc = 9/22
+Sim_hit = 6.845050260128923/22
+HV = 7.50462472821403*9/22
+----------------
+>>Sample 22
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[NH3+]C1
+- Cc1cccc(C)c1OC1C[NH2+](C)C1
+- Cc1cccc(C)c1OC1C[NH2+]CC1
+- Cc1cccc(C)c1OC1C[NH2+]CCC1
+- Cc1cccc(C)c1OC1C[NH2+](CC)C1
+Acc = 9/23
+Sim_hit = 6.845050260128923/23
+HV = 7.50462472821403*9/23
+----------------
+>>Sample 23
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])(N)c1ccc(Cl)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(O)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(NH)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(S(=O)(=O)O)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(NH2)cc1
+Acc = 9/24
+Sim_hit = 6.845050260128923/24
+HV = 7.50462472821403*9/24
+----------------
+>>Sample 24
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4NH)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4O)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COCC4)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)CCO4)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)CN(C)COC4)cc2)cc1
+Acc = 9/25
+Sim_hit = 6.845050260128923/25
+HV = 7.50462472821403*9/25
+----------------
+>>Sample 25
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=N)S2)n1(O)
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1(N)
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1(NH2)
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1NH
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1(NHCH3)
+Acc = 9/26
+Sim_hit = 6.845050260128923/26
+HV = 7.50462472821403*9/26
+----------------
+>>Sample 26
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(N)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(O)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(S(=O)(=O)N)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(CN)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(O)N)cc2)s1
+Acc = 10/27
+Sim_hit = 7.549595714674378/27
+HV = 8.209170182759484*10/27
+----------------
+>>Sample 27
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CC(O)O1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CC(O)N1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CC(N)O1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CC(N)N1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CC(O)NH1
+Acc = 11/28
+Sim_hit = 8.281738571817236/28
+HV = 8.941313039902342*11/28
+----------------
+>>Sample 28
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CC(O)CC#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC(O)#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCNCC#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCNC(C)C#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CC(O)CNCC#N)cc1
+Acc = 12/29
+Sim_hit = 8.968013081621157/29
+HV = 9.627587549706263*12/29
+----------------
+>>Sample 29
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H](O)C12CC[NH3+](CCC(=O)N(C)CCC#N)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH2+]CCC(=O)N(C)CCC#NCC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CC(C)CC(=O)NCCC#N)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCCN=C)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCCC#N)CC2
+Acc = 12/30
+Sim_hit = 8.968013081621157/30
+HV = 9.627587549706263*12/30
+----------------
+>>Sample 30
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C(=O)[C@@H](C)c1cc(O)nc(O)c1
+- CC[C@H](C)C(=O)[C@@H](C)c1ccc(O)cn1
+- CC[C@H](C)C(=O)[C@@H](C)c1c(O)cn(CO)c1
+- CC[C@H](C)C(=O)[C@@H](C)c1ccn(CO)c(O)c1
+- CC[C@H](C)C(=O)[C@@H](C)c1cccnc1(O)
+Acc = 13/31
+Sim_hit = 9.539441653049728/31
+HV = 10.770444692563405*13/31
+----------------
+>>Sample 31
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(O)ccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O
+- COc1ccc(O)cc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(O)ccc3)c2c1=O
+- COc1ccccc1NC(=O)Cn1nc(O)c2c3ccccc3n(Cc3ccccc3)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccc(O)cc3)c2c1=O
+Acc = 14/32
+Sim_hit = 10.364838478446554/32
+HV = 11.595841517960231*14/32
+----------------
+>>Sample 32
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(c2s1)NH
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1N
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(c2s1)NH2
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(c2s1)NHOH
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(c2s1)NHCH2OH
+Acc = 14/33
+Sim_hit = 10.364838478446554/33
+HV = 11.595841517960231*14/33
+----------------
+>>Sample 33
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(O)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(S)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3ccc(O)c32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(N)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(CO)ccc32)cn1
+Acc = 15/34
+Sim_hit = 11.144838478446554/34
+HV = 12.37584151796023*15/34
+----------------
+>>Sample 34
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCC(C(O)C[C@@H]2C(O))o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(O)O1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCC(C(NH2)C[C@@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(NH2)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCC(C(OH)C[C@@H]2C(OH))o1
+Acc = 15/35
+Sim_hit = 11.144838478446554/35
+HV = 12.37584151796023*15/35
+----------------
+>>Sample 35
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)cs4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4ccc(O)s4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4cccc(O)c43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccc(O)cc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)c1c(O)cc1
+Acc = 16/36
+Sim_hit = 11.909544360799494/36
+HV = 13.14054740031317*16/36
+----------------
+>>Sample 36
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1N(C(=[NH2+])Nc2nc3ccccc3n21)C(O)O
+- Cc1ccccc1[C@@H]1N(C(=[NH2+])Nc2nc3ccccc3n21)CC(O)O
+- Cc1ccccc1[C@@H]1N(C(=[NH2+])Nc2nc3ccccc3n21)C(N)O
+- Cc1ccccc1[C@@H]1N(C(=[NH2+])Nc2nc3ccccc3n21)C(O)N
+- Cc1ccccc1[C@@H]1N(C(=[NH2+])Nc2nc3ccccc3n21)C(N)N
+Acc = 17/37
+Sim_hit = 12.50569820695334/37
+HV = 13.736701246467018*17/37
+----------------
+>>Sample 37
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H](O)2C)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H](O)2NC)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2NCCO[C@@H]2C)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H](O)2Cc3cc(F)ccc3)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H](O)2C(O)C)cc1F
+Acc = 17/38
+Sim_hit = 12.50569820695334/38
+HV = 13.736701246467018*17/38
+----------------
+>>Sample 38
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2(O)O)cc1)C(=O)Nc1cccc(F)c1
+- C[C@@H](Nc1ccc(N2CCC(C(O)O)C2=O)cc1)C(=O)Nc1cccc(F)c1
+- C[C@@H](Nc1ccc(N2CCCC2(N)=O)cc1)C(=O)Nc1cccc(F)c1
+- C[C@@H](Nc1ccc(N2CCCC2(N(C)C)=O)cc1)C(=O)Nc1cccc(F)c1
+- C[C@@H](Nc1ccc(N2CCCC2(N(C)C(O)C)=O)cc1)C(=O)Nc1cccc(F)c1
+Acc = 18/39
+Sim_hit = 13.14976600356351/39
+HV = 15.024836839687357*18/39
+----------------
+>>Sample 39
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CC[NH2]3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CC[NH2]3)CC2)ccc1[NH2]
+- COc1cc(C[NH+]2CCC(OC[C@@H]3CC[NH2]3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC[NH2]2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CC[NH2]3)CC[NH2]2)ccc1SC
+Acc = 18/40
+Sim_hit = 13.14976600356351/40
+HV = 15.024836839687357*18/40
+----------------
+>>Sample 40
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nnco1
+- Cc1nc2ccccn2c1-c1nnc(O)o1
+- Cc1nc2ccccn2c1-c1nncc1O
+- Cc1nc2ccccn2c1-c1nncc1N
+- Cc1nc2ccccn2c1-c1nnc(O)nc1O
+Acc = 18/41
+Sim_hit = 13.14976600356351/41
+HV = 15.024836839687357*18/41
+----------------
+>>Sample 41
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(O)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(S)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(N)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(NH2)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(OH)cc1
+Acc = 19/42
+Sim_hit = 13.976689080486587/42
+HV = 15.851759916610433*19/42
+----------------
+>>Sample 42
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(O)o2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCC(O)O1
+- C[C@H](NC(=O)c1cc(-c2ccc(N)o2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCC(O)O1
+Acc = 19/43
+Sim_hit = 13.976689080486587/43
+HV = 15.851759916610433*19/43
+----------------
+>>Sample 43
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH3+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)CC)CCCC1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCC(C)C1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CC(C)CC1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCNC1
+Acc = 19/44
+Sim_hit = 13.976689080486587/44
+HV = 15.851759916610433*19/44
+----------------
+>>Sample 44
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[NH+](CC(=O)NCC(N)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)C(O)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NCC(N)C(O)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)N(C)CC(N)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)C(N)=O)C1
+Acc = 19/45
+Sim_hit = 13.976689080486587/45
+HV = 15.851759916610433*19/45
+----------------
+>>Sample 45
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2CC(O)C)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C(O)C)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)N1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)N(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)O[NH+]1
+Acc = 20/46
+Sim_hit = 14.6909747947723/46
+HV = 16.56604563089615*20/46
+----------------
+>>Sample 46
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH3+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(O)n1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(S)n1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(NH2)n1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(NH)n1
+Acc = 20/47
+Sim_hit = 14.6909747947723/47
+HV = 16.56604563089615*20/47
+----------------
+>>Sample 47
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](OH)Cn1nnc2ccccc2c1=O
+- Cc1ccccc1OC[C@H](O)CN(C)n1ccccc1=O
+- Cc1ccccc1OC[C@H](O)Cn1nn(C)c2ccccc2c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1[NH]O
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1NHO
+Acc = 20/48
+Sim_hit = 14.6909747947723/48
+HV = 16.56604563089615*20/48
+----------------
+>>Sample 48
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(NH)cnn12
+- CSc1nnc2n(N)cnn12O
+- CSc1nnc2n(NH2)cnn12
+- CSc1nnc2n(N)cnn12NH2
+- CSc1nnc2n(NH)cnn12NH2
+Acc = 20/49
+Sim_hit = 14.6909747947723/49
+HV = 16.56604563089615*20/49
+----------------
+>>Sample 49
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H](O)ON=C[C@@H]2c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H](O)c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(O)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H](O)ON=C[C@@H]2c2ccc(O)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H](O)c2ccc(O)cc2)n1
+Acc = 20/50
+Sim_hit = 14.6909747947723/50
+HV = 16.56604563089615*20/50
+----------------
+>>Sample 50
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CC(O)CC2)CC1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CC(O)CC2(O))CC1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CC(O)CC2)CC1(O)
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CC(O)CC2)CC1(N)
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CC(O)CC2)CC1(NH2)
+Acc = 21/51
+Sim_hit = 15.413197016994522/51
+HV = 17.28826785311837*21/51
+----------------
+>>Sample 51
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1cc(=O)[nH]c2ccccc12)C(O)C
+- CC[C@H](C)[C@](C)(O)CN(C(=O)NCc1cc(=O)[nH]c2ccccc12)C(OH)C
+- CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1cc(=O)[nH]c2ccccc12)CC(O)
+- CC[C@H](C)[C@](C)(O)CN(C(=O)NCc1cc(=O)[nH]c2ccccc12)CC(OH)
+- CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1cc(=O)[nH]c2ccccc12)CNC(O)
+Acc = 21/52
+Sim_hit = 15.413197016994522/52
+HV = 17.28826785311837*21/52
+----------------
+>>Sample 52
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nn(n1)NC1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnc(n1)NC
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnn1NC1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nn(C)n1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nn[nH]1C1CC1
+Acc = 21/53
+Sim_hit = 15.413197016994522/53
+HV = 17.28826785311837*21/53
+----------------
+>>Sample 53
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(CC#N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(O)C#N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1(N)
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1(O)
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1(NH2)
+Acc = 21/54
+Sim_hit = 15.413197016994522/54
+HV = 17.28826785311837*21/54
+----------------
+>>Sample 54
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1O
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2N
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1NH2
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1NHCH3
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1NH(CH2)2NH2
+Acc = 21/55
+Sim_hit = 15.413197016994522/55
+HV = 17.28826785311837*21/55
+----------------
+>>Sample 55
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](N(C(=O)NH)[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1ccc(O)cs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(N)cs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(OH)cs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(NH2)cs1
+Acc = 21/56
+Sim_hit = 15.413197016994522/56
+HV = 17.28826785311837*21/56
+----------------
+>>Sample 56
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)CO
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CC(O)CC1)C(C)(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(=O)OH
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(N)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(NH2)C
+Acc = 22/57
+Sim_hit = 16.265048868846375/57
+HV = 18.14011970497022*22/57
+----------------
+>>Sample 57
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](OH)C(C)(C)C)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)CO)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(OH))cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32(O)
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](NH2)C(C)(C)C)cc1c32
+Acc = 22/58
+Sim_hit = 16.265048868846375/58
+HV = 18.14011970497022*22/58
+----------------
+>>Sample 58
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2sc(c3cccc(F)c3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2sc(c3ccc(O)cc3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2sc(c3cc(O)ccc3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2sc(c3cc(O)ccc3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2sc(c3ccc(OH)cc3)c2N1
+Acc = 22/59
+Sim_hit = 16.265048868846375/59
+HV = 18.14011970497022*22/59
+----------------
+>>Sample 59
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1n(N)onc1N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1N(N)
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1n(O)onc1N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1N(O)
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1n(NH2)onc1N
+Acc = 22/60
+Sim_hit = 16.265048868846375/60
+HV = 18.14011970497022*22/60
+----------------
+>>Sample 60
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)N(c1c(F)cccc1F)C
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)N(c1c(F)ccc(O)c1F)
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)N(c1c(F)ccc(S)c1F)
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)N(c1c(F)ccc(N)c1F)
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)N(c1c(F)ccc(C)c1F)
+Acc = 22/61
+Sim_hit = 16.265048868846375/61
+HV = 18.14011970497022*22/61
+----------------
+>>Sample 61
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)ccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(OH)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1O
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(NH2)cc1
+Acc = 23/62
+Sim_hit = 17.015048868846375/62
+HV = 18.89011970497022*23/62
+----------------
+>>Sample 62
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2cc(O)ccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(O)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2(O))cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(O)cn2)c2nc3ccc([N+](=O)[O-])cc3s2(O))cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2cc(O)ccn2)c2nc3ccc([N+](=O)[O-])cc3s2(O))cc1
+Acc = 24/63
+Sim_hit = 17.821019018100106/63
+HV = 19.696089854223953*24/63
+----------------
+>>Sample 63
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OH)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OH)CC3)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OH)C3)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OH)C3=O)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OH)CC3=O)cc1
+Acc = 24/64
+Sim_hit = 17.821019018100106/64
+HV = 19.696089854223953*24/64
+----------------
+>>Sample 64
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(OH)c(F)c3F)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3[NH2])[nH]c2n1
+- CNc1ccc2nc(-c3ccc(OH)c(F)c3[NH2])[nH]c2n1
+- CNc1ccc2nc(-c3ccc(NH2)c(F)c3F)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3[NH2])[nH]c2n1
+Acc = 24/65
+Sim_hit = 17.821019018100106/65
+HV = 19.696089854223953*24/65
+----------------
+>>Sample 65
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(NH)=S)cc1
+- CCCCCOc1ccc(C(NH2)=S)cc1
+- CCCCCOc1ccc(C(NH)(NH2)=S)cc1
+- CCCCCOc1ccc(C(NH2)NH2)cc1
+- CCCCCOc1ccc(C(NH)NH2)cc1
+Acc = 24/66
+Sim_hit = 17.821019018100106/66
+HV = 19.696089854223953*24/66
+----------------
+>>Sample 66
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(N)c(S(N)(=O)=O)c1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(O)c(S(N)(=O)=O)c1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cc(O)c(S(N)(=O)=O)c1c
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(OH)c(S(N)(=O)=O)c1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(NH)(=O)=O)c1
+Acc = 25/67
+Sim_hit = 18.579639707755277/67
+HV = 20.454710543879123*25/67
+----------------
+>>Sample 67
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNc1nc(-c2cc(O)cs2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc(S(=O)(=O)N)cs2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc(NH2)cs2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc(CN)cs2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc(OCC)cs2)nc(C)c1C(C)C
+Acc = 26/68
+Sim_hit = 19.318770142537886/68
+HV = 21.193840978661733*26/68
+----------------
+>>Sample 68
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCC(O)O)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCC(O)NH)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCC(NH2)O)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCC(OH)O)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCC(O)NH2)c2ccccc2)cc1
+Acc = 27/69
+Sim_hit = 20.018770142537885/69
+HV = 21.893840978661732*27/69
+----------------
+>>Sample 69
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH3+]CC2
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH(CH3)]CC2
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(C)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(N)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(O)
+Acc = 27/70
+Sim_hit = 20.018770142537885/70
+HV = 21.893840978661732*27/70
+----------------
+>>Sample 70
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3cc(O)ccc3C[C@@H]2c2nnc(C(O)O)o2)cc1Cl
+- C=CCOc1ccc(CN2Cc3cc(O)ccc3C[C@@H]2c2nn(C(O)H)c2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nn(C(O)H)c2)cc1Cl
+- C=CCOc1ccc(CN2Cc3cc(O)ccc3C[C@@H]2c2nn(C)c2O)cc1Cl
+- C=CCOc1ccc(CN2Cc3cc(O)ccc3C[C@@H]2c2nn(C)c2O)cc1OH
+Acc = 28/71
+Sim_hit = 20.671547920315664/71
+HV = 23.852174311995064*28/71
+----------------
+>>Sample 71
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)(O)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)N1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)Oc1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)Nc1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)N(s1)
+Acc = 28/72
+Sim_hit = 20.671547920315664/72
+HV = 23.852174311995064*28/72
+----------------
+>>Sample 72
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2[C@H]1O
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1[C@@H]2COc3ccc(F)cc3[NH]2
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2[NH]1
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2[C@@H]1NH
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1[C@H]2COc3ccc(F)cc3[NH]2
+Acc = 29/73
+Sim_hit = 21.35811508449477/73
+HV = 24.53874147617417*29/73
+----------------
+>>Sample 73
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)N[C@H]1CCC[NH3+][C@@H]1C)CC(C)(C)C
+- C[C@H](CC(=O)N[C@@H]1CCC[NH2+][C@H](O)C1)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@@H](O)C1)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH3+][C@@H](O)C1)CC(C)(C)C
+- C[C@H](CC(=O)N[C@@H]1CCC[NH3+][C@H]1C)CC(C)(C)C
+Acc = 29/74
+Sim_hit = 21.35811508449477/74
+HV = 24.53874147617417*29/74
+----------------
+>>Sample 74
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1O
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1N
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1S
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1F
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1CCOH
+Acc = 30/75
+Sim_hit = 21.966810736668684/75
+HV = 25.147437128348084*30/75
+----------------
+>>Sample 75
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(OH)c(F)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(NH2)c(F)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(O)c(F)c3)cc2OH)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(NH2)c(F)c3)cc2OH)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(OH)c(F)c3)cc2NH2)CCN1
+Acc = 30/76
+Sim_hit = 21.966810736668684/76
+HV = 25.147437128348084*30/76
+----------------
+>>Sample 76
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)NH2
+- CC(C)(CO[N+](=O)[O-])C(=O)NHOH
+- CC(C)(CO[N+](=O)[O-])C(=O)NHCH3
+- CC(C)(CO[N+](=O)[O-])C(=O)NHCH2OH
+- CC(C)(CO[N+](=O)[O-])C(=O)N(CH3)OH
+Acc = 30/77
+Sim_hit = 21.966810736668684/77
+HV = 25.147437128348084*30/77
+----------------
+>>Sample 77
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(O)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(S)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[NH-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[NH2]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[OH]
+Acc = 31/78
+Sim_hit = 22.834735264970572/78
+HV = 26.015361656649972*31/78
+----------------
+>>Sample 78
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1(O)
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(O)cc2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(OH)cc2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(O)cc2)c1(N)
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(O)cc2)c1(NH2)
+Acc = 32/79
+Sim_hit = 23.50140193163724/79
+HV = 26.68202832331664*32/79
+----------------
+>>Sample 79
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS[C@@H](C)C(=O)N1CCC(C(=O)N(H)Cc2ccc(F)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)N(H)Cc2ccc(O)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)N(H)Cc2ccc(S)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)N(H)Cc2ccc(N)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)N(H)Cc2ccc(CN)cc2)CC1
+Acc = 32/80
+Sim_hit = 23.50140193163724/80
+HV = 26.68202832331664*32/80
+----------------
+>>Sample 80
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1OH
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1NH
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1NHOH
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1NH2
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1NHHOH
+Acc = 32/81
+Sim_hit = 23.50140193163724/81
+HV = 26.68202832331664*32/81
+----------------
+>>Sample 81
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)N
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NH2
+- COC[C@H](C)CN(C)C(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NHOH
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)N[H+]
+Acc = 33/82
+Sim_hit = 24.27917970941502/82
+HV = 27.45980610109442*33/82
+----------------
+>>Sample 82
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH3+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1[NH2]
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1[NH3+]
+- C[C@@H]([NH2+]C1CCCC(C)C1)c1ccc([N+](=O)[O-])cc1
+- C[C@@H]([NH2+]C1CCCC(C)C1)c1ccc([N+](=O)[O-])cc1[NH2]
+Acc = 33/83
+Sim_hit = 24.27917970941502/83
+HV = 27.45980610109442*33/83
+----------------
+>>Sample 83
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(Cc1nnc(-c2ccc(O)o2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2cc(O)co2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2ccc(OH)o2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2cc(O)cco2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2cc(N)co2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+Acc = 34/84
+Sim_hit = 25.041891573821797/84
+HV = 28.222517965501197*34/84
+----------------
+>>Sample 84
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH3+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1
+- CC[NH2+][C@@]1(C(NH)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)NC2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C(C)2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C(O)1
+Acc = 34/85
+Sim_hit = 25.041891573821797/85
+HV = 28.222517965501197*34/85
+----------------
+>>Sample 85
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N2C(=O)N3CCC4=c5ccccc5N[C@@H]4[C@@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH2][C@@H]4[C@@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+](C)[C@@H]4[C@@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+](CC)[C@@H]4[C@@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+](C[C@H]3C)C2=O)c(OC)c1
+Acc = 34/86
+Sim_hit = 25.041891573821797/86
+HV = 28.222517965501197*34/86
+----------------
+>>Sample 86
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](OH)[C@H](O)C1
+- N#Cc1ccccc1N[C@@H](CC[NH+]1C[C@H](O)[C@H](O)C1)O
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](NH2)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](NH2)[C@H](O)C1
+- N#Cc1ccccc1N[C@@H](CC[NH+]1C[C@H](O)[C@H](O)C1)NH2
+Acc = 34/87
+Sim_hit = 25.041891573821797/87
+HV = 28.222517965501197*34/87
+----------------
+>>Sample 87
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)NCc1ccc(OH)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2ccc(OH)cn2)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2cc(OH)cn2)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2cccc(OH)n2)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2ccc(n2)cc(OH))cc1)C1CCCCC1
+Acc = 34/88
+Sim_hit = 25.041891573821797/88
+HV = 28.222517965501197*34/88
+----------------
+>>Sample 88
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2NH)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(O)c(c2))s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(NH2)c(c2))s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(NH)c(c2))s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(S(=O)(=O)N)c(c2))s1
+Acc = 34/89
+Sim_hit = 25.041891573821797/89
+HV = 28.222517965501197*34/89
+----------------
+>>Sample 89
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(NH2)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(NH)=O)cc2)c1O
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(NH2)=O)cc2)c1OH
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(NH2)=O)cc2)c1NH2
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(NH2)=O)cc2)c1NHCH3
+Acc = 34/90
+Sim_hit = 25.041891573821797/90
+HV = 28.222517965501197*34/90
+----------------
+>>Sample 90
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N2C[C@H](C(=O)NCC(C)C(O))CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)CO)CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)CC(O))CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)C(N))CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)CC(N))CC2=O)cc1C
+Acc = 35/91
+Sim_hit = 25.786989613037484/91
+HV = 28.967616004716884*35/91
+----------------
+>>Sample 91
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2OH)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2NH2)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2NHCH3)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2NHC(CH3)2)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2NHCOC(CH3)2)CC1
+Acc = 35/92
+Sim_hit = 25.786989613037484/92
+HV = 28.967616004716884*35/92
+----------------
+>>Sample 92
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CC[NH+](Cc2cc(N)cc3c2O[C@H](C)C3)C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3(O))C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3N)C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@@H](C)C3)C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3N(C))C1
+Acc = 36/93
+Sim_hit = 26.55062597667385/93
+HV = 29.731252368353246*36/93
+----------------
+>>Sample 93
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc(O)cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([NH2])cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc(NH2)cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc(OH)cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc(NHMe)cc4)CC3)nc12
+Acc = 37/94
+Sim_hit = 27.26704388712161/94
+HV = 30.447670278801006*37/94
+----------------
+>>Sample 94
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)N(C[C@@H]2CCCO2)(O))cc1OC(F)F
+- COc1ccc(NC(=O)NC[C@@H]2CCC(O)O2)cc1OC(F)F
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OCC(O)F
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)FO
+- COc1ccc(NC(=O)N(C[C@@H]2CCCO2)(O)C)cc1OC(F)F
+Acc = 37/95
+Sim_hit = 27.26704388712161/95
+HV = 30.447670278801006*37/95
+----------------
+>>Sample 95
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)[C@H]1CC[NH3+]C[C@@H]1Cc1ccccc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(O)cc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(OH)cc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1cc(O)ccc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1cc(OH)ccc1
+Acc = 37/96
+Sim_hit = 27.26704388712161/96
+HV = 30.447670278801006*37/96
+----------------
+>>Sample 96
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCc1cccc(OH)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(OH)cc1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(O)cc1)N1CCC[C@H]1CN1CCOCC1(O)
+- O=C(NCCc1ccc(O)cc1)N1CCC[C@H]1CN1CCOC(O)C1
+- O=C(NCCc1ccc(OH)cc1)N1CCC[C@H]1CN1CCOCC1(O)
+Acc = 37/97
+Sim_hit = 27.26704388712161/97
+HV = 30.447670278801006*37/97
+----------------
+>>Sample 97
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)CO)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C(O))cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1O
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C(N))cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1N
+Acc = 38/98
+Sim_hit = 28.03627465635238/98
+HV = 31.216901048031776*38/98
+----------------
+>>Sample 98
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2CC
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)n(n2C)O
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)n(n2C)N
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)n(n2C)NH2
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)n(n2C)NHCH3
+Acc = 38/99
+Sim_hit = 28.03627465635238/99
+HV = 31.216901048031776*38/99
+----------------
+>>Sample 99
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1O
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)n(n2)C)cc1
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)n(n2)O)cc1
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)n(n2)N)cc1
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)n(n2)S)cc1
+Acc = 39/100
+Sim_hit = 28.74781311789084/100
+HV = 31.928439509570236*39/100
+----------------
+>>Sample 100
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1occc1C(=O)N1CCC[C@@H]1C(NH)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NH2)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NH)NH2
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NH2)NH2
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NH)NH(CH3)
+Acc = 39/101
+Sim_hit = 28.74781311789084/101
+HV = 31.928439509570236*39/101
+----------------
+>>Sample 101
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C(O)C)
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C(C)C(O))
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C(O)C(O))
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C(C)C(O)C)
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C(C)C(O)O)
+Acc = 40/102
+Sim_hit = 29.51251900024378/102
+HV = 32.693145391923174*40/102
+----------------
+>>Sample 102
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](C)NC(=O)[C@H](C)OCCOC with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)NC(=O)[C@H](C)OC(C)OC
+- CC[C@@H](C)NC(=O)[C@H](C)OCC(O)C
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)(C)O
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)O(C)
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)O(C)C
+Acc = 40/103
+Sim_hit = 29.51251900024378/103
+HV = 32.693145391923174*40/103
+----------------
+>>Sample 103
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(O)ccc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(O)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(S)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(N)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(O)cc(O)c2n1
+Acc = 41/104
+Sim_hit = 30.30881529654008/104
+HV = 33.48944168821947*41/104
+----------------
+>>Sample 104
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)CC(O)2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)CC(N)2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)CC(O)2)o1.O
+- CCOC(=O)c1ccc(CNC(=O)[C@H](CC[NH+](C)C)N(O)C2=O)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)CC(S)2)o1
+Acc = 42/105
+Sim_hit = 31.12013605125706/105
+HV = 34.30076244293645*42/105
+----------------
+>>Sample 105
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CCCC[C@H]1[NH3+]C[C@H](O)COc1ccccc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@@H](O)COc1ccccc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(O)c(F)c1
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(NH2)c(F)c1
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1cc(NH2)cc(F)c1
+Acc = 42/106
+Sim_hit = 31.12013605125706/106
+HV = 34.30076244293645*42/106
+----------------
+>>Sample 106
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)c(S(=O)(=O)Nc2ccc(OH)c3ccccc23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3cccc(O)c23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccc(O)c23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3cc(O)c23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(OH)c3ccccc23)c(C)c1OH
+Acc = 42/107
+Sim_hit = 31.12013605125706/107
+HV = 34.30076244293645*42/107
+----------------
+>>Sample 107
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CSC2=Nc3cc(O)ccc3C3=N[C@H](C)C(=O)N23)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccc(O)cc3C3=N[C@H](C)C(=O)N23)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23O)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3cc(O)c(O)c3C3=N[C@H](C)C(=O)N23)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3cc(O)ccc3C3=N[C@H](C)C(=O)N23O)cc1
+Acc = 43/108
+Sim_hit = 31.89979706820621/108
+HV = 35.08042345988561*43/108
+----------------
+>>Sample 108
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)N2CCN(Cn3ccc(O)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(NH2)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(S(=O)(=O)NH2)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(NHCOOH)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(NHOH)n3)CC2)cc1OC
+Acc = 44/109
+Sim_hit = 32.65451404933829/109
+HV = 35.835140441017685*44/109
+----------------
+>>Sample 109
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1cccc(NC(=O)C[C@H]2C[C@H](O)CC[C@@H]2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H](N)CC[C@@H]2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H](S)CC[C@@H]2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H](OCC)CC[C@@H]2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H](NH2)CC[C@@H]2)c1
+Acc = 45/110
+Sim_hit = 33.23633223115647/110
+HV = 36.416958622835864*45/110
+----------------
+>>Sample 110
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](NC(=O)CN1c2cccc3c(c23)N(S1(=O)=O)c4ccccc4O)
+- C[C@@H](NC(=O)CN1c2cccc3c(c23)N(S1(=O)=O)c4ccccc4NH)
+- C[C@@H](NC(=O)CN1c2cccc3c(c23)N(S1(=O)=O)c4ccc(O)cc4)
+- C[C@@H](NC(=O)CN1c2cccc3c(c23)N(S1(=O)=O)c4ccc(NH2)cc4)
+- C[C@@H](NC(=O)CN1c2cccc3c(c23)N(S1(=O)=O)c4ccc(OH)cc4)
+Acc = 45/111
+Sim_hit = 33.23633223115647/111
+HV = 36.416958622835864*45/111
+----------------
+>>Sample 111
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)CO
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(O)
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(N)
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(CO)
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(C(N)=O)
+Acc = 46/112
+Sim_hit = 34.031786776611014/112
+HV = 37.21241316829041*46/112
+----------------
+>>Sample 112
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)c2cc(O)cc(C)c2o)sc(C)c1C
+- CCOC(=O)c1c(NC(=O)c2cc(O)cc(C)c2o)sc(C)c1CC
+- CCOC(=O)c1c(NC(=O)c2cc(O)cc(C)c2o)sc(C)c1CO
+- CCOC(=O)c1c(NC(=O)c2cc(O)cc(C)c2o)sc(C)c1CC(C)C
+- CCOC(=O)c1c(NC(=O)c2cc(O)cc(C)c2o)sc(C)c1CCO
+Acc = 46/113
+Sim_hit = 34.031786776611014/113
+HV = 37.21241316829041*46/113
+----------------
+>>Sample 113
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H]1CS/C(=N\\c2ccccc2Oc2ccccc2)N1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1(O)
+- CC[C@H]1C(S)(O)/C(=N\c2ccccc2Oc2ccccc2)N1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1(N)
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1(CO)
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1(C(C)O)
+Acc = 46/114
+Sim_hit = 34.031786776611014/114
+HV = 37.21241316829041*46/114
+----------------
+>>Sample 114
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccccc1-n1ccc(O)cn1)c1ccc(Br)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(O)sc1
+- O=C(Nc1ccccc1-n1cccnc1O)c1ccc(Br)s1
+- O=C(Nc1ccccc1-n1ccc(OH)cn1)c1ccc(Br)s1
+- O=C(Nc1ccccc1-n1cccnc1N)c1ccc(Br)s1
+Acc = 46/115
+Sim_hit = 34.031786776611014/115
+HV = 37.21241316829041*46/115
+----------------
+>>Sample 115
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@](C)(c1cccc(O)c1)N(C)C
+- COC(=O)[C@](C)(c1ccc(O)cc1)N(C)C
+- COC(=O)[C@](C)(c1cccc(N)c1)N(C)C
+- COC(=O)[C@](C)(c1ccc(N)cc1)N(C)C
+- COC(=O)[C@](C)(c1cccc(S(O)(=O)=O)c1)N(C)C
+Acc = 47/116
+Sim_hit = 34.74231309240049/116
+HV = 37.92293948407988*47/116
+----------------
+>>Sample 116
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@@H](O)CCO
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H](CO)CCO
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1OCCO
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H](O)CC(O)O
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H](O)CC(O)CO
+Acc = 47/117
+Sim_hit = 34.74231309240049/117
+HV = 37.92293948407988*47/117
+----------------
+>>Sample 117
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)n4ccccc4O)n1
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)n4cc(O)cc4)n1
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)n4cccc(c4)O)n1
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)n4ccc(c4)cc5ccccc5O)n1
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)n4ccc(c4)O)n1
+Acc = 47/118
+Sim_hit = 34.74231309240049/118
+HV = 37.92293948407988*47/118
+----------------
+>>Sample 118
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)Cn2nc(C)c(NH2)c2C)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NH)c2C(O))cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NH)c2C(NH2))cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NH)c2C(NH)CN)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NH)c2C(NH)CO)cn1
+Acc = 47/119
+Sim_hit = 34.74231309240049/119
+HV = 37.92293948407988*47/119
+----------------
+>>Sample 119
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nc2n(n1)CCC[C@@H]2N(C(=O)c1cnc(C)cn1)C(O)C
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1O
+- CCc1nc2n(n1)CCC[C@@H]2N(C(=O)c1cnc(C)cn1)CC(O)
+- CCc1nc2n(n1)CCC[C@@H]2N(C(=O)c1cnc(C)cn1)C(O)CC
+- CCc1nc2n(n1)CCC[C@@H]2N(C(=O)c1cnc(C)cn1)CO
+Acc = 47/120
+Sim_hit = 34.74231309240049/120
+HV = 37.92293948407988*47/120
+----------------
+>>Sample 120
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Cl with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2cc(O)ccc2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccc(O)c(O)c2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2cc(O)cc(O)c2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2cccc(O)c2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccc(O)cc2OC)cc1Cl
+Acc = 48/121
+Sim_hit = 35.57043809240049/121
+HV = 38.75106448407988*48/121
+----------------
+>>Sample 121
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CNC(=O)c1csc2c1CCC(N)CC2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CCCC2)c1ccc(O)c1
+- O=C(CNC(=O)c1csc2c1CCC(O)CC2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CCC(N)CC2)c1ccc(N)c1
+- O=C(CNC(=O)c1csc2c1CCC(OH)CC2)c1cccs1
+Acc = 49/122
+Sim_hit = 36.30513196995151/122
+HV = 39.48575836163091*49/122
+----------------
+>>Sample 122
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1(O)
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1(N)
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1(NH2)
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1NH2
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1NHOH
+Acc = 49/123
+Sim_hit = 36.30513196995151/123
+HV = 39.48575836163091*49/123
+----------------
+>>Sample 123
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1C(=O)CCC1=O)NCCc1ccccc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1C(=O)CCC1=O)NCCc1ccc(O)cc1
+- O=C(CN1C(=O)CCC1=O)NCCc1cc(O)ccc1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccc(OH)cc1
+- O=C(CN1C(=O)CCC1=O)NCCc1cc(OH)ccc1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccc(NH2)cc1
+Acc = 50/124
+Sim_hit = 37.06828986468835/124
+HV = 40.24891625636775*50/124
+----------------
+>>Sample 124
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1OCC[C@@H]1C(=O)N(C)c1cccc(COCc2ccccc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NC(c1cccc(COCc2ccccc2)c1)C
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(O)c(COCc2ccccc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(S)c(COCc2ccccc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(N)c(COCc2ccccc2)c1
+Acc = 50/125
+Sim_hit = 37.06828986468835/125
+HV = 40.24891625636775*50/125
+----------------
+>>Sample 125
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(N)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(O)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(S)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(NH2)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(OH)cc2)cc1
+Acc = 51/126
+Sim_hit = 37.85552390724155/126
+HV = 41.036150298920944*51/126
+----------------
+>>Sample 126
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCNC(=O)c1ccccc1)Nc1ccc(O)cc1
+- O=C(NCCNC(=O)c1ccccc1)Nc1cc(O)ccc1
+- O=C(NCCNC(=O)c1ccccc1)Nc1cc(OH)ccc1
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(OH)cc1
+- O=C(NCCNC(=O)c1ccccc1)Nc1cc(O)cc(O)c1
+Acc = 52/127
+Sim_hit = 38.67370572542337/127
+HV = 41.854332117102764*52/127
+----------------
+>>Sample 127
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc(C)c1CN(C)C(=O)Nc1ccc(O)c(-c2nnc3n2CCC3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccc(N)c(-c2nnc3n2CCC3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1cc(O)c(-c2nnc3n2CCC3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1cc(N)c(-c2nnc3n2CCC3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccc(O)c(-c2nn(C)c3n2CCC3)c1
+Acc = 53/128
+Sim_hit = 39.42755187926952/128
+HV = 42.60817827094892*53/128
+----------------
+>>Sample 128
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC(=O)Nc1cccc[n+]1Cc1ccccc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC(=O)Nc1ccc(O)c[n+]1Cc1ccccc1
+- CCCC(=O)Nc1ccc(S)c[n+]1Cc1ccccc1
+- CCCC(=O)Nc1cc(O)cc[n+]1Cc1ccccc1
+- CCCC(=O)Nc1cc(N)cc[n+]1Cc1ccccc1
+- CCCC(=O)Nc1cc(C)c[n+]1Cc1cccc(O)c1
+Acc = 54/129
+Sim_hit = 40.13486895244026/129
+HV = 43.315495344119654*54/129
+----------------
+>>Sample 129
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCC(N)CC4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1O[C@H](CO)C
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1O[C@@H](CO)C
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OCC(O)C
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC[C@H](CO)C
+Acc = 55/130
+Sim_hit = 40.91820228577359/130
+HV = 44.098828677452985*55/130
+----------------
+>>Sample 130
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C(=O)N2)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2(O))C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2(N))C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2(OCC))C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2(NS(=O)(=O)O))C1
+Acc = 56/131
+Sim_hit = 41.497149654194644/131
+HV = 44.67777604587404*56/131
+----------------
+>>Sample 131
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2(O))s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2N)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2NH2)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2NHOH)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2NS(=O)(=O)O)s1
+Acc = 57/132
+Sim_hit = 42.29714965419464/132
+HV = 45.47777604587404*57/132
+----------------
+>>Sample 132
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C(O))CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3CO)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C(N))CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C(NH2))CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C(OH))CC2=O)c1
+Acc = 58/133
+Sim_hit = 43.13925491735254/133
+HV = 46.319881309031935*58/133
+----------------
+>>Sample 133
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CC[NH3+]C[C@@H]1NC(=O)N[C@@H]1CCOC1
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CC(OH)C1
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CC(O)C1
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H](CO)CCOC1
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CC(O)OC1
+Acc = 58/134
+Sim_hit = 43.13925491735254/134
+HV = 46.319881309031935*58/134
+----------------
+>>Sample 134
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(O)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(N)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(S)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(CO)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(NH2)
+Acc = 59/135
+Sim_hit = 43.72899850709613/135
+HV = 46.909624898775526*59/135
+----------------
+>>Sample 135
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C2(CN(S(=O)(=O)/C=C/c3ccccc3)NH)CCCC2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CC(C)CC2)cc1
+- COc1ccc(C2(CN(S(=O)(=O)/C=C/c3ccccc3)NHCH3)CCCC2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2(N))cc1
+- COc1ccc(C2(CN(S(=O)(=O)/C=C/c3ccccc3)NHCH2CH3)CCCC2)cc1
+Acc = 59/136
+Sim_hit = 43.72899850709613/136
+HV = 46.909624898775526*59/136
+----------------
+>>Sample 136
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C(O)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C(N)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C(O)C(O)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C(N)C(O)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C(OH)C2)c1
+Acc = 60/137
+Sim_hit = 44.515883752997766/137
+HV = 47.69651014467716*60/137
+----------------
+>>Sample 137
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(O)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(S(=O)(=O)N)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(N)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(OCC)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(N(C)C)cc1-2
+Acc = 61/138
+Sim_hit = 45.36588375299777/138
+HV = 48.546510144677164*61/138
+----------------
+>>Sample 138
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CCCN1c1ccc(C[NH3+]Cc2c(F)cccc2F)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)c(ccc2)OH)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)c(ccc2)NH2)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)c(ccc2)NHOH)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)c(ccc2)N(CH3)OH)cc1
+Acc = 61/139
+Sim_hit = 45.36588375299777/139
+HV = 48.546510144677164*61/139
+----------------
+>>Sample 139
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)N
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCC(O)C
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)NH[C@@H](C)C(=O)OH
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)N[C@@H](C)C(=O)NH2
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)N[C@@H](C)C(=O)NHC(=O)NH2
+Acc = 62/140
+Sim_hit = 46.12904164773461/140
+HV = 49.30966803941401*62/140
+----------------
+>>Sample 140
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2c(CN(CCO)Cc3cc(O)ccc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3ccc(O)cc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cc(O)ccc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1.O
+- COc1ccc2c(CN(CCO)Cc3cc(OH)ccc3)cc(=O)oc2c1
+Acc = 63/141
+Sim_hit = 46.95596472465769/141
+HV = 50.13659111633709*63/141
+----------------
+>>Sample 141
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)C)c(NC(=O)NCCO)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(O)cn2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2cc(O)ccn2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2cccn2O)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2cccnc2O)s1
+Acc = 64/142
+Sim_hit = 47.56380786191259/142
+HV = 50.74443425359199*64/142
+----------------
+>>Sample 142
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1(O)
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1(N)
+- COc1ccc2nc(CNc3ncc(F)c(N4CC(O)CC4)n3)[nH]c2c1
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1(NH2)
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1(NH)
+Acc = 65/143
+Sim_hit = 48.23544965295737/143
+HV = 51.41607604463677*65/143
+----------------
+>>Sample 143
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=C(C)C[C@@H](O)c1ncccn1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C(C)C[C@@H](O)c1nccc(O)c1
+- C=C(C)C[C@@H](O)c1ncc(O)cn1
+- C=C(C)C[C@@H](O)c1ncc(c1)N
+- C=C(C)C[C@@H](O)c1ncccn1(O)
+- C=C(C)C[C@@H](O)c1nccc1N
+Acc = 66/144
+Sim_hit = 48.74973536724308/144
+HV = 51.93036175892248*66/144
+----------------
+>>Sample 144
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)OH
+- C[C@H](CN(C)C(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccnc(OC2CC(O)C2)c1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccnc(OC2CC(C)C2)c1)C[C@@H](C)OH
+- C[C@H](CNC(=O)c1ccnc(OC2CC(C)C2)c1)C[C@@H](CO)O
+Acc = 66/145
+Sim_hit = 48.74973536724308/145
+HV = 51.93036175892248*66/145
+----------------
+>>Sample 145
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]21 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCN(C(=O)CSCC(F)(F)FO)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H](O)CCCC[C@@H]1O
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCC(O)CC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]2O1
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCC(O)C[C@@H]21
+Acc = 66/146
+Sim_hit = 48.74973536724308/146
+HV = 51.93036175892248*66/146
+----------------
+>>Sample 146
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H]1O[C@H](Oc2c[nH]c3cc(O)ccc23)[C@H](O)[C@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](OH)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3cc(OH)ccc23)[C@H](O)[C@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](OH)[C@H](OH)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3cc(O)ccc23)[C@H](OH)[C@H](O)[C@@H]1O
+Acc = 67/147
+Sim_hit = 49.46712667159091/147
+HV = 52.64775306327031*67/147
+----------------
+>>Sample 147
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC(O)CC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC(OH)CC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCN(CC(O)C)C1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCN(CC(OH)C)C1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCN(CCO)CC1
+Acc = 68/148
+Sim_hit = 50.30046000492425/148
+HV = 53.481086396603644*68/148
+----------------
+>>Sample 148
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)[O-] with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)N
+- CC[C@](C)(NC(=O)CN(C)C(=O)c1cccc(Cl)c1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(O)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(NH2)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(S)cc1)C(=O)[O-]
+Acc = 69/149
+Sim_hit = 51.08769404747744/149
+HV = 54.26832043915684*69/149
+----------------
+>>Sample 149
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(O))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2CC(O))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(N))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(OH))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(NH2))cc1
+Acc = 70/150
+Sim_hit = 51.83237489854127/150
+HV = 55.013001290220664*70/150
+----------------
+>>Sample 150
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(O)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(NH2)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(OH)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(NH)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(NS(=O)(=O)OH)cc2)CC1
+Acc = 71/151
+Sim_hit = 52.53237489854127/151
+HV = 55.71300129022067*71/151
+----------------
+>>Sample 151
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1O with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(CNc2ccc(F)c(C)c2)cc(N(O)O)c1O
+- COc1cc(CNc2ccc(F)c(C)c2)cc(O)c1N
+- COc1cc(CNc2ccc(F)c(C)c2)cc(NH2)c1O
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1NH
+- COc1cc(CNc2ccc(F)c(C)c2)cc(OH)c1O
+Acc = 72/152
+Sim_hit = 53.211620181560136/152
+HV = 57.071491856258405*72/152
+----------------
+>>Sample 152
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccc(O)cc1
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(O)ccc1
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1[NH2+]
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccc(OH)cc1
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(NH2)ccc1
+Acc = 73/153
+Sim_hit = 54.024120181560136/153
+HV = 57.883991856258405*73/153
+----------------
+>>Sample 153
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(OH)O1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](CO)CO1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(OH)(OH)1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(OH)1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C(OH)2)CO1
+Acc = 73/154
+Sim_hit = 54.024120181560136/154
+HV = 57.883991856258405*73/154
+----------------
+>>Sample 154
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1(O)
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1(N)
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1(NH2)
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1(OH)
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1(NH)
+Acc = 74/155
+Sim_hit = 54.6907868482268/155
+HV = 58.55065852292507*74/155
+----------------
+>>Sample 155
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\\c2ccc(OC)cc2OC)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OH)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2OH)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(N)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(S(=O)(=O)N)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2NH2)CC1
+Acc = 74/156
+Sim_hit = 54.6907868482268/156
+HV = 58.55065852292507*74/156
+----------------
+>>Sample 156
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccccc1[C@@H]([NH3+])c1ccc(C)o1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccccc1[C@@H]([NH3+])c1ccc(C[NH3+])o1
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(CO)o1
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C[NH2]([NH2]))o1
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C[NH2](C))o1
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C[NH](C)C)o1
+Acc = 75/157
+Sim_hit = 55.339435496875446/157
+HV = 59.199307171573714*75/157
+----------------
+>>Sample 157
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc([C@H](CNC(=O)c2cc(O)ccc2-c2cc(O)ccc2C#N)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2cc(O)ccc2-c2ccc(O)cc2C#N)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccc(O)cc2-c2ccc(O)cc2C#N)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccc(O)cc2C#N)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccc(O)cc2-c2ccc(O)cc2C#N)N2CCOCC2)cc1
+Acc = 76/158
+Sim_hit = 56.10866626610621/158
+HV = 60.737768710035255*76/158
+----------------
+>>Sample 158
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](O)C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1(O)
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](N)C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](O)C1(N)
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](N)C1(N)
+Acc = 76/159
+Sim_hit = 56.10866626610621/159
+HV = 60.737768710035255*76/159
+----------------
+>>Sample 159
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OCC(O)(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)OH
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(C(O)F)(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)NHOH
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)NH2
+Acc = 77/160
+Sim_hit = 56.81699959943955/160
+HV = 61.44610204336859*77/160
+----------------
+>>Sample 160
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](O)[C@@H](C)S[C@H](C(NH2)=O)c1ccccc1
+- C[C@H](O)[C@@H](C)S[C@H](C(NH2)=O)c1ccc(O)cc1
+- C[C@H](O)[C@@H](C)S[C@H](C(NH2)=O)c1ccc(N)cc1
+- C[C@H](O)[C@@H](C)S[C@H](C(NH2)=O)c1ccc(S)cc1
+- C[C@H](O)[C@@H](C)S[C@H](C(NH2)=O)c1ccc(CO)cc1
+Acc = 77/161
+Sim_hit = 56.81699959943955/161
+HV = 61.44610204336859*77/161
+----------------
+>>Sample 161
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)N2CCC(C(O)C)2)ccc1NC(=O)[C@@H]1CCO[C@H](CO)1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H](C(O)C)1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCOC[C@H](O)1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H](C(O)O)1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H](C(O)N)1C
+Acc = 77/162
+Sim_hit = 56.81699959943955/162
+HV = 61.44610204336859*77/162
+----------------
+>>Sample 162
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC(CCO)CC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC(C(NH2)=O)CC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC(CNH2)CC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC(CNHOH)CC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC(CN(CO)O)CC2)cn1
+Acc = 78/163
+Sim_hit = 57.5491424565824/163
+HV = 62.178244900511444*78/163
+----------------
+>>Sample 163
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(O)o2)c1
+- Cc1nsnc1COc1cccc(C(=O)NCCc2cc(O)co2)c1
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1(O)
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(OH)o2)c1
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(NH2)o2)c1
+Acc = 79/164
+Sim_hit = 58.30324081723814/164
+HV = 62.93234326116718*79/164
+----------------
+>>Sample 164
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COCCNC(=O)c1csc(COc2ccccc2Cl)n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1csc(COc2ccccc2Cl)n1(O)
+- COCCNC(=O)c1csc(COc2ccccc2Cl)n1N
+- COCCNC(=O)c1csc(COc2ccccc2Cl)n1NH
+- COCCNC(=O)c1csc(COc2ccccc2Cl)n1NH2
+- COCCNC(=O)c1csc(COc2ccccc2Cl)n1NHOH
+Acc = 79/165
+Sim_hit = 58.30324081723814/165
+HV = 62.93234326116718*79/165
+----------------
+>>Sample 165
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC(O)N)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC(O)N)cc2)C1.O
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCN(O))cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCN(H)(O))cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCN(H)O)cc2)C1
+Acc = 80/166
+Sim_hit = 59.01990748390481/166
+HV = 64.36567659450051*80/166
+----------------
+>>Sample 166
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1O
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1NH2
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(O)c(O)c2S(=O)(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(NH2)c(NH2)c2S(=O)(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(S(=O)(=O)N1)c(O)c(O)c2
+Acc = 80/167
+Sim_hit = 59.01990748390481/167
+HV = 64.36567659450051*80/167
+----------------
+>>Sample 167
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(OH)s1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(NH2)s1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1(OH)
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1(NH2)
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(NH2)c1OH
+Acc = 80/168
+Sim_hit = 59.01990748390481/168
+HV = 64.36567659450051*80/168
+----------------
+>>Sample 168
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccoc1C(=O)Nc1ccc(F)cc1Br with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccoc1C(=O)N(c1ccc(F)cc1)N
+- Cc1ccoc1C(=O)N(c1ccc(F)cc1)NH2
+- Cc1ccoc1C(=O)N(c1ccc(O)cc1)NH
+- Cc1ccoc1C(=O)N(c1ccc(NH2)cc1)F
+- Cc1ccoc1C(=O)N(c1ccc(N)cc1)Br
+Acc = 80/169
+Sim_hit = 59.01990748390481/169
+HV = 64.36567659450051*80/169
+----------------
+>>Sample 169
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)N(C)C)CCCC1
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)NH)CCCC1
+- CC(C)CC1(CNC(=O)c2ccc(O)c(O)c2S(C)(=O)=O)CCCC1
+- CC(C)CC1(CNC(=O)c2ccc(NH2)c(O)c2S(C)(=O)=O)CCCC1
+- CC(C)CC1(CNC(=O)c2ccc(O)c(NH2)c2S(C)(=O)=O)CCCC1
+Acc = 81/170
+Sim_hit = 59.612500076497405/170
+HV = 64.95826918709311*81/170
+----------------
+>>Sample 170
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc21 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2cc(O)ccc2Br)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccc(O)cc2Br)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2cc(OH)ccc2Br)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)c(O)ccc21
+- Cn1c(C(=O)Nc2ccc(OH)cc2Br)cc2c(F)cccc21
+Acc = 82/171
+Sim_hit = 60.38333340983074/171
+HV = 65.72910252042644*82/171
+----------------
+>>Sample 171
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)c2nnn(-c3ccc(O)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(S)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(N)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(OCC)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(NH2)cc3)c2C)c(C)c1
+Acc = 83/172
+Sim_hit = 61.191844048128615/172
+HV = 66.53761315872431*83/172
+----------------
+>>Sample 172
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(O)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(NH2)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(OH)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(F)cc1)CS(=O)(=O)C2.O
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(S)cc1)CS(=O)(=O)C2.N
+Acc = 84/173
+Sim_hit = 62.011844048128616/173
+HV = 67.3576131587243*84/173
+----------------
+>>Sample 173
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH2]1C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1CC
+- Cc1nn(C)c(N2CCOCC2)c1CN[C@@H]1CC[NH2]1C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CC[NH3+]C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CC[NH+]1CCCCOH
+Acc = 84/174
+Sim_hit = 62.011844048128616/174
+HV = 67.3576131587243*84/174
+----------------
+>>Sample 174
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCNS(=O)(=O)c1cccnc1Cl with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCN(S(=O)(=O)c1cccnc1Cl)C(O)C
+- C=CCN(S(=O)(=O)c1cccnc1Cl)CC(O)
+- C=CCN(S(=O)(=O)c1cccnc1Cl)C(OH)2
+- C=CCN(S(=O)(=O)c1cccnc1Cl)C(O)CC
+- C=CCN(S(=O)(=O)c1cccnc1Cl)CC(OH)
+Acc = 84/175
+Sim_hit = 62.011844048128616/175
+HV = 67.3576131587243*84/175
+----------------
+>>Sample 175
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1N(C(=O)[C@@H]1CC(c2ccccc2)=NO1)C
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1(O)
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1N
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1NH2
+- CCOc1ccccc1N(C(=O)[C@@H]1CC(c2ccccc2)=NO1)OH
+Acc = 84/176
+Sim_hit = 62.011844048128616/176
+HV = 67.3576131587243*84/176
+----------------
+>>Sample 176
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1.O
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2NH)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2NS)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2N)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2NH2)n1
+Acc = 84/177
+Sim_hit = 62.011844048128616/177
+HV = 67.3576131587243*84/177
+----------------
+>>Sample 177
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C(O))cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C(N))cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C(OH))cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C(NH2))cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C(OH2))cc2)C1
+Acc = 85/178
+Sim_hit = 62.80845421762014/178
+HV = 68.15422332821583*85/178
+----------------
+>>Sample 178
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O[C@H](C[NH3+]C[C@H]1COc2ccccc21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC(O)C1
+- O[C@H](C[NH2+]C[C@@H]1COc2ccccc21)C1CC(O)C1
+- O[C@H](C[NH2+]C[C@H]1COc2ccc(O)c(O)c21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccc(OH)c(OH)c21)C1CC1
+Acc = 85/179
+Sim_hit = 62.80845421762014/179
+HV = 68.15422332821583*85/179
+----------------
+>>Sample 179
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(OH)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(NH2)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(S(=O)(=O)NH2)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(C(OH)(OH))cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(CN)cc3)no2)CC1
+Acc = 85/180
+Sim_hit = 62.80845421762014/180
+HV = 68.15422332821583*85/180
+----------------
+>>Sample 180
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(N2C(=O)S/C(=C\\c3cccc(F)c3)C2=O)c1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(N2C(=O)S/C(=C\c3ccc(O)c(F)c3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cc(O)cc(F)c3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1(N)
+- Cc1cccc(N2C(=O)S/C(=C\c3ccc(OH)c(F)c3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cc(O)c(F)c3)C2=O)c1N
+Acc = 86/181
+Sim_hit = 63.54314809517116/181
+HV = 68.88891720576686*86/181
+----------------
+>>Sample 181
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2cc(O)ccc2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2cc(NH2)ccc2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccc(OH)cc2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2cc(OH)ccc2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2cc(NH)ccc2)CC1
+Acc = 87/182
+Sim_hit = 64.3470696637986/182
+HV = 69.6928387743943*87/182
+----------------
+>>Sample 182
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nnc2n1CCC[C@H]2N(C(=O)N(Cc1ccccc1)C[NH+](C)C)C(O)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)N(Cc1ccccc1C[NH+](C)C)CC(O)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)N(Cc1ccccc1C[NH+](C)C)C(OH)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)N(Cc1ccccc1C[NH+](C)C)C(NH2)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)N(Cc1ccccc1C[NH+](C)C)C(NH)C
+Acc = 87/183
+Sim_hit = 64.3470696637986/183
+HV = 69.6928387743943*87/183
+----------------
+>>Sample 183
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2cccc(O)c2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C(=O)Nc2ccc(O)c(F)c2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccc(O)c(O)c1)C2
+- Cn1c(C(=O)Nc2ccc(OH)c(F)c2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1cc(O)ccc1)C2
+Acc = 88/184
+Sim_hit = 65.1470696637986/184
+HV = 70.4928387743943*88/184
+----------------
+>>Sample 184
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[NH]c1=O
+- CCn1c(CC2CC[NH+](Cc3ccc(O)cc3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)c(O)c(F)c3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[NH2+]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[NH2]c1=O
+Acc = 88/185
+Sim_hit = 65.1470696637986/185
+HV = 70.4928387743943*88/185
+----------------
+>>Sample 185
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1.O
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1.N
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3(O))CCC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCCN2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCCN(C)C2)N1
+Acc = 88/186
+Sim_hit = 65.1470696637986/186
+HV = 70.4928387743943*88/186
+----------------
+>>Sample 186
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC(CCO)C[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC(O)CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC(C[NH3+])CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC(C[NH2+]([O-]))CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC(C[NH2])CC[C@@H]43)cc12
+Acc = 89/187
+Sim_hit = 65.93739224444377/187
+HV = 71.28316135503947*89/187
+----------------
+>>Sample 187
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1(O)
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1(N)
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)cc(O)n1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1(CO)
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1(NS(=O)(=O)O)
+Acc = 89/188
+Sim_hit = 65.93739224444377/188
+HV = 71.28316135503947*89/188
+----------------
+>>Sample 188
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@]12CC3CC(N4CC[C@H](N)C4=O)(C1)C[C@](C)(C3)C2O
+- C[C@@]12CC3CC(N4CC[C@H](N)C4=O)(C1)C[C@](C)(C3)C2[NH2+]
+- C[C@@]12CC3CC(N4CC[C@H](N)C4=O)(C1)C[C@](C)(C3)C2[NH3+]
+- C[C@@]12CC3CC(N4CC[C@H](N)C4=O)(C1)C[C@](C)(C3)C2OH
+- C[C@@]12CC3CC(N4CC[C@H](N)C4=O)(C1)C[C@](C)(C3)C2NH2
+Acc = 90/189
+Sim_hit = 66.41565311400899/189
+HV = 71.76142222460469*90/189
+----------------
+>>Sample 189
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5cc(O)ccc5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccc(O)c(O)c5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5cc(O)cc5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2(O))n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccc(OH)c(O)c5[nH]4)C3)nn2)n1
+Acc = 91/190
+Sim_hit = 67.26811213040243/190
+HV = 72.61388124099813*91/190
+----------------
+>>Sample 190
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N(H)N1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=NH1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N(H)NH1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)NNN1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N(H)NH2
+Acc = 91/191
+Sim_hit = 67.26811213040243/191
+HV = 72.61388124099813*91/191
+----------------
+>>Sample 191
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-] with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NCC[C@@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)N[C@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)N[C@@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)N[C@@H](C)C(=O)O
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)N[C@H](C)C(=O)O
+Acc = 91/192
+Sim_hit = 67.26811213040243/192
+HV = 72.61388124099813*91/192
+----------------
+>>Sample 192
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH2)=O)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH)=O)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH)NH2)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH2)NH)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH2)NH2)cc1
+Acc = 91/193
+Sim_hit = 67.26811213040243/193
+HV = 72.61388124099813*91/193
+----------------
+>>Sample 193
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1cc(c(O)O)co1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+- O=C(NCc1ccc(O)co1)C1CCN(c2cnc(N3CCC(C)CC3)nc2)CC1
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1(O)
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1(OH)
+- O=C(NCc1ccc(OH)co1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+Acc = 91/194
+Sim_hit = 67.26811213040243/194
+HV = 72.61388124099813*91/194
+----------------
+>>Sample 194
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(SCC(=O)N2CCN(c3ccc(OH)cc3)CC2)nnc1-c1ccc(OH)o1
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nn(c1ccco1)c(OH)
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccc(NH2)o1
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1cc(OH)co1
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1.NHOH
+Acc = 91/195
+Sim_hit = 67.26811213040243/195
+HV = 72.61388124099813*91/195
+----------------
+>>Sample 195
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NHCc2cccc3ccccc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc(O)cc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc(S)cc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NHCc2ccc(N)cc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc(NH2)cc23)CC1
+Acc = 91/196
+Sim_hit = 67.26811213040243/196
+HV = 72.61388124099813*91/196
+----------------
+>>Sample 196
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C(O)C2)CCCC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2(O))CCCC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)C(CCC)CCC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CC(C)CCC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1(O)
+Acc = 92/197
+Sim_hit = 68.07203369902987/197
+HV = 73.41780280962557*92/197
+----------------
+>>Sample 197
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH3+]CC1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC(O)1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC(OH)1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC(OH)C1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC(COH)1
+Acc = 92/198
+Sim_hit = 68.07203369902987/198
+HV = 73.41780280962557*92/198
+----------------
+>>Sample 198
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-] with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)N
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)NH2
+- CC(C)[C@H](Nc1cc(C#N)cc[nH]1)C(=O)[O-]
+- CC(C)[C@H](Nc1ccc(C#N)cc1[NH3+])C(=O)[O-]
+- CC(C)[C@H](Nc1cc(C#N)c(NH2)cn1)C(=O)[O-]
+Acc = 93/199
+Sim_hit = 68.82813126000548/199
+HV = 74.17390037060117*93/199
+----------------
+>>Sample 199
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1 with more hydrogen bond donors and increase HBD by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(NC(=O)CCc2ccc(OH)c(Cl)c2Cl)no1
+- Cc1cc(NC(=O)CCc2ccc(NH2)c(Cl)c2Cl)no1
+- Cc1cc(NC(=O)CCc2cc(OH)cc(Cl)c2Cl)no1
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2NH2)no1
+- Cc1cc(NC(=O)CCc2ccc(NH2)c(Cl)c2O)no1
+Acc = 93/200
+Sim_hit = 68.82813126000548/200
+HV = 74.17390037060117*93/200
+----------------
+--------Final Acc--------
+Acc = 93/200
+----------------

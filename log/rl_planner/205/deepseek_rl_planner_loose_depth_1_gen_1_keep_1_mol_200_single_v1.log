@@ -1,0 +1,2405 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_llama_loose_205_best_reward_v1.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=205, constraint='loose', conversation_type='single', planner='rl_planner', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCC3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC3)no2)[NH2+]C1
+Acc = 0/1
+Sim_hit = 0/1
+HV = 0*0/1
+----------------
+>>Sample 1
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccnc  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cc  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCC
+Acc = 0/2
+Sim_hit = 0/2
+HV = 0*0/2
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Fluorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Fluorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c([PH2])cccc1[PH2]
+- CCC[NH2+]Cc1ncoc1-c1c([PH3])cccc1[PH3]
+- CCC[NH2+]Cc1ncoc1-c1c([PH4])cccc1[PH4]
+- CCC[NH2+]Cc1ncoc1-c1c([PH])cccc1[PH]
+- CCC[NH2+]Cc1ncoc1-c1c([PH2])(P)cccc1[PH2]
+Acc = 0/3
+Sim_hit = 0/3
+HV = 0*0/3
+----------------
+>>Sample 3
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Oc3ccccc32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Nc3ccccc32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)C(=O)c3ccccc32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)COc3ccccc32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)C(O)c3ccccc32)cc1
+Acc = 0/4
+Sim_hit = 0/4
+HV = 0*0/4
+----------------
+>>Sample 4
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(CC#C)=O)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(C#C)=O)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(C#N)=O)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(C#CH)=O)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(C#CC)=O)C1
+Acc = 0/5
+Sim_hit = 0/5
+HV = 0*0/5
+----------------
+>>Sample 5
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: • COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(P)ccc3n2C)C1  
+• COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc([P](=O)(O)O)ccc3n2C)C1  
+• COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc([P](O)(O)=O)ccc3n2C)C1  
+• COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc([P](=O)(O)O)ccc3n2C)C1  
+• COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc([P](O)(O)O)ccc3n2C)C1
+Acc = 0/6
+Sim_hit = 0/6
+HV = 0*0/6
+----------------
+>>Sample 6
+RL Suggestion 0: Remove a Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Nitro Group.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21)O
+- Cc1ccc(cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21)F
+- Cc1ccc(cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21)Cl
+- Cc1ccc(cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21)N
+- Cc1ccc(cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21)C(=O)O
+Acc = 1/7
+Sim_hit = 0.7222222222222222/7
+HV = 16.69243333333332*1/7
+----------------
+>>Sample 7
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc([P](=O)(O)O)s1  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc([P](O)(O)O)s1  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc([P](S)(O)O)s1  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc([P](O)(S)O)s1  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc([P](=S)(O)O)s1
+Acc = 1/8
+Sim_hit = 0.7222222222222222/8
+HV = 16.69243333333332*1/8
+----------------
+>>Sample 8
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(S)nc2)sc2c1CCC2  
+- N#Cc1c(NC(=O)c2ccc(S)nc2)sc2c1CC(C)C2  
+- N#Cc1c(NC(=O)c2ccc(S)nc2)sc2c1CCOC2  
+- N#Cc1c(NC(=O)c2ccc(S)nc2)sc2c1CCN2  
+- N#Cc1c(NC(=O)c2ccc(S)nc2)sc2c1CC(O)C2
+Acc = 1/9
+Sim_hit = 0.7222222222222222/9
+HV = 16.69243333333332*1/9
+----------------
+>>Sample 9
+RL Suggestion 0: Replace Aromatic Amine with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Aromatic Amine with N,N-Dimethylacrylamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)C=Cc1c(NCc2ccccc2)ncnc1Nc1ccccc1F  
+- CN(C)C(=O)C=Cc1c(NCc2ccccc2)ncnc1Nc1cccc(F)c1  
+- CN(C)C(=O)C=Cc1c(NCc2ccccc2)ncnc1Nc1ccc(F)cc1  
+- CN(C)C(=O)C=Cc1c(NCc2ccccc2)ncnc1Nc1cc(F)ccc1  
+- CN(C)C(=O)C=Cc1c(NCc2ccccc2)ncnc1Nc1c(F)cccc1
+Acc = 1/10
+Sim_hit = 0.7222222222222222/10
+HV = 16.69243333333332*1/10
+----------------
+>>Sample 10
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(S)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cc(S)cc1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1c(S)ccc1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(S)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cc(S)c(S)c1
+Acc = 1/11
+Sim_hit = 0.7222222222222222/11
+HV = 16.69243333333332*1/11
+----------------
+>>Sample 11
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc([P])nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc([P]=O)nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc([P](=O)(O)O)nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc([P](O)(O)O)nn2)c1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc([P](Cl)(Cl)Cl)nn2)c1
+Acc = 1/12
+Sim_hit = 0.7222222222222222/12
+HV = 16.69243333333332*1/12
+----------------
+>>Sample 12
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCCC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1C1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1
+Acc = 1/13
+Sim_hit = 0.7222222222222222/13
+HV = 16.69243333333332*1/13
+----------------
+>>Sample 13
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(P)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(P(O)(O)=O)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(P(=O)(O)O)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(P(O)O)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(P(O)(O)O)ccc3N2)cc1
+Acc = 1/14
+Sim_hit = 0.7222222222222222/14
+HV = 16.69243333333332*1/14
+----------------
+>>Sample 14
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+Acc = 1/15
+Sim_hit = 0.7222222222222222/15
+HV = 16.69243333333332*1/15
+----------------
+>>Sample 15
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1  
+- CSC(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1  
+- CN(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1  
+- CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1  
+- COC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1
+Acc = 1/16
+Sim_hit = 0.7222222222222222/16
+HV = 16.69243333333332*1/16
+----------------
+>>Sample 16
+RL Suggestion 0: Replace Tertiary Amine with Dialkylaminomethyleneimine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Dialkylaminomethyleneimine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[N+]=C(C)Nc1cncc(N2Cc3ccccc3C2)n1  
+- CC(C)[N+]=C(C)NCc1cncc(N2Cc3ccccc3C2)n1  
+- CC(C)[N+]=C(C)NCc1cncc(N2Cc3cc(OC)ccc3C2)n1  
+- CC(C)[N+]=C(C)NCc1cncc(N2Cc3cc(O)ccc3C2)n1  
+- CC(C)[N+]=C(C)NCc1cncc(N2Cc3ccc(OC)cc3C2)n1
+Acc = 1/17
+Sim_hit = 0.7222222222222222/17
+HV = 16.69243333333332*1/17
+----------------
+>>Sample 17
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc([P](=O)(O)O)c1  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc([P](O)(O)O)c1  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc([P](S)(O)O)c1  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc([P](=S)(O)O)c1  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc([P](O)(S)O)c1
+Acc = 1/18
+Sim_hit = 0.7222222222222222/18
+HV = 16.69243333333332*1/18
+----------------
+>>Sample 18
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Oc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1  
+- CN(C)C(=O)Nc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1  
+- CN(C)C(=O)CC1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1  
+- CN(C)C(=O)OCC1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1  
+- CN(C)C(=O)NC1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1
+Acc = 1/19
+Sim_hit = 0.7222222222222222/19
+HV = 16.69243333333332*1/19
+----------------
+>>Sample 19
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1cccc(P(=O)(O)O)c1  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(P(=O)(O)(O))c1  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(P(=S)(O)O)c1  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(P(=O)(OH)(O))c1  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(P(=O)(OH)(OH))c1
+Acc = 1/20
+Sim_hit = 0.7222222222222222/20
+HV = 16.69243333333332*1/20
+----------------
+>>Sample 20
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1C[C@@H](c2ccccc2)O1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)OC1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)[C@@H]1c2ccccc2
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)c2ccccc21
+Acc = 1/21
+Sim_hit = 0.7222222222222222/21
+HV = 16.69243333333332*1/21
+----------------
+>>Sample 21
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(S)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1  
+- COc1cc(S(N)(=O)=O)c(S)cc1C(=O)N[C@@H](C)Cc1cccs1  
+- COc1cc(S)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1  
+- COc1cc(S(N)(=O)=O)c(S)cc1C(=O)N[C@@H](C)Cc1cccs1  
+- COc1cc(S)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1
+Acc = 1/22
+Sim_hit = 0.7222222222222222/22
+HV = 16.69243333333332*1/22
+----------------
+>>Sample 22
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[NH2+]CC1  
+- Cc1cccc(C)c1OC1C[NH2+]C1C  
+- Cc1cccc(C)c1OC1C[NH2+]C(C)C1  
+- Cc1cccc(C)c1OC1C[NH2+]C1CC  
+- Cc1cccc(C)c1OC1C[NH2+]C1C(C)C
+Acc = 1/23
+Sim_hit = 0.7222222222222222/23
+HV = 16.69243333333332*1/23
+----------------
+>>Sample 23
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc([P](=O)(O)O)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc([P](O)(O)O)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc([PH](=O)O)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc([P](O)O)cc1  
+- CC(C)C[C@@H]([NH3+])c1ccc([P]([O-])(=O)O)cc1
+Acc = 1/24
+Sim_hit = 0.7222222222222222/24
+HV = 16.69243333333332*1/24
+----------------
+>>Sample 24
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: • CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)C4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)O4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)CC4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)C(=O)4)cc2)cc1  
+• CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)N4)cc2)cc1
+Acc = 2/25
+Sim_hit = 1.4722222222222223/25
+HV = 23.709433333333322*2/25
+----------------
+>>Sample 25
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=O)N2)n1
+- CCCCc1noc([C@@H]2C=CC(=O)N2)n1
+- CCCCc1noc([C@H]2C=CC(=O)O2)n1
+- CCCCc1noc([C@@H]2C=CC(=O)O2)n1
+- CCCCc1noc([C@H]2C=CC(=N)O2)n1
+Acc = 2/26
+Sim_hit = 1.4722222222222223/26
+HV = 23.709433333333322*2/26
+----------------
+>>Sample 26
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)O)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)N)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O))cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OH)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)NH2)cc2)s1
+Acc = 2/27
+Sim_hit = 1.4722222222222223/27
+HV = 23.709433333333322*2/27
+----------------
+>>Sample 27
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2Cc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2CCOc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2CCOc3ccc(Br)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1
+Acc = 2/28
+Sim_hit = 1.4722222222222223/28
+HV = 23.709433333333322*2/28
+----------------
+>>Sample 28
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=C)N(C)CCC#N)cc1  
+- CCN(CC)C(=O)Cc1ccc(NC(=C)N(C)CC#N)cc1  
+- CCN(CC)C(=O)Cc1ccc(NC(=C)N(C)C#N)cc1  
+- CCN(CC)C(=O)Cc1ccc(NC(=C)N(C)CCCN)cc1  
+- CCN(CC)C(=O)Cc1ccc(NC(=C)N(C)CC#C)cc1
+Acc = 2/29
+Sim_hit = 1.4722222222222223/29
+HV = 23.709433333333322*2/29
+----------------
+>>Sample 29
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCCN)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCCO)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC(O)=O)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCCS)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC[O-])CC2
+Acc = 2/30
+Sim_hit = 1.4722222222222223/30
+HV = 23.709433333333322*2/30
+----------------
+>>Sample 30
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C(=S)[C@@H](C)c1ccncc1
+- CCC(C)C(=S)[C@@H](C)c1ccncc1
+- CC[C@H](C)C(=S)[C@H](C)c1ccncc1
+- CCC(C)C(=S)[C@H](C)c1ccncc1
+- CC[C@H](C)C(=S)C(C)c1ccncc1
+Acc = 2/31
+Sim_hit = 1.4722222222222223/31
+HV = 23.709433333333322*2/31
+----------------
+>>Sample 31
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1O  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1N  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1S  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1P  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1Cl
+Acc = 2/32
+Sim_hit = 1.4722222222222223/32
+HV = 23.709433333333322*2/32
+----------------
+>>Sample 32
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1
+- CN1C=C(C(=O)Nc2nc3c(F)cc(F)cc3s2)C=N1
+- CN1C=C(C(=O)Nc2nc3c(F)cc(F)cc3s2)N=C1
+- CN1C=C(C(=O)Nc2nc3c(F)cc(F)cc3s2)NC=1
+- CN1C=C(C(=O)Nc2nc3c(F)cc(F)cc3s2)CN=1
+Acc = 3/33
+Sim_hit = 2.0972222222222223/33
+HV = 29.483558333333324*3/33
+----------------
+>>Sample 33
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(S)ccc32)cn1  
+- CC1=CC=C(C(=O)N2CC(=O)NC3=C(S)C=CC=C32)C=N1  
+- Cc1cc(C(=O)N2CC(=O)Nc3cc(S)ccc32)cnc1  
+- Cc1c(C(=O)N2CC(=O)Nc3cc(S)ccc32)cncc1  
+- Cc1cc(C(=O)N2CC(=O)Nc3cc(S)ccc32)cnc1C
+Acc = 3/34
+Sim_hit = 2.0972222222222223/34
+HV = 29.483558333333324*3/34
+----------------
+>>Sample 34
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](CO)NC(=O)N[C@H]2CCCC[C@@H]2C)o1  
+- CCc1ccc([C@@H](C)NC(=O)N[C@H]2CCCC[C@@H]2C)o1  
+- CCc1ccc([C@@H](COH)NC(=O)N[C@H]2CCCC[C@@H]2C)o1  
+- CCc1ccc([C@@H](CN)NC(=O)N[C@H]2CCCC[C@@H]2C)o1  
+- CCc1ccc([C@@H](C(=O)O)NC(=O)N[C@H]2CCCC[C@@H]2C)o1
+Acc = 3/35
+Sim_hit = 2.0972222222222223/35
+HV = 29.483558333333324*3/35
+----------------
+>>Sample 35
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccn4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4ccc(O)cc4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccc(F)c4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4ccco4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4ccncc4)c(=O)c4ccccc43)n2)cc1
+Acc = 3/36
+Sim_hit = 2.0972222222222223/36
+HV = 29.483558333333324*3/36
+----------------
+>>Sample 36
+RL Suggestion 0: Remove a Dialkylaminomethyleneimine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Dialkylaminomethyleneimine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=O)Nc2nc3ccccc3n21  
+- Cc1ccccc1[C@@H]1NC(=NH)Nc2nc3ccccc3n21  
+- Cc1ccccc1[C@@H]1NC(=N)Nc2nc3ccccc3n21  
+- Cc1ccccc1[C@@H]1NC(=S)Nc2nc3ccccc3n21  
+- Cc1ccccc1[C@@H]1NC(=NH2)Nc2nc3ccccc3n21
+Acc = 3/37
+Sim_hit = 2.0972222222222223/37
+HV = 29.483558333333324*3/37
+----------------
+>>Sample 37
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CC[C@@H]2C)cc1F  
+- COc1ccc(CN(C)C(=O)[C@@H]2CC[C@@H]2C)cc1O  
+- COc1ccc(CN(C)C(=O)[C@@H]2CC[C@@H]2C)cc1Cl  
+- COc1ccc(CN(C)C(=O)[C@@H]2CC[C@@H]2C)cc1Br  
+- COc1ccc(CN(C)C(=O)[C@@H]2CC[C@@H]2C)cc1I
+Acc = 3/38
+Sim_hit = 2.0972222222222223/38
+HV = 29.483558333333324*3/38
+----------------
+>>Sample 38
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)C#Cc1cccc(F)c1  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)C#Cc1ccc(F)cc1  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)C#Cc1ccccc1F  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)C#Cc1c(F)cccc1  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)C#Cc1cccc(F)c1
+Acc = 4/39
+Sim_hit = 2.7751883239171375/39
+HV = 37.651626129943494*4/39
+----------------
+>>Sample 39
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1S
+- COc1cc(C[NH+]2CCC(O[C@H]3CCCO3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(O[C@H]3CCCO3)CC2)ccc1S
+- COc1cc(C[NH+]2CCC(O[C@H]3CCCO3)CC2)ccc1O
+- COc1cc(C[NH+]2CCC(O[C@H]3CCCO3)CC2)ccc1N
+Acc = 4/40
+Sim_hit = 2.7751883239171375/40
+HV = 37.651626129943494*4/40
+----------------
+>>Sample 40
+RL Suggestion 0: Replace Sulfur Atom with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfur Atom with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nnc([C-]#C)o1  
+- Cc1nc2ccccn2c1-c1nnc([C-]#C)c1O  
+- Cc1nc2ccccn2c1-c1nnc([C-]#C)c1  
+- Cc1nc2ccccn2c1-c1nnc([C-]#C)n1  
+- Cc1nc2ccccn2c1-c1nnc([C-]#C)s1
+Acc = 4/41
+Sim_hit = 2.7751883239171375/41
+HV = 37.651626129943494*4/41
+----------------
+>>Sample 41
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1
+Acc = 4/42
+Sim_hit = 2.7751883239171375/42
+HV = 37.651626129943494*4/42
+----------------
+>>Sample 42
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCO1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CC1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CO1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1C1
+Acc = 4/43
+Sim_hit = 2.7751883239171375/43
+HV = 37.651626129943494*4/43
+----------------
+>>Sample 43
+RL Suggestion 0: Replace Tertiary Amine with Dialkylaminomethyleneimine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Dialkylaminomethyleneimine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)CN)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)CC)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C(C)C)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C=O)CCCC1
+Acc = 4/44
+Sim_hit = 2.7751883239171375/44
+HV = 37.651626129943494*4/44
+----------------
+>>Sample 44
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1  
+- C[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1O  
+- C[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1C  
+- C[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1CC  
+- C[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1CCC
+Acc = 4/45
+Sim_hit = 2.7751883239171375/45
+HV = 37.651626129943494*4/45
+----------------
+>>Sample 45
+RL Suggestion 0: Replace Secondary Amine with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Secondary Amine with Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(SCC[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1  
+- Cc1ccc(SCC[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1  
+- Cc1ccc(SCC[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1  
+- Cc1ccc(SCC[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1  
+- Cc1ccc(SCC[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1
+Acc = 4/46
+Sim_hit = 2.7751883239171375/46
+HV = 37.651626129943494*4/46
+----------------
+>>Sample 46
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]Cc1cn2cc([P](=O)(O)O)ccc2n1)[C@@H](C)n1cccn1  
+- C[C@@H]([NH2+]Cc1cn2cc([P](O)(O)=O)ccc2n1)[C@@H](C)n1cccn1  
+- C[C@@H]([NH2+]Cc1cn2cc([P](O)O)ccc2n1)[C@@H](C)n1cccn1  
+- C[C@@H]([NH2+]Cc1cn2cc([P](O)(O)O)ccc2n1)[C@@H](C)n1cccn1  
+- C[C@@H]([NH2+]Cc1cn2cc([P]=O)ccc2n1)[C@@H](C)n1cccn1
+Acc = 4/47
+Sim_hit = 2.7751883239171375/47
+HV = 37.651626129943494*4/47
+----------------
+>>Sample 47
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O
+- Cc1ccccc1O[C@H](O)Cn1nnc2ccccc2c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1
+- Cc1ccccc1O[C@H](O)Cn1nnc2ccccc2c1
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1O
+Acc = 4/48
+Sim_hit = 2.7751883239171375/48
+HV = 37.651626129943494*4/48
+----------------
+>>Sample 48
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(N)cnn12  
+- CNc1nnc2n(N)cnn12  
+- COc1nnc2n(N)cnn12  
+- CCOc1nnc2n(N)cnn12  
+- C=Oc1nnc2n(N)cnn12
+Acc = 4/49
+Sim_hit = 2.7751883239171375/49
+HV = 37.651626129943494*4/49
+----------------
+>>Sample 49
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(C(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1  
+- CCCc1cc(=O)[nH]c(C(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(F)F)cc2)n1  
+- CCCc1cc(=O)[nH]c(C(=O)N[C@@H]2ON=C[C@@H]2c2cc(C)ccc2O)n1  
+- CCCc1cc(=O)[nH]c(C(=O)N[C@@H]2ON=C[C@@H]2c2cc(C)cc(F)c2)n1  
+- CCCc1cc(=O)[nH]c(C(=O)N[C@@H]2ON=C[C@@H]2c2cc(C)cc(N)c2)n1
+Acc = 4/50
+Sim_hit = 2.7751883239171375/50
+HV = 37.651626129943494*4/50
+----------------
+>>Sample 50
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCCN2CCOCC2CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCNCC2)CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCCCCN2)CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCCN2)CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCCC2)CC1
+Acc = 4/51
+Sim_hit = 2.7751883239171375/51
+HV = 37.651626129943494*4/51
+----------------
+>>Sample 51
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(S)CNC(=O)NCc1cc(=S)[nH]c2ccccc12  
+- CC[C@H](C)[C@](C)(S)CNC(=S)NCc1cc(=O)[nH]c2ccccc12  
+- CC[C@H](C)[C@](C)(S)CNC(=S)NCc1cc(=S)[nH]c2ccccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=S)NCc1cc(=S)[nH]c2ccccc12  
+- CC[C@H](C)[C@](C)(S)CNC(=O)NCc1cc(=O)[nH]c2ccccc12
+Acc = 4/52
+Sim_hit = 2.7751883239171375/52
+HV = 37.651626129943494*4/52
+----------------
+>>Sample 52
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CO1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1OCC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1OC(C)1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1OC(=O)1
+Acc = 4/53
+Sim_hit = 2.7751883239171375/53
+HV = 37.651626129943494*4/53
+----------------
+>>Sample 53
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(P)c(F)c1)c1ccc(C#N)c(P)c1  
+- CCN(C(=O)c1ccc(P)c(F)c1)c1ccc(C#N)c(Cl)c1  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(P)c1  
+- CCN(C(=O)c1ccc(P)c(F)c1)c1ccc(C#N)c(P)c1  
+- CCN(C(=O)c1ccc(P)c(F)c1)c1ccc(C#N)c(P)c1
+Acc = 4/54
+Sim_hit = 2.7751883239171375/54
+HV = 37.651626129943494*4/54
+----------------
+>>Sample 54
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCN(C#Cc4cc5ncccn5n4)C3)cc2[nH]1  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C#Cc4cc5ncccn5n4)C3)cc2[nH]1  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C#Cc4cc5ncccn5n4)C3)cc2[nH]1  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C#Cc4cc5ncccn5n4)C3)cc2[nH]1  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C#Cc4cc5ncccn5n4)C3)cc2[nH]1
+Acc = 4/55
+Sim_hit = 2.7751883239171375/55
+HV = 37.651626129943494*4/55
+----------------
+>>Sample 55
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=S)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1  
+- CC(C)C[C@@H](NC(=S)N[C@H](C)c1nc(C(C)(C)C)no1)c1ccc(S)s1  
+- CC(C)C[C@@H](NC(=S)N[C@H](C)c1nc(C(C)(C)C)ns1)c1cccs1  
+- CC(C)C[C@@H](NC(=S)N[C@H](C)c1nc(C(C)(C)C)ns1)c1ccc(S)s1  
+- CC(C)C[C@@H](NC(=S)N[C@H](C)c1nc(C(C)(C)C)no1)c1ccc(S)s1
+Acc = 4/56
+Sim_hit = 2.7751883239171375/56
+HV = 37.651626129943494*4/56
+----------------
+>>Sample 56
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCO1)C(C)(C)C  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)C1)C(C)(C)C  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OC3)CCOCC1)C(C)(C)C  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOC1)C(C)(C)C  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOC(C)C1)C(C)(C)C
+Acc = 4/57
+Sim_hit = 2.7751883239171375/57
+HV = 37.651626129943494*4/57
+----------------
+>>Sample 57
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)C2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32  
+- C[C@H]1C(=CC2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32)[H]  
+- C[C@H]1C(=O)C2CCCc3cc(NC(=O)C(=CCNCC[C@@H](O)C(C)(C)C)O)cc1c32  
+- C[C@H]1C(=O)C2CCCc3cc(NC(=CC(=O)NCC[C@@H](O)C(C)(C)C)O)cc1c32  
+- C[C@H]1C(=O)C2CCCc3cc(NC(=O)C(=CNCC[C@@H](O)C(C)(C)C)O)cc1c32
+Acc = 4/58
+Sim_hit = 2.7751883239171375/58
+HV = 37.651626129943494*4/58
+----------------
+>>Sample 58
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2C#N1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2C#CC1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2C#C(C)C1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2C#C1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2C#C(O)C1
+Acc = 4/59
+Sim_hit = 2.7751883239171375/59
+HV = 37.651626129943494*4/59
+----------------
+>>Sample 59
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N/C(=N\OCc1ccc(P)c(Cl)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Cl)c(P)c1)c1nonc1N
+- N/C(=N\OCc1ccc(P)c(P)c1)c1nonc1N
+- N/C(=N\OCc1ccc(P)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Cl)c1)c1nonc1N
+Acc = 4/60
+Sim_hit = 2.7751883239171375/60
+HV = 37.651626129943494*4/60
+----------------
+>>Sample 60
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)C(=O)Nc1c(F)cccc1F  
+- C[C@@H](c1ccc(F)cc1)C(=O)Nc1c(F)cccc1F  
+- C[C@@H](c1ccc(F)cc1)C(=O)Nc1c(F)cccc1F  
+- C[C@@H](c1ccc(F)cc1)C(=O)Nc1c(F)cccc1F  
+- C[C@@H](c1ccc(F)cc1)C(=O)Nc1c(F)cccc1F
+Acc = 4/61
+Sim_hit = 2.7751883239171375/61
+HV = 37.651626129943494*4/61
+----------------
+>>Sample 61
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - **CN1C(=O)[C@H]2CCCCN2C(=C)[C@@H]1c1ccccc1**
+- **CN1C(=O)[C@H]2CCCCN2C(=C)[C@@H]1c1ccc(F)cc1**
+- **CN1C(=O)[C@H]2CCCCN2C(=C)[C@@H]1c1cc(C)ccc1**
+- **CN1C(=O)[C@H]2CCCCN2C(=C)[C@@H]1c1cc(O)ccc1**
+- **CN1C(=O)[C@H]2CCCCN2C(=C)[C@@H]1c1ccc(Cl)cc1**
+Acc = 4/62
+Sim_hit = 2.7751883239171375/62
+HV = 37.651626129943494*4/62
+----------------
+>>Sample 62
+RL Suggestion 0: Remove a Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Nitro Group.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3cccc(O)cc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(O)cc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(Cl)cc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(F)cc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(Br)cc3s2)cc1
+Acc = 4/63
+Sim_hit = 2.7751883239171375/63
+HV = 37.651626129943494*4/63
+----------------
+>>Sample 63
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=S)N[C@H]3N=NC(S)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=S)N[C@H]3N=NC(=S)C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=S)N[C@H]3N=NC(S)=C32)c(C)c1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=S)N[C@H]3N=NC(S)=C32)cc1C
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=S)N[C@H]3N=NC(S)=C32)cc1Cl
+Acc = 4/64
+Sim_hit = 2.7751883239171375/64
+HV = 37.651626129943494*4/64
+----------------
+>>Sample 64
+RL Suggestion 0: Replace Fluorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Fluorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc([PH2])c([PH2])c3[PH2])[nH]c2n1  
+- CNc1ccc2nc(-c3ccc([PH])c([PH])c3[PH])[nH]c2n1  
+- CNc1ccc2nc(-c3ccc([PH2])c(F)c3[PH2])[nH]c2n1  
+- CNc1ccc2nc(-c3ccc([PH])c(F)c3[PH])[nH]c2n1  
+- CNc1ccc2nc(-c3ccc([PH2])c([PH])c3F)[nH]c2n1
+Acc = 4/65
+Sim_hit = 2.7751883239171375/65
+HV = 37.651626129943494*4/65
+----------------
+>>Sample 65
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=O)cc1  
+- CCCCCOc1ccc(C(NH2)=S)cc1  
+- CCCCCOc1ccc(C(N)=S(N)(=O)=O)cc1  
+- CCCCCOc1ccc(C(N)=S(O)=O)cc1  
+- CCCCCOc1ccc(C(N)=S(=O)(N)=O)cc1
+Acc = 4/66
+Sim_hit = 2.7751883239171375/66
+HV = 37.651626129943494*4/66
+----------------
+>>Sample 66
+RL Suggestion 0: Replace Sulfonamide with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfonamide with Guanidine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1C(N)=Nc1cccc(C(N)=N)c1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1C(N)=Nc1cccc(C(N)=N)c1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1C(N)=Nc1cccc(C(N)=N)c1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1C(N)=Nc1cccc(C(N)=N)c1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1C(N)=Nc1cccc(C(N)=N)c1
+Acc = 4/67
+Sim_hit = 2.7751883239171375/67
+HV = 37.651626129943494*4/67
+----------------
+>>Sample 67
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNc1nc(-c2cc([P](=O)(O)O)s2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc([P](=O)O)s2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc([P](O)(O)O)s2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc([P](=S)(O)O)s2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc([P](S)(O)O)s2)nc(C)c1C(C)C
+Acc = 4/68
+Sim_hit = 2.7751883239171375/68
+HV = 37.651626129943494*4/68
+----------------
+>>Sample 68
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=S)NCCO)c2ccccc2)cc1  
+- Cc1ccc([C@@H](NC(=O)NCCS)c2ccccc2)cc1  
+- Cc1ccc([C@@H](NC(=S)NCCS)c2ccccc2)cc1  
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccccs2)cc1  
+- Cc1ccc([C@@H](NC(=S)NCCO)c2ccccs2)cc1
+Acc = 4/69
+Sim_hit = 2.7751883239171375/69
+HV = 37.651626129943494*4/69
+----------------
+>>Sample 69
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1O)[C@H]([C@H](C)CC)[NH2+]CC2  
+- CCOc1cc2c(cc1)[C@H]([C@H](C)CC)[NH2+]CC2O  
+- CCOc1cc2c(cc1)[C@H]([C@H](C)CC)[NH2+]CC2  
+- CCOc1cc2c(cc1O)[C@H]([C@H](C)CC)[NH2+]CC2O  
+- CCOc1cc2c(cc1)[C@H]([C@H](C)CC)[NH2+]CC2
+Acc = 4/70
+Sim_hit = 2.7751883239171375/70
+HV = 37.651626129943494*4/70
+----------------
+>>Sample 70
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1P=O
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1P(O)(O)=O
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1P(O)O
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1P(O)(O)O
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1P(O)(O)(O)O
+Acc = 4/71
+Sim_hit = 2.7751883239171375/71
+HV = 37.651626129943494*4/71
+----------------
+>>Sample 71
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC#CCNCC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1  
+- Cc1nc(CNC#CCNC#C CC23CC4CC(CC(C4)C2)C3)c(C)s1  
+- Cc1nc(CNC#CCNCC#C CC23CC4CC(CC(C4)C2)C3)c(C)s1  
+- Cc1nc(CNC#CCNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1  
+- Cc1nc(CNC#CCNCC(=O) CC23CC4CC(CC(C4)C2)C3)c(C)s1
+Acc = 4/72
+Sim_hit = 2.7751883239171375/72
+HV = 37.651626129943494*4/72
+----------------
+>>Sample 72
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1Cc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1CCc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1CCOc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1CCOc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1CCNc2ccc(F)cc2C1
+Acc = 4/73
+Sim_hit = 2.7751883239171375/73
+HV = 37.651626129943494*4/73
+----------------
+>>Sample 73
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)C[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C  
+- C[C@H](CC(=O)C[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)O  
+- C[C@H](CC(=O)C[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)N  
+- C[C@H](CC(=O)C[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)F  
+- C[C@H](CC(=O)C[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)Cl
+Acc = 4/74
+Sim_hit = 2.7751883239171375/74
+HV = 37.651626129943494*4/74
+----------------
+>>Sample 74
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CN(C)c2nc3c(c(=S)[nH]c(=O)n3C)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=S)n3C)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=S)[nH]c(=S)n3C)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=S)[nH]c(=O)n3C)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=S)n3C)n2C1
+Acc = 4/75
+Sim_hit = 2.7751883239171375/75
+HV = 37.651626129943494*4/75
+----------------
+>>Sample 75
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2[P](=O)(O)O)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2[P](=O)(O)O)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2[P](=O)(O)O)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2[P](=O)(O)O)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2[P](=O)(O)O)CCN1
+Acc = 4/76
+Sim_hit = 2.7751883239171375/76
+HV = 37.651626129943494*4/76
+----------------
+>>Sample 76
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)P
+- CC(C)(CO[N+](=O)[O-])C(=O)P(O)(O)=O
+- CC(C)(CO[N+](=O)[O-])C(=O)P(O)O
+- CC(C)(CO[N+](=O)[O-])C(=O)P(O)C
+- CC(C)(CO[N+](=O)[O-])C(=O)P(C)C
+Acc = 4/77
+Sim_hit = 2.7751883239171375/77
+HV = 37.651626129943494*4/77
+----------------
+>>Sample 77
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C#Cc1nn(-c2ccc(F)cc2)cc1[O-]  
+- C[C@H](Cc1ccsc1)N(C)C#Cc1nn(-c2ccc(F)cc2)cc1[O-]  
+- C[C@H](Cc1ccsc1)N(C)C#Cc1nn(-c2ccc(F)cc2)cc1[O-]  
+- C[C@H](Cc1ccsc1)N(C)C#Cc1nn(-c2ccc(F)cc2)cc1[O-]  
+- C[C@H](Cc1ccsc1)N(C)C#Cc1nn(-c2ccc(F)cc2)cc1[O-]
+Acc = 4/78
+Sim_hit = 2.7751883239171375/78
+HV = 37.651626129943494*4/78
+----------------
+>>Sample 78
+RL Suggestion 0: Replace Fluorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Fluorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2cccc(CP)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(CP(C)C)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(CP=O)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(CP(F)F)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(CP(O)(O)=O)c2)c1
+Acc = 4/79
+Sim_hit = 2.7751883239171375/79
+HV = 37.651626129943494*4/79
+----------------
+>>Sample 79
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: Here are five new molecules in SMILES format based on your requirements:
+- O=C(N1CCC(C(=O)NCc2ccc(F)cc2)CC1)[C@@H](C)C
+- O=C(N1CCC(C(=O)NCc2ccc(F)cc2)CC1)[C@H](C)C
+- O=C(N1CCC(C(=O)NCc2ccc(F)cc2)CC1)[C@@H](C)O
+- O=C(N1CCC(C(=O)NCc2ccc(F)cc2)CC1)[C@@H](C)N
+- O=C(N1CCC(C(=O)NCc2ccc(F)cc2)CC1)[C@@H](C)S(=O)(=O)
+Acc = 4/80
+Sim_hit = 2.7751883239171375/80
+HV = 37.651626129943494*4/80
+----------------
+>>Sample 80
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)C(C)C3CC[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)C(C#C)C3CC[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)C(CC)C3CC[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)C(C=C)C3CC[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)C(CO)C3CC[NH+](C)CC3)C2)c1F
+Acc = 4/81
+Sim_hit = 2.7751883239171375/81
+HV = 37.651626129943494*4/81
+----------------
+>>Sample 81
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1C[C@@H]1C(=O)[O-]
+Acc = 4/82
+Sim_hit = 2.7751883239171375/82
+HV = 37.651626129943494*4/82
+----------------
+>>Sample 82
+RL Suggestion 0: Remove a Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Nitro Group.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCCC1)c1ccc(O)cc1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(F)cc1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(Cl)cc1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(Br)cc1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(I)cc1
+Acc = 5/83
+Sim_hit = 3.396809945538759/83
+HV = 52.01891802183538*5/83
+----------------
+>>Sample 83
+RL Suggestion 0: Remove a Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Nitro Group.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc(O)o1  
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccco1  
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1cc(O)cc1  
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1cc(O)c(O)c1  
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccccc1
+Acc = 6/84
+Sim_hit = 4.151195910451039/84
+HV = 69.45473907446699*6/84
+----------------
+>>Sample 84
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCOC2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCNC(=O)C2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CC(=O)C2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCN2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCF)C1
+Acc = 6/85
+Sim_hit = 4.151195910451039/85
+HV = 69.45473907446699*6/85
+----------------
+>>Sample 85
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(O)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c([O-])c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(F)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(Cl)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(Br)c1
+Acc = 6/86
+Sim_hit = 4.151195910451039/86
+HV = 69.45473907446699*6/86
+----------------
+>>Sample 86
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1NC(=S)CC[NH+]1C[C@H](O)[C@H](O)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](OC)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](OC)[C@H](OC)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C(=O)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C(=S)C1
+Acc = 6/87
+Sim_hit = 4.151195910451039/87
+HV = 69.45473907446699*6/87
+----------------
+>>Sample 87
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)NCc1ccc(Oc2ccccn2)cc1)C1CCCCC1  
+- CCN(C(=O)NCc1ccc(O)cc1)C1CCCCC1  
+- CCN(C(=O)NCc1ccc(OC)cc1)C1CCCCC1  
+- CCN(C(=O)NCc1ccc(OCC)cc1)C1CCCCC1  
+- CCN(C(=O)NCc1ccc(OC(C)C)cc1)C1CCCCC1
+Acc = 6/88
+Sim_hit = 4.151195910451039/88
+HV = 69.45473907446699*6/88
+----------------
+>>Sample 88
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1
+Acc = 6/89
+Sim_hit = 4.151195910451039/89
+HV = 69.45473907446699*6/89
+----------------
+>>Sample 89
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccsc1-c1cccc(NC(=O)C(O)c2ccc(C(N)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)CCc2ccc(C(N)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)C(CO)c2ccc(C(N)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)C(N)c2ccc(C(N)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)C(OCC)c2ccc(C(N)=O)cc2)c1
+Acc = 6/90
+Sim_hit = 4.151195910451039/90
+HV = 69.45473907446699*6/90
+----------------
+>>Sample 90
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N2C[C@H](C#CCCC(C)C)CC2=O)cc1C  
+- Cc1ccc(N2C[C@H](C#CC(C)C)CC2=O)cc1C  
+- Cc1ccc(N2C[C@H](C#CCCC)CC2=O)cc1C  
+- Cc1ccc(N2C[C@H](C#CC(C)C)CC2=O)cc1C  
+- Cc1ccc(N2C[C@H](C#CCCC(C)C)CC2=O)cc1C
+Acc = 6/91
+Sim_hit = 4.151195910451039/91
+HV = 69.45473907446699*6/91
+----------------
+>>Sample 91
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)ncc2C)CC1  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)ncc2C)Cc1  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)ncc2C)CC1C  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)ncc2C)C1  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)ncc2C)Cc1C
+Acc = 6/92
+Sim_hit = 4.151195910451039/92
+HV = 69.45473907446699*6/92
+----------------
+>>Sample 92
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CC[NH+](Cc2cc(O)cc3c2O[C@H](C)C3)C1  
+- CCOC[C@H]1CC[NH+](Cc2cc(O)cc3c2[C@H](C)O3)C1  
+- CCOC[C@H]1CC[NH+](Cc2cc(O)c(O)c3c2O[C@H](C)C3)C1  
+- CCOC[C@H]1CC[NH+](Cc2cc(O)cc3c2O[C@H](C)C3O)C1  
+- CCOC[C@H]1CC[NH+](Cc2cc(O)cc3c2O[C@@H](C)C3)C1
+Acc = 6/93
+Sim_hit = 4.151195910451039/93
+HV = 69.45473907446699*6/93
+----------------
+>>Sample 93
+RL Suggestion 0: Remove a Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Nitro Group.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(O)c4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(Cl)c4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(F)c4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(Br)c4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(I)c4)CC3)nc12
+Acc = 7/94
+Sim_hit = 4.923923183178312/94
+HV = 87.31447543810334*7/94
+----------------
+>>Sample 94
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(O)
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(Cl)
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(Br)
+Acc = 7/95
+Sim_hit = 4.923923183178312/95
+HV = 87.31447543810334*7/95
+----------------
+>>Sample 95
+RL Suggestion 0: Replace Carbon Atom with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Carbon Atom with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1cc(CC#C)ccc1  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1cccc(CC#C)c1  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1c(CC#C)cccc1  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(CC#C)cc1  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1(CC#C)
+Acc = 7/96
+Sim_hit = 4.923923183178312/96
+HV = 87.31447543810334*7/96
+----------------
+>>Sample 96
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOC1  
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CC1  
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1C1  
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCO1  
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCN1
+Acc = 7/97
+Sim_hit = 4.923923183178312/97
+HV = 87.31447543810334*7/97
+----------------
+>>Sample 97
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)C)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccccc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(O)cc1
+Acc = 7/98
+Sim_hit = 4.923923183178312/98
+HV = 87.31447543810334*7/98
+----------------
+>>Sample 98
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CCC(=O)O)C(=O)c1cnc2c(c1)c(C)nn2C
+- CCN(CCC(=O)O)C(=O)c1cnc2c(c1)c(C)nn2C
+- CCN(CC(=O)O)C(=O)c1cnc2c(c1)c(C)nn2C
+- CCN(CC(=O)O)C(=O)c1cnc2c(c1)c(C)nn2C
+- CCN(CC(=O)O)C(=O)c1cnc2c(c1)c(C)nn2C
+Acc = 7/99
+Sim_hit = 4.923923183178312/99
+HV = 87.31447543810334*7/99
+----------------
+>>Sample 99
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNc3ccccn3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3ccc[nH+]3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cc[nH+]cc3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3ccc(O)cc3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3ccc(O)[nH+]3)nn2)cc1
+Acc = 7/100
+Sim_hit = 4.923923183178312/100
+HV = 87.31447543810334*7/100
+----------------
+>>Sample 100
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * Cc1occc1C#CN1CCC[C@@H]1C(N)=O  
+* Cc1occc1C#CN1CCCC1C#C=O  
+* Cc1occc1C#CN1CCC[C@H]1C(N)=O  
+* Cc1occc1C#CN1CCC[C@@H]1C#C=O  
+* Cc1occc1C#CN1CCCC1C(N)=O
+Acc = 7/101
+Sim_hit = 4.923923183178312/101
+HV = 87.31447543810334*7/101
+----------------
+>>Sample 101
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(C(=O)N[C@H](CO)c2ccccc2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C(O)=O)c2ccccc2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C(N)=O)c2ccccc2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C(O)C)c2ccccc2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C(O)C(O)=O)c2ccccc2)cnn1C(C)C
+Acc = 7/102
+Sim_hit = 4.923923183178312/102
+HV = 87.31447543810334*7/102
+----------------
+>>Sample 102
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](C)NC(=O)[C@H](C)OCCOC more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)NC(=O)[C@H](C)OCC  
+- CC[C@@H](C)NC(=O)[C@H](C)O  
+- CC[C@@H](C)NC(=O)[C@H](C)OCC(=O)O  
+- CC[C@@H](C)NC(=O)[C@H](C)OCCN  
+- CC[C@@H](C)NC(=O)[C@H](C)OCC(O)CO
+Acc = 7/103
+Sim_hit = 4.923923183178312/103
+HV = 87.31447543810334*7/103
+----------------
+>>Sample 103
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(P)ccc2n1  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(P(O)(=O)O)ccc2n1  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(P(=O)(O)O)ccc2n1  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(P(O)O)ccc2n1  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(P(O)(O)O)ccc2n1
+Acc = 7/104
+Sim_hit = 4.923923183178312/104
+HV = 87.31447543810334*7/104
+----------------
+>>Sample 104
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC(N)C2)o1  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[NH+](C)C2)o1  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[NH2+]C2)o1  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC(N)C2)o1
+Acc = 7/105
+Sim_hit = 4.923923183178312/105
+HV = 87.31447543810334*7/105
+----------------
+>>Sample 105
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)Cc1ccccc1F  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)Cc1ccc(F)cc1  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)Cc1cc(F)ccc1  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)Cc1c(F)cccc1
+Acc = 7/106
+Sim_hit = 4.923923183178312/106
+HV = 87.31447543810334*7/106
+----------------
+>>Sample 106
+RL Suggestion 0: Replace Sulfonamide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfonamide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)c(C#Cc2ccc(O)c3ccccc23)c(C)c1  
+- Cc1cc(C)c(C#Cc2cc(O)ccc3ccccc23)c(C)c1  
+- Cc1cc(C)c(C#Cc2ccc(O)cc3ccccc23)c(C)c1  
+- Cc1cc(C)c(C#Cc2cc(O)cc3ccccc23)c(C)c1  
+- Cc1cc(C)c(C#Cc2ccc(O)c3cccc4ccccc34)c(C)c1
+Acc = 7/107
+Sim_hit = 4.923923183178312/107
+HV = 87.31447543810334*7/107
+----------------
+>>Sample 107
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)COC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1  
+- CCc1ccc(NC(=O)CNC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1  
+- CCc1ccc(NC(=O)C(N)C2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1  
+- CCc1ccc(NC(=O)C(O)C2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1  
+- CCc1ccc(NC(=O)C(O)OC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1
+Acc = 7/108
+Sim_hit = 4.923923183178312/108
+HV = 87.31447543810334*7/108
+----------------
+>>Sample 108
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1C
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1O
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)c(C)c1
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)c(O)c1
+Acc = 7/109
+Sim_hit = 4.923923183178312/109
+HV = 87.31447543810334*7/109
+----------------
+>>Sample 109
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@H]2CC[C@@H]1C3cccc(NC(=O)C[C@H]2C3)c1  
+- C[C@@H]1C[C@H]2CC[C@@H]1C3cccc(NC(=O)C[C@@H]2C3)c1  
+- C[C@H]1C[C@@H]2CC[C@H]1C3cccc(NC(=O)C[C@H]2C3)c1  
+- C[C@H]1C[C@@H]2CC[C@H]1C3cccc(NC(=O)C[C@@H]2C3)c1  
+- C[C@@H]1C[C@H]2CC[C@@H]1C3cccc(NC(=O)C[C@H]2C3)c1O
+Acc = 7/110
+Sim_hit = 4.923923183178312/110
+HV = 87.31447543810334*7/110
+----------------
+>>Sample 110
+RL Suggestion 0: Replace Sulfonamide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfonamide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](NC(=O)CN1c2cccc3cccc(c23)C#C1)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)C#CC1)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)C#C(C)C1)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)C#C(Cl)C1)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)C#C(F)F1)c1cc2ccccc2o1
+Acc = 7/111
+Sim_hit = 4.923923183178312/111
+HV = 87.31447543810334*7/111
+----------------
+>>Sample 111
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C
+Acc = 7/112
+Sim_hit = 4.923923183178312/112
+HV = 87.31447543810334*7/112
+----------------
+>>Sample 112
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(O)
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(N)
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(Cl)
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(F)
+Acc = 7/113
+Sim_hit = 4.923923183178312/113
+HV = 87.31447543810334*7/113
+----------------
+>>Sample 113
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H]1CS/C(=N\\c2ccccc2Oc2ccccc2)N1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1  
+- CC[C@H]1CS/C(=N\c2ccccc2c2ccccc2)N1  
+- CC[C@H]1CS/C(=N\c2ccccc2Cc2ccccc2)N1  
+- CC[C@H]1CS/C(=N\c2ccccc2CN2CCCC2)N1  
+- CC[C@H]1CS/C(=N\c2ccccc2C(=O)N2CCCC2)N1
+Acc = 8/114
+Sim_hit = 5.562221055518737/114
+HV = 93.28594352320972*8/114
+----------------
+>>Sample 114
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccccc1-n1cccn1)c1ccc(S)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(S)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(S)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(S)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(S)s1
+Acc = 8/115
+Sim_hit = 5.562221055518737/115
+HV = 93.28594352320972*8/115
+----------------
+>>Sample 115
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@](C)(c1cccc(S)c1)N(C)C  
+- COC(=O)[C@](C)(c1cccc(S)c1)NC  
+- COC(=O)[C@](C)(c1cccc(S)c1)N(C)O  
+- COC(=O)[C@](C)(c1cccc(S)c1)N(C)C(C)=O  
+- COC(=O)[C@](C)(c1cccc(S)c1)N(C)CC
+Acc = 8/116
+Sim_hit = 5.562221055518737/116
+HV = 93.28594352320972*8/116
+----------------
+>>Sample 116
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccc(Cc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO  
+- O=C(Nc1ccc(CO)cc1)C(=O)N[C@H]1CCC[C@H]1CO  
+- O=C(Nc1ccc(C2CCCCC2)cc1)C(=O)N[C@H]1CCC[C@H]1CO  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)O  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)CO
+Acc = 8/117
+Sim_hit = 5.562221055518737/117
+HV = 93.28594352320972*8/117
+----------------
+>>Sample 117
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cnc(CNC(=S)Nc2ccc3[nH]nnc3c2)n1  
+- Cn1cnc(CNC(=S)Nc2ccc3[nH]nnc3c2)s1  
+- Cn1cnc(CNC(=S)Nc2ccc3snnc3c2)n1  
+- Cn1cnc(CNC(=S)Nc2ccc3[nH]nnc3c2)c1  
+- Cn1cnc(CNC(=S)Nc2ccc3[nH]nnc3c2)o1
+Acc = 8/118
+Sim_hit = 5.562221055518737/118
+HV = 93.28594352320972*8/118
+----------------
+>>Sample 118
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cc1  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)c1  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)nc1  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)nc1
+Acc = 8/119
+Sim_hit = 5.562221055518737/119
+HV = 93.28594352320972*8/119
+----------------
+>>Sample 119
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nc2n(n1)CCC[C@@H]2NC#Cc1cnc(C)cn1  
+- CCc1nc2n(n1)CCC[C@@H]2NC#Cc1cnc(C)cn1C  
+- CCc1nc2n(n1)CCC[C@@H]2NC#Cc1cnc(C)cn1O  
+- CCc1nc2n(n1)CCC[C@@H]2NC#Cc1cnc(C)cn1N  
+- CCc1nc2n(n1)CCC[C@@H]2NC#Cc1cnc(C)cn1F
+Acc = 8/120
+Sim_hit = 5.562221055518737/120
+HV = 93.28594352320972*8/120
+----------------
+>>Sample 120
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Cl more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1P  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1[PH](=O)O  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1[PH2](=O)  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1P(O)(O)O  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1[PH](O)(O)
+Acc = 8/121
+Sim_hit = 5.562221055518737/121
+HV = 93.28594352320972*8/121
+----------------
+>>Sample 121
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(C#CNC(=O)c1csc2c1CCCC2)c1cccs1  
+- O=C(C#CNC(=O)c1csc2c1CCCC2)c1ccc(C)s1  
+- O=C(C#CNC(=O)c1csc2c1CCCC2)c1ccc(O)s1  
+- O=C(C#CNC(=O)c1csc2c1CCCC2)c1ccc(N)s1  
+- O=C(C#CNC(=O)c1csc2c1CCCC2)c1ccc(F)s1
+Acc = 8/122
+Sim_hit = 5.562221055518737/122
+HV = 93.28594352320972*8/122
+----------------
+>>Sample 122
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1nc(Cc2nc3ccc(S)cc3s2)cs1  
+- Nc1nc(Cc2sc3ccc(S)cc3s2)cs1  
+- Nc1nc(Cc2sc3cc(S)ccc3s2)cs1  
+- Nc1nc(Cc2sc3cccc(S)s3)cs1  
+- Nc1nc(Cc2sc3ccc(S)c(S)c3)cs1
+Acc = 8/123
+Sim_hit = 5.562221055518737/123
+HV = 93.28594352320972*8/123
+----------------
+>>Sample 123
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1C(=O)CCC1=O)NCCc1ccccc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(C#C1C(=O)CCC1=O)NCCc1ccccc1  
+- O=C(C#C1C(=O)CCC1=O)NCCc1cccc(O)c1  
+- O=C(C#C1C(=O)CCC1=O)NCCc1ccccc1F  
+- O=C(C#C1C(=O)CCC1=O)NCCc1ccc(Cl)cc1  
+- O=C(C#C1C(=O)CCC1=O)NCCc1cc(C)ccc1
+Acc = 8/124
+Sim_hit = 5.562221055518737/124
+HV = 93.28594352320972*8/124
+----------------
+>>Sample 124
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(Cc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(CO)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(C(O)c2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(Cc2ccc(O)cc2)c1
+Acc = 8/125
+Sim_hit = 5.562221055518737/125
+HV = 93.28594352320972*8/125
+----------------
+>>Sample 125
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(F)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccccc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Cl)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Br)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(I)cc1
+Acc = 9/126
+Sim_hit = 6.419363912661594/126
+HV = 102.73362923749545*9/126
+----------------
+>>Sample 126
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCNC#Cc1ccccc1)Nc1ccccc1  
+- O=C(NCCNC#Cc1ccc(O)cc1)Nc1ccccc1  
+- O=C(NCCNC#Cc1ccccc1)Nc1ccc(Cl)cc1  
+- O=C(NCCNC#Cc1ccccc1)Nc1cc(C)ccc1  
+- O=C(NCCNC#Cc1ccccc1)Nc1cc(F)ccc1
+Acc = 9/127
+Sim_hit = 6.419363912661594/127
+HV = 102.73362923749545*9/127
+----------------
+>>Sample 127
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsc(C)c1CN(C)C(=S)Nc1cccc(-c2nnc3n2CCC3)c1
+- Cc1nsc(C)c1CN(C)C(=S)Nc1cccc(-c2nsc3n2CCC3)c1
+- Cc1nsc(C)c1CN(C)C(=S)Nc1cccc(-c2nnc3s2CCC3)c1
+- Cc1nsc(C)c1CN(C)C(=S)Nc1cccc(-c2nsc3s2CCC3)c1
+- Cc1nsc(C)c1CN(C)C(=S)Nc1cccc(-c2nnc3n2CCS3)c1
+Acc = 9/128
+Sim_hit = 6.419363912661594/128
+HV = 102.73362923749545*9/128
+----------------
+>>Sample 128
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC(=O)Nc1cccc[n+]1Cc1ccccc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC(=C)Nc1cccc[n+]1Cc1ccccc1  
+- CCCC(=C)Nc1cccc[n+]1Cc1ccc(OC)cc1  
+- CCCC(=C)Nc1cccc[n+]1Cc1cc(F)ccc1  
+- CCCC(=C)Nc1cccc[n+]1Cc1ccc(Br)cc1  
+- CCCC(=C)Nc1cccc[n+]1Cc1ccc(CC)cc1
+Acc = 9/129
+Sim_hit = 6.419363912661594/129
+HV = 102.73362923749545*9/129
+----------------
+>>Sample 129
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1O  
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1N  
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1C(=O)O  
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1S(=O)(=O)O  
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1CN
+Acc = 9/130
+Sim_hit = 6.419363912661594/130
+HV = 102.73362923749545*9/130
+----------------
+>>Sample 130
+RL Suggestion 0: Replace Tertiary Amine with Dialkylaminomethyleneimine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Dialkylaminomethyleneimine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1
+Acc = 9/131
+Sim_hit = 6.419363912661594/131
+HV = 102.73362923749545*9/131
+----------------
+>>Sample 131
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CCNC#C[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(CCN(C#C)[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(CCN(C#C)C(C)[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(CCN(C#C)C[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(CCN(C#C)C(C(=O)C)[C@H](C)C2CCCCC2)s1
+Acc = 9/132
+Sim_hit = 6.419363912661594/132
+HV = 102.73362923749545*9/132
+----------------
+>>Sample 132
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1N  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1F  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1O  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1Cl  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1Br
+Acc = 9/133
+Sim_hit = 6.419363912661594/133
+HV = 102.73362923749545*9/133
+----------------
+>>Sample 133
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CC1  
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1C1  
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CC1O  
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCO1  
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CC1C
+Acc = 9/134
+Sim_hit = 6.419363912661594/134
+HV = 102.73362923749545*9/134
+----------------
+>>Sample 134
+RL Suggestion 0: Replace Tertiary Amine with Dialkylaminomethyleneimine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Dialkylaminomethyleneimine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN1CC[N+](=C(C)C2CCC(C)(C)CC2)CC1  
+- CCCN1CC[N+](=C(C)C2CCCC(C)(C)CC2)CC1  
+- CCCN1CC[N+](=C(C)C2CCC(C)C(C)(C)CC2)CC1  
+- CCCN1CC[N+](=C(C)C2CC(C)(C)CCC2)CC1  
+- CCCN1CC[N+](=C(C)C2CC(C)(C)CC(C)C2)CC1
+Acc = 9/135
+Sim_hit = 6.419363912661594/135
+HV = 102.73362923749545*9/135
+----------------
+>>Sample 135
+RL Suggestion 0: Replace Sulfonamide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfonamide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C2(CNC(=O)/C=C/c3ccccc3)CCCC2)cc1  
+- COc1ccc(C2(CNC(=O)C#Cc3ccccc3)CCCC2)cc1  
+- COc1ccc(C2(CNC(=O)C=Cc3ccccc3)CCCC2)cc1  
+- COc1ccc(C2(CNC(=O)C#CCc3ccccc3)CCCC2)cc1  
+- COc1ccc(C2(CNC(=O)C=C/Cc3ccccc3)CCCC2)cc1
+Acc = 9/136
+Sim_hit = 6.419363912661594/136
+HV = 102.73362923749545*9/136
+----------------
+>>Sample 136
+RL Suggestion 0: Replace Sulfonamide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfonamide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC#C(=O)Nc1cccc(C2=NN(C(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1  
+- CC#C(=O)Nc1cccc(C2=NN(C(=O)c3ccc(F)cc3)[C@@H](c3ccccc3Cl)C2)c1  
+- CC#C(=O)Nc1cccc(C2=NN(C(=O)c3ccccc3)[C@@H](c3ccc(F)cc3)C2)c1  
+- CC#C(=O)Nc1cccc(C2=NN(C(=O)c3ccccc3)[C@@H](c3ccc(Cl)cc3)C2)c1  
+- CC#C(=O)Nc1cccc(C2=NN(C(=O)c3ccc(Cl)cc3)[C@@H](c3ccccc3F)C2)c1
+Acc = 9/137
+Sim_hit = 6.419363912661594/137
+HV = 102.73362923749545*9/137
+----------------
+>>Sample 137
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc([P](=O)(O)O)cc1-2  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc([P](=O)(O)OC)cc1-2  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc([P](=O)(OC)(OC))cc1-2  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc([P](=O)(O)C)cc1-2  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc([P](=O)(C)C)cc1-2
+Acc = 9/138
+Sim_hit = 6.419363912661594/138
+HV = 102.73362923749545*9/138
+----------------
+>>Sample 138
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CCCN1c1ccc(C#[NH2+]Cc2c(F)cccc2F)cc1  
+- O=C1CCCN1c1ccc(C#[NH2+]Cc2c(F)cccc2Cl)cc1  
+- O=C1CCCN1c1ccc(C#[NH2+]Cc2c(Cl)cccc2Cl)cc1  
+- O=C1CCCN1c1ccc(C#[NH2+]Cc2c(Br)cccc2Br)cc1  
+- O=C1CCCN1c1ccc(C#[NH2+]Cc2c(I)cccc2I)cc1
+Acc = 9/139
+Sim_hit = 6.419363912661594/139
+HV = 102.73362923749545*9/139
+----------------
+>>Sample 139
+RL Suggestion 0: Replace Sulfonamide with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfonamide with Guanidine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(N=C(N)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC)=O  
+- CC(N=C(N)N[C@@H](c1ccc(O)cc1)[C@@H](C)C(=O)OC)=O  
+- CC(N=C(N)N[C@@H](c1cc(Cl)ccc1)[C@@H](C)C(=O)OC)=O  
+- CC(N=C(N)N[C@@H](c1cc(F)ccc1)[C@@H](C)C(=O)OC)=O  
+- CC(N=C(N)N[C@@H](c1cc(Br)ccc1)[C@@H](C)C(=O)OC)=O
+Acc = 9/140
+Sim_hit = 6.419363912661594/140
+HV = 102.73362923749545*9/140
+----------------
+>>Sample 140
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1  
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1  
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1  
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1  
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1
+Acc = 9/141
+Sim_hit = 6.419363912661594/141
+HV = 102.73362923749545*9/141
+----------------
+>>Sample 141
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)C)c(NC(=S)NCc2ccccn2)s1  
+- Cc1nc(CC(C)C)c(NC(=S)NCCc2ccccn2)s1  
+- Cc1nc(CC(C)C)c(NC(=S)NCc2cccs2)s1  
+- Cc1nc(CC(C)C)c(NC(=S)NCc2cccnc2)s1  
+- Cc1nc(CC(C)C)c(NC(=S)NCCc2cccs2)s1
+Acc = 9/142
+Sim_hit = 6.419363912661594/142
+HV = 102.73362923749545*9/142
+----------------
+>>Sample 142
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2nc(CNc3ncc(F)c(N4CCNCC4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCCCC4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCN(C)C4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCN(CC)C4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCN(CCO)C4)n3)[nH]c2c1
+Acc = 9/143
+Sim_hit = 6.419363912661594/143
+HV = 102.73362923749545*9/143
+----------------
+>>Sample 143
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=C(C)C[C@@H](O)c1ncccn1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C(C)C[C@@H](S)c1ncccn1  
+- C=C(C)C[C@H](S)c1ncccn1  
+- C=C(C)C[C@@H](S)c1ncncc1  
+- C=C(C)C[C@H](S)c1ncncc1  
+- C=C(C)C[C@@H](S)c1ccccn1
+Acc = 9/144
+Sim_hit = 6.419363912661594/144
+HV = 102.73362923749545*9/144
+----------------
+>>Sample 144
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CNC(=O)c1ccnc(O)c1)C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(OC2CC2)c1)C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(OCC)c1)C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(O)c1)C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(OCC(C)C)c1)C[C@@H](C)O
+Acc = 9/145
+Sim_hit = 6.419363912661594/145
+HV = 102.73362923749545*9/145
+----------------
+>>Sample 145
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]21 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCN(C(=O)CO)[C@H]2CCCC[C@@H]21  
+- C[C@@H]1CCN(C(=O)C(O)F)[C@H]2CCCC[C@@H]21  
+- C[C@@H]1CCN(C(=O)CF)[C@H]2CCCC[C@@H]21  
+- C[C@@H]1CCN(C(=O)CCl)[C@H]2CCCC[C@@H]21  
+- C[C@@H]1CCN(C(=O)CBr)[C@H]2CCCC[C@@H]21
+Acc = 9/146
+Sim_hit = 6.419363912661594/146
+HV = 102.73362923749545*9/146
+----------------
+>>Sample 146
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@@H](O)[C@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@@H](O)[C@H](O)[C@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@@H](O)[C@@H](O)[C@H]1O
+Acc = 9/147
+Sim_hit = 6.419363912661594/147
+HV = 102.73362923749545*9/147
+----------------
+>>Sample 147
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC#C1CC1  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC#C1CC(C)C1  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC#C1CC(O)C1  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC#C1CC(F)C1  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC#C1CC(N)C1
+Acc = 9/148
+Sim_hit = 6.419363912661594/148
+HV = 102.73362923749545*9/148
+----------------
+>>Sample 148
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)[O-] more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@](C)(NC(=O)CNC(=O)c1cccc([P](=O)(O)O)c1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc([P](=O)(O)OC)c1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc([P](=O)(OC)OC)c1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc([P](=O)(O)C)c1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc([P](=O)(C)C)c1)C(=O)[O-]
+Acc = 9/149
+Sim_hit = 6.419363912661594/149
+HV = 102.73362923749545*9/149
+----------------
+>>Sample 149
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC#Cc2cc(-c3ccncc3)cn2C)cc1  
+- CCc1ccc(CNC#Cc2cc(-c3ccncc3)cn2)cc1  
+- CCc1ccc(CNC#Cc2cc(-c3ccncc3)cn2C(C)C)cc1  
+- CCc1ccc(CNC#Cc2cc(-c3ccncc3)cn2C(C)(C)C)cc1  
+- CCc1ccc(CNC#Cc2cc(-c3ccncc3)cn2C(F)(F)F)cc1
+Acc = 9/150
+Sim_hit = 6.419363912661594/150
+HV = 102.73362923749545*9/150
+----------------
+>>Sample 150
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cc1ccc(P)cc1P)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1
+- C[C@@H](Cc1ccc(P(=O)(O)O)cc1P(=O)(O)O)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1
+- C[C@@H](Cc1ccc(P(O)(O)=O)cc1P(O)(O)=O)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1
+- C[C@@H](Cc1ccc(P(=O)O)cc1P(=O)O)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1
+- C[C@@H](Cc1ccc(P(O)O)cc1P(O)O)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1
+Acc = 9/151
+Sim_hit = 6.419363912661594/151
+HV = 102.73362923749545*9/151
+----------------
+>>Sample 151
+RL Suggestion 0: Remove a Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1O more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Nitro Group.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(CNc2ccc(F)c(C)c2)cc(OH)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(NH2)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(CO)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(SO3H)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(COOH)c1O
+Acc = 9/152
+Sim_hit = 6.419363912661594/152
+HV = 102.73362923749545*9/152
+----------------
+>>Sample 152
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1
+- Cc1cc(=O)oc(C)c1C(=O)[C@@H](C)C(=O)N(C)c1ccccc1
+- Cc1cc(=O)oc(C)c1C(=O)[C@@H](C)C(=O)Nc1ccccc1
+- Cc1cc(=O)oc(C)c1C(=O)[C@@H](C)C(=O)N(C)Cc1ccccc1
+- Cc1cc(=O)oc(C)c1C(=O)[C@@H](C)C(=O)N(C)c1ccc(F)cc1
+Acc = 9/153
+Sim_hit = 6.419363912661594/153
+HV = 102.73362923749545*9/153
+----------------
+>>Sample 153
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(O)O1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(O)(O)O1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(O)C1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(O)CN1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C(O)CC1
+Acc = 9/154
+Sim_hit = 6.419363912661594/154
+HV = 102.73362923749545*9/154
+----------------
+>>Sample 154
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCO1
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)C1
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CO1
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)OC1
+Acc = 9/155
+Sim_hit = 6.419363912661594/155
+HV = 102.73362923749545*9/155
+----------------
+>>Sample 155
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\\c2ccc(OC)cc2OC)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(O)cc2OC)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(O)cc2O)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2O)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(O)cc2OC)C1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(O)cc2O)C1
+Acc = 9/156
+Sim_hit = 6.419363912661594/156
+HV = 102.73362923749545*9/156
+----------------
+>>Sample 156
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccccc1[C@@H]([NH3+])c1ccc(C)o1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1=CC=C(C[C@H]([NH3+])C2=CC=CC=C2)O1
+- CC1=CC=C(C[C@H]([NH3+])C2=CC=CC=C2)O1
+- CC1=CC=C(C[C@H]([NH3+])C2=CC=CC=C2)O1
+- CC1=CC=C(C[C@H]([NH3+])C2=CC=CC=C2)O1
+- CC1=CC=C(C[C@H]([NH3+])C2=CC=CC=C2)O1
+Acc = 9/157
+Sim_hit = 6.419363912661594/157
+HV = 102.73362923749545*9/157
+----------------
+>>Sample 157
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCO)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)NCCO)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)NC)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCN)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOC)cc1
+Acc = 9/158
+Sim_hit = 6.419363912661594/158
+HV = 102.73362923749545*9/158
+----------------
+>>Sample 158
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC[C@H](C)NC#CCN1C[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)NC#CC1C[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)NC#CC[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)NC#C[C@H]1CC[C@@H](C)C1[NH3+]  
+- CC(C)CC[C@H](C)NC#C[C@@H](C)CC[C@H]1C1[NH3+]
+Acc = 9/159
+Sim_hit = 6.419363912661594/159
+HV = 102.73362923749545*9/159
+----------------
+>>Sample 159
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1C(F)(F)F  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1F  
+- CN[C@@H](c1[nH]cc[nH+]1)c1cccc(F)c1  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccc(F)cc1  
+- CN[C@@H](c1[nH]cc[nH+]1)c1cc(F)ccc1
+Acc = 9/160
+Sim_hit = 6.419363912661594/160
+HV = 102.73362923749545*9/160
+----------------
+>>Sample 160
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](O)[C@@H](C)O[C@H](C(N)=O)c1ccccc1
+- C[C@H](O)[C@@H](C)OC(=O)c1ccccc1
+- C[C@H](O)[C@@H](C)NC(=O)c1ccccc1
+- C[C@H](O)[C@@H](C)SC(=O)c1ccccc1
+- C[C@H](O)[C@@H](C)OC(C(N)=O)c1ccccc1
+Acc = 9/161
+Sim_hit = 6.419363912661594/161
+HV = 102.73362923749545*9/161
+----------------
+>>Sample 161
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCOC1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CC(O)C1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CC(O)CC1
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CC(O)C(O)C1
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CC(O)C(O)CC1
+Acc = 9/162
+Sim_hit = 6.419363912661594/162
+HV = 102.73362923749545*9/162
+----------------
+>>Sample 162
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(CCNC#CC(=O)NCCC(=O)N2CCCCCC2)cn1
+- Cc1ccc(CCNC#CC(=O)NCCC(=O)N2CCCCC2)cn1
+- Cc1ccc(CCNC#CC(=O)NCCC(=O)N2CCCC2)cn1
+- Cc1ccc(CCNC#CC(=O)NCCC(=O)N2CCC2)cn1
+- Cc1ccc(CCNC#CC(=O)NCCC(=O)N2CC2)cn1
+Acc = 9/163
+Sim_hit = 6.419363912661594/163
+HV = 102.73362923749545*9/163
+----------------
+>>Sample 163
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsnc1Cc1cccc(C(=O)NCCc2ccco2)c1  
+- Cc1nsnc1CCc1cccc(C(=O)NCCc2ccco2)c1  
+- Cc1nsnc1CCOc1cccc(C(=O)NCCc2ccco2)c1  
+- Cc1nsnc1C=Oc1cccc(C(=O)NCCc2ccco2)c1  
+- Cc1nsnc1C(O)c1cccc(C(=O)NCCc2ccco2)c1
+Acc = 9/164
+Sim_hit = 6.419363912661594/164
+HV = 102.73362923749545*9/164
+----------------
+>>Sample 164
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COCCNC(=O)c1csc(COc2ccccc2Cl)n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1csc(COc2ccccc2P)n1  
+- COCCNC(=O)c1csc(COc2cccc(P)c2)n1  
+- COCCNC(=O)c1csc(COc2cc(P)ccc2)n1  
+- COCCNC(=O)c1csc(COc2ccc(P)cc2)n1  
+- COCCNC(=O)c1csc(COc2ccccc2P(=O)(O)O)n1
+Acc = 9/165
+Sim_hit = 6.419363912661594/165
+HV = 102.73362923749545*9/165
+----------------
+>>Sample 165
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1  
+- CCO[C@H]1CCN(C(=O)/C=C/c2ccc(OC)cc2)C1  
+- CC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1  
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(O)cc2)C1  
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(N)cc2)C1
+Acc = 9/166
+Sim_hit = 6.419363912661594/166
+HV = 102.73362923749545*9/166
+----------------
+>>Sample 166
+RL Suggestion 0: Replace Sulfonamide with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Sulfonamide with Guanidine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2C(=N)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2C(=N)N1C
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2C(=N)N1CC
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2C(=N)N1C(C)
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2C(=N)N1C(C)(C)
+Acc = 9/167
+Sim_hit = 6.419363912661594/167
+HV = 102.73362923749545*9/167
+----------------
+>>Sample 167
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)N[C@H](CO)c1ccc([P](=O)(O)O)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc([P](O)(O)=O)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc([P](O)O)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc([P]=O)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc([P](O)(O)O)cc1)c1cccs1
+Acc = 9/168
+Sim_hit = 6.419363912661594/168
+HV = 102.73362923749545*9/168
+----------------
+>>Sample 168
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccoc1C(=O)Nc1ccc(F)cc1Br more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccoc1C(=O)Nc1ccc(F)cc1S  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1S(=O)  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1S(=O)(=O)  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1SC  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1SN
+Acc = 9/169
+Sim_hit = 6.419363912661594/169
+HV = 102.73362923749545*9/169
+----------------
+>>Sample 169
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC1(CNC(=O)c2ccccc2O)CCCC1
+- CC(C)CC1(CNC(=O)c2ccccc2N)CCCC1
+- CC(C)CC1(CNC(=O)c2ccccc2C(=O)O)CCCC1
+- CC(C)CC1(CNC(=O)c2ccccc2F)CCCC1
+- CC(C)CC1(CNC(=O)c2ccccc2Cl)CCCC1
+Acc = 9/170
+Sim_hit = 6.419363912661594/170
+HV = 102.73362923749545*9/170
+----------------
+>>Sample 170
+RL Suggestion 0: Replace Bromine Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc21 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2ccccc2S)cc2c(F)cccc21  
+- Cn1c(C(=O)Nc2ccccc2S)cc2c(F)cc(F)cc21  
+- Cn1c(C(=O)Nc2ccccc2S)cc2c(F)c(F)ccc21  
+- Cn1c(C(=O)Nc2ccccc2S)cc2c(F)c(F)c(F)cc21  
+- Cn1c(C(=O)Nc2ccccc2S)cc2c(F)c(F)c(F)c(F)c21
+Acc = 9/171
+Sim_hit = 6.419363912661594/171
+HV = 102.73362923749545*9/171
+----------------
+>>Sample 171
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC#Cc2nnn(-c3ccc(F)cc3)c2C)c(C)c1  
+- Cc1ccc(NC#Cc2nnn(-c3ccc(F)cc3)c2C)c(C)c1F  
+- Cc1ccc(NC#Cc2nnn(-c3ccc(F)cc3)c2C)c(C)c1O  
+- Cc1ccc(NC#Cc2nnn(-c3ccc(F)cc3)c2C)c(C)c1Cl  
+- Cc1ccc(NC#Cc2nnn(-c3ccc(F)cc3)c2C)c(C)c1Br
+Acc = 9/172
+Sim_hit = 6.419363912661594/172
+HV = 102.73362923749545*9/172
+----------------
+>>Sample 172
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc([PH2])cc1)CS(=O)(=O)C2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc([P](=O)(O)O)cc1)CS(=O)(=O)C2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc([P](O)(O)O)cc1)CS(=O)(=O)C2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc([PH](O)O)cc1)CS(=O)(=O)C2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc([P](O)C)cc1)CS(=O)(=O)C2
+Acc = 9/173
+Sim_hit = 6.419363912661594/173
+HV = 102.73362923749545*9/173
+----------------
+>>Sample 173
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(C)c(N2CCOC2)c1CNC[C@@H]1CCC[NH+]1C  
+- Cc1nn(C)c(N2CCNCC2)c1CNC[C@@H]1CCC[NH+]1C  
+- Cc1nn(C)c(N2CCCOC2)c1CNC[C@@H]1CCC[NH+]1C  
+- Cc1nn(C)c(N2CCCCC2)c1CNC[C@@H]1CCC[NH+]1C  
+- Cc1nn(C)c(N2CCCC2)c1CNC[C@@H]1CCC[NH+]1C
+Acc = 9/174
+Sim_hit = 6.419363912661594/174
+HV = 102.73362923749545*9/174
+----------------
+>>Sample 174
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCNS(=O)(=O)c1cccnc1Cl more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCNS(=O)(=O)c1cccnc1P
+- C=CCNS(=O)(=O)c1cccc(P)c1
+- C=CCNS(=O)(=O)c1ccncc1P
+- C=CCNS(=O)(=O)c1cnccc1P
+- C=CCNS(=O)(=O)c1ccnc(P)c1
+Acc = 9/175
+Sim_hit = 6.419363912661594/175
+HV = 102.73362923749545*9/175
+----------------
+>>Sample 175
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1  
+- CCOc1ccccc1N[C@H](C(=O)O)C1CC(c2ccccc2)=NO1  
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO  
+- CCOc1ccccc1NC(=O)[C@H]1CC(c2ccccc2)=NO1  
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=N1O
+Acc = 9/176
+Sim_hit = 6.419363912661594/176
+HV = 102.73362923749545*9/176
+----------------
+>>Sample 176
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cc(Br)c(C(=O)N/N=C/c2cc(P)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(P(O)(O)=O)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(P(=O)(O)O)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(P(O)O)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(P(Cl)(Cl)=O)ccc2O)n1
+Acc = 9/177
+Sim_hit = 6.419363912661594/177
+HV = 102.73362923749545*9/177
+----------------
+>>Sample 177
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+](CC)[C@@H]1CCN(C#C(=O)Nc2ccc(-c3nncn3C)cc2)C1  
+- CC[NH+](CC)[C@@H]1CCN(C#CC(=O)Nc2ccc(-c3nncn3C)cc2)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C#Cc2ccc(-c3nncn3C)cc2)C1  
+- CC[NH+](CC)[C@@H]1CCN(C#CC(=O)Nc2ccc(-c3nncn3C(F)F)cc2)C1  
+- CC[NH+](CC)[C@@H]1CCN(C#CC(=O)Nc2ccc(-c3nncn3C(Cl)Cl)cc2)C1
+Acc = 9/178
+Sim_hit = 6.419363912661594/178
+HV = 102.73362923749545*9/178
+----------------
+>>Sample 178
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O[C@H](C[NH2+]C[C@H]1Cc2ccccc21)C1CC1  
+- O[C@H](C[NH2+]CC1Cc2ccccc21)C1CC1  
+- O[C@H](C[NH2+]C[C@H]1CCc2ccccc21)C1CC1  
+- O[C@H](C[NH2+]C[C@H]1CCOc2ccccc21)C1CC1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1C1
+Acc = 9/179
+Sim_hit = 6.419363912661594/179
+HV = 102.73362923749545*9/179
+----------------
+>>Sample 179
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc([P](=O)(O)O)cc3)no2)CC1  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc([P](=S)(O)O)cc3)no2)CC1  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc([P](=O)(O)C)cc3)no2)CC1  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc([P](=O)(O)OC)cc3)no2)CC1  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc([P](=O)(O)OCC)cc3)no2)CC1
+Acc = 9/180
+Sim_hit = 6.419363912661594/180
+HV = 102.73362923749545*9/180
+----------------
+>>Sample 180
+RL Suggestion 0: Remove a Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(N2C(=O)S/C(=C\\c3cccc(F)c3)C2=O)c1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Thioalkyl ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(N2C(=O)O/C(=C\c3cccc(F)c3)C2=O)c1  
+- Cc1cccc(N2C(=O)O/C(=C\c3ccccc3)C2=O)c1  
+- Cc1cccc(N2C(=O)O/C(=C\c3ccc(F)cc3)C2=O)c1  
+- Cc1cccc(N2C(=O)O/C(=C\c3cc(F)ccc3)C2=O)c1  
+- Cc1cccc(N2C(=O)O/C(=C\c3cc(F)cc3)C2=O)c1
+Acc = 9/181
+Sim_hit = 6.419363912661594/181
+HV = 102.73362923749545*9/181
+----------------
+>>Sample 181
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1  
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C1  
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C(C)O  
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C(C)(O)O  
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC(O)
+Acc = 9/182
+Sim_hit = 6.419363912661594/182
+HV = 102.73362923749545*9/182
+----------------
+>>Sample 182
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nnc2n1CCC[C@H]2NC(=S)NCc1ccccc1C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=S)NCc1ccccc1C[NH2+]C
+- Cc1nnc2n1CCC[C@H]2NC(=S)NCc1ccccc1C[N+](C)(C)C
+- Cc1nnc2n1CCC[C@H]2NC(=S)NCc1cc(C)cc([NH+](C)C)c1
+- Cc1nnc2n1CCC[C@H]2NC(=S)NCc1ccccc1C[NH+](C)C
+Acc = 9/183
+Sim_hit = 6.419363912661594/183
+HV = 102.73362923749545*9/183
+----------------
+>>Sample 183
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C#Cc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C#Cc2cc(F)ccc2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C#Cc2ccc(F)cc2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C#Cc2cccc(F)c2)cc2c1CCN(Cc1cccc(F)c1)C2
+- Cn1c(C#Cc2cccc(F)c2)cc2c1CCN(Cc1ccccc1Cl)C2
+Acc = 9/184
+Sim_hit = 6.419363912661594/184
+HV = 102.73362923749545*9/184
+----------------
+>>Sample 184
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=S  
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=S  
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=S  
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=S  
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=S
+Acc = 9/185
+Sim_hit = 6.419363912661594/185
+HV = 102.73362923749545*9/185
+----------------
+>>Sample 185
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3cc(O)ccc3)CCC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3cc(O)ccc3O)CCC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3cc(O)ccc3OC)CCC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3cc(O)ccc3OC(F)F)CCC2)N1
+Acc = 9/186
+Sim_hit = 6.419363912661594/186
+HV = 102.73362923749545*9/186
+----------------
+>>Sample 186
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12
+- CC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12
+- C(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12
+- C(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc1O
+- C(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc1C(=O)O
+Acc = 9/187
+Sim_hit = 6.419363912661594/187
+HV = 102.73362923749545*9/187
+----------------
+>>Sample 187
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1
+- CC(=O)N1CCCN(C(=O)NCc2ccncc2)CC1
+- CC(=O)N1CCCN(C(=O)NCc2cc(O)ccn2)CC1
+- CC(=O)N1CCCN(C(=O)NCc2cc(Cl)ccn2)CC1
+- CC(=O)N1CCCN(C(=O)NCc2cc(Br)ccn2)CC1
+Acc = 10/188
+Sim_hit = 7.065197245994927/188
+HV = 108.95216465416212*10/188
+----------------
+>>Sample 188
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@]12CC3CC(N4CC[C@H]([NH3+])C#C)C4)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C#C(C)C)C4)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C#CC)C4)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C#C(CC)C)C4)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C#C(C)C(C)C)C4)(C1)C[C@](C)(C3)C2
+Acc = 10/189
+Sim_hit = 7.065197245994927/189
+HV = 108.95216465416212*10/189
+----------------
+>>Sample 189
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=S)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=S)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=S)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=S)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=S)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1
+Acc = 10/190
+Sim_hit = 7.065197245994927/190
+HV = 108.95216465416212*10/190
+----------------
+>>Sample 190
+RL Suggestion 0: Remove a Dialkylaminomethyleneimine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Dialkylaminomethyleneimine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1O  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3O)=NO2)N=N1  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO)O  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3)=NO2)N=N1  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3cc(O)ccc3C)=NO2)N=N1
+Acc = 10/191
+Sim_hit = 7.065197245994927/191
+HV = 108.95216465416212*10/191
+----------------
+>>Sample 191
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-] more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=S)NC[C@@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=S)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=S)NC[C@@H](C)C(=S)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[S-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=S)NC[C@@H](C)C(=O)[S-]
+Acc = 10/192
+Sim_hit = 7.065197245994927/192
+HV = 108.95216465416212*10/192
+----------------
+>>Sample 192
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2ccccc2P)c1C(=O)Nc1ccc(C(N)=O)cc1  
+- Cc1onc(-c2ccccc2P)c1C(=O)Nc1ccc(C(N)=O)cc1F  
+- Cc1onc(-c2ccccc2P)c1C(=O)Nc1ccc(C(N)=O)cc1O  
+- Cc1onc(-c2ccccc2P)c1C(=O)Nc1ccc(C(N)=O)cc1N  
+- Cc1onc(-c2ccccc2P)c1C(=O)Nc1ccc(C(N)=O)cc1Cl
+Acc = 10/193
+Sim_hit = 7.065197245994927/193
+HV = 108.95216465416212*10/193
+----------------
+>>Sample 193
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(C#Cc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1  
+- O=C(C#Cc1ccco1)C1CCN(c2cnc(N3CCOCC3)nc2)CC1  
+- O=C(C#Cc1ccco1)C1CCN(c2cnc(N3CCOCC3)nc2)CC1  
+- O=C(C#Cc1ccco1)C1CCN(c2cnc(N3CCNCC3)nc2)CC1  
+- O=C(C#Cc1ccco1)C1CCN(c2cnc(N3CCCCC3)nc2)CC1
+Acc = 10/194
+Sim_hit = 7.065197245994927/194
+HV = 108.95216465416212*10/194
+----------------
+>>Sample 194
+RL Suggestion 0: Remove a Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Remove a Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1cccc(O)c1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(O)cc3)CC2)nnc1-c1ccco1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(Cl)cc3)CC2)nnc1-c1ccco1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(Br)cc3)CC2)nnc1-c1ccco1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(C)cc3)CC2)nnc1-c1ccco1
+Acc = 10/195
+Sim_hit = 7.065197245994927/195
+HV = 108.95216465416212*10/195
+----------------
+>>Sample 195
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=S)NCc2cccc3ccccc23)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=S)NCc2ccc3ccccc3c2)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=S)NCc2ccccc2)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=S)NCc2ccc3[nH]ccc3c2)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=S)NCc2ccc3c(c2)CCCC3)CC1
+Acc = 10/196
+Sim_hit = 7.065197245994927/196
+HV = 108.95216465416212*10/196
+----------------
+>>Sample 196
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#CC1(NC#CC2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1
+- N#CC1(NC#CC2=NN(c3ccccc3)[C@@H](c3ccc(F)cc3)C2)CCCC1
+- N#CC1(NC#CC2=NN(c3ccccc3)[C@@H](c3ccc(Cl)cc3)C2)CCCC1
+- N#CC1(NC#CC2=NN(c3ccccc3)[C@@H](c3ccc(Br)cc3)C2)CCCC1
+- N#CC1(NC#CC2=NN(c3ccccc3)[C@@H](c3ccc(CF3)cc3)C2)CCCC1
+Acc = 10/197
+Sim_hit = 7.065197245994927/197
+HV = 108.95216465416212*10/197
+----------------
+>>Sample 197
+RL Suggestion 0: Replace Amide with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Amide with Acetylide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC(C#N)CC1  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC(C#C)CC1  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC(C#N)C(C)C1  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC(C#C)C(C)C1  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC(C#N)CC(C)C1
+Acc = 10/198
+Sim_hit = 7.065197245994927/198
+HV = 108.95216465416212*10/198
+----------------
+>>Sample 198
+RL Suggestion 0: Replace Oxygen Atom with Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-] more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](Nc1cc(C#N)ccn1)C(=S)[O-]
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=S)[S-]
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=S)NC
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=S)O
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=S)N
+Acc = 10/199
+Sim_hit = 7.065197245994927/199
+HV = 108.95216465416212*10/199
+----------------
+>>Sample 199
+RL Suggestion 0: Replace Chlorine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1 more soluble in water and higher permeability and decrease logP by at least 0. decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Phosphorus.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(NC(=O)CCc2cccc(P)c2P)no1  
+- Cc1cc(NC(=O)CCc2cccc(P)c2P)no1  
+- Cc1cc(NC(=O)CCc2cccc(P)c2P)no1  
+- Cc1cc(NC(=O)CCc2cccc(P)c2P)no1  
+- Cc1cc(NC(=O)CCc2cccc(P)c2P)no1
+Acc = 10/200
+Sim_hit = 7.065197245994927/200
+HV = 108.95216465416212*10/200
+----------------
+--------Final Acc--------
+Acc = 10/200
+----------------

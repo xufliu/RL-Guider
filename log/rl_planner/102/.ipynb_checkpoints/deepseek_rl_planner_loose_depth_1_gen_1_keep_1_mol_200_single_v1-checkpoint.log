@@ -1,0 +1,2420 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/xufeng_pth/general_replay_buffer_mol_logP_loose_102_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=102, constraint='loose', conversation_type='single', planner='rl_planner', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C=C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1C=C
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1/C=C/
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1\C=C\
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1C=C/C
+Acc = 1/1
+Sim_hit = 0.7169811320754716/1
+HV = 0.36831320754716973*1/1
+----------------
+>>Sample 1
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C=C  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C=CC  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C=C(C)C  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C=CC=C  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C=CC(C)=C
+Acc = 2/2
+Sim_hit = 1.4826061320754715/2
+HV = 0.6244760200471696*2/2
+----------------
+>>Sample 2
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC=C[NH2+]Cc1ncoc1-c1c(F)cccc1F  
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1C=C  
+- C=CC[NH2+]Cc1ncoc1-c1c(F)cccc1F  
+- CCC[NH2+]Cc1ncoc1-c1c(F)C=CCc1F  
+- CCC[NH2+]Cc1ncoc1-c1c(F)C=Cc1F
+Acc = 3/3
+Sim_hit = 2.164424313893653/3
+HV = 0.9747260200471697*3/3
+----------------
+>>Sample 3
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)C=C1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)C=C(C)C1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)C=C(C=C)C1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)C=C(CC)C1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)C=C(OC)C1
+Acc = 3/4
+Sim_hit = 2.164424313893653/4
+HV = 0.9747260200471697*3/4
+----------------
+>>Sample 4
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C=C  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1=C  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1CC=C  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C=CC  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C=C(C)C
+Acc = 4/5
+Sim_hit = 2.8007879502572894/5
+HV = 1.437426020047171*4/5
+----------------
+>>Sample 5
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1/C=C/C  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1/C=C\C  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1/C=C(/C)C  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1/C=C\C(C)C  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1/C=C(/C)C(C)C
+Acc = 5/6
+Sim_hit = 3.491964420845525/6
+HV = 2.090380431811878*5/6
+----------------
+>>Sample 6
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1C=C(=O)Nc2ccccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1C=C(O)Nc2ccccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC=C(=O)Nc2ccccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1C=C(Nc2ccccc21)CC  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1C=C(CC)Nc2ccccc21
+Acc = 5/7
+Sim_hit = 3.491964420845525/7
+HV = 2.090380431811878*5/7
+----------------
+>>Sample 7
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1C=C
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1/C=C/C
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1C=CC
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1/C=C\C
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1C=C/C
+Acc = 5/8
+Sim_hit = 3.491964420845525/8
+HV = 2.090380431811878*5/8
+----------------
+>>Sample 8
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1C=CC2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC=C2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1C=CCC2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1C=C(C)C2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1C=CC=C2
+Acc = 6/9
+Sim_hit = 4.17714960603071/9
+HV = 2.1456063577378037*6/9
+----------------
+>>Sample 9
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1C=C
+- Nc1c(NCc2ccccc2)ncnc1Nc1cccc(F)c1C=C
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(F)cc1C=C
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(F)ccc1C=C
+- Nc1c(NCc2ccccc2)ncnc1Nc1c(F)cccc1C=C
+Acc = 7/10
+Sim_hit = 4.843816272697377/10
+HV = 2.4815396910711374*7/10
+----------------
+>>Sample 10
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C=C[C@@H]1c1cccc(Br)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(C=C)cc1Br
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1C=C
+- O=C(NC=CC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H](C=C)c1cccc(Br)c1
+Acc = 8/11
+Sim_hit = 5.54751997640108/11
+HV = 2.598424876256323*8/11
+----------------
+>>Sample 11
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1C=C  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1/C=C/C  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1C=C(C)C  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1/C=C\C1CCCC1  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1C=C(C)CC
+Acc = 9/12
+Sim_hit = 6.157689467926504/12
+HV = 2.9907638593071715*9/12
+----------------
+>>Sample 12
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1=C  
+报警声在登陆区域刺耳响起，范登伯格的反重力车还在斜板上就来了个急煞，伴随着尖锐的摩擦声，车底撞到坡道边缘。心跳一百八，肾上腺素狂飙，他已经很久没这么激动了。比发现外星生物还要刺激。他跳下车，朝伽马楼自己那个单元奔去。乔治·塔利也许已经老掉牙了，但是主电脑还在第一时间把他叫了回来，而且他管理维护的那些设备也还跟以前一样难用。——要花太多时间在预热和内部自检上。
+
+通常情况下，这种事总是叫人一阵忙乱——寻遍所有地方想要找到是哪里出了问题，最后却发现是某人点错了一个按钮或者主电脑又在什么地方犯了傻。但是这一回，范登伯格一下子就知道了是哪里的警报在响，同时，他也意识到了兹事体大，远非哪台机器出故障那么简单。那些采样钻机找到了一些不同寻常的东西，还没等他回到单元里，年轻的塔利就已经检测出来了。
+
+“嘿，弗兰克！”等科学家姗姗来迟地赶到的时候，年迈的技术员说，“我们可能撞大运了。快看看这里。”——
+
+标注错误啦，以下是按照要求生成的SMILES：
+
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)C=C1CCOCC1  
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOC=C1  
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC=CCOCC1  
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1=CC  
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](C=O)CN1CCOCC1
+Acc = 10/13
+Sim_hit = 6.894531573189662/13
+HV = 3.3692796487808554*10/13
+----------------
+>>Sample 13
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1C=C
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1C(C)=C
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1/C=C/
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1C=C(C)C
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1C=C/C
+Acc = 11/14
+Sim_hit = 7.561198239856329/14
+HV = 3.7979463154475224*11/14
+----------------
+>>Sample 14
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc2C=C3)c1
+- COc1cccc(NC(=O)CCC=Cc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc2C=CC3)c1
+- COc1cccc(NC(=O)CC=Cc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc2C=Cc3)c1
+Acc = 12/15
+Sim_hit = 8.153790832448921/15
+HV = 3.861946315447522*12/15
+----------------
+>>Sample 15
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(C=C)s1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(C=C)cs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(C=C)s1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1c(C=C)ccs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1c(C=C)csc1
+Acc = 13/16
+Sim_hit = 8.837124165782255/16
+HV = 4.301329648780856*13/16
+----------------
+>>Sample 16
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1C=C  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1C=CC  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1C=CC=C  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1C=CCCC  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1C=CC=C=C
+Acc = 13/17
+Sim_hit = 8.837124165782255/17
+HV = 4.301329648780856*13/17
+----------------
+>>Sample 17
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1C=C  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1/C=C\  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1/C=C/C  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1C=C/C  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1/C=C\C
+Acc = 14/18
+Sim_hit = 9.514543520620965/18
+HV = 4.736910293942146*14/18
+----------------
+>>Sample 18
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1C=C
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1C=CC
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1C=C(C)C
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1C=CC=C
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1C=CC(C)=C
+Acc = 15/19
+Sim_hit = 10.107763859604015/19
+HV = 5.1183509719082485*15/19
+----------------
+>>Sample 19
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1C=C  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1/C=C\  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1C=C(C)C  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1/C=C/C  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1C=CC
+Acc = 16/20
+Sim_hit = 10.596652748492904/20
+HV = 5.432706527463804*16/20
+----------------
+>>Sample 20
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C=C1  
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2cccc(C=C)c2)C1  
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1C=C  
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2cc(C=C)ccc2)C1  
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1=CC
+Acc = 17/21
+Sim_hit = 11.293622445462601/21
+HV = 5.790739860797138*17/21
+----------------
+>>Sample 21
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(C=C)s1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(C=C)cs1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1/C=C/C  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(C=C)s1/C=C/C  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(C=C)cs1/C=C/C
+Acc = 18/22
+Sim_hit = 11.971041800301311/22
+HV = 6.226320505958429*18/22
+----------------
+>>Sample 22
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C=C[NH2+]C1  
+- C=Cc1cccc(C)c1OC1C[NH2+]C1  
+- Cc1cccc(C)c1OC1C[NH2+]C=C1  
+- Cc1cccc(C=)c1OC1C[NH2+]C1  
+- Cc1cccc(C)c1OC1C[NH2+]C1C=C
+Acc = 19/23
+Sim_hit = 12.546799376058887/23
+HV = 6.5220871726250955*19/23
+----------------
+>>Sample 23
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1C=C  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1/C=C\  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)/C=C\c1  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)/C=C/c1  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1/C=C/C
+Acc = 20/24
+Sim_hit = 13.046799376058887/24
+HV = 6.843587172625096*20/24
+----------------
+>>Sample 24
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1C=C  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1/C=C\  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1C=C/C  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1/C=C/C  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1C=CC
+Acc = 21/25
+Sim_hit = 13.777568606828117/25
+HV = 7.3134717880097115*21/25
+----------------
+>>Sample 25
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=N)S2)n1C=C
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C=CC
+- C=CCCCc1noc([C@H]2C=CC(=N)S2)n1
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C=CCC
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C=C(C)C
+Acc = 21/26
+Sim_hit = 13.777568606828117/26
+HV = 7.3134717880097115*21/26
+----------------
+>>Sample 26
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2C=C)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)C=Cc2)s1  
+- CC=Cc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2C=C(C)C)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2C=CC)s1
+Acc = 22/27
+Sim_hit = 14.419078040790382/27
+HV = 7.725962354047448*22/27
+----------------
+>>Sample 27
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC=C1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC1=CC  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC1=CCC  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC1=C2C=C  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC1=CC2C
+Acc = 23/28
+Sim_hit = 15.11399329502767/28
+HV = 8.255001337098298*23/28
+----------------
+>>Sample 28
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1C=C  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1C=CC  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1C=CCC  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1C=C(C)C  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1C=CC(C)C
+Acc = 24/29
+Sim_hit = 15.780659961694337/29
+HV = 8.683668003764964*24/29
+----------------
+>>Sample 29
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2\C=C\C  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2C=C  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2/C=C/C  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2\C=C/C  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2/C=C\C
+Acc = 25/30
+Sim_hit = 16.452534961694337/30
+HV = 9.222646128764964*25/30
+----------------
+>>Sample 30
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C(=O)[C@@H](C)c1ccncc1C=C  
+- C=CC[C@H](C)C(=O)[C@@H](C)c1ccncc1  
+- CC[C@H](C=O)C(=O)[C@@H](C)c1ccncc1  
+- CC=C[C@H](C)C(=O)[C@@H](C)c1ccncc1  
+- CC[C@H](C)C(=O)C=C[C@@H](C)c1ccncc1
+Acc = 26/31
+Sim_hit = 16.989120327547994/31
+HV = 9.567670519008868*26/31
+----------------
+>>Sample 31
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=OC=C  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=OC=CC  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=OC=C(C)C  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=OC=Cc1ccccc1  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=OC=CC1CCCC1
+Acc = 26/32
+Sim_hit = 16.989120327547994/32
+HV = 9.567670519008868*26/32
+----------------
+>>Sample 32
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1C=C  
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1/C=C  
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1\C=C  
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1C=C/C  
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1C=C\C
+Acc = 26/33
+Sim_hit = 16.989120327547994/33
+HV = 9.567670519008868*26/33
+----------------
+>>Sample 33
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)C=Ccn1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)CC=Cn1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)C=CCn1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)CCN=Ccn1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)CCN=CCn1
+Acc = 27/34
+Sim_hit = 17.55578699421466/34
+HV = 9.824699185675534*27/34
+----------------
+>>Sample 34
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)CC=C1  
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)=C(C)C1  
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)C=CC1  
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@H]2C)CC=C1  
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)CC(=C)C1
+Acc = 28/35
+Sim_hit = 18.162344371263842/35
+HV = 10.246013939773896*28/35
+----------------
+>>Sample 35
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)C=Ccc1  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)CC=CCcc1  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)C=CCcc1  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)C=C(C)cc1  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)C=CC(C)cc1
+Acc = 29/36
+Sim_hit = 18.866569723376518/36
+HV = 10.504746334140094*29/36
+----------------
+>>Sample 36
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C=C1  
+- C=Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(C=C)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C(C)=C1  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C=CC1
+Acc = 30/37
+Sim_hit = 19.48656972337652/37
+HV = 10.917108334140094*30/37
+----------------
+>>Sample 37
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2C=CCO[C@@H]2C)cc1F  
+- COc1ccc(CN(C)C(=O)[C@@H]2CC=CO[C@@H]2C)cc1F  
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C=C)cc1F  
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C=CC)cc1F  
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C=C(C)C)cc1F
+Acc = 31/38
+Sim_hit = 20.135692530394063/38
+HV = 11.024927632385708*31/38
+----------------
+>>Sample 38
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1C=C  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1/C=C\C  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1C=CC  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1/C=C/C  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1C=CC=C
+Acc = 32/39
+Sim_hit = 20.791430235312095/39
+HV = 11.446566976648004*32/39
+----------------
+>>Sample 39
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * COc1cc(C[NH+]2CCC(OC[C@@H]3CCCO3)CC2)ccc1SC=C  
+* COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1C=CSC  
+* COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC=C(C)  
+* COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC=C([C@H])  
+* COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC=C([C@@H])
+Acc = 33/40
+Sim_hit = 21.584533683587956/40
+HV = 11.853984218027316*33/40
+----------------
+>>Sample 40
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - **Cc1nc2ccccn2c1-c1nnc([S-])o1C=C**
+- **Cc1nc2ccccn2c1-c1nnc([S-])o1/C=C**
+- **Cc1nc2ccccn2c1-c1nnc([S-])o1C=C/C**
+- **Cc1nc2ccccn2c1-c1nnc([S-])o1\C=C**
+- **Cc1nc2ccccn2c1-c1nnc([S-])o1/C=C\**
+Acc = 33/41
+Sim_hit = 21.584533683587956/41
+HV = 11.853984218027316*33/41
+----------------
+>>Sample 41
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1/C=C  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1/C=C/C  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1C=C  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1/C=C\C  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1/C=C/C=C
+Acc = 34/42
+Sim_hit = 22.278082070684732/42
+HV = 12.299935830930544*34/42
+----------------
+>>Sample 42
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CC=CCO1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCC=C1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CC=CC1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1C=CCCO1  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CC=C1
+Acc = 35/43
+Sim_hit = 22.974510642113305/43
+HV = 12.415612616644829*35/43
+----------------
+>>Sample 43
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CC=CC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)C=CCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCC=C1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)C=CC=C1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)C=C(C)C1
+Acc = 35/44
+Sim_hit = 22.974510642113305/44
+HV = 12.415612616644829*35/44
+----------------
+>>Sample 44
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1C=C  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1CC=C  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1C=CC  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1CCC=C  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1C=CCC
+Acc = 36/45
+Sim_hit = 23.523530249956444/45
+HV = 12.720098891154633*36/45
+----------------
+>>Sample 45
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C=C)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C=C)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C=C)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C=C)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C=C)c(C)[nH+]1
+Acc = 37/46
+Sim_hit = 24.252696916623112/46
+HV = 12.964063474487967*37/46
+----------------
+>>Sample 46
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)/C=C/n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)C=Cc1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)/C=C\c1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)C=Cc1ncccc1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)/C=C/c1ncccc1
+Acc = 38/47
+Sim_hit = 24.91936358328978/47
+HV = 13.327930141154633*38/47
+----------------
+>>Sample 47
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=OC=C  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=OC=CC  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=OC=C(C)C  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=OC=CC=CC  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=OC=C(C)CC
+Acc = 38/48
+Sim_hit = 24.91936358328978/48
+HV = 13.327930141154633*38/48
+----------------
+>>Sample 48
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(N)cnn12C=C  
+- CSc1nnc2n(N)cnn12C=CC  
+- CSc1nnc2n(N)cnn12C=CCC  
+- CSc1nnc2n(N)cnn12C=C(C)C  
+- CSc1nnc2n(N)cnn12C=CC=C
+Acc = 38/49
+Sim_hit = 24.91936358328978/49
+HV = 13.327930141154633*38/49
+----------------
+>>Sample 49
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1C=C  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C=C)cc2)n1  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1C=CC  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C=C(C)C)cc2)n1  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1C=CCC
+Acc = 38/50
+Sim_hit = 24.91936358328978/50
+HV = 13.327930141154633*38/50
+----------------
+>>Sample 50
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1C=C  
+- Cc1[nH]c2c(C)ccc(C=C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1CC=C  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1C=CC  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1C=C(C)C
+Acc = 39/51
+Sim_hit = 25.602696916623113/51
+HV = 13.706906807821301*39/51
+----------------
+>>Sample 51
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(C=C)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(C=C)c(cc2C)C  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(C=C)c(C)cc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(C=C)c(Cl)cc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(C=C)c(Br)cc12
+Acc = 40/52
+Sim_hit = 26.344076226967942/52
+HV = 14.183613704373027*40/52
+----------------
+>>Sample 52
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1C=C  
+- C=C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)C=Cc1nnnn1C1CC1  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1C=C  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C=CC1CC1
+Acc = 41/53
+Sim_hit = 27.078451226967942/53
+HV = 14.486249641873027*41/53
+----------------
+>>Sample 53
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1C=C  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1/C=C\  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1/C=C/C  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1C=CC  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1/C=C/C=C
+Acc = 42/54
+Sim_hit = 27.72659937511609/54
+HV = 14.903008901132287*42/54
+----------------
+>>Sample 54
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1C=C  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1/C=C\  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1C=C/C  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1/C=C/C  
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1C=C\C
+Acc = 42/55
+Sim_hit = 27.72659937511609/55
+HV = 14.903008901132287*42/55
+----------------
+>>Sample 55
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1/C=C/C  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1/C=C\C  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1/C=C/C(C)=C  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1/C=C\C(C)  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1/C=C/C=C
+Acc = 42/56
+Sim_hit = 27.72659937511609/56
+HV = 14.903008901132287*42/56
+----------------
+>>Sample 56
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C\C=C\C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C/C=C/C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C\C=C/C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C/C=C\C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C\C=C/C\C=C\C
+Acc = 43/57
+Sim_hit = 28.519702823391953/57
+HV = 15.653522694235736*43/57
+----------------
+>>Sample 57
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32C=C  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32C=CC  
+- C=C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32C=C(C)C  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32C=CC=C
+Acc = 43/58
+Sim_hit = 28.519702823391953/58
+HV = 15.653522694235736*43/58
+----------------
+>>Sample 58
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C=C  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1/C=C/C  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C=CC  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1/C=C\C  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C=C(F)
+Acc = 44/59
+Sim_hit = 29.098650191813004/59
+HV = 15.964996378446264*44/59
+----------------
+>>Sample 59
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1N\C=C  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1N/C=C/C  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1N\C=C\C  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1N/C=C/C=C  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1N\C=C/C=C\C
+Acc = 45/60
+Sim_hit = 29.76531685847967/60
+HV = 16.613796378446263*45/60
+----------------
+>>Sample 60
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F/C=C/C  
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F/C=C\C  
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F/C=C/C(C)=O  
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F/C=C/C1CCCC1  
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F/C=C/C1CC1
+Acc = 45/61
+Sim_hit = 29.76531685847967/61
+HV = 16.613796378446263*45/61
+----------------
+>>Sample 61
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(CC=C)cc1  
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cccc(C=C)c1  
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(C=C)ccc1  
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(CC=C)cc1  
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(C=C=C)cc1
+Acc = 46/62
+Sim_hit = 30.41749077152315/62
+HV = 17.088905074098438*46/62
+----------------
+>>Sample 62
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)C=Ccc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)C=Cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)C=C(C)c1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)C=Cc1c  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)C=CCc1
+Acc = 47/63
+Sim_hit = 31.133706987739366/63
+HV = 17.27769966869303*47/63
+----------------
+>>Sample 63
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)C=Cc1  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)C=CC1  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)CC=C1  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)Cc1=C  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)C=CC=C1
+Acc = 47/64
+Sim_hit = 31.133706987739366/64
+HV = 17.27769966869303*47/64
+----------------
+>>Sample 64
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1C=C  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1C=CC  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1C=C(C)C  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1C=CC=C  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1C=CC(C)=C
+Acc = 47/65
+Sim_hit = 31.133706987739366/65
+HV = 17.27769966869303*47/65
+----------------
+>>Sample 65
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=S)cc1C=C  
+- C=CCCCOc1ccc(C(N)=S)cc1  
+- CCCCCOc1ccc(C(N)=S)cc1C=CC  
+- CCC=CCOc1ccc(C(N)=S)cc1  
+- CCCC=Cc1ccc(C(N)=S)cc1OCC
+Acc = 48/66
+Sim_hit = 31.694682597495465/66
+HV = 17.638406985766203*48/66
+----------------
+>>Sample 66
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@H]1CC=CCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1
+    - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@H]1C=CCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1
+    - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@H]1CCC=CN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1
+    - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@H]1CCCC=N1S(=O)(=O)c1cccc(S(N)(=O)=O)c1
+    - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@H]1C=CCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1
+Acc = 48/67
+Sim_hit = 31.694682597495465/67
+HV = 17.638406985766203*48/67
+----------------
+>>Sample 67
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2  
+- CCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2  
+since these were the only ones that fit, here are three more with slight changes:  
+- CCCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2C  
+- CCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2O  
+- CNCC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2Cl  
+
+- CCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2  
+- CCCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2C  
+- CCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2O  
+- CNCC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2Cl  
+- CCNC1=NC(=C(N=C1C)C(C)C)C=C2C=C(Cl)C=C2C
+Acc = 49/68
+Sim_hit = 31.991557597495465/68
+HV = 17.663374173266202*49/68
+----------------
+>>Sample 68
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1C=C
+- C=Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1C=C(C)C
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1C=CC
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1C=C(C)C=C
+Acc = 50/69
+Sim_hit = 32.66547064097372/69
+HV = 18.096700260222725*50/69
+----------------
+>>Sample 69
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2C=C
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2=CC
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2C=CC
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2=CCC
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2C=CC=C
+Acc = 51/70
+Sim_hit = 33.22797064097372/70
+HV = 18.505694010222726*51/70
+----------------
+>>Sample 70
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1ClC=C
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1ClC=CC
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1ClC=CCC=C
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1ClC=CC=C
+Acc = 51/71
+Sim_hit = 33.22797064097372/71
+HV = 18.505694010222726*51/71
+----------------
+>>Sample 71
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)C=C2C3CC4CC(CC(C4)C3)C2)c(C)s1  
+- Cc1nc(CNC(=O)CNC(=O)CC2C3CC4C=C(CC(C4)C3)C2)c(C)s1  
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4C=C(CC(C4)C2)C3)c(C)s1  
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4C=C(CC(C4)C2)C3)c(C)s1  
+- Cc1nc(CNC(=O)CNC(=O)C=C2C3CC4CC(CC(C4)C3)C2)c(C)s1
+Acc = 52/72
+Sim_hit = 33.81725635525944/72
+HV = 18.60357436736558*52/72
+----------------
+>>Sample 72
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1=CC  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C=C1  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1C=COc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2cc(F)c(C=C)cc2C1  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C=C1C
+Acc = 53/73
+Sim_hit = 34.493726943494735/73
+HV = 19.185880249718522*53/73
+----------------
+>>Sample 73
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C=C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)C=C(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C=CC
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)=CC
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)=C(C)C
+Acc = 54/74
+Sim_hit = 35.28442461791334/74
+HV = 19.317215133439454*54/74
+----------------
+>>Sample 74
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1C=C
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)C=Cn2C1
+- C=C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1
+- C[C@@H]1CN(C)c2nc3c(C=C)(c(=O)[nH]c(=O)n3C)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1=CC
+Acc = 55/75
+Sim_hit = 35.84442461791334/75
+HV = 19.724391133439454*55/75
+----------------
+>>Sample 75
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C=C  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1/C=C\  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C=CC  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1/C=C/C  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C=CC=C
+Acc = 56/76
+Sim_hit = 36.49442461791334/76
+HV = 20.280726133439455*56/76
+----------------
+>>Sample 76
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C=CCO[N+](=O)[O-])C(=O)Cl  
+- CC(C)(C=CC(=O)Cl)CO[N+](=O)[O-]  
+- CC(C)(CO[N+](=O)[O-])C(=O)C=CCl  
+- C=C(C)(CO[N+](=O)[O-])C(=O)Cl  
+- CC(C)(C=C[N+](=O)[O-])C(=O)Cl
+Acc = 57/77
+Sim_hit = 37.009576133064854/77
+HV = 20.567253406166728*57/77
+----------------
+>>Sample 77
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-]C=C
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-]C=CC
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-]C=CCC
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-]C=CCCC
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-]C=CC=C
+Acc = 57/78
+Sim_hit = 37.009576133064854/78
+HV = 20.567253406166728*57/78
+----------------
+>>Sample 78
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1C=C
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C=Cc1
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C=Cc1C
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C=Cc1CC
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C=Cc1CCC
+Acc = 58/79
+Sim_hit = 37.64449676798549/79
+HV = 20.975507374420697*58/79
+----------------
+>>Sample 79
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)C=C1
+* CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2cc(F)ccc2)C=C1
+* CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2cc(F)c(C=C)cc2)CC1
+* CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)C=C(C)C1
+* CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)C=C(CC)C1
+Acc = 59/80
+Sim_hit = 38.28735391084263/80
+HV = 21.05496451727784*59/80
+----------------
+>>Sample 80
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F=CC  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1FC=C  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F/C=C\  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F/C=C/C  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F\C=C/
+Acc = 59/81
+Sim_hit = 38.28735391084263/81
+HV = 21.05496451727784*59/81
+----------------
+>>Sample 81
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC=C[C@@H]1C(=O)[O-]  
+- COC[C@H](C)C=NC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]  
+- COC[C@H](C)CNC(=O)N[C@@H]1CC=CCC[C@@H]1C(=O)[O-]  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCC=C[C@@H]1C(=O)[O-]  
+- COC[C@H](C)=CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+Acc = 60/82
+Sim_hit = 38.941200064688786/82
+HV = 21.163568363431683*60/82
+----------------
+>>Sample 82
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1/C=C/C
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1C=C
+- C=C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])c(C=C)c1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1/C=C\[C@@H](C)C
+Acc = 61/83
+Sim_hit = 39.53694474553985/83
+HV = 21.779032193218917*61/83
+----------------
+>>Sample 83
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1C=C  
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])C=C1  
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1cc([N+](=O)[O-])oC=C1  
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1cc([N+](=O)[O-])o1C=C  
+- CCC=C N(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+Acc = 61/84
+Sim_hit = 39.53694474553985/84
+HV = 21.779032193218917*61/84
+----------------
+>>Sample 84
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1=C
+- CC[NH2+][C@@]1(C(N)=O)CCC=C[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1
+- CC[NH2+][C@@]1(C(N)=O)CC=C[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1
+- CC=[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1
+- CC[NH2+][C@@]1(C(N)=O)CC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1=CC
+Acc = 62/85
+Sim_hit = 40.12315164209157/85
+HV = 21.876401158736158*62/85
+----------------
+>>Sample 85
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1C=C  
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1/C=C\  
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1/C=C(/C)C  
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1C=CC  
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1/C=C/C
+Acc = 63/86
+Sim_hit = 40.815459334399264/86
+HV = 22.321555004890005*63/86
+----------------
+>>Sample 86
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1NC(=O)C=C[NH+]1C[C@H](O)[C@H](O)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C=C(O)[C@H](O)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)C=C1O  
+- N#Cc1ccccc1NC(=O)C=CC[NH+]1C[C@H](O)[C@H](O)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)C=C(O)C1
+Acc = 64/87
+Sim_hit = 41.36647974256253/87
+HV = 22.389661127338986*64/87
+----------------
+>>Sample 87
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CC=CCC1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1C=CCCC1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCC=CC1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCC=C1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1C=C(C)CCC1
+Acc = 64/88
+Sim_hit = 41.36647974256253/88
+HV = 22.389661127338986*64/88
+----------------
+>>Sample 88
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1C=C  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1C=CC  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1C=C(C)C  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1C=CC=C  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1C=CC(C)=C
+Acc = 64/89
+Sim_hit = 41.36647974256253/89
+HV = 22.389661127338986*64/89
+----------------
+>>Sample 89
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)C=Cc2)c1  
+- Cc1ccsc1-c1cccc(NC(=O)C=Cc2ccc(C(N)=O)cc2)c1  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)C=Cc1  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1C=C  
+- C=Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1
+Acc = 64/90
+Sim_hit = 41.36647974256253/90
+HV = 22.389661127338986*64/90
+----------------
+>>Sample 90
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C=C  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C=C)CC2=O)cc1C  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C=CC  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)C=Cc1C  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C=C)CC2=O)C=Cc1C
+Acc = 65/91
+Sim_hit = 42.1357105117933/91
+HV = 22.647030358108218*65/91
+----------------
+>>Sample 91
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)C=C1  
+- CCN(CC)C(=O)C1CCN(C=CNCCCc2c(C)noc2C)CC1  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)C=CC1  
+- CCN(CC)C(=O)C1CCN(C(=O)NCC=Cc2c(C)noc2C)CC1  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)C(CC)=C1
+Acc = 66/92
+Sim_hit = 42.79144821671133/92
+HV = 22.728079538436088*66/92
+----------------
+>>Sample 92
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1C=C  
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C=C3)C1  
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)C=Cc3c2O[C@H](C)C3)C1  
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1CC=C  
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1C=CC
+Acc = 67/93
+Sim_hit = 43.40082321671133/93
+HV = 23.06603891343609*67/93
+----------------
+>>Sample 93
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc1C=C2
+- CC=Cc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc1C=C(C)C2
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc1C=C(C=C)C2
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc1C=C(C=CC)C2
+Acc = 68/94
+Sim_hit = 43.973993948418645/94
+HV = 23.295364523192188*68/94
+----------------
+>>Sample 94
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)NC[C@@H]2CC=CO2)cc1OC(F)F  
+- COc1ccc(NC(=O)NC[C@@H]2C=CCO2)cc1OC(F)F  
+- COc1ccc(NC(=O)NC[C@@H]2CC=C2)cc1OC(F)F  
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)C=C  
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC=C(F)F
+Acc = 69/95
+Sim_hit = 44.66890920265593/95
+HV = 23.381256048615917*69/95
+----------------
+>>Sample 95
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1C=C  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1/C=C\  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1/C=C/C  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1C=CC  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1/C=C/C=C
+Acc = 70/96
+Sim_hit = 45.3355758693226/96
+HV = 23.809922715282585*70/96
+----------------
+>>Sample 96
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1C=C
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1C=C[N]1CCOCC1
+- O=C(NCCc1cccc(O)c1)N1C=C[C@H]1CN1CCOCC1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H](C=C)1CN1CCOCC1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1C=CCOCC1
+Acc = 71/97
+Sim_hit = 46.04986158360831/97
+HV = 24.20606557242544*71/97
+----------------
+>>Sample 97
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C=C)cc1  
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)C=Cc1  
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C=C(C)(C)C)cc1  
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1C=C  
+- C[C@@H]1OCC[C@@H](C=C)[C@H]1c1ccc(C(C)(C)C)cc1O
+Acc = 72/98
+Sim_hit = 46.81909235283908/98
+HV = 24.333834803194673*72/98
+----------------
+>>Sample 98
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C\C=C
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C\C=C/C
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C\C=C\C
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C\C=C/C=C
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C\C=C\C=C
+Acc = 73/99
+Sim_hit = 47.53839059845311/99
+HV = 24.800659364598182*73/99
+----------------
+>>Sample 99
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1C=C  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1C=CC  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1C=C(C)C  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1C=CC=C  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1C=CC(C)=C
+Acc = 74/100
+Sim_hit = 48.211117871180384/100
+HV = 25.233223000961818*74/100
+----------------
+>>Sample 100
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O/C=C/C  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O/C=C\C  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O/C=C/C(C)(C)C  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O/C=C/C1CCCC1  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O/C=C/C1=CC=CC=C1
+Acc = 74/101
+Sim_hit = 48.211117871180384/101
+HV = 25.233223000961818*74/101
+----------------
+>>Sample 101
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C=C  
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C/C=C\  
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C/C=C/C  
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C=C/C  
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C/C=C(/C)\C
+Acc = 75/102
+Sim_hit = 48.999579409641925/102
+HV = 25.364186462500278*75/102
+----------------
+>>Sample 102
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](C)NC(=O)[C@H](C)OCCOC less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)NC(=O)[C@H](C)OC=COC  
+- CC[C@@H](C)NC(=O)[C@H](C)OC=CCOC  
+- CC[C@@H](C)NC(=O)[C@H](C)OC=C(C)OC  
+- CC[C@@H](C)NC(=O)[C@H](C)OC=CC(C)OC  
+- CC[C@@H](C)NC(=O)[C@H](C)OC=C(OC)COC
+Acc = 76/103
+Sim_hit = 49.571007981070494/103
+HV = 25.63344360535742*76/103
+----------------
+>>Sample 103
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1C=C
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1C=C(C)
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1C=CC
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1C=C(C)C
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1C=CC(C)
+Acc = 76/104
+Sim_hit = 49.571007981070494/104
+HV = 25.63344360535742*76/104
+----------------
+>>Sample 104
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1/C=C/C  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1C=C  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1/C=C\C  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1C=CC  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1/C=C/C=C
+Acc = 76/105
+Sim_hit = 49.571007981070494/105
+HV = 25.63344360535742*76/105
+----------------
+>>Sample 105
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)C=COc1ccccc1F  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1cccc(C=C)c1F  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(C=C)cc1F  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1cc(C=C)ccc1F  
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1c(C=C)cccc1F
+Acc = 77/106
+Sim_hit = 50.22555343561595/106
+HV = 25.96968360535742*77/106
+----------------
+>>Sample 106
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C=C)c1  
+- Cc1cc(C=C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1  
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3=Cc4ccccc4nc23)c(C)c1  
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C=C)C1  
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3cc(C=C)ccc23)c(C)c1
+Acc = 78/107
+Sim_hit = 50.99828070834322/107
+HV = 26.228222696266513*78/107
+----------------
+>>Sample 107
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC=Cc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1  
+- CCc1ccc(NC(=O)CSC2=NC=C3ccccc3C3=N[C@H](C)C(=O)N23)cc1  
+- CCc1ccc(NC(=O)CSC2=Nc3cc(=C)ccc3C3=N[C@H](C)C(=O)N23)cc1  
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)C=C1  
+- CCc1ccc(NC(=O)CSC2=Nc3cccc=C3C3=N[C@H](C)C(=O)N23)cc1
+Acc = 79/108
+Sim_hit = 51.77794172529238/108
+HV = 26.59520913694448*79/108
+----------------
+>>Sample 108
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC=C
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC=C(C)C
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC=C(OC)OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC=Cc2ccccc2
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC=C(C#N)
+Acc = 80/109
+Sim_hit = 52.617227439578095/109
+HV = 27.026350208373053*80/109
+----------------
+>>Sample 109
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC=C[C@@H]2C3)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3C=CC[C@@H]2C3)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C=C3)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3C=C[C@@H]2C3)c1
+- CSc1cccc(NC(=O)C[C@H]2C=C[C@H]3CC[C@@H]2C3)c1
+Acc = 81/110
+Sim_hit = 53.26537558772624/110
+HV = 27.13400761578046*81/110
+----------------
+>>Sample 110
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1C=C
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1/C=C/C
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1C=C=C
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1/C=C\C
+Acc = 82/111
+Sim_hit = 54.006754898071065/111
+HV = 27.257150719228736*82/111
+----------------
+>>Sample 111
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C=C  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)=C  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C=C(C)C  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C=C(C)  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)=CC
+Acc = 83/112
+Sim_hit = 54.784532675848844/112
+HV = 27.386339608117627*83/112
+----------------
+>>Sample 112
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C=C)c1C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C=C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)C=C1C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C=C)c1C=C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)C=C1C=C
+Acc = 84/113
+Sim_hit = 55.591550219708495/113
+HV = 27.65635153794219*84/113
+----------------
+>>Sample 113
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H]1CS/C(=N\\c2ccccc2Oc2ccccc2)N1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C=C  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1/C=C/C  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C=C(C)C  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1/C=C\C(=C)C  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C=CC=C
+Acc = 85/114
+Sim_hit = 56.10940736256564/114
+HV = 28.09958546651362*85/114
+----------------
+>>Sample 114
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1C=C
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)C=C1
+- O=C(Nc1ccccc1-n1cccnCC1)c1ccc(Br)s1
+- O=C(Nc1ccccc1C=C-n1cccn1)c1ccc(Br)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)C=Cs1
+Acc = 85/115
+Sim_hit = 56.10940736256564/115
+HV = 28.09958546651362*85/115
+----------------
+>>Sample 115
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C=C  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C=CC  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C=C(C)C  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C=CC=C  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C=C(CC)C
+Acc = 86/116
+Sim_hit = 56.85940736256564/116
+HV = 28.48486046651362*86/116
+----------------
+>>Sample 116
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C=C  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC=CC[C@H]1CO  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C=C  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC=CC[C@H]1C=C  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C=C
+Acc = 87/117
+Sim_hit = 57.56849827165655/117
+HV = 29.33130228469544*87/117
+----------------
+>>Sample 117
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)C=Cn1  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)C=CCn1  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)CC=Cn1  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)C=C=Cn1  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)C=CC=Cn1
+Acc = 87/118
+Sim_hit = 57.56849827165655/118
+HV = 29.33130228469544*87/118
+----------------
+>>Sample 118
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1C=C
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1/C=C/
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1C=CC
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1/C=C/C
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1C=CC=C
+Acc = 87/119
+Sim_hit = 57.56849827165655/119
+HV = 29.33130228469544*87/119
+----------------
+>>Sample 119
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1C=C
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C=C)cn1
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1C=CC
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1CC=C
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C=C=C)cn1
+Acc = 87/120
+Sim_hit = 57.56849827165655/120
+HV = 29.33130228469544*87/120
+----------------
+>>Sample 120
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Cl less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1ClC=C
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1ClC=CC
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1ClC=CC=C
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1ClC=CC=CC
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1ClC=CC=CC=C
+Acc = 87/121
+Sim_hit = 57.56849827165655/121
+HV = 29.33130228469544*87/121
+----------------
+>>Sample 121
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CNC(=O)c1csc2c1CC=CC2)c1cccs1  
+- O=C(CNC(=O)c1csc2c1C=CCC2)c1cccs1  
+- O=C(CNC(=O)c1csc2c1CCC=C2)c1cccs1  
+- O=C(CNC(=O)c1csc2c1C=C(C)C2)c1cccs1  
+- O=C(CNC(=O)c1csc2c1CCCC=C2)c1cccs1
+Acc = 87/122
+Sim_hit = 57.56849827165655/122
+HV = 29.33130228469544*87/122
+----------------
+>>Sample 122
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1\C=C\C  
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1\C=C\C(C)C  
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1\C=C\C=C  
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1\C=C\C(=C)C  
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1\C=C\C1CC1
+Acc = 87/123
+Sim_hit = 57.56849827165655/123
+HV = 29.33130228469544*87/123
+----------------
+>>Sample 123
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1C(=O)CCC1=O)NCCc1ccccc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1C(=O)CCC1=O)NCCc1ccccc1C=C
+- O=C(CN1C(=O)CCC1=O)NCCc1cccc(C=C)c1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccc(C=C)cc1
+- O=C(CN1C(=O)CCC1=O)NCCc1cc(C=C)ccc1
+- O=C(CN1C(=O)CCC1=O)NCCc1c(C=C)cccc1
+Acc = 88/124
+Sim_hit = 58.19072049387877/124
+HV = 29.731391173584328*88/124
+----------------
+>>Sample 124
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COC=Cc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(C=CCOc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccc(C=C)cc2)c1  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2cc(C=C)ccc2)c1
+Acc = 89/125
+Sim_hit = 58.94072049387877/125
+HV = 29.855966173584328*89/125
+----------------
+>>Sample 125
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)c(C=C)c2)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2cc(C=C)c(F)cc2)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)C=Cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1cc(C=C)c(Oc2ccc(F)cc2)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2cc(F)c(C=C)cc2)cc1
+Acc = 90/126
+Sim_hit = 59.66294271610099/126
+HV = 30.32035506247322*90/126
+----------------
+>>Sample 126
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1C=C
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1\C=C\C
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1/C=C/C
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1C=C/C
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1/C=C\C
+Acc = 91/127
+Sim_hit = 60.278327331485606/127
+HV = 30.716047370165526*91/127
+----------------
+>>Sample 127
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1C=C  
+- C=Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1  
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CC=C3)c1  
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1C=C(C)C  
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1C=CC
+Acc = 92/128
+Sim_hit = 60.94975590291418/128
+HV = 31.147775941594098*92/128
+----------------
+>>Sample 128
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC(=O)Nc1cccc[n+]1Cc1ccccc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC(=O)Nc1cccc[n+]1CC=Cc1ccccc1  
+- CCCC(=O)Nc1cccc[n+]1C=Cc1ccccc1  
+- CCCC(=O)Nc1cccc[n+]1CC=CC1CCCCC1  
+- CCCC(=O)Nc1cccc[n+]1C=CCc1ccccc1  
+- CCCC(=O)Nc1cccc[n+]1CC=C(C)c1ccccc1
+Acc = 93/129
+Sim_hit = 61.5719781251364/129
+HV = 31.5616159415941*93/129
+----------------
+>>Sample 129
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CC=CC4)no2)cc1OC
+* COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)C=CCC4)no2)cc1OC
+* COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CC=CC4)no2)cc1OC
+* COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)C=C(C)C4)no2)cc1OC
+* COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)C=CC=C4)no2)cc1OC
+Acc = 93/130
+Sim_hit = 61.5719781251364/130
+HV = 31.5616159415941*93/130
+----------------
+>>Sample 130
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1=C  
+- CC(C)N[C@@]1(C#N)CC=C[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1  
+- CC(C)N[C@@]1(C#N)C=CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1  
+- CC(C)N[C@@]1(C#N)CC[C@H](N2C=C[NH+]3CCCC[C@@H]3C2)C1  
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CC=CC[C@@H]3C2)C1
+Acc = 94/131
+Sim_hit = 62.16126383942211/131
+HV = 31.659496298736954*94/131
+----------------
+>>Sample 131
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CCNC(=O)C[C@H](C)C2=CCCCC2)s1  
+- CCc1cnc(CCNC(=O)C=C[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(CCNC(=O)C[C@@H](C)C2=CCCC2)s1  
+- CCc1cnc(CCNC(=O)C[C@H](C)C2=C(C)CCCC2)s1  
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CC=C(C)CC2)s1
+Acc = 94/132
+Sim_hit = 62.16126383942211/132
+HV = 31.659496298736954*94/132
+----------------
+>>Sample 132
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1C=C  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C=C)cc3C)CC2=O)c1  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C=C)cc(C)cc3C)CC2=O)c1  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C=C)CC2=O)c1  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C=C)cc3C=C)CC2=O)c1
+Acc = 95/133
+Sim_hit = 62.80188883942211/133
+HV = 32.07141817373696*95/133
+----------------
+>>Sample 133
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1C=COC1  
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1C=CCOC1  
+- C=C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1  
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CC=COC1  
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1C=C(C)OC1
+Acc = 96/134
+Sim_hit = 63.376356924528494/134
+HV = 32.142422429056104*96/134
+----------------
+>>Sample 134
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN1CC[NH+](C2CCC(C)(C)CC2)C=C1  
+- CCCN1CC[NH+](C2CC=C(C)(C)CC2)CC1  
+- CCCN1CC[NH+](C2CCC(C)(C)C=C2)CC1  
+- CCCN1C=C[NH+](C2CCC(C)(C)CC2)CC1  
+- CCCN1CC[NH+](C=CCCC(C)(C)CC2)CC1
+Acc = 97/135
+Sim_hit = 63.876356924528494/135
+HV = 32.3780224290561*97/135
+----------------
+>>Sample 135
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1C=C  
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1/C=C  
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1/C=C/C  
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1C=C/C  
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1/C=C\C
+Acc = 98/136
+Sim_hit = 64.56056745084429/136
+HV = 32.817969797477154*98/136
+----------------
+>>Sample 136
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2=C)c1  
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2=CC)c1  
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2=CCC)c1  
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2=CCCC)c1  
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2=CCCCC)c1
+Acc = 99/137
+Sim_hit = 65.21681745084429/137
+HV = 32.926972922477155*99/137
+----------------
+>>Sample 137
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2/C=C/C  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2/C=C\C  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2/C=C/C(F)(F)F  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2/C=C/C(Cl)(Cl)Cl  
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2/C=C/C(OC)OC
+Acc = 99/138
+Sim_hit = 65.21681745084429/138
+HV = 32.926972922477155*99/138
+----------------
+>>Sample 138
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)C=Cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)CC=Cc1
+- O=C1CCCN1c1ccc(C[NH2+]CC=Cc2c(F)cccc2F)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)C=CCc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)C=C(C)c1
+Acc = 99/139
+Sim_hit = 65.21681745084429/139
+HV = 32.926972922477155*99/139
+----------------
+>>Sample 139
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC=C(S(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC)C  
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC=C  
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)C=COC  
+- CC=C[S(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC]  
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC(C)=C
+Acc = 100/140
+Sim_hit = 65.86798024154196/140
+HV = 33.51549385270971*100/140
+----------------
+>>Sample 140
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1C=C
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1/C=C/C
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1C=C/C
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1/C=C\C
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1C=C/C=C
+Acc = 101/141
+Sim_hit = 66.48464690820862/141
+HV = 33.91201051937638*101/141
+----------------
+>>Sample 141
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1C=C  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1/C=C/C  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1C=CC  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1/C=C\C(C)C  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1C=C/C=C
+Acc = 101/142
+Sim_hit = 66.48464690820862/142
+HV = 33.91201051937638*101/142
+----------------
+>>Sample 142
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1\C=C\C  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1/C=C/C  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1\C=C/C  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1/C=C\C  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1\C=C=C\C
+Acc = 102/143
+Sim_hit = 67.14178976535148/143
+HV = 34.590904805090666*102/143
+----------------
+>>Sample 143
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=C(C)C[C@@H](O)c1ncccn1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C(C)C[C@@H](O)c1nccc(C=C)n1  
+- C=C(C)C[C@@H](O)c1ncc(C=C)cn1  
+- C=C(C)C[C@@H](O)c1nc(C=C)ccn1  
+- C=C(C)C[C@@H](O)c1ncc(C=C)nc1  
+- C=C(C)C[C@@H](O)c1nc(C=C)cnc1
+Acc = 103/144
+Sim_hit = 67.74178976535147/144
+HV = 34.97670480509067*103/144
+----------------
+>>Sample 144
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C=C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)C=C  
+- C=C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C=C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C=C)O
+Acc = 104/145
+Sim_hit = 68.50542612898784/145
+HV = 35.10354480509067*104/145
+----------------
+>>Sample 145
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]21 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CC=CC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSC=C(F)(F)F)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CC=CC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSC=C(F)(F)F)[C@H]2CC=CC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2C=CCC[C@@H]21
+Acc = 104/146
+Sim_hit = 68.50542612898784/146
+HV = 35.10354480509067*104/146
+----------------
+>>Sample 146
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1C=C  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](C=C)[C@@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](C=C)[C@H](O)[C@@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1C=CC  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1CC=C
+Acc = 105/147
+Sim_hit = 69.25010698005167/147
+HV = 36.17685331572897*105/147
+----------------
+>>Sample 147
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC=C1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1=CC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCC=C1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1C=CC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1C=C1
+Acc = 106/148
+Sim_hit = 69.99010698005166/148
+HV = 36.29976731572897*106/148
+----------------
+>>Sample 148
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)[O-] less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)OCC=C  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)OC=CC  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)OCC=CC  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)OCC=C(C)C  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)OCC=C(Cl)
+Acc = 107/149
+Sim_hit = 70.67529216523685/149
+HV = 37.65595435276601*107/149
+----------------
+>>Sample 149
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1C=C  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)C=Cc1  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1C=C=C  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1C=CC  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1C=CC=C
+Acc = 108/150
+Sim_hit = 71.38683062677532/150
+HV = 38.11347358353524*108/150
+----------------
+>>Sample 150
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1/C=C/C
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1/C=C\C
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1/C=C/C(C)=O
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1/C=C/C1CCCC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1/C=C/C1CCCCC1
+Acc = 109/151
+Sim_hit = 72.11540205534675/151
+HV = 38.80175501210667*109/151
+----------------
+>>Sample 151
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1O less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OC=C  
+- COc1cc(CNc2ccc(F)c(C(=C)C)c2)cc([N+](=O)[O-])c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1C=CO  
+- COc1cc(CNc2ccc(F)c(C)c2C=C)cc([N+](=O)[O-])c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1C=C
+Acc = 110/152
+Sim_hit = 72.81715644131167/152
+HV = 39.374877819124215*110/152
+----------------
+>>Sample 152
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC=C1C(=O)OC(C)C1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1  
+- C=Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1  
+- CC1=C(C(=O)OC(C)C1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1)C=C  
+- CC1=C(C(=O)OC(C)C1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1)=CC  
+- C=C1C(=O)OC(C)C1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1
+Acc = 110/153
+Sim_hit = 72.81715644131167/153
+HV = 39.374877819124215*110/153
+----------------
+>>Sample 153
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CN(Cc2nc(CC=Cc3ccccc3)no2)[C@H](C)CO1  
+- C[C@H]1CN(Cc2nc(C=Cc3ccccc3)no2)[C@H](C)CO1  
+- C[C@H]1CN(Cc2nc(CCc3cc=ccc3)no2)[C@H](C)CO1  
+- C[C@H]1CN(Cc2nc(CCc3c=cccc3)no2)[C@H](C)CO1  
+- C[C@H]1CN(Cc2nc(CCc3ccc=cc3)no2)[C@H](C)CO1
+Acc = 111/154
+Sim_hit = 73.50234162649686/154
+HV = 39.69739448579088*111/154
+----------------
+>>Sample 154
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)C=C(C)OC1
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)C=C(OC1)C
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)C=C(C)OC1C
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)C=C(OC1)CC
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)C=C(C)C(OC1)C
+Acc = 112/155
+Sim_hit = 74.1356749598302/155
+HV = 40.02273781912422*112/155
+----------------
+>>Sample 155
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\\c2ccc(OC)cc2OC)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2OC)CC1C=C
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2cc(OC)c(OC)cc2C=C)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2cc(OC)c(C=C)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2cc(C=C)c(OC)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2cc(OC)cc(C=C)c2OC)CC1
+Acc = 113/156
+Sim_hit = 74.89373947595924/156
+HV = 40.443160399769376*113/156
+----------------
+>>Sample 156
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccccc1[C@@H]([NH3+])c1ccc(C)o1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccccc1[C@@H]([NH3+])c1ccc(C=C)o1
+- CSc1ccccc1[C@@H]([NH3+])(C=C)c1ccc(C)o1
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(CC=C)o1
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C)=C1
+- CSc1ccccc1[C@@H]([NH3+])c1cc(C=C)co1
+Acc = 114/157
+Sim_hit = 75.52531842332766/157
+HV = 40.6544740839799*114/157
+----------------
+>>Sample 157
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc([C@H](CNC(=O)c2ccccc2/C=C/c2ccccc2C#N)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2\C=C\c2ccccc2C#N)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2/C=C\c2ccccc2C#N)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2\C=C/c2ccccc2C#N)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2/C=C/c2ccccc2C#N)N2CCOCC2)cc1
+Acc = 115/158
+Sim_hit = 76.29454919255843/158
+HV = 41.04170485321067*115/158
+----------------
+>>Sample 158
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C=C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)NC(=O)CN1C=C[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C=C1  
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C=C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1=C
+Acc = 116/159
+Sim_hit = 76.90324484473234/159
+HV = 41.142809201036755*116/159
+----------------
+>>Sample 159
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)C=C  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)C=C(F)  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC=C(F)(F)F  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)C=CC  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)C=C(Cl)C
+Acc = 117/160
+Sim_hit = 77.68585354038451/160
+HV = 41.34550485321067*117/160
+----------------
+>>Sample 160
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1C=C  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1cccc(C=C)c1  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1cc(C=C)ccc1  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(C=C)cc1  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1cccc1C=C
+Acc = 118/161
+Sim_hit = 78.28585354038451/161
+HV = 41.73130485321067*118/161
+----------------
+>>Sample 161
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C=C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCOC=C[C@H]1C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1C=CC[C@H]1C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CC=C[C@H]1C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CC[C@H]1C=C
+Acc = 119/162
+Sim_hit = 79.06363131816228/162
+HV = 41.860493742099564*119/162
+----------------
+>>Sample 162
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)C=Cc1  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)C=CC=Cc1  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)C=C(CN)c1  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)C=CC(CN)c1  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)C=C(C=O)c1
+Acc = 119/163
+Sim_hit = 79.06363131816228/163
+HV = 41.860493742099564*119/163
+----------------
+>>Sample 163
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)C=C1  
+- Cc1nsnc1COc1cccc(C(=O)NCC=Cc2ccco2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(C=C)o2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2cc(C=C)co2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2cc(OC=C)co2)c1
+Acc = 119/164
+Sim_hit = 79.06363131816228/164
+HV = 41.860493742099564*119/164
+----------------
+>>Sample 164
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COCCNC(=O)c1csc(COc2ccccc2Cl)n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1csc(COc2ccccc2Cl)C=C1  
+- COCCNC(=O)c1csc(COc2ccccc2Cl)C=CC1  
+- COCCNC(=O)c1csc(COc2ccccc2Cl)C=C(C)C1  
+- COCCNC(=O)c1csc(COc2ccccc2Cl)C=CC=C1  
+- COCCNC(=O)c1csc(COc2ccccc2Cl)C=CCC1
+Acc = 119/165
+Sim_hit = 79.06363131816228/165
+HV = 41.860493742099564*119/165
+----------------
+>>Sample 165
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C=C1  
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC=C)cc2)C1  
+- CCOC[C@H]1CCN(C(=O)/C=C\C=C/c2ccc(OCC#N)cc2)C1  
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC=C#N)cc2)C1  
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2C=C)C1
+Acc = 120/166
+Sim_hit = 79.71442496895592/166
+HV = 42.19480644051227*120/166
+----------------
+>>Sample 166
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1C=C  
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cc(C=C)ccc2S(=O)(=O)N1  
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1CC=C  
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cccc(C=C)c2S(=O)(=O)N1  
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cc(C=CC)ccc2S(=O)(=O)N1
+Acc = 121/167
+Sim_hit = 80.35078860531956/167
+HV = 42.739470076875904*121/167
+----------------
+>>Sample 167
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1c(=C)ccs1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cc(=C)cs1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1c(=C)cs1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cc(C=C)cs1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1c(C=C)ccs1
+Acc = 121/168
+Sim_hit = 80.35078860531956/168
+HV = 42.739470076875904*121/168
+----------------
+>>Sample 168
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccoc1C(=O)Nc1ccc(F)cc1Br less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC=Cc1ccoc1C(=O)Nc1ccc(F)cc1Br
+- C=Cc1ccoc1C(=O)Nc1ccc(F)cc1Br
+- C=C(C)c1ccoc1C(=O)Nc1ccc(F)cc1Br
+- CC=C(C)c1ccoc1C(=O)Nc1ccc(F)cc1Br
+- C=Cc1ccoc1C(=O)Nc1cc(F)ccc1Br
+Acc = 122/169
+Sim_hit = 81.06817990966739/169
+HV = 43.259349207310684*122/169
+----------------
+>>Sample 169
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)C=CCC1
+- CC(C)C=C1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CC=CC1
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)C=CC=C1
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)C=C(C)C1
+Acc = 122/170
+Sim_hit = 81.06817990966739/170
+HV = 43.259349207310684*122/170
+----------------
+>>Sample 170
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc21 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)C=Ccccc21  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)C=Cc(C)cc21  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)C=Cc(Cl)cc21  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)C=Cc(Br)cc21  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)C=Cc(C#N)cc21
+Acc = 122/171
+Sim_hit = 81.06817990966739/171
+HV = 43.259349207310684*122/171
+----------------
+>>Sample 171
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C=C)c(C)c1  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)C=Cc2C)c(C)c1  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C=C(C)C)c(C)c1  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)C=Cc1c(C)c1  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C=CC)c(C)c1
+Acc = 123/172
+Sim_hit = 81.81817990966739/172
+HV = 43.51028420731068*123/172
+----------------
+>>Sample 172
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C=C  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2/C=C/C  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C=C(C)C  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2/C=C(\C)C  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C=C(Cl)C
+Acc = 124/173
+Sim_hit = 82.4681799096674/173
+HV = 43.98289920731068*124/173
+----------------
+>>Sample 173
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CC=C[NH+]1C  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1C=CC[NH+]1C  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C=CC  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CC=CC[NH+]1C  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1C=C[NH+]1CC
+Acc = 125/174
+Sim_hit = 83.14675133823883/174
+HV = 44.06677063588211*125/174
+----------------
+>>Sample 174
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCNS(=O)(=O)c1cccnc1Cl less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCNS(=O)(=O)c1cccnc1ClC=C
+- C=CCNS(=O)(=O)c1cccnc1ClC=CC
+- C=CCNS(=O)(=O)c1cccnc1ClC=C(C)C
+- C=CCNS(=O)(=O)c1cccnc1ClC=CC=C
+- C=CCNS(=O)(=O)c1cccnc1ClC=C(C)C=C
+Acc = 125/175
+Sim_hit = 83.14675133823883/175
+HV = 44.06677063588211*125/175
+----------------
+>>Sample 175
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1NC(=O)[C@@H]1CC(c2cc(O)ccc2)=NO1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=N(O1)C=C
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2cc(O)ccc2)=N(O1)C=C
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2C=C)=NO1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2C=C)=N(O1)C=C
+Acc = 125/176
+Sim_hit = 83.14675133823883/176
+HV = 44.06677063588211*125/176
+----------------
+>>Sample 176
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cc(Br)c(C(=O)N/N=C\C=C/c2cc(Cl)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C\C(/C)=C/c2cc(Cl)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C\C(C)=C/c2cc(Cl)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C\C(C=C)/c2cc(Cl)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)N/N=C\C(/C=C)/c2cc(Cl)ccc2O)n1
+Acc = 126/177
+Sim_hit = 83.9245291160166/177
+HV = 44.58407063588211*126/177
+----------------
+>>Sample 177
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1C=C  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3C=CCncn3)cc2)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3C=CCNn3)cc2)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3C=CCNcn3)cc2)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3C=CCNnc3)cc2)C1
+Acc = 127/178
+Sim_hit = 84.58606757755506/178
+HV = 44.95095986665134*127/178
+----------------
+>>Sample 178
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC=C1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1C=CC1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1C=C(C)C1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1C=C  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1C=C(C)C
+Acc = 128/179
+Sim_hit = 85.29717868866616/179
+HV = 45.06907542220689*128/179
+----------------
+>>Sample 179
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CC1CCCCC1)N1CCN(c2nc(-c3cc=C(Cl)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)c=C3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3cc(Cl)cc=C3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3C=Cc(Cl)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3cc=Cc(Cl)c3)no2)CC1
+Acc = 128/180
+Sim_hit = 85.29717868866616/180
+HV = 45.06907542220689*128/180
+----------------
+>>Sample 180
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(N2C(=O)S/C(=C\\c3cccc(F)c3)C2=O)c1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1C=C
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1C=CC
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1C=C(C)C
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1C=CC=C
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1C=C(C)C=C
+Acc = 129/181
+Sim_hit = 85.90828979977728/181
+HV = 45.46201986665134*129/181
+----------------
+>>Sample 181
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1/C=C/C
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1/C=C\C
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1/C=C/C(C)=C
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1/C=C/C=C/C
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1/C=C/C(C)=C/C
+Acc = 130/182
+Sim_hit = 86.58070359288072/182
+HV = 46.001430211478926*130/182
+----------------
+>>Sample 182
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C=C  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C\C=C  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C/C=C  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C=C\C  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C=C/C
+Acc = 131/183
+Sim_hit = 87.38772113674037/183
+HV = 46.41599512375963*131/183
+----------------
+>>Sample 183
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CC=C(Cc1ccccc1)N2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1C=CCN(Cc1ccccc1)C2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C=C2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(C=Cc1ccccc1)C2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccc(C=C)cc1)C2
+Acc = 132/184
+Sim_hit = 87.97233652135576/184
+HV = 46.72952435452886*132/184
+----------------
+>>Sample 184
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O\C=C\C
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O/C=C/C
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O/C=C\C
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O\C=C/C
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O/C=C=C\C
+Acc = 132/185
+Sim_hit = 87.97233652135576/185
+HV = 46.72952435452886*132/185
+----------------
+>>Sample 185
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CC=C2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)C=CC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)C=C(C)C2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CC=C(C)C2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)C=CC(C)C2)N1
+Acc = 132/186
+Sim_hit = 87.97233652135576/186
+HV = 46.72952435452886*132/186
+----------------
+>>Sample 186
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC=CC@@H43)cc12
+* COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4C=CC[C@@H]43)cc12
+* COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC=C@@H43)cc12
+* COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC=C@@H4CCC[C@@H]43)cc12
+* COC(=O)c1n[nH]c2ccc(NC(=O)N3C=CC[C@@H]4CCC[C@@H]43)cc12
+Acc = 132/187
+Sim_hit = 87.97233652135576/187
+HV = 46.72952435452886*132/187
+----------------
+>>Sample 187
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)cc(C=C)n1  
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)cc(C=CC)n1  
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)cc(C=CC=C)n1  
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)cc(C=CCC)n1  
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)cc(C=CCCC)n1
+Acc = 133/188
+Sim_hit = 88.63305080707005/188
+HV = 47.15436364024315*133/188
+----------------
+>>Sample 188
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C=C2  
+- C[C@@]12CC3=C(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)=C(C3)C2  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C=C[C@](C)(C3)C2  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C=3)C2
+Acc = 134/189
+Sim_hit = 89.33305080707005/189
+HV = 47.27063364024315*134/189
+----------------
+>>Sample 189
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1C=C
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1C=C(C)C
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1C=Cc6ccccc6
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1C=C(C)C(C)C
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1C=CC#C
+Acc = 134/190
+Sim_hit = 89.33305080707005/190
+HV = 47.27063364024315*134/190
+----------------
+>>Sample 190
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1/C=C/C  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1/C=C\C  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1/C=C(C)C  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1/C=C/C(C)C  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1/C=C\C(C)C
+Acc = 134/191
+Sim_hit = 89.33305080707005/191
+HV = 47.27063364024315*134/191
+----------------
+>>Sample 191
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-] less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C=C
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C=O)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C=C(C)C
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C=CC
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C=C[C@H]
+Acc = 134/192
+Sim_hit = 89.33305080707005/192
+HV = 47.27063364024315*134/192
+----------------
+>>Sample 192
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1C=C  
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1/C=C  
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1C=CC  
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1/C=C/C  
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1C=CC=C
+Acc = 135/193
+Sim_hit = 90.0054646001735/193
+HV = 47.702995709208665*135/193
+----------------
+>>Sample 193
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1C=C  
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1/C=C\  
+- O=C(NCc1ccco1)C1CC=C(c2cnc(N3CCCC3)nc2)CC1  
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)C=C1  
+- O=C(N=Cc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+Acc = 136/194
+Sim_hit = 90.72213126684017/194
+HV = 47.998334042542*136/194
+----------------
+>>Sample 194
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1C=C  
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1C=CC  
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1C=CC=C  
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1C=C(OC)  
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1C=CC=CC
+Acc = 136/195
+Sim_hit = 90.72213126684017/195
+HV = 47.998334042542*136/195
+----------------
+>>Sample 195
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3cc=Ccc23)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3c=Cccc23)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccc=cc23)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3cc=ccc23)CC1  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3c=cCcc23)CC1
+Acc = 136/196
+Sim_hit = 90.72213126684017/196
+HV = 47.998334042542*136/196
+----------------
+>>Sample 196
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CC=C1  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)C=CCC1  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CC=CC1  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)C=CC1  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC=C1
+Acc = 136/197
+Sim_hit = 90.72213126684017/197
+HV = 47.998334042542*136/197
+----------------
+>>Sample 197
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC/C=C\1  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC/C=C\[NH2+]CC1  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]C/C=C/C1  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1/C=C\  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C=C
+Acc = 137/198
+Sim_hit = 91.38122217593107/198
+HV = 48.59402040617836*137/198
+----------------
+>>Sample 198
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-] less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-]C=C  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-]C=CC  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-]C=C(C)C  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-]C=CC#C  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-]C=CC(=C)C
+Acc = 137/199
+Sim_hit = 91.38122217593107/199
+HV = 48.59402040617836*137/199
+----------------
+>>Sample 199
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1 less soluble in water and increase logP by at least 0. ? The output molecules should be similar to the input molecule. Add a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(NC(=O)C=Cc2cccc(Cl)c2Cl)no1
+- Cc1cc(NC(=O)CC=Cc2cccc(Cl)c2Cl)no1
+- Cc1cc(NC(=O)CCc2cc(Cl)cc(C=C)c2Cl)no1
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2C=C)no1
+- Cc1cc(NC(=O)CCc2cccc(C=C)c2Cl)no1
+Acc = 138/200
+Sim_hit = 91.93891448362338/200
+HV = 48.63897040617836*138/200
+----------------
+--------Final Acc--------
+Acc = 138/200
+----------------

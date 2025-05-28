@@ -1,0 +1,29 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=2, task_id=101, constraint='loose', conversation_type='single', planner='baseline', depth=3, num_generate=1, num_keep=1)
+>>Sample 0
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 more soluble in water and decrease logP by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH3+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]CC1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]OC1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]O1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]CCC1
+All nodes in last layer is invalid, Tree search process ends.
+>>Sample 1
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more soluble in water and decrease logP by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccc(O)cc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1CO
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)N(CCc1ccc(O)cc1)Cc1ccncc1
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)N(CC(O)c1ccncc1)Cc1ccccc1
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccc(O)nc1C
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more soluble in water and decrease logP by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1N(C(=O)C(=O)NCCc1ccncc1C)O
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)N(CCc1ccncc1)O
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1CO
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)N(CCc1ccncc1C)O
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cc(O)nc1C
+Acc = 1/1
+Sim_hit = 0.7230769230769231/1
+HV = 0.15640153846153843*1/1
+----------------
+--------Final Acc--------
+Acc = 1/1
+----------------

@@ -1,0 +1,2204 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=105, constraint='loose', conversation_type='single', planner='baseline', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CCSCCO3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCOC3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCCCO3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC(O)CO3)no2)[NH2+]C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCC(C)O3)no2)[NH2+]C1
+Acc = 0/1
+Sim_hit = 0/1
+HV = 0*0/1
+----------------
+>>Sample 1
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cccnc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccccc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccccn1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cc2ccccc21
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccc2cncnc21
+Acc = 0/2
+Sim_hit = 0/2
+HV = 0*0/2
+----------------
+>>Sample 2
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(F)ccc(F)c1
+- CCC[NH2+]Cc1ncoc1-c1cc(F)ccc1
+- CCC[NH2+]Cc1ncoc1-c1ccc(F)cc1
+- CCC[NH2+]Cc1ncoc1-c1cccc1F
+- CCC[NH2+]Cc1ncoc1-c1cc(F)ccc1F
+Acc = 0/3
+Sim_hit = 0/3
+HV = 0*0/3
+----------------
+>>Sample 3
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)OC3CC32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC3CC32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC3C=C32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC3C(C)C32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC3CC(C)C32)cc1
+Acc = 0/4
+Sim_hit = 0/4
+HV = 0*0/4
+----------------
+>>Sample 4
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C(F)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3ccc(F)c3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(C)cs3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(Cl)cs3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(I)cs3)c2C(N)=O)C1
+Acc = 0/5
+Sim_hit = 0/5
+HV = 0*0/5
+----------------
+>>Sample 5
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2)[C@@H]1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)c(C)c3n2)[C@@H]1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)c(C)c3n2)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)c(C)c3n2)[C@H]1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)c(C)c3n2)[C@@H]1
+Acc = 0/6
+Sim_hit = 0/6
+HV = 0*0/6
+----------------
+>>Sample 6
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@@H]1CC(=O)Nc2ccccc21
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccc(F)cc2
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2F
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccc(Cl)cc2
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccc(Br)cc2
+Acc = 0/7
+Sim_hit = 0/7
+HV = 0*0/7
+----------------
+>>Sample 7
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(F)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Br)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(I)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(O)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(N)s1
+Acc = 0/8
+Sim_hit = 0/8
+HV = 0*0/8
+----------------
+>>Sample 8
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(F)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(Cl)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(CN)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(I)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(CF3)nc2)sc2c1CCC2
+Acc = 0/9
+Sim_hit = 0/9
+HV = 0*0/9
+----------------
+>>Sample 9
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccc(F)cc2)ncnc1Nc1ccccc1
+- Nc1c(NCc2ccc(Cl)cc2)ncnc1Nc1ccccc1
+- Nc1c(NCc2ccc(Br)cc2)ncnc1Nc1ccccc1
+- Nc1c(NCc2ccc(I)cc2)ncnc1Nc1ccccc1
+- Nc1c(NCc2ccc(CN)cc2)ncnc1Nc1ccccc1
+Acc = 0/10
+Sim_hit = 0/10
+HV = 0*0/10
+----------------
+>>Sample 10
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1CC[C@@H]1c1ccc(Cl)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1CC[C@@H]1c1ccc(F)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1CC[C@@H]1c1ccc(I)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1CC[C@@H]1c1ccc(C)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1CC[C@@H]1c1ccc(c2ccccc2)c1
+Acc = 0/11
+Sim_hit = 0/11
+HV = 0*0/11
+----------------
+>>Sample 11
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(F)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)Nc2ccccc2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2cc(Br)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(I)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(CN)nn2)c1
+Acc = 0/12
+Sim_hit = 0/12
+HV = 0*0/12
+----------------
+>>Sample 12
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@@H](O)CN1CCOC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCSCC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCCC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1C(CC)CC1
+Acc = 1/13
+Sim_hit = 0.84/13
+HV = 7.753200000000003*1/13
+----------------
+>>Sample 13
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(Br)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(F)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(CN)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(CF3)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(I)ccc3N2)cc1
+Acc = 1/14
+Sim_hit = 0.84/14
+HV = 7.753200000000003*1/14
+----------------
+>>Sample 14
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(Cl)cc23)c1
+- COc1cccc(NC(=O)CC(C)c2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(C)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(I)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(Br)cc23)c1
+Acc = 1/15
+Sim_hit = 0.84/15
+HV = 7.753200000000003*1/15
+----------------
+>>Sample 15
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c(S)nnc1-c1ccc(Cl)s1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c(S)nnc1-c1ccc(F)s1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nn(C)c1cccs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c(S)nnc1-c1ccc(Br)s1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c(S)nnc1-c1ccc(I)s1
+Acc = 1/16
+Sim_hit = 0.84/16
+HV = 7.753200000000003*1/16
+----------------
+>>Sample 16
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)c1
+- CC(C)N+c1cncc(N2Cc3ccccc3C2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccC3)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccc(F)cc3C2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3cc(O)ccc3C2)n1
+Acc = 2/17
+Sim_hit = 1.414468085106383/17
+HV = 15.158093617021281*2/17
+----------------
+>>Sample 17
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccnc(N)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccc(O)cc1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccc(F)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1cc[nH]c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccc(C)c1)c1cccc(Cl)c1
+Acc = 2/18
+Sim_hit = 1.414468085106383/18
+HV = 15.158093617021281*2/18
+----------------
+>>Sample 18
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)c1ccc(CN2C(=O)c3ccccc3C2=O)c1
+- CN(C)C(=O)c1ccc(CN2C(=O)c3ccc(F)c3C2=O)c1
+- CN(C)C(=O)c1ccc(CN2C(=O)c3cc(Cl)cc3C2=O)c1
+- CN(C)C(=O)c1ccc(CN2C(=O)c3cc(I)cc3C2=O)c1
+- CN(C)C(=O)c1ccc(CN2C(=O)c3cc(Br)cc3C2=O)c1
+Acc = 2/19
+Sim_hit = 1.414468085106383/19
+HV = 15.158093617021281*2/19
+----------------
+>>Sample 19
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)O)c1ccc(Cl)cc1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(F)cc1
+- C[NH2+][C@](C)(C(=O)O)c1ccc(F)cc1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(Br)cc1
+- C[NH2+][C@](C)(C(=O)O)c1ccc(Br)cc1
+Acc = 3/20
+Sim_hit = 1.8760065466448448/20
+HV = 16.464247463175127*3/20
+----------------
+>>Sample 20
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1CCOC[C@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCOC[C@@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCOC(C)c2ccccc2
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCOC(C)c2ccc(F)cc2
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCOC(C)c2ccc(Cl)cc2
+Acc = 3/21
+Sim_hit = 1.8760065466448448/21
+HV = 16.464247463175127*3/21
+----------------
+>>Sample 21
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(Cl)c1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(F)c1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(F)cs1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(C)c1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cc(O)c1
+Acc = 3/22
+Sim_hit = 1.8760065466448448/22
+HV = 16.464247463175127*3/22
+----------------
+>>Sample 22
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1CC[NH2+]C1
+- Cc1cccc(C)c1OC1C[NH2+]CC1
+- Cc1cccc(C)c1OC1C[NH]C1
+- Cc1cccc(C)c1OC1C[NH2+]C(C)C1
+- Cc1cccc(C)c1OC1C[NH2+]C(C)(C)C1
+Acc = 3/23
+Sim_hit = 1.8760065466448448/23
+HV = 16.464247463175127*3/23
+----------------
+>>Sample 23
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(F)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(Br)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(I)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(CN)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(OMe)cc1
+Acc = 3/24
+Sim_hit = 1.8760065466448448/24
+HV = 16.464247463175127*3/24
+----------------
+>>Sample 24
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc(c3)cc2)cc1)
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)OC(C)C4)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)OC(C)C(C)C4)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)OC(C)(C)C4)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)OC(C)(C)C(C)C4)cc2)cc1
+Acc = 3/25
+Sim_hit = 1.8760065466448448/25
+HV = 16.464247463175127*3/25
+----------------
+>>Sample 25
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=O)S2)n1
+- CCCCc1noc([C@H]2C=CC(=N)O2)n1
+- CCCCc1noc([C@H]2C=CC(=N)SC2)n1
+- CCCCc1noc([C@H]2C=CC(=N)S(C)C2)n1
+- CCCCc1noc([C@H]2C=CC(=N)SC(C)C2)n1
+Acc = 4/26
+Sim_hit = 2.590292260930559/26
+HV = 21.30710460603227*4/26
+----------------
+>>Sample 26
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(COC)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(CCOC)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(COCC)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OEt)cc2)s1
+Acc = 5/27
+Sim_hit = 3.3076835652783854/27
+HV = 33.552974171249666*5/27
+----------------
+>>Sample 27
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2CCc3ccc(Br)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3cc(Br)c(Cl)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(F)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(I)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Cl)cc32)CCO1
+Acc = 6/28
+Sim_hit = 4.021969279564099/28
+HV = 40.14583131410681*6/28
+----------------
+>>Sample 28
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCN)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCN(C)C)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CC(C)C#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CC(C)CN)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CC(C#N)C)cc1
+Acc = 6/29
+Sim_hit = 4.021969279564099/29
+HV = 40.14583131410681*6/29
+----------------
+>>Sample 29
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCCN)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCNC)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CC(C)N)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CC(C#N))CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCN(C)C)CC2
+Acc = 7/30
+Sim_hit = 4.605302612897432/30
+HV = 40.4958313141068*7/30
+----------------
+>>Sample 30
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)C(=O)[C@H](C)c1ccncc1
+- CC[C@H](C)C(=O)[C@@H](C)c1cccnc1
+- CC[C@@H](C)C(=O)[C@H](C)c1ccccc1
+- CC[C@H](C)C(=O)[C@@H](C)c1cc2cnnc2c1
+- CC[C@@H](C)C(=O)[C@H](C)c1cc(c2ccncc2)c1
+Acc = 7/31
+Sim_hit = 4.605302612897432/31
+HV = 40.4958313141068*7/31
+----------------
+>>Sample 31
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(C)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1-C
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(C)c2c1-N
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1-S
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1-F
+Acc = 7/32
+Sim_hit = 4.605302612897432/32
+HV = 40.4958313141068*7/32
+----------------
+>>Sample 32
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(Cl)cc2s1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(F)c2s1
+- COc1nn(C)cc1C(=O)Nc1nc2ccc(F)cc2s1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(Br)c2s1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(I)c2s1
+Acc = 7/33
+Sim_hit = 4.605302612897432/33
+HV = 40.4958313141068*7/33
+----------------
+>>Sample 33
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(Cl)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(F)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(C)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(I)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(c4ccccc4)ccc32)cn1
+Acc = 7/34
+Sim_hit = 4.605302612897432/34
+HV = 40.4958313141068*7/34
+----------------
+>>Sample 34
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CC(C)CC[C@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCC(C)[C@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CC(C)C[C@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(C))o1
+Acc = 7/35
+Sim_hit = 4.605302612897432/35
+HV = 40.4958313141068*7/35
+----------------
+>>Sample 35
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccsc4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccc4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4ccccc4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccnc4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccoc4)c(=O)c4ccccc43)n2)cc1
+Acc = 7/36
+Sim_hit = 4.605302612897432/36
+HV = 40.4958313141068*7/36
+----------------
+>>Sample 36
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=O)Nc2nc3ccccc3n21
+- Cc1ccccc1[C@@H]1NC(=S)Nc2nc3ccccc3n21
+- Cc1ccccc1[C@@H]1NC(=N)Nc2nc3ccccc3n21
+- Cc1ccccc1[C@@H]1NC(=O)Nc2nc3cccc3n21
+- Cc1ccccc1[C@@H]1NC(=O)Nc2nc3ccccc3c21
+Acc = 8/37
+Sim_hit = 5.338635946230766/37
+HV = 46.7438313141068*8/37
+----------------
+>>Sample 37
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CCOC2)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2C[C@H]2OC)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CC[C@@H]2O)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2COC2)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2C[C@@H](O)C2)cc1F
+Acc = 8/38
+Sim_hit = 5.338635946230766/38
+HV = 46.7438313141068*8/38
+----------------
+>>Sample 38
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(Cl)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(Br)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(I)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(c2ccccc2)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(C)c1
+Acc = 8/39
+Sim_hit = 5.338635946230766/39
+HV = 46.7438313141068*8/39
+----------------
+>>Sample 39
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CCCC3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCC3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3C(CC)CO3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CC(C)CO3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1CSC
+Acc = 9/40
+Sim_hit = 6.065908673503493/40
+HV = 53.45655858683407*9/40
+----------------
+>>Sample 40
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nnco1
+- Cc1nc2ccccn2c1-c1nncc1
+- Cc1nc2ccccn2c1-c1nn(c1)O
+- Cc1nc2ccccn2c1-c1nn(C)o1
+- Cc1nc2ccccn2c1-c1nn(C)C(=O)O
+Acc = 9/41
+Sim_hit = 6.065908673503493/41
+HV = 53.45655858683407*9/41
+----------------
+>>Sample 41
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=CNCCc1ccc(F)c1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C\CNCCc1ccc(F)c1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=CNCCc1cc(F)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1cc(F)c1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)c1
+Acc = 9/42
+Sim_hit = 6.065908673503493/42
+HV = 53.45655858683407*9/42
+----------------
+>>Sample 42
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1cc(-c2ccc(O)cc2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(F)cc2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(Cl)cc2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(Br)cc2)on1)[C@H]1CCCO1
+Acc = 9/43
+Sim_hit = 6.065908673503493/43
+HV = 53.45655858683407*9/43
+----------------
+>>Sample 43
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCC1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CC(C)C1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(C)CCCC1
+- CC[NH2+][C@@H](Cc1cnnc1)C1(N(C)C)CCCC1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(CC)CCCC1
+Acc = 9/44
+Sim_hit = 6.065908673503493/44
+HV = 53.45655858683407*9/44
+----------------
+>>Sample 44
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[NH+](CC(=O)NCC)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)N(C)C)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)N(C)O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(C)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)N(C)CN)C1
+Acc = 10/45
+Sim_hit = 6.780194387789208/45
+HV = 84.2351300154055*10/45
+----------------
+>>Sample 45
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)c[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)c1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)c[n+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[n+]1
+Acc = 10/46
+Sim_hit = 6.780194387789208/46
+HV = 84.2351300154055*10/46
+----------------
+>>Sample 46
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(F)ccc2n1)[C@@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2c1)[C@@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(c1)O
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(c1)N
+Acc = 10/47
+Sim_hit = 6.780194387789208/47
+HV = 84.2351300154055*10/47
+----------------
+>>Sample 47
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](O)Cn1nn(c2ccccc2)c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nc(c2ccccc2)c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nnc2cccc2c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nn(c2ccc(F)cc2)c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nn(c2ccccc2)c1=O
+Acc = 10/48
+Sim_hit = 6.780194387789208/48
+HV = 84.2351300154055*10/48
+----------------
+>>Sample 48
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(C)cnn12
+- CSc1nnc2n(N)cnc12
+- CSc1nnc2n(N)cn1c2n
+- CSc1nnc2n(N)cnn1C
+- CSc1nnc2n(CH3)cnn12
+Acc = 11/49
+Sim_hit = 7.425355678111789/49
+HV = 101.02222678959905*11/49
+----------------
+>>Sample 49
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2OC=C[C@@H]2c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2OCC[C@@H]2c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2OP(=O)(O)O[C@@H]2c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2O[C@@H](C)c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2O[C@@H](CC)c2ccc(C)cc2)n1
+Acc = 12/50
+Sim_hit = 8.187260440016551/50
+HV = 110.43936964674191*12/50
+----------------
+>>Sample 50
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOC(C)C2)CC1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1(C)
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2C(CC)COCC2)CC1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1(C)C
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1(C#N)
+Acc = 12/51
+Sim_hit = 8.187260440016551/51
+HV = 110.43936964674191*12/51
+----------------
+>>Sample 51
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CN(C(=O)NCc1cc(=O)[nH]c2ccc(Cl)c12)
+- CC[C@H](C)[C@](C)(O)CN(C(=O)NCc1cc(=O)[nH]c2ccc(F)c12)
+- CC[C@H](C)[C@](C)(O)CN(C(=O)NCc1cc(=O)[nH]c2ccc(I)c12)
+- CC[C@H](C)[C@](C)(O)CN(C(=O)NCc1cc(=O)[nH]c2ccc(Br)c12)
+- CC[C@H](C)[C@](C)(O)CN(C(=O)NCc1cc(=O)[nH]c2ccc(CN)c12)
+Acc = 12/52
+Sim_hit = 8.187260440016551/52
+HV = 110.43936964674191*12/52
+----------------
+>>Sample 52
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(Cl)cc1Cl)[S@@](=O)Cc1nnnn1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1)[S@@](=O)Cc1nnnn1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@](=O)Cc1nnnn1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnnc1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1(C)C
+Acc = 12/53
+Sim_hit = 8.187260440016551/53
+HV = 110.43936964674191*12/53
+----------------
+>>Sample 53
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Br)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C=C)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(C)C)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(CO)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(CF)c(Cl)c1
+Acc = 12/54
+Sim_hit = 8.187260440016551/54
+HV = 110.43936964674191*12/54
+----------------
+>>Sample 54
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5nccc5n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccc5n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncc(c5)n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5nc(cc5)n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5nccc5n4)C3)cc2[nH]1
+Acc = 13/55
+Sim_hit = 8.771676024432136/55
+HV = 113.63612289349516*13/55
+----------------
+>>Sample 55
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)n1o)c1ccc(Cl)s1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)n1o)c1ccc(F)s1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)n1o)c1ccc(Br)s1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)n1o)c1ccc(I)s1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)n1o)c1ccc(CN)s1
+Acc = 13/56
+Sim_hit = 8.771676024432136/56
+HV = 113.63612289349516*13/56
+----------------
+>>Sample 56
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OC(C)O3)CCOCC1)C(C)(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OC(O)O3)CCOCC1)C(C)(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOC(C)C1)C(C)(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)F
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)C(C)C
+Acc = 13/57
+Sim_hit = 8.771676024432136/57
+HV = 113.63612289349516*13/57
+----------------
+>>Sample 57
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](F)C(C)(C)C)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)C)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(F))cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](Cl)C(C)(C)C)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(C))cc1c32
+Acc = 14/58
+Sim_hit = 9.588342691098802/58
+HV = 130.15728956016181*14/58
+----------------
+>>Sample 58
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(Cl)c3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3ccc(F)cc3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccs3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cc(C)cc(F)c3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3ccc(F)c(C)c3)c2N1
+Acc = 14/59
+Sim_hit = 9.588342691098802/59
+HV = 130.15728956016181*14/59
+----------------
+>>Sample 59
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N/C(=N\OCc1ccc(F)c(Cl)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Br)c(Cl)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Cl)c(F)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nons1N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1F
+Acc = 14/60
+Sim_hit = 9.588342691098802/60
+HV = 130.15728956016181*14/60
+----------------
+>>Sample 60
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)ccc1
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cc(F)ccc1
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1ccc(F)c1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cccc(F)c1
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cc(F)ccc1F
+Acc = 14/61
+Sim_hit = 9.588342691098802/61
+HV = 130.15728956016181*14/61
+----------------
+>>Sample 61
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H]2CCCCN2C(=O)C1Cc1ccccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(F)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(Cl)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(Br)cc1
+Acc = 14/62
+Sim_hit = 9.588342691098802/62
+HV = 130.15728956016181*14/62
+----------------
+>>Sample 62
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(O)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(F)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(Cl)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(Br)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+Acc = 14/63
+Sim_hit = 9.588342691098802/63
+HV = 130.15728956016181*14/63
+----------------
+>>Sample 63
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OCC)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OC(C)C)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(F)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(C)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(C(C)C)=C32)cc1
+Acc = 15/64
+Sim_hit = 10.295239242822941/64
+HV = 137.93315162912734*15/64
+----------------
+>>Sample 64
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(Cl)c(Cl)c3Cl)[nH]c2n1
+- CNc1ccc2nc(-c3ccccc3F)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(Br)c(Br)c3Br)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(I)c(I)c3I)[nH]c2n1
+- CNc1ccc2nc(-c3cc(CN)cc3F)[nH]c2n1
+Acc = 15/65
+Sim_hit = 10.295239242822941/65
+HV = 137.93315162912734*15/65
+----------------
+>>Sample 65
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=S)cc1
+- CCCCCCCOc1ccc(C(N)=S)cc1
+- CCCCCOc1ccc(CNC=S)cc1
+- CCCCCOc1ccc(C(NS)=O)cc1
+- CCCCCOc1ccc(C(N)=SO)cc1
+Acc = 15/66
+Sim_hit = 10.295239242822941/66
+HV = 137.93315162912734*15/66
+----------------
+>>Sample 66
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(Cl)c(S(N)(=O)=O)c1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cc(F)cc(S(N)(=O)=O)c1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(I)c(S(N)(=O)=O)c1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(Br)c(S(N)(=O)=O)c1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(CF3)c(S(N)(=O)=O)c1
+Acc = 15/67
+Sim_hit = 10.295239242822941/67
+HV = 137.93315162912734*15/67
+----------------
+>>Sample 67
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNc1nc(-c2cc(Cl)cs2)nc(C)c1CC
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1CO
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1CF
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)O
+Acc = 15/68
+Sim_hit = 10.295239242822941/68
+HV = 137.93315162912734*15/68
+----------------
+>>Sample 68
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCCCN)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NC(C)C)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCCl)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCCF)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCCBr)c2ccccc2)cc1
+Acc = 15/69
+Sim_hit = 10.295239242822941/69
+HV = 137.93315162912734*15/69
+----------------
+>>Sample 69
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)NCC2
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)NC(C)C2
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)NCC2[C@@H]C
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)NCC2[C@H]C
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)NCC2[C@@H]CC
+Acc = 16/70
+Sim_hit = 10.860456634127289/70
+HV = 140.52184728130126*16/70
+----------------
+>>Sample 70
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nn(C)o2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2ncn(C)c2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)c2)cc1F
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)c2)cc1Br
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nn(C)c2)cc1Cl
+Acc = 17/71
+Sim_hit = 11.622361396032051/71
+HV = 146.58660918606316*17/71
+----------------
+>>Sample 71
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)c1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)sc1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)o1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)n1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)cn1
+Acc = 17/72
+Sim_hit = 11.622361396032051/72
+HV = 146.58660918606316*17/72
+----------------
+>>Sample 72
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CS[C@@H]1C(=O)[C@H]1COc2ccc(F)cc2C1
+- CC(C)CNC(=O)[C@H]1CSC[C@H]1C(=O)[C@H]1COc2ccc(F)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@@H]1Cc2ccc(F)cc2
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1Cc2ccc(F)c(F)c2
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(Cl)cc2C1
+Acc = 18/73
+Sim_hit = 12.249227067673843/73
+HV = 148.61765396218254*18/73
+----------------
+>>Sample 73
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@@H]1C)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CC[C@H][NH2+]C1)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+]C1)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CC[NH2+][C@H]1C)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CC[NH2+][C@@H]1C)CC(C)(C)C
+Acc = 18/74
+Sim_hit = 12.249227067673843/74
+HV = 148.61765396218254*18/74
+----------------
+>>Sample 74
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(F)F)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(Cl)Cl)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)c2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)c2C(F)F1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)c2C(Cl)Cl1
+Acc = 18/75
+Sim_hit = 12.249227067673843/75
+HV = 148.61765396218254*18/75
+----------------
+>>Sample 75
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(Cl)c(F)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2F)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Br)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(Cl)c(Cl)c3)cc2Cl)CCN1
+Acc = 18/76
+Sim_hit = 12.249227067673843/76
+HV = 148.61765396218254*18/76
+----------------
+>>Sample 76
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)F
+- CC(C)(CO[N+](=O)[O-])C(=O)Br
+- CC(C)(CO[N+](=O)[O-])C(=O)I
+- CC(C)(CO[N+](=O)[O-])C(=O)OC
+- CC(C)(CO[N+](=O)[O-])CC(=O)Cl
+Acc = 18/77
+Sim_hit = 12.249227067673843/77
+HV = 148.61765396218254*18/77
+----------------
+>>Sample 77
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(Cl)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(Br)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(C)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(I)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(c3ccco3)cc2)cc1[O-]
+Acc = 18/78
+Sim_hit = 12.249227067673843/78
+HV = 148.61765396218254*18/78
+----------------
+>>Sample 78
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2ccc(C(F)(F)F)cc2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(Cl)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(F)cc2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(C(C)C)cc2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(C)cc2)c1
+Acc = 18/79
+Sim_hit = 12.249227067673843/79
+HV = 148.61765396218254*18/79
+----------------
+>>Sample 79
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(Cl)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(I)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(Br)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(CN)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(O)cc2)CC1
+Acc = 18/80
+Sim_hit = 12.249227067673843/80
+HV = 148.61765396218254*18/80
+----------------
+>>Sample 80
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1Cl
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1Br
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1I
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1CN
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1O
+Acc = 18/81
+Sim_hit = 12.249227067673843/81
+HV = 148.61765396218254*18/81
+----------------
+>>Sample 81
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@H]1C(=O)O
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OC
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)CC
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)CO
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)CCC
+Acc = 19/82
+Sim_hit = 13.063180556045936/82
+HV = 150.92114233427557*19/82
+----------------
+>>Sample 82
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCC1)c1ccc([N+](=O)[O-])cc1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc([N+](=O)O)cc1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc([N+]([O-])=O)cc1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc([N+](=O)[O-])c(F)c1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc([N+](=O)[O-])c(Cl)c1
+Acc = 19/83
+Sim_hit = 13.063180556045936/83
+HV = 150.92114233427557*19/83
+----------------
+>>Sample 83
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(Cc1nnc(-c2ccc(F)co2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc(Cl)o1
+- CCCN(Cc1nnc(-c2ccc(F)co2)o1)C(=O)c1ccc(Cl)o1
+- CCCN(Cc1nnc(-c2ccc(F)co2)o1)C(=O)c1ccc(Br)o1
+- CCCN(Cc1nnc(-c2ccc(F)co2)o1)C(=O)c1ccc(I)o1
+Acc = 19/84
+Sim_hit = 13.063180556045936/84
+HV = 150.92114233427557*19/84
+----------------
+>>Sample 84
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)C2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCSC2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@H]2CCS(=O)(=O)C2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCOC2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCCC2)C1
+Acc = 20/85
+Sim_hit = 13.692810185675565/85
+HV = 161.66892011205334*20/85
+----------------
+>>Sample 85
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH][C@@H]4[C@@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+][C@@H]4[C@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+][C@@H]4[C@@]3(C)C2=O)c(O)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH][C@@H]4[C@@]3(C)C2=O)c(O)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccc(F)cc5[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1
+Acc = 20/86
+Sim_hit = 13.692810185675565/86
+HV = 161.66892011205334*20/86
+----------------
+>>Sample 86
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](F)[C@H](F)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](Cl)[C@H](Cl)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@@H](O)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](F)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@@H](O)[C@H](O)C1
+Acc = 21/87
+Sim_hit = 14.506763674047658/87
+HV = 194.60147825158822*21/87
+----------------
+>>Sample 87
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)NCc1ccc(Cl)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(F)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(I)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(Br)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(C)cc1)C1CCCCC1
+Acc = 22/88
+Sim_hit = 15.08858185586584/88
+HV = 207.4712964334064*22/88
+----------------
+>>Sample 88
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(F)cc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2cc(ccc2)Cl)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2F)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(Br)cc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2I)s1
+Acc = 22/89
+Sim_hit = 15.08858185586584/89
+HV = 207.4712964334064*22/89
+----------------
+>>Sample 89
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=S)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=N)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(F)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(Cl)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(C)=O)cc2)c1
+Acc = 23/90
+Sim_hit = 15.956506384167726/90
+HV = 222.2867681315196*23/90
+----------------
+>>Sample 90
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N2C[C@H](C(=O)NCC(C)C)CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)Cc2c)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)C)CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCCCC)CC2=O)cc1C
+Acc = 23/91
+Sim_hit = 15.956506384167726/91
+HV = 222.2867681315196*23/91
+----------------
+>>Sample 91
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)C1CCN(C(=O)NC(C)Cc2c(C)noc2C)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)nc(C)c2C)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)coc2C)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)no(C)c2C)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)nn(C)c2C)CC1
+Acc = 23/92
+Sim_hit = 15.956506384167726/92
+HV = 222.2867681315196*23/92
+----------------
+>>Sample 92
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CC[NH+](Cc2cc(OC)c3c2C[C@H](C)C3)C1
+- CCOC[C@H]1CC[NH+](Cc2ccc(OC)c3c2O[C@H](C)C3)C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)c3c2O[C@H](C)C3)C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)c3c2O[C@H](C)C3)C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)c3c2O[C@H](C)C3)C1
+Acc = 23/93
+Sim_hit = 15.956506384167726/93
+HV = 222.2867681315196*23/93
+----------------
+>>Sample 93
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([N+](=O)[O-])c4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cc([N+](=O)[O-])cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4c([N+](=O)[O-])ccc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([N+](=O)[O-])cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cc([N+](=O)[O-])ccc4)CC3)nc12
+Acc = 23/94
+Sim_hit = 15.956506384167726/94
+HV = 222.2867681315196*23/94
+----------------
+>>Sample 94
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)NCC[C@@H]2CCCO2)cc1OC(F)F
+- COc1ccc(NC(=O)NC[C@@H]2CCCCO2)cc1OC(F)F
+- COc1ccc(NC(=O)NCC[C@@H]2CCCO2)cc1OC(F)Cl
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)Cl
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(CF3)F
+Acc = 23/95
+Sim_hit = 15.956506384167726/95
+HV = 222.2867681315196*23/95
+----------------
+>>Sample 95
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)[C@H]1CC[NH+]CC[C@@H]1Cc1ccccc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]CC[C@@H]1Cc1c(ccc1)C
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1c(c(c1)F)F
+- CCC[C@@H](C)[C@H]1CC[NH+]C[C@@H]1Cc1ccc(c1)O
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(c1)Cl
+Acc = 24/96
+Sim_hit = 16.59287002053136/96
+HV = 222.9294954042469*24/96
+----------------
+>>Sample 96
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCc1cccc(F)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(O)cc1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(F)c(F)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(Cl)c(O)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(C)c(O)c1)N1CCC[C@H]1CN1CCOCC1
+Acc = 25/97
+Sim_hit = 17.411051838713178/97
+HV = 239.48131358606508*25/97
+----------------
+>>Sample 97
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)C)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(CC)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)C(C))cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C(C))cc1
+Acc = 25/98
+Sim_hit = 17.411051838713178/98
+HV = 239.48131358606508*25/98
+----------------
+>>Sample 98
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CCC(=O)OC)C(=O)c1cncc(c1)C
+- CCN(CCC(=O)OC)C(=O)c1cccnc1C
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)ncn2C
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)cnn2C
+Acc = 26/99
+Sim_hit = 17.995957499090537/99
+HV = 249.9043324539896*26/99
+----------------
+>>Sample 99
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNc3ccccn3)nn2)cc1
+- COc1ccc(-n2cc(C#cNc3cccc[nH+]3)nn2)cc1
+- COc1ccc(-n2cc(CNc3ccc([nH]3)nn2))cc1
+- COc1ccc(-n2cc(CNc3cccc[nH+]3)c2=O)cc1
+- COc1ccc(-n2cc(CNc3ccc(Cl)c3)nn2)cc1
+Acc = 27/100
+Sim_hit = 18.64301632261995/100
+HV = 250.71315598340138*27/100
+----------------
+>>Sample 100
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1occc1C(=O)N1CCC[C@@H]1C(NCC)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NC(C)C)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NS(=O)(=O)C)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NC(F)F)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(NC#N)=O
+Acc = 28/101
+Sim_hit = 19.360407626967774/101
+HV = 260.74946033122745*28/101
+----------------
+>>Sample 101
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1CC
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C(C)
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1Cc(C)C
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)Cc
+Acc = 28/102
+Sim_hit = 19.360407626967774/102
+HV = 260.74946033122745*28/102
+----------------
+>>Sample 102
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](C)NC(=O)[C@H](C)OCCOC higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)NC(=O)[C@H](C)OC
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)
+- CC[C@@H](C)NC(=O)[C@H](C)OCC
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)C
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)(C)C
+Acc = 29/103
+Sim_hit = 20.07469334125349/103
+HV = 267.3423174740846*29/103
+----------------
+>>Sample 103
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(Cl)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1ccc(C#N)c2ccc(Cl)cc21
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(F)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(Br)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(I)cc2n1
+Acc = 29/104
+Sim_hit = 20.07469334125349/104
+HV = 267.3423174740846*29/104
+----------------
+>>Sample 104
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@H](C)C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@@H](C)C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[C@H](C)C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@H](C)C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@@H](C)C2)o1
+Acc = 30/105
+Sim_hit = 20.71755048411063/105
+HV = 270.1966031883703*30/105
+----------------
+>>Sample 105
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)CCc1ccccc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COCc1ccccc1Cl
+- CC1(C)CCCC[C@H]1[NH3+]C[C@H](O)COc1ccccc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1cccc(F)c1
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(F)cc1
+Acc = 31/106
+Sim_hit = 21.359059918072894/106
+HV = 276.117735263842*31/106
+----------------
+>>Sample 106
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)c(S(=O)(=O)Nc2ccc(F)c3ccccc23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(Cl)c3ccccc23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(Br)c3ccccc23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(I)c3ccccc23)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(c4ccccc4)c3ccccc23)c(C)c1
+Acc = 32/107
+Sim_hit = 22.066376991243626/107
+HV = 290.4267596540859*32/107
+----------------
+>>Sample 107
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N(C)23)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)NC3)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)O2)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N(C)C3)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N(C)C(C)3)cc1
+Acc = 32/108
+Sim_hit = 22.066376991243626/108
+HV = 290.4267596540859*32/108
+----------------
+>>Sample 108
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)Cl)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(Cl)(Cl)Cl)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(Cl)F)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)F)n3)CC2)cc1SC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(Cl)Cl)n3)CC2)cc1OC
+Acc = 32/109
+Sim_hit = 22.066376991243626/109
+HV = 290.4267596540859*32/109
+----------------
+>>Sample 109
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1cccc(NC(=O)C[C@H]2CC[C@@H]2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@@H](C)C2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@@H](C#N)C2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@@H](O)C2)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@@H](F)C2)c1
+Acc = 32/110
+Sim_hit = 22.066376991243626/110
+HV = 290.4267596540859*32/110
+----------------
+>>Sample 110
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](NC(=O)CN1c2cccc3ccccc23S1(=O)=O)c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O))c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2cccc3ccc(c23)S1(=O)=O)c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1ccccc1o
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1ccc2ccccc2o1
+Acc = 32/111
+Sim_hit = 22.066376991243626/111
+HV = 290.4267596540859*32/111
+----------------
+>>Sample 111
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N[C@@H](C(=O)N1CC[C@H](F)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](Cl)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](Br)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](I)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](C)C1)C(C)C
+Acc = 33/112
+Sim_hit = 22.83381885170874/112
+HV = 305.95210849129523*33/112
+----------------
+>>Sample 112
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(F)c3o2)sc(C)c1C
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3n2)sc(C)c1C
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3s2)sc(C)c1C
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(F)c1C
+Acc = 33/113
+Sim_hit = 22.83381885170874/113
+HV = 305.95210849129523*33/113
+----------------
+>>Sample 113
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H]1CS/C(=N\\c2ccccc2Oc2ccccc2)N1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H]1CS/C(=N\c2ccccc2Oc2ccc(F)cc2)N1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C
+- CC[C@H]1CS/C(=N\c2ccc(Cl)cc2Oc2ccccc2)N1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)NC1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccc(C)cc2)N1
+Acc = 33/114
+Sim_hit = 22.83381885170874/114
+HV = 305.95210849129523*33/114
+----------------
+>>Sample 114
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccccc1-n1ccc(c1)cn1)c1ccc(F)s1
+- O=C(Nc1ccccc1-n1cc(c1)cn1)c1ccc(Cl)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(C)s1
+- O=C(Nc1ccccc1-n1cc(c(F)F)cn1)c1ccc(Br)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(I)s1
+Acc = 33/115
+Sim_hit = 22.83381885170874/115
+HV = 305.95210849129523*33/115
+----------------
+>>Sample 115
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@](C)(c1cccc(F)c1)N(C)C
+- COC(=O)[C@](C)(c1ccc(Cl)cc1)N(C)C
+- COC(=O)[C@](C)(c1ccc(I)cc1)N(C)C
+- COC(=O)[C@](C)(c1ccc(CC)cc1)N(C)C
+- COC(=O)[C@](C)(c1ccc(C)cc1)N(C)C
+Acc = 33/116
+Sim_hit = 22.83381885170874/116
+HV = 305.95210849129523*33/116
+----------------
+>>Sample 116
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@@H](O)C1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@H](O)C1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@@H]1CC[C@H](O)C1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@@H]1CCC[C@@H](O)C1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@@H](CO)C1
+Acc = 33/117
+Sim_hit = 22.83381885170874/117
+HV = 305.95210849129523*33/117
+----------------
+>>Sample 117
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)n1)F
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2Cl)n1)n1
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2Br)n1)n1
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2I)n1)n1
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2F)n1)n1
+Acc = 33/118
+Sim_hit = 22.83381885170874/118
+HV = 305.95210849129523*33/118
+----------------
+>>Sample 118
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)Cn2nc(C)c(NCC)cn2)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NCc3ccccc3)c2)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NCc3cccc(c3))c2)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NCc3ccccc3F)c2)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(NCc3ccc(F)cc3)c2)cn1
+Acc = 33/119
+Sim_hit = 22.83381885170874/119
+HV = 305.95210849129523*33/119
+----------------
+>>Sample 119
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1ccc(C)cc1
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cc(C)ccc1
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1ccc(C)c(C)c1
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cc(C)c(C)cc1
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cccc(C)c1
+Acc = 34/120
+Sim_hit = 23.50048551837541/120
+HV = 323.1387751579619*34/120
+----------------
+>>Sample 120
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Cl higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2O)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)cn3)[C@H]2c2ccccc2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2cccc(O)c2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccc(F)cc2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2C)cc1Cl
+Acc = 34/121
+Sim_hit = 23.50048551837541/121
+HV = 323.1387751579619*34/121
+----------------
+>>Sample 121
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CNC(=O)c1csc2c1CCSC2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CCC(C)C2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CC(C)CC2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CCCC(C)2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CC(C)(C)CC2)c1cccs1
+Acc = 34/122
+Sim_hit = 23.50048551837541/122
+HV = 323.1387751579619*34/122
+----------------
+>>Sample 122
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1nc(Cc2nc3ccc(F)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(Cl)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(I)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(C)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(C#N)cc3s2)cs1
+Acc = 34/123
+Sim_hit = 23.50048551837541/123
+HV = 323.1387751579619*34/123
+----------------
+>>Sample 123
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1C(=O)CCC1=O)NCCc1ccccc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1C(=O)CCC1=O)NC(C)c1ccccc1
+- O=C(CN1C(=O)CCC1=O)NCCc1cccc(c1)F
+- O=C(CN1C(=O)CCC1=O)NCCc1ccc(Cl)cc1
+- O=C(CN1C(=O)CCC1=O)NCCc1cc(ccc1)S
+- O=C(CN1C(=O)CCC1=O)NCCc1cc(ccc1)C
+Acc = 34/124
+Sim_hit = 23.50048551837541/124
+HV = 323.1387751579619*34/124
+----------------
+>>Sample 124
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(COCc2ccc(F)cc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(COCc2ccc(Cl)cc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(COCc2ccc(Br)cc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(COCc2ccc(I)cc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(COCc2ccc(NO2)cc2)c1
+Acc = 34/125
+Sim_hit = 23.50048551837541/125
+HV = 323.1387751579619*34/125
+----------------
+>>Sample 125
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(Cl)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(I)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(C#N)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(C=C)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(C=C(C)C)cc2)cc1
+Acc = 34/126
+Sim_hit = 23.50048551837541/126
+HV = 323.1387751579619*34/126
+----------------
+>>Sample 126
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCNC(=O)c1ccccc1)Nc1ccc(c(c1)Cl)Cl
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(c(c1)F)F
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(c(c1)Br)Br
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(c(c1)I)I
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(c(c1)O)O
+Acc = 34/127
+Sim_hit = 23.50048551837541/127
+HV = 323.1387751579619*34/127
+----------------
+>>Sample 127
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc(C)c1CN(C)C(=O)Nc1ccc(-c2nnc3n2CCC3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccccc1-c1nnc2n1CCC2
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccc(-c2nnC3CCN2C3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc1-c1nnC2CCN1C2
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccc(-c2nnc3c2CCCC3)c1
+Acc = 34/128
+Sim_hit = 23.50048551837541/128
+HV = 323.1387751579619*34/128
+----------------
+>>Sample 128
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC(=O)Nc1cccc[n+]1Cc1ccccc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC(=O)Nc1ccc[n+]1Cc1ccccc1
+- CCCC(=O)Nc1ccccn1Cc1ccccc1
+- CCC(C)(=O)Nc1cccc[n+]1Cc1ccccc1
+- CCCC(=O)Nc1ccc[n+]1Cc1cccc1C
+- CCCC(=O)Nc1ccc[n+]1Cc1ccc(C)c1
+Acc = 34/129
+Sim_hit = 23.50048551837541/129
+HV = 323.1387751579619*34/129
+----------------
+>>Sample 129
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCOC4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCC4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)COC4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CC4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CC(C)C4)no2)cc1OC
+Acc = 34/130
+Sim_hit = 23.50048551837541/130
+HV = 323.1387751579619*34/130
+----------------
+>>Sample 130
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C(=O)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C(F)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C(Cl)C1
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1=C(C)C
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1=CC=CC=C1
+Acc = 34/131
+Sim_hit = 23.50048551837541/131
+HV = 323.1387751579619*34/131
+----------------
+>>Sample 131
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CCNC(=O)C[C@H](C)C2CCCC2)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCC2C)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CC2CC)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CC2C)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)c2ccccc2)s1
+Acc = 34/132
+Sim_hit = 23.50048551837541/132
+HV = 323.1387751579619*34/132
+----------------
+>>Sample 132
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(N2C[C@@H](NC(=O)Nc3ccc(C)cc3C)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3cc(C)cc(C)cc3)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3cc(C)ccc3C)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3ccc(C)cc3C)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3cc(C)ccc3C)CC2=O)c1
+Acc = 34/133
+Sim_hit = 23.50048551837541/133
+HV = 323.1387751579619*34/133
+----------------
+>>Sample 133
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC(C)C
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC(C)O
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC(C)F
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC(C)Cl
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC(C)Br
+Acc = 34/134
+Sim_hit = 23.50048551837541/134
+HV = 323.1387751579619*34/134
+----------------
+>>Sample 134
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(F)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(Cl)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(Br)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(I)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(c3ccccc3)
+Acc = 34/135
+Sim_hit = 23.50048551837541/135
+HV = 323.1387751579619*34/135
+----------------
+>>Sample 135
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CC(C)CC2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCC(C)C2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CC(C)C(C)C2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC(C)C2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CC(C)CC(C)C2)cc1
+Acc = 34/136
+Sim_hit = 23.50048551837541/136
+HV = 323.1387751579619*34/136
+----------------
+>>Sample 136
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3Cl)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3)C2)c1F
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3Br)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3)C2)c1Cl
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3I)C2)c1
+Acc = 34/137
+Sim_hit = 23.50048551837541/137
+HV = 323.1387751579619*34/137
+----------------
+>>Sample 137
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)O)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C#N)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)c1ccc(Br)cc1-2
+Acc = 35/138
+Sim_hit = 24.25048551837541/138
+HV = 335.9412751579619*35/138
+----------------
+>>Sample 138
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)ccc2F)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2ccc(F)c2)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2cc(F)cc2)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)c(cc2)C)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2cc(F)c2)cc1
+Acc = 35/139
+Sim_hit = 24.25048551837541/139
+HV = 335.9412751579619*35/139
+----------------
+>>Sample 139
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)O
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)N
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@H](C)C(=O)OC
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)C
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)F
+Acc = 35/140
+Sim_hit = 24.25048551837541/140
+HV = 335.9412751579619*35/140
+----------------
+>>Sample 140
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1
+- COc1ccc2c(CN(C)Cc3ccccc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cccc(F)c3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3ccc(F)cc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)c2c1
+Acc = 36/141
+Sim_hit = 24.956367871316587/141
+HV = 350.22127515796194*36/141
+----------------
+>>Sample 141
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(F)cn2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccc2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(Cl)cn2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(Br)cn2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(I)cn2)s1
+Acc = 36/142
+Sim_hit = 24.956367871316587/142
+HV = 350.22127515796194*36/142
+----------------
+>>Sample 142
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)c[nH]c2c1
+- COc1ccc2nc(CNc3ncc(Cl)c(N4CCOCC4)n3)[nH]c2c1
+- COc1ccc2nc(CNc3ncc(F)c(N4CCCC4)n3)[nH]c2c1
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOC4)n3)[nH]c2c1
+- COc1ccc2nc(CNc3ncc(F)c(N4CCSCC4)n3)[nH]c2c1
+Acc = 36/143
+Sim_hit = 24.956367871316587/143
+HV = 350.22127515796194*36/143
+----------------
+>>Sample 143
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=C(C)C[C@@H](O)c1ncccn1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C(C)C[C@@H](O)c1ncccc1
+- C=C(C)C[C@@H](O)c1cccnc1
+- C=C(C)C[C@@H](O)c1ccncc1
+- C=C(C)C[C@@H](O)c1cccnc1
+- C=C(C)C[C@@H](O)c1cnccc1
+Acc = 37/144
+Sim_hit = 25.581367871316587/144
+HV = 358.2775251579619*37/144
+----------------
+>>Sample 144
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CNC(=O)c1ccnc(OC2CC2)c1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccnc(OC2C(C)C2)c1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccc(O)cc1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccnc(OC2C(C)(C)C2)c1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccnc(OC2CC(C)C2)c1)C[C@@H](C)O
+Acc = 37/145
+Sim_hit = 25.581367871316587/145
+HV = 358.2775251579619*37/145
+----------------
+>>Sample 145
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]21 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCN(C(=O)CSCC(F)(F)Cl)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(Cl)F)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(Cl)(Cl)Cl)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(Cl)Cl)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(Cl)(F)F)[C@H]2CCCC[C@@H]21
+Acc = 37/146
+Sim_hit = 25.581367871316587/146
+HV = 358.2775251579619*37/146
+----------------
+>>Sample 146
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@@H](O)[C@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@@H](O)[C@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@@H](O)[C@@H](O)[C@H]1O
+Acc = 37/147
+Sim_hit = 25.581367871316587/147
+HV = 358.2775251579619*37/147
+----------------
+>>Sample 147
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1CCN([C@@H]2CCN(CC(F)(F)Cl)C2=O)CC1)NC1CC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(Cl)F)C2=O)CC1)NC1CC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC(C)C1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC(C)C1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC(C)C1
+Acc = 37/148
+Sim_hit = 25.581367871316587/148
+HV = 358.2775251579619*37/148
+----------------
+>>Sample 148
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)[O-] higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@](C)(NC(=O)CNC(=O)c1cccc(F)c1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(F)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(CF3)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(C)c1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(Br)c1)C(=O)[O-]
+Acc = 37/149
+Sim_hit = 25.581367871316587/149
+HV = 358.2775251579619*37/149
+----------------
+>>Sample 149
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)c2cc(-c3cccnc3)cn2C)cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccccc3)cn2C)cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccccn3)cn2C)cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(C))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2CC)cc1
+Acc = 37/150
+Sim_hit = 25.581367871316587/150
+HV = 358.2775251579619*37/150
+----------------
+>>Sample 150
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(-c3ccccc3)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(F)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(C)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(Br)cc2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(I)cc2)CC1
+Acc = 38/151
+Sim_hit = 26.286285904103472/151
+HV = 388.68768909238815*38/151
+----------------
+>>Sample 151
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1O higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OC
+- COc1cc(CNc2ccc(Cl)c(C)c2)cc([N+](=O)[O-])c1O
+- COc1cc(CNc2ccc(F)c(C)c2)cc(O)c1O
+- COc1cc(CNc2ccc(F)c(C)c2)cc(S)c1O
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1S
+Acc = 39/152
+Sim_hit = 27.086285904103473/152
+HV = 397.48768909238817*39/152
+----------------
+>>Sample 152
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccc(O)cc1
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1F
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(ccc1)Cl
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1Br
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccc(F)cc1
+Acc = 39/153
+Sim_hit = 27.086285904103473/153
+HV = 397.48768909238817*39/153
+----------------
+>>Sample 153
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@@H](C)CO1
+- C[C@@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CCO1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)COC1
+Acc = 39/154
+Sim_hit = 27.086285904103473/154
+HV = 397.48768909238817*39/154
+----------------
+>>Sample 154
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@]1(NC(=O)c2ccc(-c3csc(C)n3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2cc(-c3csc(C)n3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2coc(-c3ccsc(C)n3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2ccc(-c3cscn3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2ccc(-c3csc(C)cc3)c2)CCOC1
+Acc = 39/155
+Sim_hit = 27.086285904103473/155
+HV = 397.48768909238817*39/155
+----------------
+>>Sample 155
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\\c2ccc(OC)cc2OC)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(F)cc2F)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(Cl)cc2Cl)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(Br)cc2Br)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(I)cc2I)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(c3ccccc3)cc2)CC1
+Acc = 40/156
+Sim_hit = 27.741458317896576/156
+HV = 409.58217185100887*40/156
+----------------
+>>Sample 156
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccccc1[C@@H]([NH3+])c1ccc(C)o1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccccc1[C@@H](N)c1ccc(C)o1
+- CSc1ccccc1[C@@H](C)c1ccc(C)o1
+- CSc1ccccc1[C@@H]([NH2+])c1ccc(C)o1
+- CSc1ccccc1[C@@H](O)c1ccc(C)o1
+- CSc1ccccc1[C@@H](S)c1ccc(C)o1
+Acc = 41/157
+Sim_hit = 28.398601175039435/157
+HV = 410.6467432795803*41/157
+----------------
+>>Sample 157
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C=N)N2CCCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2CN)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCSCC2)cc1
+Acc = 42/158
+Sim_hit = 29.00154235151002/158
+HV = 416.17571386781555*42/158
+----------------
+>>Sample 158
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@@H]([NH3+])C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](C)C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH2])C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])CC1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@@H]([NH2])C1
+Acc = 42/159
+Sim_hit = 29.00154235151002/159
+HV = 416.17571386781555*42/159
+----------------
+>>Sample 159
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OCC(F)(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(C)(C)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OCCl
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(Cl)F
+Acc = 42/160
+Sim_hit = 29.00154235151002/160
+HV = 416.17571386781555*42/160
+----------------
+>>Sample 160
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](O)[C@@H](C)SC[C@H](C(N)=O)c1ccccc1
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1c(cccc1)C
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(C)cc1
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc2c(c1)CCCC2
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(CC)cc1
+Acc = 42/161
+Sim_hit = 29.00154235151002/161
+HV = 416.17571386781555*42/161
+----------------
+>>Sample 161
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)N2CC(C)CC2)ccc1NC(=O)[C@@H]1CCOC[C@H]1C
+- Cc1cc(C(=O)N2CCC(C)C2)ccc1NC(=O)[C@@H]1CCO[C@H]1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCOC[C@H]1C
+- Cc1cc(C(=O)N2CC(C)CC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCOC[C@H](C)C
+Acc = 42/162
+Sim_hit = 29.00154235151002/162
+HV = 416.17571386781555*42/162
+----------------
+>>Sample 162
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(CCNC(=O)NCC(C)C(=O)N2CCCCC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCC(C)C2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CC(C)CC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CC(C)C(C)C2)cn1
+Acc = 42/163
+Sim_hit = 29.00154235151002/163
+HV = 416.17571386781555*42/163
+----------------
+>>Sample 163
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(O)cc2)c1
+- Cc1nsnc1COc1ccc(C(=O)NCCc2ccccc2)c1
+- Cc1nsnc1COc1ccc(C(=O)NCCc2ccccc2)c1F
+- Cc1nsnc1COc1ccc(C(=O)NCCc2ccc(Cl)c(F)c2)c1
+- Cc1nsnc1COc1ccc(C(=O)NCCc2ccc(Br)c(F)c2)c1
+Acc = 42/164
+Sim_hit = 29.00154235151002/164
+HV = 416.17571386781555*42/164
+----------------
+>>Sample 164
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COCCNC(=O)c1csc(COc2ccccc2Cl)n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1csc(COc2ccccc2F)n1
+- COCCNC(=O)c1csc(COc2ccc(F)cc2)n1
+- COCCNC(=O)c1csc(COc2ccccc2Br)n1
+- COCCNC(=O)c1csc(COc2ccc(Cl)cc2)n1
+- COCCNC(=O)c1csc(COc2ccc(I)cc2)n1
+Acc = 42/165
+Sim_hit = 29.00154235151002/165
+HV = 416.17571386781555*42/165
+----------------
+>>Sample 165
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCCN)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCO)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCC)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCF)cc2)C1
+Acc = 43/166
+Sim_hit = 29.812863106227002/166
+HV = 435.4770346225325*43/166
+----------------
+>>Sample 166
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=NC2CCCCC2S(=O)(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cccc(S(=O)(=O)N1)c2
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(S(=O)(=O)N1)cc2
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)N1
+Acc = 44/167
+Sim_hit = 30.463656757020654/167
+HV = 446.58608224158013*44/167
+----------------
+>>Sample 167
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)N[C@H](CO)c1ccc(F)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Br)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(I)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(CF3)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(c2cccs2)cc1)c1cccs1
+Acc = 44/168
+Sim_hit = 30.463656757020654/168
+HV = 446.58608224158013*44/168
+----------------
+>>Sample 168
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccoc1C(=O)Nc1ccc(F)cc1Br higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccoc1C(=O)Nc1ccc(Cl)cc1Br
+- Cc1ccoc1C(=O)Nc1ccc(I)cc1Br
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1Cl
+- Cc1ccoc1C(=O)Nc1ccc(C)cc1Br
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1C
+Acc = 44/169
+Sim_hit = 30.463656757020654/169
+HV = 446.58608224158013*44/169
+----------------
+>>Sample 169
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CC(C)C1
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCC1C
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1(C)
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CC(C)CC1
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CC1CCCC
+Acc = 44/170
+Sim_hit = 30.463656757020654/170
+HV = 446.58608224158013*44/170
+----------------
+>>Sample 170
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc21 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2ccccc2Cl)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccccc2F)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccc(I)cc2)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccc(C)cc2)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccc(C#N)cc2)cc2c(F)cccc21
+Acc = 44/171
+Sim_hit = 30.463656757020654/171
+HV = 446.58608224158013*44/171
+----------------
+>>Sample 171
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)c2nnn(-c3ccc(Cl)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(Br)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(I)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(CN)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(c4ccccc4)cc3)c2C)c(C)c1
+Acc = 44/172
+Sim_hit = 30.463656757020654/172
+HV = 446.58608224158013*44/172
+----------------
+>>Sample 172
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(F)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Br)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(CN)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(CF3)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(OCH3)cc1)CS(=O)(=O)C2
+Acc = 44/173
+Sim_hit = 30.463656757020654/173
+HV = 446.58608224158013*44/173
+----------------
+>>Sample 173
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCCN1C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCCC1C
+- Cc1nn(C)c(N2CCOCC2)c1CNCC[C@@H]1CN1C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[C@H]1C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CC[C@@H]1C
+Acc = 45/174
+Sim_hit = 31.11820221156611/174
+HV = 447.3715367870347*45/174
+----------------
+>>Sample 174
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCNS(=O)(=O)c1cccnc1Cl higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCNS(=O)(=O)c1cccnc1F
+- C=CCNS(=O)(=O)c1ccccc1Cl
+- C=CCNS(=O)(=O)c1ccc(Cl)cc1
+- C=CCNS(=O)(=O)c1cccs1Cl
+- C=CCNS(=O)(=O)c1cccnc1Br
+Acc = 45/175
+Sim_hit = 31.11820221156611/175
+HV = 447.3715367870347*45/175
+----------------
+>>Sample 175
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NNC1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)C=NO1
+- CCOc1ccccc1NC(=O)[C@H]1CC(c2ccccc2)=NO1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2cccnc2)=NO1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccn2)=NO1
+Acc = 45/176
+Sim_hit = 31.11820221156611/176
+HV = 447.3715367870347*45/176
+----------------
+>>Sample 176
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cc(Br)c(C(=O)N/N=C/c2ccc(Cl)cc2)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2ccc(Cl)cc2)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2F)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2ccc(Cl)cc2F)n1
+Acc = 46/177
+Sim_hit = 31.83820221156611/177
+HV = 461.9371367870347*46/177
+----------------
+>>Sample 177
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nnc(C)n3C)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nn(C)c3C)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nnn3C)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nn(C#N)c3C)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nn(CF)c3C)cc2)C1
+Acc = 46/178
+Sim_hit = 31.83820221156611/178
+HV = 461.9371367870347*46/178
+----------------
+>>Sample 178
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O[C@H](C[NH2+]C[C@H]1CCc2ccccc21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccc(Cl)cc21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccc(F)cc21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc2O1)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccc(Br)cc21)C1CC1
+Acc = 47/179
+Sim_hit = 32.43820221156611/179
+HV = 467.4751367870347*47/179
+----------------
+>>Sample 179
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(F)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Br)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(CN)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(OCC)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(CH3)cc3)no2)CC1
+Acc = 47/180
+Sim_hit = 32.43820221156611/180
+HV = 467.4751367870347*47/180
+----------------
+>>Sample 180
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(N2C(=O)S/C(=C\\c3cccc(F)c3)C2=O)c1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(N2C(=O)S/C(=C\c3ccc(F)cc3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cc(F)ccc3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cc(Cl)ccc3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3ccc(Br)cc3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3ccc(I)cc3)C2=O)c1
+Acc = 47/181
+Sim_hit = 32.43820221156611/181
+HV = 467.4751367870347*47/181
+----------------
+>>Sample 181
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccc(Cl)c2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2cc(F)ccc2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1(C)
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccc(Br)c2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1(C(C)C)
+Acc = 47/182
+Sim_hit = 32.43820221156611/182
+HV = 467.4751367870347*47/182
+----------------
+>>Sample 182
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nnc2n1CCC[C@H]2NC(=O)NCCc1ccccc1C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCCc1cccc(c1)C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCCc1ccc(cc1)C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCCc1ccc(c1)C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCCc1ccccc1C[NH+](C)C(C)
+Acc = 47/183
+Sim_hit = 32.43820221156611/183
+HV = 467.4751367870347*47/183
+----------------
+>>Sample 183
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2cccc(Cl)c2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C(=O)Nc2ccc(F)cc2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C(=O)Nc2cccc(I)c2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C(=O)Nc2ccc(Cl)cc2)cc2c1CCN(Cc1ccccc1)C2
+- Cn1c(C(=O)Nc2ccc(Br)cc2)cc2c1CCN(Cc1ccccc1)C2
+Acc = 47/184
+Sim_hit = 32.43820221156611/184
+HV = 467.4751367870347*47/184
+----------------
+>>Sample 184
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC2CCN(Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3ccc(F)cc3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(Cl)cc(F)c3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)cs3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(Br)c3)CC2)n[nH]c1=O
+Acc = 48/185
+Sim_hit = 33.136315419113274/185
+HV = 468.31287263609136*48/185
+----------------
+>>Sample 185
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1NC(=O)[C@@]2(CCC[C@H]2CNC(=O)C2(c3ccccc3)CC(C)C2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CC(C)C2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCO2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCCN2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC(O)C2)N1
+Acc = 48/186
+Sim_hit = 33.136315419113274/186
+HV = 468.31287263609136*48/186
+----------------
+>>Sample 186
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1n[nH]c2ccc(NC(=O)N3CC[C@@H](C)C[C@@H]4CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CC[C@H](C)C[C@@H]4CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CC[C@@H](C)C[C@H]4CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CC[C@H](C)C[C@H]4CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CC[C@@H](C)C[C@@H]4CC[C@H]43)cc12
+Acc = 48/187
+Sim_hit = 33.136315419113274/187
+HV = 468.31287263609136*48/187
+----------------
+>>Sample 187
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc(CNC(=O)N2CCCN(C(C)C)CC2)ccn1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)cnn1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccc1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)C)CC2)cnn1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=S)CC2)ccn1
+Acc = 49/188
+Sim_hit = 33.924776957574814/188
+HV = 481.7719110976298*49/188
+----------------
+>>Sample 188
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@]12CC3CC(N4CC[C@H](N)C4=O)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH2])C4=O)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)CC2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)CC2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C(C)C2
+Acc = 50/189
+Sim_hit = 34.61708464988251/189
+HV = 482.8934495591683*50/189
+----------------
+>>Sample 189
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)c1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5cccc6c5[nH]c6)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)c2)nn1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)c1F
+Acc = 51/190
+Sim_hit = 35.33583464988251/190
+HV = 492.15813705916827*51/190
+----------------
+>>Sample 190
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NOC2)N=N1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NN2)N=N1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NS2)N=N1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=C1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N1C
+Acc = 51/191
+Sim_hit = 35.33583464988251/191
+HV = 492.15813705916827*51/191
+----------------
+>>Sample 191
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-] higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)O
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)CC(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NCC[C@@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)OC
+Acc = 51/192
+Sim_hit = 35.33583464988251/192
+HV = 492.15813705916827*51/192
+----------------
+>>Sample 192
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2ccccc2F)c1C(=O)Nc1ccc(C(N)=O)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH)=O)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(=O)N)cc1
+- Cc1onc(-c2cccc(F)c2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH2)=O)cc1
+Acc = 51/193
+Sim_hit = 35.33583464988251/193
+HV = 492.15813705916827*51/193
+----------------
+>>Sample 193
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C1CCN(c2cnc(N3CCC3)nc2)CC1
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CC(C)CC3)nc2)CC1
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCOCC3)nc2)CC1
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CC(C)OC3)nc2)CC1
+Acc = 51/194
+Sim_hit = 35.33583464988251/194
+HV = 492.15813705916827*51/194
+----------------
+>>Sample 194
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(SCC(=O)N2CCN(c3ccc(Cl)cc3)CC2)nnc1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(F)cc3)CC2)nnc1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(Br)cc3)CC2)nnc1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(I)cc3)CC2)nnc1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(CF3)cc3)CC2)nnc1-c1ccco1
+Acc = 52/195
+Sim_hit = 36.1493939719164/195
+HV = 499.66728960154114*52/195
+----------------
+>>Sample 195
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc3ccccc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc3cccc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc3ccccc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc3cccc23)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc3ccccc23)CC1
+Acc = 52/196
+Sim_hit = 36.1493939719164/196
+HV = 499.66728960154114*52/196
+----------------
+>>Sample 196
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)CC2)CCCC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@H](c3ccccc3)C2)CCCC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CC(C)CC1
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCCC1
+Acc = 52/197
+Sim_hit = 36.1493939719164/197
+HV = 499.66728960154114*52/197
+----------------
+>>Sample 197
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)N1CCC[C@@H]1C(=O)N1CC[NH]CC1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH]CC1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2]CC1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH](C)CC1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1
+Acc = 53/198
+Sim_hit = 36.8417016642241/198
+HV = 502.83805883231037*53/198
+----------------
+>>Sample 198
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-] higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)O
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)OC
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)N
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)NC
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)ONO
+Acc = 54/199
+Sim_hit = 37.616701664224095/199
+HV = 505.03130883231034*54/199
+----------------
+>>Sample 199
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1 higher permeability and decrease tPSA by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(NC(=O)CCc2ccc(Cl)cc2Cl)cno1
+- Cc1cc(NC(=O)CCc2ccc(Cl)cc2F)cno1
+- Cc1cc(NC(=O)CCc2ccc(F)cc2Cl)cno1
+- Cc1cc(NC(=O)CCc2ccc(Cl)cc2)cno1
+- Cc1cc(NC(=O)CCc2ccc(Br)cc2Cl)cno1
+Acc = 54/200
+Sim_hit = 37.616701664224095/200
+HV = 505.03130883231034*54/200
+----------------
+--------Final Acc--------
+Acc = 54/200
+----------------

@@ -1,0 +1,1223 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_llama_strict_206_best_reward_v3.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=206, constraint='strict', conversation_type='multi', planner='rl_planner', depth=3, num_generate=1, num_keep=1)
+>>Sample 0
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1O
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OCO
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OCCN
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OCCO
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OCC(=O)O
+Acc = 1/1
+Sim_hit = 0.6981132075471698/1
+HV = 14.598664150943398*1/1
+----------------
+>>Sample 1
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(O)O
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)N(O)CCc1ccncc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(O)C(O)O
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(N)=O
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(O)CO
+Acc = 2/2
+Sim_hit = 1.4758909853249476/2
+HV = 47.098279706498964*2/2
+----------------
+>>Sample 2
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F[N+](=O)[O-]
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1FOC(=O)C
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1FNC(=O)C
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1FSC(=O)N
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1FOP(=O)(O)O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 2/2
+Sim_hit = 1.4758909853249476/2
+HV = 47.098279706498964*2/2
+----------------
+>>Sample 3
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1O  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1OCC(O)C  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1NC(=O)O  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1OCO  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1OCCN
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1O  \n- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1OCC(O)C  \n- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1NC(=O)O  \n- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1OCO  \n- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1OCCN'}, {'role': 'user', 'content': 'Your provided sequence CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1S(=O)(=O)NC  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1S(=O)(=O)N  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1S(=O)(=O)NCC  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1S(=O)(=O)NC(O)=O  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1S(=O)(=O)NCO
+Acc = 3/3
+Sim_hit = 2.1790159853249476/3
+HV = 80.32930314399897*3/3
+----------------
+>>Sample 4
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1O  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1(O)OC  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1(O)OC(=O)O  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1(O)NC  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1(O)C(=O)N
+Acc = 4/4
+Sim_hit = 2.845682651991614/4
+HV = 94.15536981066563*4/4
+----------------
+>>Sample 5
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1O  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1OCC(=O)O  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1OCCN  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1OCC(=O)N  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1OCC(=O)ON
+Acc = 5/5
+Sim_hit = 3.580057651991614/5
+HV = 109.51232606066563*5/5
+----------------
+>>Sample 6
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21O  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2cc(O)ccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2cc(S(=O)(=O)O)ccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2cc(N)ccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2cc(C(O)=O)ccc21
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 5/5
+Sim_hit = 3.580057651991614/5
+HV = 109.51232606066563*5/5
+----------------
+>>Sample 7
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1O
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1OCC(=O)O
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1OCCO
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1OCCN
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1OCC(=O)N
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 5/5
+Sim_hit = 3.580057651991614/5
+HV = 109.51232606066563*5/5
+----------------
+>>Sample 8
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2O  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2(O)  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2N  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2C(O)O  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2OC
+Acc = 6/6
+Sim_hit = 4.2407719377059/6
+HV = 123.21494570352277*6/6
+----------------
+>>Sample 9
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1F  
+- Nc1c(NCc2cc(O)ccc2)ncnc1Nc1ccccc1F  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1(O)F  
+- Nc1c(NCc2cc(O)ccc2O)ncnc1Nc1ccccc1F  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1(O)F
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1F  \n- Nc1c(NCc2cc(O)ccc2)ncnc1Nc1ccccc1F  \n- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1(O)F  \n- Nc1c(NCc2cc(O)ccc2O)ncnc1Nc1ccccc1F  \n- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1(O)F'}, {'role': 'user', 'content': 'Your provided sequence Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1F could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1cc(OC(=O)O)ccc1  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(OC(=O)N)ccc1  
+- Nc1c(NCc2cc(O)ccc2)ncnc1Nc1cc(OC(=O)O)ccc1  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(OC(=O)OC)ccc1  
+- Nc1c(NCc2cc(O)ccc2O)ncnc1Nc1cc(OC(=O)O)ccc1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1F  \n- Nc1c(NCc2cc(O)ccc2)ncnc1Nc1ccccc1F  \n- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1(O)F  \n- Nc1c(NCc2cc(O)ccc2O)ncnc1Nc1ccccc1F  \n- Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1(O)F'}, {'role': 'user', 'content': 'Your provided sequence Nc1c(NCc2ccccc2)ncnc1Nc1cc(O)ccc1F could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- Nc1c(NCc2ccccc2)ncnc1Nc1cc(OC(=O)O)ccc1  \n- Nc1c(NCc2ccccc2)ncnc1Nc1cc(OC(=O)N)ccc1  \n- Nc1c(NCc2cc(O)ccc2)ncnc1Nc1cc(OC(=O)O)ccc1  \n- Nc1c(NCc2ccccc2)ncnc1Nc1cc(OC(=O)OC)ccc1  \n- Nc1c(NCc2cc(O)ccc2O)ncnc1Nc1cc(OC(=O)O)ccc1'}, {'role': 'user', 'content': 'Your provided sequence Nc1c(NCc2ccccc2)ncnc1Nc1cc(OC(=O)O)ccc1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1cc(S(=O)(=O)N)ccc1  
+- Nc1c(NCc2cc(S(=O)(=O)N)ccc2)ncnc1Nc1ccccc1  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(S(=O)(=O)NC)ccc1  
+- Nc1c(NCc2cc(S(=O)(=O)N)ccc2)ncnc1Nc1cc(F)ccc1  
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(S(=O)(=O)NCC)ccc1
+Acc = 7/7
+Sim_hit = 4.760002706936669/7
+HV = 155.22640531890738*7/7
+----------------
+>>Sample 10
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1O
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1N
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1CN
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1CO
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1CS(=O)(=O)O
+RL Suggestion 0: Replace Bromine Atom with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1O\n- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1N\n- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1CN\n- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1CO\n- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1CS(=O)(=O)O'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Bromine Atom with Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(S(=O)(=O)N)c1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(S(=O)(=O)NC)c1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(S(=O)(=O)NCC)c1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(S(=O)(=O)NCO)c1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(S(=O)(=O)NC(=O)O)c1
+Acc = 8/8
+Sim_hit = 5.469093616027578/8
+HV = 199.38511259163465*8/8
+----------------
+>>Sample 11
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2O)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2C(=O)O)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2C(O)O)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2C(N)O)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2S(=O)(=O)O)c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 8/8
+Sim_hit = 5.469093616027578/8
+HV = 199.38511259163465*8/8
+----------------
+>>Sample 12
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1O
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1[N+](=O)[O-]
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1C(=O)O
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1OCC(=O)O
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1NC(=O)N
+Acc = 9/9
+Sim_hit = 6.205935721290736/9
+HV = 214.79365996005572*9/9
+----------------
+>>Sample 13
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1O
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1OS(=O)(=O)O
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1N
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1CO
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1OC(=O)C
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1O\n- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1OS(=O)(=O)O\n- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1N\n- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1CO\n- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1OC(=O)C'}, {'role': 'user', 'content': 'Your provided sequence O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1S(=O)(=O)N  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1S(=O)(=O)NC  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1S(=O)(=O)N(C)C  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1S(=O)(=O)NC(=O)O  
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1S(=O)(=O)NCC
+Acc = 10/10
+Sim_hit = 6.85978187513689/10
+HV = 255.01343688313267*10/10
+----------------
+>>Sample 14
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1O  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1C(=O)O  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1SC(=O)N  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1NC(=O)O  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1OCC(=O)O
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1O  \n- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1C(=O)O  \n- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1SC(=O)N  \n- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1NC(=O)O  \n- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1OCC(=O)O'}, {'role': 'user', 'content': 'Your provided sequence COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OC(=O)N)cc23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OC(=O)OC)cc23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OC(=O)N(C)C)cc23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OC(=O)ON)cc23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OC(=O)NCC)cc23)c1
+Acc = 11/11
+Sim_hit = 7.665337430692445/11
+HV = 297.709170216466*11/11
+----------------
+>>Sample 15
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1O  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(O)s1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(O)cs1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(O)c(O)s1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(O)cs1O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 11/11
+Sim_hit = 7.665337430692445/11
+HV = 297.709170216466*11/11
+----------------
+>>Sample 16
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1O
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2C(=O)O)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3cc(O)ccc3C2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccc(O)cc3C2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3cc(O)c(O)cc3C2)n1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 11/11
+Sim_hit = 7.665337430692445/11
+HV = 297.709170216466*11/11
+----------------
+>>Sample 17
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1O
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1N
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1C(=O)O
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1S(=O)(=O)O
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1CO
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1O\n- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1N\n- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1C(=O)O\n- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1S(=O)(=O)O\n- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1CO'}, {'role': 'user', 'content': 'Your provided sequence CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1S(=O)(=O)N  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1S(=O)(=O)NC  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1S(=O)(=O)NCC  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1S(=O)(=O)NC(=O)O  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1S(=O)(=O)NC(=O)N
+Acc = 12/12
+Sim_hit = 8.321587430692446/12
+HV = 338.07681396646603*12/12
+----------------
+>>Sample 18
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O(O))c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O(O))c1O
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O(O))c1(O)
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O(O))c1(O)O
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O(O))c1(O)O(O)
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 12/12
+Sim_hit = 8.321587430692446/12
+HV = 338.07681396646603*12/12
+----------------
+>>Sample 19
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1O  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1[N+](=O)[O-]  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1C(=O)O  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1OC(=O)C  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1NC(=O)C
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1O  \n- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1[N+](=O)[O-]  \n- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1C(=O)O  \n- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1OC(=O)C  \n- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1NC(=O)C'}, {'role': 'user', 'content': 'Your provided sequence C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1S(=O)(=O)N  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1S(=O)(=O)NC  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1S(=O)(=O)NCC  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1S(=O)(=O)NC(=O)C  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1S(=O)(=O)NCC(=O)O
+Acc = 13/13
+Sim_hit = 8.799848300257663/13
+HV = 367.49588353168343*13/13
+----------------
+>>Sample 20
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: • Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1O  
+• Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2cc(O)ccc2)C1  
+• Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(O)C(=O)O  
+• Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1NC(=O)O  
+• Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1C(O)(O)O
+Acc = 14/14
+Sim_hit = 9.530007030416392/14
+HV = 382.7646708332707*14/14
+----------------
+>>Sample 21
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)s1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(N)s1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(OCC(O)=O)s1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)C(O)=O
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)CC(O)=O
+RL Suggestion 0: Replace Bromine Atom with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)s1\n- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(N)s1\n- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(OCC(O)=O)s1\n- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)C(O)=O\n- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)CC(O)=O'}, {'role': 'user', 'content': 'Your provided sequence COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)s1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Bromine Atom with Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - COc1cc(S(N)(=O)=O)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1
+- COc1cc(S(N)(=O)=O)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)s1
+- COc1cc(S(N)(=O)=O)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(N)s1
+- COc1cc(S(N)(=O)=O)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(OCC(O)=O)s1
+- COc1cc(S(N)(=O)=O)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)C(O)=O
+Acc = 15/15
+Sim_hit = 10.395391645801007/15
+HV = 436.65658429480914*15/15
+----------------
+>>Sample 22
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cccc(C)c1OC1C[NH2+]C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[NH2+]C1C(=O)O
+
+Acc = 16/16
+Sim_hit = 10.869075856327322/16
+HV = 454.5840158737565*16/16
+----------------
+>>Sample 23
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1O  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1[N+](=O)[O-]  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1C(=O)O  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(=O)(=O)O  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1NC(=O)C
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1O  \n- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1[N+](=O)[O-]  \n- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1C(=O)O  \n- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(=O)(=O)O  \n- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1NC(=O)C'}, {'role': 'user', 'content': 'Your provided sequence CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(=O)(=O)N  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(=O)(=O)NC  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(=O)(=O)NCC  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(=O)(=O)NC(=O)C  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(=O)(=O)N(C)C
+Acc = 17/17
+Sim_hit = 11.369075856327322/17
+HV = 485.34031587375654*17/17
+----------------
+>>Sample 24
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4(O))cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4(O)O)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4(O)OC)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4(O)CO)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4(O)CC )cc2)cc1
+Acc = 18/18
+Sim_hit = 12.062953407347731/18
+HV = 499.7307117921239*18/18
+----------------
+>>Sample 25
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCCc1noc([C@H]2C=CC(=N)S2)n1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=N)S2)n1O  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1N  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1S(=O)(=O)  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C(=O)O  
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1C(=O)N
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 18/18
+Sim_hit = 12.062953407347731/18
+HV = 499.7307117921239*18/18
+----------------
+>>Sample 26
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)O)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC(O)=O)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC(N)=O)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC(O)C(=O)O)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC(O)=O)cc2)s1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)O)cc2)s1  \n- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC(O)=O)cc2)s1  \n- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC(N)=O)cc2)s1  \n- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC(O)C(=O)O)cc2)s1  \n- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC(O)=O)cc2)s1'}, {'role': 'user', 'content': 'Your provided sequence CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)O)cc2)s1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OS(=O)(=O)N)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OS(=O)(=O)NC)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OS(=O)(=O)NCC)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OS(=O)(=O)NC(=O)C)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OS(=O)(=O)NCC(O)=O)cc2)s1
+Acc = 19/19
+Sim_hit = 12.812953407347731/19
+HV = 545.9204367921238*19/19
+----------------
+>>Sample 27
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)O1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)NC1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)N(C)C1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)OC1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)N1
+RL Suggestion 0: Replace Bromine Atom with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)O1  \n- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)NC1  \n- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)N(C)C1  \n- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)OC1  \n- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)N1'}, {'role': 'user', 'content': 'Your provided sequence CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(=O)O1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Bromine Atom with Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(S(=O)(=O)N)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(S(=O)(=O)NC)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(S(=O)(=O)NCC)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(S(=O)(=O)NC(=O)C)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(S(=O)(=O)N(C)C)cc32)CCO1
+Acc = 20/20
+Sim_hit = 13.537091338382213/20
+HV = 591.0161988610894*20/20
+----------------
+>>Sample 28
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCO)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCO)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCC(=O)O)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCNC(=O)O)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCS(=O)(=O)O)cc1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCO)cc1\n- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCO)cc1\n- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCC(=O)O)cc1\n- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCNC(=O)O)cc1\n- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCS(=O)(=O)O)cc1'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCO)cc1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NS(=O)(=O)N(C)CCC#N)cc1  
+- CCN(CC)C(=O)Cc1ccc(NS(=O)(=O)N(C)CCCO)cc1  
+- CCN(CC)C(=O)Cc1ccc(NS(=O)(=O)N(C)CCO)cc1  
+- CCN(CC)C(=O)Cc1ccc(NS(=O)(=O)N(C)CCCC(=O)O)cc1  
+- CCN(CC)C(=O)Cc1ccc(NS(=O)(=O)N(C)CCCNC(=O)O)cc1
+Acc = 21/21
+Sim_hit = 14.184150161911624/21
+HV = 602.6277988610893*21/21
+----------------
+>>Sample 29
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC(=O)O)CC2
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)=O)CC2
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)C(=O)O)CC2
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)C(O)=O)CC2
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)CC(=O)O)CC2
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC(=O)O)CC2\n- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)=O)CC2\n- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)C(=O)O)CC2\n- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)C(O)=O)CC2\n- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC(O)CC(=O)O)CC2'}, {'role': 'user', 'content': 'Your provided sequence CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC(=O)O)CC2 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCS(=O)(=O)N)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCCS(=O)(=O)N)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCCCS(=O)(=O)N)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC(S(=O)(=O)N)C)CC2  
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCCS(=O)(=O)NC)CC2
+Acc = 22/22
+Sim_hit = 14.891046713635763/22
+HV = 629.4864605852273*22/22
+----------------
+>>Sample 30
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C(=O)[C@@H](C)c1ccncc1O  
+- CC[C@H](C)C(=O)[C@@H](C)c1ccncc1N  
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(O)ncc1  
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(N)cc1  
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(O)cc1O
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC[C@H](C)C(=O)[C@@H](C)c1ccncc1O  \n- CC[C@H](C)C(=O)[C@@H](C)c1ccncc1N  \n- CC[C@H](C)C(=O)[C@@H](C)c1cc(O)ncc1  \n- CC[C@H](C)C(=O)[C@@H](C)c1cc(N)cc1  \n- CC[C@H](C)C(=O)[C@@H](C)c1cc(O)cc1O'}, {'role': 'user', 'content': 'Your provided sequence CC[C@H](C)C(=O)[C@@H](C)c1ccncc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CC[C@H](C)C(=O)[C@@H](C)c1ccncc1S(=O)(=O)N  
+- CC[C@H](C)C(=O)[C@@H](C)c1ccncc1S(=O)(=O)NC  
+- CC[C@H](C)C(=O)[C@@H](C)c1ccncc1S(=O)(=O)NCC  
+- CC[C@H](C)C(=O)[C@@H](C)c1ccncc1S(=O)(=O)NC(=O)C  
+- CC[C@H](C)C(=O)[C@@H](C)c1ccncc1S(=O)(=O)Nc2ccccc2
+Acc = 23/23
+Sim_hit = 15.414856237445287/23
+HV = 661.707346299513*23/23
+----------------
+>>Sample 31
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(O)ccc3O)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(O)ccc3N)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(O)ccc3S(=O)(=O)O)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(O)ccc3C(=O)O)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(O)ccc3N(=O)=O)c2c1=O
+Acc = 24/24
+Sim_hit = 16.161124894161706/24
+HV = 692.340779135334*24/24
+----------------
+>>Sample 32
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1[N+](=O)[O-]
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1O
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1C(O)=O
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1[N+]([O-])=O
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1S(=O)(=O)O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 24/24
+Sim_hit = 16.161124894161706/24
+HV = 692.340779135334*24/24
+----------------
+>>Sample 33
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1O
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1OCO
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1OC(=O)O
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1OCN
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1OC(=O)N
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 24/24
+Sim_hit = 16.161124894161706/24
+HV = 692.340779135334*24/24
+----------------
+>>Sample 34
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(O)O)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(N)=O)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(O)C(O)O)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(O)CC(O)=O)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(O)C(N)=O)o1
+Acc = 25/25
+Sim_hit = 16.953577724350385/25
+HV = 725.7578810221264*25/25
+----------------
+>>Sample 35
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4cc(O)ccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)cs4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)c(O)s4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)cs4)c(=O)c4cc(O)ccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)c(O)s4)c(=O)c4cc(O)ccc43)n2)cc1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4cc(O)ccc43)n2)cc1\n- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)cs4)c(=O)c4ccccc43)n2)cc1\n- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)c(O)s4)c(=O)c4ccccc43)n2)cc1\n- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)cs4)c(=O)c4cc(O)ccc43)n2)cc1\n- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)c(O)s4)c(=O)c4cc(O)ccc43)n2)cc1'}, {'role': 'user', 'content': 'Your provided sequence CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4cc(O)ccc43)n2)cc1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: + CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4cc(S(=O)(=O)N)ccc43)n2)cc1
++ CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(S(=O)(=O)N)cs4)c(=O)c4ccccc43)n2)cc1
++ CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(S(=O)(=O)N)c(S(=O)(=O)N)s4)c(=O)c4ccccc43)n2)cc1
++ CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(S(=O)(=O)N)cs4)c(=O)c4cc(S(=O)(=O)N)ccc43)n2)cc1
++ CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(S(=O)(=O)N)c(S(=O)(=O)N)s4)c(=O)c4cc(S(=O)(=O)N)ccc43)n2)cc1
+Acc = 26/26
+Sim_hit = 17.72822561167433/26
+HV = 773.4084866559292*26/26
+----------------
+>>Sample 36
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(O)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(OC)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(N)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(CO)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(CC(=O)O)ccc3n21
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(O)ccc3n21  \n- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(OC)ccc3n21  \n- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(N)ccc3n21  \n- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(CO)ccc3n21  \n- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(CC(=O)O)ccc3n21'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(O)ccc3n21 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(S(=O)(=O)N)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(S(=O)(=O)NC)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(S(=O)(=O)NCC)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(S(=O)(=O)NC(=O)C)ccc3n21  
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(S(=O)(=O)NCC(=O)O)ccc3n21
+Acc = 27/27
+Sim_hit = 18.407470894693198/27
+HV = 815.1906300521556*27/27
+----------------
+>>Sample 37
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(O)O)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(N)O)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(O)C(O)O)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(O)C(N)O)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(O)C(O)C(O)O)cc1F
+Acc = 28/28
+Sim_hit = 19.166730153952457/28
+HV = 847.2079856077112*28/28
+----------------
+>>Sample 38
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1O
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.NC(=O)C
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.O=C(O)CO
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.O=S(=O)(O)C
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.NC(=O)NC
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1O\n- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.NC(=O)C\n- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.O=C(O)CO\n- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.O=S(=O)(O)C\n- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1.NC(=O)NC'}, {'role': 'user', 'content': 'Your provided sequence C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(OC(=O)N)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(OC(=O)NH2)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(OC(=O)O)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(OC(=O)N(C)C)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(OC(=O)NC)c1
+Acc = 29/29
+Sim_hit = 19.878594560732118/29
+HV = 884.937938150084*29/29
+----------------
+>>Sample 39
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1S(=O)(=O)[O-]
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1S(=O)(=O)NC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC(=O)O
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC(=O)NCC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC(=O)NCCO
+Acc = 30/30
+Sim_hit = 20.59045896751178/30
+HV = 926.9506093365247*30/30
+----------------
+>>Sample 40
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1nc2ccccn2c1-c1nnc([S-])o1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nnc([S-])o1O
+- Cc1nc2ccccn2c1-c1nnc([S-])o1[N+](=O)[O-]
+- Cc1nc2ccccn2c1-c1nnc([S-])o1C(=O)O
+- Cc1nc2ccccn2c1-c1nnc([S-])o1C(O)O
+- Cc1nc2ccccn2c1-c1nnc([S-])o1[N+](=O)([O-])[O-]
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 30/30
+Sim_hit = 20.59045896751178/30
+HV = 926.9506093365247*30/30
+----------------
+>>Sample 41
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1O  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1OC  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1OCO  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1NC(=O)O  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1OCC(=O)O
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1O  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1OC  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1OCO  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1NC(=O)O  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1OCC(=O)O'}, {'role': 'user', 'content': 'Your provided sequence CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(NC(=O)O)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(OC(=O)O)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(NC(=O)OC)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(OC(=O)OC)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(NC(=O)OCC)cc1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1O  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1OC  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1OCO  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1NC(=O)O  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1OCC(=O)O'}, {'role': 'user', 'content': 'Your provided sequence CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(NC(=O)O)cc1  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(OC(=O)O)cc1  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(NC(=O)OC)cc1  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(OC(=O)OC)cc1  \n- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(NC(=O)OCC)cc1'}, {'role': 'user', 'content': 'Your provided sequence CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(NC(=O)O)cc1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(NS(=O)(=O)O)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(OS(=O)(=O)O)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(NS(=O)(=O)C)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(OS(=O)(=O)C)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(NS(=O)(=O)N)cc1
+Acc = 31/31
+Sim_hit = 21.34484493242406/31
+HV = 977.7391917926651*31/31
+----------------
+>>Sample 42
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1O  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1N  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1C(=O)O  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1C(=O)N  
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1S(=O)(=O)O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 31/31
+Sim_hit = 21.34484493242406/31
+HV = 977.7391917926651*31/31
+----------------
+>>Sample 43
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1O  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1(O)O  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1(O)C(=O)O  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1OS(=O)(=O)O  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1OCC(O)C(O)C(O)
+Acc = 32/32
+Sim_hit = 21.972295912816218/32
+HV = 991.078297675018*32/32
+----------------
+>>Sample 44
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1O  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1(O)C(=O)O  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1(O)CO  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1(O)CC(=O)O  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1(O)CC(O)=O
+Acc = 33/33
+Sim_hit = 22.56804059366728/33
+HV = 1003.5362721431031*33/33
+----------------
+>>Sample 45
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1O  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2CO)c(C)[nH+]1  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)O)nc2C)c(C)[nH+]1  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2CN)c(C)[nH+]1  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C(O)O)c(C)[nH+]1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 33/33
+Sim_hit = 22.56804059366728/33
+HV = 1003.5362721431031*33/33
+----------------
+>>Sample 46
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C(O)=O)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C(O)O)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C(O)NC)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C(N)C(=O)O)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C(O)CC(=O)O)n1cccn1
+Acc = 34/34
+Sim_hit = 23.303889650271053/34
+HV = 1031.6716815770653*34/34
+----------------
+>>Sample 47
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](O)CN1NNC(=O)c2ccccc21  
+- Cc1ccccc1OC[C@H](O)CN1NNC(N)=Oc2ccccc21  
+- Cc1ccccc1OC[C@H](O)CN1NNC(O)=Oc2ccccc21  
+- Cc1ccccc1OC[C@H](O)CN1NNC(S)=Oc2ccccc21  
+- Cc1ccccc1OC[C@H](O)CN1NNC(O)Cc2ccccc21
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1ccccc1OC[C@H](O)CN1NNC(=O)c2ccccc21  \n- Cc1ccccc1OC[C@H](O)CN1NNC(N)=Oc2ccccc21  \n- Cc1ccccc1OC[C@H](O)CN1NNC(O)=Oc2ccccc21  \n- Cc1ccccc1OC[C@H](O)CN1NNC(S)=Oc2ccccc21  \n- Cc1ccccc1OC[C@H](O)CN1NNC(O)Cc2ccccc21'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccccc1OC[C@H](O)CN1NNC(=O)c2ccccc21 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: 
+Acc = 34/35
+Sim_hit = 23.303889650271053/35
+HV = 1031.6716815770653*34/35
+----------------
+>>Sample 48
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CSc1nnc2n(N)cnn12 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(N)cnn12O
+- CSc1nnc2n(N)cnn12[C@@H](O)CO
+- CSc1nnc2n(N)cnn12NC(=O)O
+- CSc1nnc2n(N)cnn12SC(=O)N
+- CSc1nnc2n(N)cnn12OCC(O)CO
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 34/35
+Sim_hit = 23.303889650271053/35
+HV = 1031.6716815770653*34/35
+----------------
+>>Sample 49
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(O)=O)cc2)n1  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(O)N)cc2)n1  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(O)OC)cc2)n1  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(O)NC)cc2)n1  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(O)N(C)C)cc2)n1
+Acc = 35/36
+Sim_hit = 24.139955224041543/36
+HV = 1063.367111413131*35/36
+----------------
+>>Sample 50
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1O  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2O)CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1(O)O  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1NS(=O)(=O)O  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2CO)CC1
+Acc = 36/37
+Sim_hit = 24.8720980811844/37
+HV = 1078.6773899845596*36/37
+----------------
+>>Sample 51
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  \n- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  \n- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  \n- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12  \n- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12'}, {'role': 'user', 'content': 'Your provided sequence CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(O)ccc12 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(S(=O)(=O)N)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(S(=O)(=O)NC)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(S(=O)(=O)NCC)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(S(=O)(=O)NC(=O)C)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(S(=O)(=O)NCC(O)=O)ccc12
+Acc = 37/38
+Sim_hit = 25.61347739152923/38
+HV = 1124.2815589500767*37/38
+----------------
+>>Sample 52
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1O
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1N
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1CO
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1OCO
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1ON
+Acc = 38/39
+Sim_hit = 26.423822219115436/39
+HV = 1141.5088417086974*38/39
+----------------
+>>Sample 53
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)O)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)OCCN)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)OCC(=O)O)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)NCCN)c(Cl)c1
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)O)c(Cl)c1\n- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)N)c(Cl)c1\n- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)OCCN)c(Cl)c1\n- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)OCC(=O)O)c(Cl)c1\n- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)NCCN)c(Cl)c1'}, {'role': 'user', 'content': 'Your provided sequence CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C(=O)O)c(Cl)c1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(OC(=O)N)c1)c1ccc(C#N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(OC(=O)NH2)c1)c1ccc(C#N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(OC(=O)N(C)C)c1)c1ccc(C#N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(OC(=O)O)c1)c1ccc(C#N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(OC(=O)NCC)c1)c1ccc(C#N)c(Cl)c1
+Acc = 39/40
+Sim_hit = 27.129704572056614/40
+HV = 1178.9217358263445*39/40
+----------------
+>>Sample 54
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4C(=O)O)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4C(=O)N)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4O)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4N)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4[N+](=O)[O-])C3)cc2[nH]1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 39/40
+Sim_hit = 27.129704572056614/40
+HV = 1178.9217358263445*39/40
+----------------
+>>Sample 55
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)cs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)c(O)s1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)c(O)c(O)s1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)c(O)c(O)c(O)s1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1\n- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)cs1\n- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)c(O)s1\n- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)c(O)c(O)s1\n- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)c(O)c(O)c(O)s1'}, {'role': 'user', 'content': 'Your provided sequence CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(O)cs1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)NH2)cs1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)NHc2ccccc2)cs1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)N(C)C)cs1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)NHc2ccccc2)s1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)NH2)s1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 39/40
+Sim_hit = 27.129704572056614/40
+HV = 1178.9217358263445*39/40
+----------------
+>>Sample 56
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(O)=O  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(N)=O  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(O)C(O)=O  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(O)CC(O)=O  
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C(O)C(N)=O
+Acc = 40/41
+Sim_hit = 28.014319956671997/41
+HV = 1212.7452704417292*40/41
+----------------
+>>Sample 57
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(O)=O)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(NS(=O)(=O)O)=O)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(O)C(=O)O)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(O)CC(O)=O)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(O)CC(O)C(=O)O)cc1c32
+Acc = 41/42
+Sim_hit = 28.864319956672/42
+HV = 1245.2452754417293*41/42
+----------------
+>>Sample 58
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(=O)O
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(=O)N
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1O
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1S(=O)(=O)O
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(=O)OC
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(=O)O\n- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(=O)N\n- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1O\n- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1S(=O)(=O)O\n- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(=O)OC'}, {'role': 'user', 'content': 'Your provided sequence O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(OC(=O)N)c3)c2N1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(OC(=O)OC)c3)c2N1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(OC(=O)NC)c3)c2N1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(OC(=O)N(C)C)c3)c2N1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(OC(=O)NCC)c3)c2N1
+Acc = 42/43
+Sim_hit = 29.53704722939927/43
+HV = 1280.900897259911*42/43
+----------------
+>>Sample 59
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)O  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)O  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)C(=O)O  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)N  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)NS(=O)(=O)O
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)O  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)O  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)C(=O)O  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)N  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)NS(=O)(=O)O'}, {'role': 'user', 'content': 'Your provided sequence NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2O  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2Cl  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2N  
+- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2C(=O)O
+RL Suggestion 0: Replace Chlorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)O  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)O  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)C(=O)O  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)N  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)NS(=O)(=O)O'}, {'role': 'user', 'content': 'Your provided sequence NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2O  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2Cl  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2N  \n- NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2C(=O)O'}, {'role': 'user', 'content': 'Your provided sequence NC(=NOCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)Cc2ccccc2 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Chlorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - NC(=NOCc1ccc(OC(=O)N)c(Cl)c1)c1nonc1N  
+- NC(=NOCc1ccc(OC(=O)N)c(OC(=O)N)c1)c1nonc1N  
+- NC(=NOCc1ccc(OC(=O)N)c(Cl)c1)c1nonc1NS(=O)(=O)N  
+- NC(=NOCc1ccc(OC(=O)N)c(Cl)c1)c1nonc1NC(=O)O  
+- NC(=NOCc1ccc(OC(=O)N)c(Cl)c1)c1nonc1NC(=O)N
+Acc = 43/44
+Sim_hit = 30.307880562732603/44
+HV = 1322.1527368432444*43/44
+----------------
+>>Sample 60
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F.O=C(O)C[C@H](O)C(=O)O
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F.N[C@@H](CC(O)=O)C(O)=O
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F.O=C(O)CC(O)=O
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F.N[C@@H](C(O)=O)C(O)=O
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F.O=C(O)C[C@H](N)C(O)=O
+Acc = 44/45
+Sim_hit = 31.078713896065935/45
+HV = 1396.093691009911*44/45
+----------------
+>>Sample 61
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)ccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)c(O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1O
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)cc(O)c1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)ccc1\n- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(O)cc1\n- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)c(O)cc1\n- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1O\n- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)cc(O)c1'}, {'role': 'user', 'content': 'Your provided sequence CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)ccc1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1NS(=O)(=O)O
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(NS(=O)(=O)O)ccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(NS(=O)(=O)O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(NS(=O)(=O)O)c(O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1NS(=O)(=O)N
+Acc = 45/46
+Sim_hit = 31.658713896065933/46
+HV = 1435.061165009911*45/46
+----------------
+>>Sample 62
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1O  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1OCC(=O)O  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1N  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1OCCN  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1OCCO
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1O  \n- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1OCC(=O)O  \n- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1N  \n- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1OCCN  \n- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1OCCO'}, {'role': 'user', 'content': 'Your provided sequence CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2(N))cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2(NS(=O)(=O)c4ccccc4))cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2(NS(=O)(=O)C))cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2(NS(=O)(=O)O))cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2(NS(=O)(=O)N))cc1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 45/46
+Sim_hit = 31.658713896065933/46
+HV = 1435.061165009911*45/46
+----------------
+>>Sample 63
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1O
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1OC(=O)C
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1N
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1S(=O)(=O)O
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1OC(=O)N
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1O\n- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1OC(=O)C\n- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1N\n- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1S(=O)(=O)O\n- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1OC(=O)N'}, {'role': 'user', 'content': 'Your provided sequence CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1S(=O)(=O)NC
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1S(=O)(=O)NCC
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1S(=O)(=O)NC(C)=O
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1S(=O)(=O)NCC(=O)O
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1S(=O)(=O)NCCN
+Acc = 46/47
+Sim_hit = 32.31496389606593/47
+HV = 1466.0767868849111*46/47
+----------------
+>>Sample 64
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1O  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1[N+](=O)[O-]  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1C(=O)O  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1C(=O)N  
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1S(=O)(=O)O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 46/47
+Sim_hit = 32.31496389606593/47
+HV = 1466.0767868849111*46/47
+----------------
+>>Sample 65
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCCCOc1ccc(C(N)=S)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=S)cc1O  
+- CCCCCOc1ccc(C(N)=S)cc1N  
+- CCCCCOc1ccc(C(N)=S)cc1C(=O)O  
+- CCCCCOc1ccc(C(N)=S)cc1OC(=O)C  
+- CCCCCOc1ccc(C(N)=S)cc1CN
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCCCOc1ccc(C(N)=S)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCCCCOc1ccc(C(N)=S)cc1O  \n- CCCCCOc1ccc(C(N)=S)cc1N  \n- CCCCCOc1ccc(C(N)=S)cc1C(=O)O  \n- CCCCCOc1ccc(C(N)=S)cc1OC(=O)C  \n- CCCCCOc1ccc(C(N)=S)cc1CN'}, {'role': 'user', 'content': 'Your provided sequence CCCCCOc1ccc(C(N)=S)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CCCCCOc1ccc(C(NS(=O)(=O)N)=S)cc1  
+- CCCCCOc1ccc(C(NS(=O)(=O)C)=S)cc1  
+- CCCCCOc1ccc(C(NS(=O)(=O)O)=S)cc1  
+- CCCCCOc1ccc(C(NS(=O)(=O)CC)=S)cc1  
+- CCCCCOc1ccc(C(NS(=O)(=O)c2ccccc2)=S)cc1
+Acc = 47/48
+Sim_hit = 32.914963896065935/48
+HV = 1494.4781468849112*47/48
+----------------
+>>Sample 66
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1O
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1OC
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1OCC(=O)O
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1NC(=O)O
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1OCCN
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1O\n\n- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1OC\n\n- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1OCC(=O)O\n\n- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1NC(=O)O\n\n- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1OCCN'}, {'role': 'user', 'content': 'Your provided sequence CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)(=O)N)c1  
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)(=O)NC)c1  
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)(=O)NCC)c1  
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)(=O)N(C)C)c1  
+
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)(=O)NCC(=O)O)c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 47/48
+Sim_hit = 32.914963896065935/48
+HV = 1494.4781468849112*47/48
+----------------
+>>Sample 67
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNc1nc(-c2cc(Cl)cs2)nc(C(O)=O)c1C(C)C
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(CO)C
+- CCNc1nc(-c2cc(Cl)cs2)nc(C(O)C)c1C(C)C
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C(O)=O)C
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)CO
+Acc = 48/49
+Sim_hit = 33.61496389606594/49
+HV = 1521.0153008849113*48/49
+----------------
+>>Sample 68
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCCO)c2cc(O)ccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCOC(=O)O)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCC(O)CO)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCO)c2cc(S(=O)(=O)O)ccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCO)c2cc(O)c(O)cc2)cc1
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1ccc([C@@H](NC(=O)NCCO)c2cc(O)ccc2)cc1\n- Cc1ccc([C@@H](NC(=O)NCCOC(=O)O)c2ccccc2)cc1\n- Cc1ccc([C@@H](NC(=O)NCC(O)CO)c2ccccc2)cc1\n- Cc1ccc([C@@H](NC(=O)NCCO)c2cc(S(=O)(=O)O)ccc2)cc1\n- Cc1ccc([C@@H](NC(=O)NCCO)c2cc(O)c(O)cc2)cc1'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccc([C@@H](NC(=O)NCCO)c2cc(O)ccc2)cc1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCCNS(=O)(=O)O)c2ccccc2)cc1  
+- Cc1ccc([C@@H](NC(=O)NCCOS(=O)(=O)O)c2ccccc2)cc1  
+- Cc1ccc([C@@H](NC(=O)NCC(O)S(=O)(=O)O)c2ccccc2)cc1  
+- Cc1ccc([C@@H](NC(=O)NCC(N)S(=O)(=O)O)c2ccccc2)cc1  
+- Cc1ccc([C@@H](NC(=O)NCCS(=O)(=O)O)c2ccccc2)cc1
+Acc = 49/50
+Sim_hit = 34.32924961035165/50
+HV = 1554.4223723134828*49/50
+----------------
+>>Sample 69
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2O  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2CO  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2OC(=O)C  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2N  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2SC(=O)N
+Acc = 50/51
+Sim_hit = 34.929249610351654/51
+HV = 1566.8658323134828*50/51
+----------------
+>>Sample 70
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl  
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)O)cc1Cl  
+- C=CCOc1ccc(CN2Cc3cccc(O)c3C[C@@H]2c2nnc(C)o2)cc1Cl  
+- C=CCOc1ccc(CN2Cc3cc(O)ccc3C[C@@H]2c2nnc(C)o2)cc1Cl  
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(O)o2)cc1Cl
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 50/51
+Sim_hit = 34.929249610351654/51
+HV = 1566.8658323134828*50/51
+----------------
+>>Sample 71
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C(O)=O)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C(O)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C(O)H)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C(O)NH2)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C(O)OH)s1
+Acc = 51/52
+Sim_hit = 35.70475981443329/52
+HV = 1596.2655947624623*51/52
+----------------
+>>Sample 72
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1O  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1(O)OC  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1(O)NC  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1(O)CO  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1(O)SC
+Acc = 52/53
+Sim_hit = 36.39132697861239/53
+HV = 1610.5043798370891*52/53
+----------------
+>>Sample 73
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(O)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(O)(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)CO
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(O)CO
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(O)(C)CO
+Acc = 53/54
+Sim_hit = 37.220595271295316/54
+HV = 1628.337960324894*53/54
+----------------
+>>Sample 74
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(O))n2C1  
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(O)H)n2C1  
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(O)OH)n2C1  
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(O)NH2)n2C1  
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(O)OCH3)n2C1
+Acc = 54/55
+Sim_hit = 37.931706382406425/55
+HV = 1643.1413025471163*54/55
+----------------
+>>Sample 75
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1O
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)O
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(O)O
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)N
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(O)N
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1O\n- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)O\n- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(O)O\n- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)N\n- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(O)N'}, {'role': 'user', 'content': 'Your provided sequence O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(OC(=O)N)c(OC(=O)N)c3)cc2Cl)CCN1  
+- O=C1CN(c2ccc(NC(=O)c3ccc(OC(=O)N)c(F)c3)cc2Cl)CCN1  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(OC(=O)N)c3)cc2Cl)CCN1  
+- O=C1CN(c2ccc(NC(=O)c3ccc(OC(=O)N)c(OC(=O)N)c3)cc2Cl)CCN1O  
+- O=C1CN(c2ccc(NC(=O)c3ccc(OC(=O)N)c(F)c3)cc2Cl)CCN1C(=O)O
+Acc = 55/56
+Sim_hit = 38.643570789186086/56
+HV = 1718.601207631862*55/56
+----------------
+>>Sample 76
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)(CO[N+](=O)[O-])C(=O)Cl more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)O
+- CC(C)(CO[N+](=O)[O-])C(=O)OCCO
+- CC(C)(CO[N+](=O)[O-])C(=O)OCCN
+- CC(C)(CO[N+](=O)[O-])C(=O)OCC(O)CO
+- CC(C)(CO[N+](=O)[O-])C(=O)OCC(O)C(O)CO
+Acc = 56/57
+Sim_hit = 39.31023745585275/57
+HV = 1732.5417409651955*56/57
+----------------
+>>Sample 77
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)O
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCCN
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)N
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)NC
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)OCC(=O)O
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)O\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCCN\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)N\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)NC\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)OCC(=O)O'}, {'role': 'user', 'content': 'Your provided sequence C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)N)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)NC)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)NCC)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)NC(=O)O)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)N(C)C)cc2)cc1O
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)O\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCCN\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)N\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)NC\n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)OCC(=O)O'}, {'role': 'user', 'content': 'Your provided sequence C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)N)cc2)cc1O  \n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)NC)cc2)cc1O  \n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)NCC)cc2)cc1O  \n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)NC(=O)O)cc2)cc1O  \n- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)N(C)C)cc2)cc1O'}, {'role': 'user', 'content': 'Your provided sequence C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(OC(=O)N)cc2)cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(S(=O)(=O)N)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(S(=O)(=O)NC)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(S(=O)(=O)NCC)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(S(=O)(=O)NC(=O)O)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(S(=O)(=O)N(C)C)cc2)cc1O
+Acc = 57/58
+Sim_hit = 39.98765681069146/58
+HV = 1771.9605699974536*57/58
+----------------
+>>Sample 78
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1O
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1N
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1CO
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1CN
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1SO
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1O\n- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1N\n- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1CO\n- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1CN\n- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1SO'}, {'role': 'user', 'content': 'Your provided sequence CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(=O)OC)c2)c1  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(=O)OC(F)(F)F)c2)c1  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(=O)OCC)c2)c1  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(=O)OCN)c2)c1  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(=O)OC(=O)N)c2)c1
+Acc = 58/59
+Sim_hit = 40.65978795823244/59
+HV = 1790.4658191777814*58/59
+----------------
+>>Sample 79
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)=O
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)C(O)=O
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)C(=O)O
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1\n- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)\n- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)=O\n- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)C(O)=O\n- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1(O)C(=O)O'}, {'role': 'user', 'content': 'Your provided sequence CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1 could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Carbamate. . Can you give me new molecules?'}]
+AI answer 0: - CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(OC(=O)N)cc2)CC1  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(OC(=O)NH)cc2)CC1  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(OC(=O)N(C)C)cc2)CC1  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(OC(=O)NC)cc2)CC1  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(OC(=O)NCC)cc2)CC1
+Acc = 59/60
+Sim_hit = 41.382010180454664/60
+HV = 1828.7447525111147*59/60
+----------------
+>>Sample 80
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F.O
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F.[N+](=O)[O-]
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F.C(O)(=O)O
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F.[OH-]
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F.[Na+]
+Acc = 60/61
+Sim_hit = 42.36446632080554/61
+HV = 1860.5023525111146*60/61
+----------------
+>>Sample 81
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)O
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCC(=O)O
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCC(O)CO
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCCO
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCCN
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)O\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCC(=O)O\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCC(O)CO\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCCO\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCCN'}, {'role': 'user', 'content': 'Your provided sequence COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)O  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)C  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)NC  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)N  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)CC
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)O\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCC(=O)O\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCC(O)CO\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCCO\n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OCCN'}, {'role': 'user', 'content': 'Your provided sequence COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)O  \n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)C  \n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)NC  \n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)N  \n- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)CC'}, {'role': 'user', 'content': 'Your provided sequence COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)CC(=O)O  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)CCO  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)CC(O)CO  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)CCN  
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NS(=O)(=O)CC(=O)N
+Acc = 60/62
+Sim_hit = 42.36446632080554/62
+HV = 1860.5023525111146*60/62
+----------------
+>>Sample 82
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1O
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1[N+](=O)[O-]
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1OCC(O)CO
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1C(=O)O
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1C(O)=O
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 more soluble in water and lower permeability and decrease logP by at least 0.5. increase tPSA by at least 10. ? The output molecule should be similar to the input molecule.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1O\n- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1[N+](=O)[O-]\n- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1OCC(O)CO\n- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1C(=O)O\n- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1C(O)=O'}, {'role': 'user', 'content': 'Your provided sequence C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1O could not achieve goal. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide. . Can you give me new molecules?'}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1S(=O)(=O)N  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1S(=O)(=O)NC  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1S(=O)(=O)NCC  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1S(=O)(=O)NCCO  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1S(=O)(=O)NCC(O)=O
+Acc = 61/63
+Sim_hit = 42.9602110016566/63
+HV = 1897.1481567664337*61/63
+----------------
+>>Sample 83

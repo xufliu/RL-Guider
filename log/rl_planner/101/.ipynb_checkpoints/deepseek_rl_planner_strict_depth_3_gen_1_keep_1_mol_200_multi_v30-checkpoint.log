@@ -1,0 +1,856 @@
+args:  Namespace(rl_model_path='results/rl_model_checkpoint/reward_type_add_a0.1_b0.1_c1.0_tau0.02general_replay_buffer_mol_strict_101_best_reward_v1.pth', conversational_LLM='deepseek', planning_LLM='deepseek', fast_protein=False, cot=None, num_of_mol=200, task_id=101, constraint='strict', conversation_type='multi', planner='rl_planner', depth=3, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=S(=O)(=O)O
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=S(=O)(O)O
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=S(=O)(O)[O-]
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=S(=O)([O-])[O-]
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=S(=O)([O-])O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 0/1
+Hit Ratio = 0/0
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cn1ccc(C(=O)Nc2sc3c(c2C#N)CCC3)cc1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1ccc(C(=O)S(=O)(=O)Oc2sc3c(c2C#N)CCC3)cc1=O  
+- Cn1ccc(C(=O)S(=O)(=O)Nc2sc3c(c2C#N)CCC3)cc1=O  
+- Cn1ccc(C(=O)S(=O)(=O)Oc2sc3c(c2C#N)CCC3)cc1  
+- Cn1ccc(C(=O)S(=O)(=O)Nc2sc3c(c2C#N)CCC3)cc1  
+- Cn1ccc(C(=O)S(=O)(=O)Oc2sc3c(c2C#N)CCC3)cc1=O
+Acc = 1/2
+Hit Ratio = 1/1
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=O
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)(=O)O
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)(=O)ONa
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)(=O)OK
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)(=O)OLi
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 1/3
+Hit Ratio = 1/1
+----------------
+>>Sample 3
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1
+- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1
+- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1
+- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1
+- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1\n- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1\n- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1\n- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1\n- CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1'}, {'role': 'user', 'content': 'Your provided sequence CC[C@@](C)(NC(=N)NCC(=O)N(C)OC)c1nc(C)cs1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}]
+AI answer 0: Here are five modified molecules with the secondary amine replaced by a guanidine group, aiming to improve water solubility while maintaining similarity to the original structure:
+
+- CC[C@@](C)(N=C(N)NCC(=O)N(C)OC)c1nc(C)cs1  
+- CC[C@@](C)(N=C(N)NCC(=O)N(C)OC)c1nc(C)cs1  
+- CC[C@@](C)(N=C(N)NCC(=O)N(C)OC)c1nc(C)cs1  
+- CC[C@@](C)(N=C(N)NCC(=O)N(C)OC)c1nc(C)cs1  
+- CC[C@@](C)(N=C(N)NCC(=O)N(C)OC)c1nc(C)cs1
+Acc = 2/4
+Hit Ratio = 2/2
+----------------
+>>Sample 4
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)O
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)OC
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)OCC
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)OCC(O)=O
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)OCC(O)C(O)=O
+Acc = 3/5
+Hit Ratio = 3/3
+----------------
+>>Sample 5
+RL Suggestion 0: Replace Aliphatic Amine with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Aliphatic Amine with Acetylide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1#C
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1C#C
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1C#N
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1C#C#C
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1C#C#N
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 3/6
+Hit Ratio = 3/3
+----------------
+>>Sample 6
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Fc1ccccc1N1CCN(c2ncc(NS(=O)(=O)C)cc2F)CC1  
+- Fc1ccccc1N1CCN(c2ncc(NS(=O)(=O)N)cc2F)CC1  
+- Fc1ccccc1N1CCN(c2ncc(NS(=O)(=O)O)cc2F)CC1  
+- Fc1ccccc1N1CCN(c2ncc(NS(=O)(=O)C(F)(F)F)cc2F)CC1  
+- Fc1ccccc1N1CCN(c2ncc(NS(=O)(=O)Cc3ccccc3)cc2F)CC1
+Acc = 4/7
+Hit Ratio = 4/4
+----------------
+>>Sample 7
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)CSc1ncnc2sc(C)c(C)c12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNC(=O)CSc1ncnc2sc(C)c(C)c12
+- CNC(=O)CSc1ncnc2sc(C)c(C)c12S(=O)(=O)O
+- CNC(=O)CSc1ncnc2sc(C)c(C)c12S(=O)(=O)OC
+- CNC(=O)CSc1ncnc2sc(C)c(C)c12S(=O)(=O)OCC
+- CNC(=O)CSc1ncnc2sc(C)c(C)c12S(=O)(=O)OCCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 4/8
+Hit Ratio = 4/4
+----------------
+>>Sample 8
+RL Suggestion 0: Replace Tertiary Amine with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1cc2n(n1)CCNc1cc(OC)nc(OC)n1C2  
+- COC(=O)c1cc2n(n1)CCNc1cc(O)nc(OC)n1C2  
+- COC(=O)c1cc2n(n1)CCNc1cc(OC)nc(O)n1C2  
+- COC(=O)c1cc2n(n1)CCNc1cc(O)nc(O)n1C2  
+- COC(=O)c1cc2n(n1)CCNc1cc(OC)nc(OC)n1C2
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 4/9
+Hit Ratio = 4/4
+----------------
+>>Sample 9
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2F)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)NH2)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)N)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)NC)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)NCC)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)NC(=O)N)CC1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 4/10
+Hit Ratio = 4/4
+----------------
+>>Sample 10
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(S(=O)(=O)N(CC(=O)O)c2cc(C)ccc2C)cc1
+- Cc1ccc(S(=O)(=O)N(CC(=O)OCC(=O)O)c2cc(C)ccc2C)cc1
+- Cc1ccc(S(=O)(=O)N(CC(=O)OCC(=O)OC)c2cc(C)ccc2C)cc1
+- Cc1ccc(S(=O)(=O)N(CC(=O)OCC(=O)OCC(=O)O)c2cc(C)ccc2C)cc1
+- Cc1ccc(S(=O)(=O)N(CC(=O)OCC(=O)OCC(=O)OC)c2cc(C)ccc2C)cc1
+Acc = 5/11
+Hit Ratio = 5/5
+----------------
+>>Sample 11
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)N)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)NH2)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)NMe)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)NHMe)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)NHEt)c2)CCS1
+Acc = 6/12
+Hit Ratio = 6/6
+----------------
+>>Sample 12
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1sc(NC(=O)c2cccc(S(=O)(=O)O)c2)c(C#N)c1C  
+- Cc1sc(NC(=O)c2cccc(S(=O)(=O)OC)c2)c(C#N)c1C  
+- Cc1sc(NC(=O)c2cccc(S(=O)(=O)Nc3ccccc3)c2)c(C#N)c1C  
+- Cc1sc(NC(=O)c2cccc(S(=O)(=O)NC(=O)C)c2)c(C#N)c1C  
+- Cc1sc(NC(=O)c2cccc(S(=O)(=O)NC(=O)OC)c2)c(C#N)c1C
+Acc = 7/13
+Hit Ratio = 7/7
+----------------
+>>Sample 13
+RL Suggestion 0: Replace Thioalkyl ether with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(S(=O)(=O)Nc2cc3ccccc3[nH]2)ccc1C=O
+- Cc1cc(S(=O)(=O)Nc2cc3ccccc3[nH]2)ccc1C(=O)O
+- Cc1cc(S(=O)(=O)Nc2cc3ccccc3[nH]2)ccc1C(=O)N
+- Cc1cc(S(=O)(=O)Nc2cc3ccccc3[nH]2)ccc1C(=O)OC
+- Cc1cc(S(=O)(=O)Nc2cc3ccccc3[nH]2)ccc1C(=O)NC
+Acc = 8/14
+Hit Ratio = 8/8
+----------------
+>>Sample 14
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(F)(F)F)c12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)N)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)NC)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)NCC)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)N(C)C)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)NC(C)C)c12
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 8/15
+Hit Ratio = 8/8
+----------------
+>>Sample 15
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(C(C)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(C)(C)C)cc1S(=O)(=O)N=C(N)Nc1ccc(C(=O)N2CCC2)cc1
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)N=C(N)Nc1ccc(C(=O)N2CCCC2)cc1
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)N=C(N)Nc1ccc(C(=O)N2CC2)cc1
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)N=C(N)Nc1ccc(C(=O)N2CC(C)C2)cc1
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)N=C(N)Nc1ccc(C(=O)N2CCC(C)C2)cc1
+Acc = 9/16
+Hit Ratio = 9/9
+----------------
+>>Sample 16
+RL Suggestion 0: Replace Tertiary Amine with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCN(CC#N)Cc1csc2ccccc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(CC#N)Cc1csc2ccccc12  
+- CCCN(C)Cc1csc2ccccc12  
+- CCCN(CC)Cc1csc2ccccc12  
+- CCCN(C#N)Cc1csc2ccccc12  
+- CCCN(C(=O)C)Cc1csc2ccccc12
+RL Suggestion 0: Replace Tertiary Amine with Di-alkyl urea. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCN(CC#N)Cc1csc2ccccc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCCN(CC#N)Cc1csc2ccccc12  \n- CCCN(C)Cc1csc2ccccc12  \n- CCCN(CC)Cc1csc2ccccc12  \n- CCCN(C#N)Cc1csc2ccccc12  \n- CCCN(C(=O)C)Cc1csc2ccccc12'}, {'role': 'user', 'content': 'Your provided sequence CCCN(C)Cc1csc2ccccc12 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Di-alkyl urea. . Can you give me new molecules?'}]
+AI answer 0: - CCCN(C(=O)N)Cc1csc2ccccc12  
+- CCCN(C(=O)NC)Cc1csc2ccccc12  
+- CCCN(C(=O)NCC)Cc1csc2ccccc12  
+- CCCN(C(=O)NC(=O))Cc1csc2ccccc12  
+- CCCN(C(=O)N(C)C)Cc1csc2ccccc12
+RL Suggestion 0: Replace Aliphatic Amine with Acetylide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCN(CC#N)Cc1csc2ccccc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCCN(CC#N)Cc1csc2ccccc12  \n- CCCN(C)Cc1csc2ccccc12  \n- CCCN(CC)Cc1csc2ccccc12  \n- CCCN(C#N)Cc1csc2ccccc12  \n- CCCN(C(=O)C)Cc1csc2ccccc12'}, {'role': 'user', 'content': 'Your provided sequence CCCN(C)Cc1csc2ccccc12 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Di-alkyl urea. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- CCCN(C(=O)N)Cc1csc2ccccc12  \n- CCCN(C(=O)NC)Cc1csc2ccccc12  \n- CCCN(C(=O)NCC)Cc1csc2ccccc12  \n- CCCN(C(=O)NC(=O))Cc1csc2ccccc12  \n- CCCN(C(=O)N(C)C)Cc1csc2ccccc12'}, {'role': 'user', 'content': 'Your provided sequence CCCN(C(=O)N)Cc1csc2ccccc12 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Aliphatic Amine with Acetylide. . Can you give me new molecules?'}]
+AI answer 0: - CCCN(C#C)Cc1csc2ccccc12  
+- CCCN(C#CC)Cc1csc2ccccc12  
+- CCCN(C#C(C)C)Cc1csc2ccccc12  
+- CCCN(C#C(=O))Cc1csc2ccccc12  
+- CCCN(C#C(C#N))Cc1csc2ccccc12
+Acc = 9/17
+Hit Ratio = 9/10
+----------------
+>>Sample 17
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1ccccc1F more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1ccccc1S(=O)(=O)N  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1ccc(cc1)S(=O)(=O)N  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(ccc1S(=O)(=O)N)  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cccc(c1)S(=O)(=O)N  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)N)ccc1
+Acc = 10/18
+Hit Ratio = 10/11
+----------------
+>>Sample 18
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2c(S(=O)(=O)N)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1  
+- Cc1onc(-c2c(S(=O)(=O)NC)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1  
+- Cc1onc(-c2c(S(=O)(=O)NCC)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1  
+- Cc1onc(-c2c(S(=O)(=O)NC(=O)N)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1  
+- Cc1onc(-c2c(S(=O)(=O)NCC(=O)N)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1
+Acc = 11/19
+Hit Ratio = 11/12
+----------------
+>>Sample 19
+RL Suggestion 0: Replace Iodine with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\\c1ccc(I)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Iodine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(NC)cc1  
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(NCC)cc1  
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(NC2CC2)cc1  
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(NC(=O)C)cc1  
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(NCC(=O)O)cc1
+Acc = 12/20
+Hit Ratio = 12/13
+----------------
+>>Sample 20
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1.S(=O)(=O)O
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1.S(=O)(=O)[O-]
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1.S(=O)(=O)[O-].[Na+]
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1.S(=O)(=O)[O-].[K+]
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1.S(=O)(=O)[O-].[NH4+]
+Acc = 13/21
+Hit Ratio = 13/14
+----------------
+>>Sample 21
+RL Suggestion 0: Replace Tertiary Amine with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1
+Acc = 13/22
+Hit Ratio = 13/15
+----------------
+>>Sample 22
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](c1cccc2ccccc12)N(C(=O)CCCn1cncn1)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](c1cccc2ccccc12)N(S(=O)(=O)CCCn1cncn1)C1CC1  
+- C[C@H](c1cccc2ccccc12)N(S(=O)(=O)CCCN1C=NC=N1)C1CC1  
+- C[C@H](c1cccc2ccccc12)N(S(=O)(=O)CCCCn1cncn1)C1CC1  
+- C[C@H](c1cccc2ccccc12)N(S(=O)(=O)CCCN1C=NCN1)C1CC1  
+- C[C@H](c1cccc2ccccc12)N(S(=O)(=O)CCCN1C=NC=N1)C1CC1
+Acc = 14/23
+Hit Ratio = 14/16
+----------------
+>>Sample 23
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule FC(F)(F)c1ccnc(NCc2cc[nH]n2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=S(=O)(N)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)c1ccnc(NCc2cc[nH]n2)n1
+Acc = 15/24
+Hit Ratio = 15/17
+----------------
+>>Sample 24
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1
+- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1
+- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1
+- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1
+- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1
+RL Suggestion 0: Replace Sulfur Atom with Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1\n- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1\n- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1\n- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1\n- CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1'}, {'role': 'user', 'content': 'Your provided sequence CC(C)[C@H](C#N)N1CCN(S(=O)(=O)c2cnc(-c3cccs3)s2)CC1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Sulfur Atom with Nitro Group. . Can you give me new molecules?'}]
+AI answer 0: - CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)[N+](=O)[O-])CC1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)[N+](=O)[O-])CC1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)[N+](=O)[O-])CC1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)[N+](=O)[O-])CC1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 15/25
+Hit Ratio = 15/17
+----------------
+>>Sample 25
+RL Suggestion 0: Replace Alkene with Bromine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1NC(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1NC(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate. . Can you give me new molecules?'}]
+AI answer 0: - Cc1ccccc1S(=O)(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+RL Suggestion 0: Replace Alkene with Bromine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1NC(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C\n- Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccccc1NC(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- Cc1ccccc1S(=O)(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  \n- Cc1ccccc1S(=O)(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  \n- Cc1ccccc1S(=O)(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  \n- Cc1ccccc1S(=O)(=O)/C(C#N)=C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  \n- Cc1ccccc1S(=O)(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccccc1S(=O)(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom. . Can you give me new molecules?'}]
+AI answer 0: - Cc1ccccc1S(=O)(=O)/C(C#N)C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C  
+- Cc1ccccc1S(=O)(=O)/C(C#N)C(Br)c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+Acc = 15/26
+Hit Ratio = 15/18
+----------------
+>>Sample 26
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCn1c(C)cc(CNc2cccc(C(C)C)c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(C)cc(CN=C(N)Nc2cccc(C(C)C)c2)c1C
+- CCn1c(C)cc(CN=C(N)Nc2ccc(C(C)C)cc2)c1C
+- CCn1c(C)cc(CN=C(N)Nc2cc(C(C)C)ccc2)c1C
+- CCn1c(C)cc(CN=C(N)Nc2c(C(C)C)cccc2)c1C
+- CCn1c(C)cc(CN=C(N)Nc2cccc(C(C)C)c2C)c1C
+Acc = 16/27
+Hit Ratio = 16/19
+----------------
+>>Sample 27
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1
+- O=S(=O)(O)Nc1ccc(Oc2ccc(Cl)cc2)nc1
+- O=S(=O)(O)Nc1ccc(Oc2ccc(Cl)cc2)nc1
+- O=S(=O)(O)Nc1ccc(Oc2ccc(Cl)cc2)nc1
+- O=S(=O)(O)Nc1ccc(Oc2ccc(Cl)cc2)nc1
+Acc = 17/28
+Hit Ratio = 17/20
+----------------
+>>Sample 28
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCCCC2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)S(=O)(=O)O)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)S(=O)(=O)O2CCCCC2)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)S(=O)(=O)O)C1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)S(=O)(=O)O2CC2)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)S(=O)(=O)O3CC3)CC1
+Acc = 18/29
+Hit Ratio = 18/21
+----------------
+>>Sample 29
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)c1ccc(C)c(NC(=O)CCCO)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)O)c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-])c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-].[Na+])c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-].[K+])c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-].[NH4+])c1
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)c1ccc(C)c(NC(=O)CCCO)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)O)c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-])c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-].[Na+])c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-].[K+])c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)[O-].[NH4+])c1'}, {'role': 'user', 'content': 'Your provided sequence CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)O)c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate. . Can you give me new molecules?'}]
+AI answer 0: - CCNC(=O)c1ccc(C)c(S(=O)(=O)OCCCO)c1  
+- CCNC(=O)c1ccc(C)c(S(=O)(=O)[O-]CCCO)c1  
+- CCNC(=O)c1ccc(C)c(S(=O)(=O)[O-]CCCO.[Na+])c1  
+- CCNC(=O)c1ccc(C)c(S(=O)(=O)[O-]CCCO.[K+])c1  
+- CCNC(=O)c1ccc(C)c(S(=O)(=O)[O-]CCCO.[NH4+])c1
+Acc = 19/30
+Hit Ratio = 19/22
+----------------
+>>Sample 30
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)N)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)NH)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)NH2)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)N(C)C)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)N(CC)C)c3)c2)n1
+Acc = 20/31
+Hit Ratio = 20/23
+----------------
+>>Sample 31
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)O)c2)cc1
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)OC)c2)cc1
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)OCC)c2)cc1
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)OCCC)c2)cc1
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)OCCCC)c2)cc1
+Acc = 21/32
+Hit Ratio = 21/24
+----------------
+>>Sample 32
+RL Suggestion 0: Replace Chloroalkane with Di-alkyl urea. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Chloroalkane with Di-alkyl urea.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1NC(=O)NCC
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1NC(=O)NC
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1NC(=O)N(C)C
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1NC(=O)NCC(C)C
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1NC(=O)NCCCC
+Acc = 22/33
+Hit Ratio = 22/25
+----------------
+>>Sample 33
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNC(=N)N)S(C)(=O)=O)on2)cc1  
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNC(=N)N)S(C)(=O)=O)on2)cc1  
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNC(=N)N)S(C)(=O)=O)on2)cc1  
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNC(=N)N)S(C)(=O)=O)on2)cc1  
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNC(=N)N)S(C)(=O)=O)on2)cc1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 22/34
+Hit Ratio = 22/25
+----------------
+>>Sample 34
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](C(=O)N(C)CCC#N)n1cnc2c1c(=O)n(C)c(=O)n2C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)S(=O)(=O)O)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)S(=O)(=O)OCC#N)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)S(=O)(=O)OCCC#N)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)S(=O)(=O)OC(C)C)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)S(=O)(=O)OCC(C)C)n1cnc2c1c(=O)n(C)c(=O)n2C
+Acc = 23/35
+Hit Ratio = 23/26
+----------------
+>>Sample 35
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(-c2ccc(OC(F)(F)F)cc2)cn1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2ccc(OC(S(=O)(=O)N)cc2)cn1  
+- COc1ccc(-c2ccc(OC(S(=O)(=O)NH2)cc2)cn1  
+- COc1ccc(-c2ccc(OC(S(=O)(=O)N(C)C)cc2)cn1  
+- COc1ccc(-c2ccc(OC(S(=O)(=O)NHMe)cc2)cn1  
+- COc1ccc(-c2ccc(OC(S(=O)(=O)NMe2)cc2)cn1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 23/36
+Hit Ratio = 23/26
+----------------
+>>Sample 36
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C)cc1NS(=O)(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NS(=O)(=O)CCS(=O)(=O)c1ccc2c(c1)OCCN2  
+- COc1ccc(C)cc1NS(=O)(=O)CCS(=O)(=O)c1ccc2c(c1)OCCS2  
+- COc1ccc(C)cc1NS(=O)(=O)CCS(=O)(=O)c1ccc2c(c1)OCCCl2  
+- COc1ccc(C)cc1NS(=O)(=O)CCS(=O)(=O)c1ccc2c(c1)OCCBr2
+Acc = 24/37
+Hit Ratio = 24/27
+----------------
+>>Sample 37
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)COC3)cc1
+- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)OCO3)cc1
+- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)OC3)cc1
+- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)CC3)cc1
+- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)CCO3)cc1
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)COC3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)OCO3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)OC3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)CC3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)CCO3)cc1'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)COC3)cc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}]
+AI answer 0: - CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)COC3)cc1  
+- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)OCO3)cc1  
+- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)OC3)cc1  
+- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)CC3)cc1  
+- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)CCO3)cc1
+RL Suggestion 0: Replace Sulfur Atom with Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)COC3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)OCO3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)OC3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)CC3)cc1\n- CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)CCO3)cc1'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC)c1ccc(NS(=O)(=O)c2ccc3c(c2)COC3)cc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)COC3)cc1  \n- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)OCO3)cc1  \n- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)OC3)cc1  \n- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)CC3)cc1  \n- CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)CCO3)cc1'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC)c1ccc(NC(=N)Nc2ccc3c(c2)COC3)cc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Sulfur Atom with Nitro Group. . Can you give me new molecules?'}]
+AI answer 0: - CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1(NO2)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)OCO3)cc1(NO2)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)OC3)cc1(NO2)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)CC3)cc1(NO2)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)CCO3)cc1(NO2)
+Acc = 24/38
+Hit Ratio = 24/28
+----------------
+>>Sample 38
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)N)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)NH2)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)N(C)C)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)NC)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)NCC)c2)n1
+Acc = 25/39
+Hit Ratio = 25/29
+----------------
+>>Sample 39
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCc1cc(C(=O)S(=O)(=O)O2CCC[C@@H](COC)C2)no1
+- COCc1cc(C(=O)S(=O)(=O)O2CCC[C@@H](COC)C2)no1
+- COCc1cc(C(=O)S(=O)(=O)O2CCC[C@@H](COC)C2)no1
+- COCc1cc(C(=O)S(=O)(=O)O2CCC[C@@H](COC)C2)no1
+- COCc1cc(C(=O)S(=O)(=O)O2CCC[C@@H](COC)C2)no1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 25/40
+Hit Ratio = 25/29
+----------------
+>>Sample 40
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CC(C)C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2C[S](=O)(=O)O1
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2C[S](=O)(=O)CC(C)C
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2C[S](=O)(=O)C1
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2C[S](=O)(=O)C(C)C
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2C[S](=O)(=O)C1CC(C)C
+Acc = 26/41
+Hit Ratio = 26/30
+----------------
+>>Sample 41
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1Cl  
+- CC(=O)Oc1ccccc1S(=O)(=O)Nc1ccc(Cl)cc1Cl  
+- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1  
+- CC(=O)Oc1ccccc1S(=O)(=O)Nc1ccc(Cl)cc1  
+- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccccc1Cl
+RL Suggestion 0: Replace Chloroalkane with Di-alkyl urea. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1Cl  \n- CC(=O)Oc1ccccc1S(=O)(=O)Nc1ccc(Cl)cc1Cl  \n- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1  \n- CC(=O)Oc1ccccc1S(=O)(=O)Nc1ccc(Cl)cc1  \n- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccccc1Cl'}, {'role': 'user', 'content': 'Your provided sequence CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1Cl could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Chloroalkane with Di-alkyl urea. . Can you give me new molecules?'}]
+AI answer 0: - CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(Cl)cc1Cl  
+- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccccc1  
+- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(O)cc1  
+- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(C)cc1  
+- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(N)cc1
+RL Suggestion 0: Replace Chloroalkane with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1Cl  \n- CC(=O)Oc1ccccc1S(=O)(=O)Nc1ccc(Cl)cc1Cl  \n- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1  \n- CC(=O)Oc1ccccc1S(=O)(=O)Nc1ccc(Cl)cc1  \n- CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccccc1Cl'}, {'role': 'user', 'content': 'Your provided sequence CC(=O)Oc1ccccc1S(=O)(=O)Oc1ccc(Cl)cc1Cl could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Chloroalkane with Di-alkyl urea. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(Cl)cc1Cl  \n- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccccc1  \n- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(O)cc1  \n- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(C)cc1  \n- CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(N)cc1'}, {'role': 'user', 'content': 'Your provided sequence CC(=O)Oc1ccccc1C(=O)NC(=O)Nc1ccc(Cl)cc1Cl could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Chloroalkane with Fluorine Atom. . Can you give me new molecules?'}]
+AI answer 0: - CC(=O)Oc1ccccc1C(=O)Nc1ccc(F)cc1F  
+- CC(=O)Oc1ccccc1C(=O)Nc1cccc(F)c1  
+- CC(=O)Oc1ccccc1C(=O)Nc1ccc(F)cc1  
+- CC(=O)Oc1ccccc1C(=O)Nc1cc(F)ccc1  
+- CC(=O)Oc1ccccc1C(=O)Nc1ccc(F)c(F)c1
+Acc = 27/42
+Hit Ratio = 27/31
+----------------
+>>Sample 42
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1
+RL Suggestion 0: Replace Sulfur Atom with Nitro Group. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc(OC)c([C@@H]2CCCN2S(=O)(=O)Cc2c(C)nn(C)c2C)c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Sulfur Atom with Nitro Group. . Can you give me new molecules?'}]
+AI answer 0: - COc1ccc(OC)c([C@@H]2CCCN2N(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2N(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2N(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2N(=O)(=O)Cc2c(C)nn(C)c2C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2N(=O)(=O)Cc2c(C)nn(C)c2C)c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 27/43
+Hit Ratio = 27/31
+----------------
+>>Sample 43
+RL Suggestion 0: Replace N,N-Dimethylacrylamide with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc2ccc(OC)c(/C=C3\\NC(=O)NC3=O)c2c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace N,N-Dimethylacrylamide with Acetohydroxamate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2ccc(OC)c(/C=C3\NC(=O)NC3=O)c2c1
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)OC3)c2c1
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)OC3O)c2c1
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)OC3O)c2c1
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)OC3O)c2c1
+RL Suggestion 0: Replace Alkene with Bromine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc2ccc(OC)c(/C=C3\\NC(=O)NC3=O)c2c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace N,N-Dimethylacrylamide with Acetohydroxamate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)NC3=O)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3O)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3O)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3O)c2c1'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3)c2c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom. . Can you give me new molecules?'}]
+AI answer 0: Here are five new molecules in SMILES format, modified by replacing the alkene with a bromine atom:
+
+- COc1ccc2ccc(OC)c(Br)c2c1  
+- COc1ccc2ccc(OC)c(Br)c2c1  
+- COc1ccc2ccc(OC)c(Br)c2c1  
+- COc1ccc2ccc(OC)c(Br)c2c1  
+- COc1ccc2ccc(OC)c(Br)c2c1
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc2ccc(OC)c(/C=C3\\NC(=O)NC3=O)c2c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace N,N-Dimethylacrylamide with Acetohydroxamate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)NC3=O)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3O)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3O)c2c1\n- COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3O)c2c1'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc2ccc(OC)c(/C=C3\\NC(=O)OC3)c2c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom. . Can you give me new molecules?'}, {'role': 'assistant', 'content': 'Here are five new molecules in SMILES format, modified by replacing the alkene with a bromine atom:\n\n- COc1ccc2ccc(OC)c(Br)c2c1  \n- COc1ccc2ccc(OC)c(Br)c2c1  \n- COc1ccc2ccc(OC)c(Br)c2c1  \n- COc1ccc2ccc(OC)c(Br)c2c1  \n- COc1ccc2ccc(OC)c(Br)c2c1'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc2ccc(OC)c(Br)c2c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate. . Can you give me new molecules?'}]
+AI answer 0: Here are five new molecules in SMILES format, modified by replacing the amide with a sulfonate group:
+
+- COc1ccc2ccc(OC)c(/C=C3\S(=O)(=O)O)c2c1  
+- COc1ccc2ccc(OC)c(/C=C3\S(=O)(=O)O)c2c1  
+- COc1ccc2ccc(OC)c(/C=C3\S(=O)(=O)O)c2c1  
+- COc1ccc2ccc(OC)c(/C=C3\S(=O)(=O)O)c2c1  
+- COc1ccc2ccc(OC)c(/C=C3\S(=O)(=O)O)c2c1
+Acc = 27/44
+Hit Ratio = 27/32
+----------------
+>>Sample 44
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1noc(CCN=C(N)Nc2ccccc2[N+](=O)[O-])n1  
+- CC(C)c1noc(CCN=C(N)Nc2ccc(cc2)[N+](=O)[O-])n1  
+- CC(C)c1noc(CCN=C(N)Nc2cc(ccc2[N+](=O)[O-])C)n1  
+- CC(C)c1noc(CCN=C(N)Nc2cc(cc(c2)[N+](=O)[O-])F)n1  
+- CC(C)c1noc(CCN=C(N)Nc2cc(c(cc2)[N+](=O)[O-])Cl)n1
+Acc = 28/45
+Hit Ratio = 28/33
+----------------
+>>Sample 45
+RL Suggestion 0: Replace Tertiary Amine with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CC[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1C[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1C[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1[C@H](CO)C1
+RL Suggestion 0: Replace Tertiary Amine with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CC[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1C[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1C[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1[C@H](CO)C1'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1ccc2ccccc2c1)N1CC[C@H](CO)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine. . Can you give me new molecules?'}]
+AI answer 0: Here are five modified molecules where the tertiary amine is replaced with a secondary amine, as per your suggestion:
+
+- O=C(NCc1ccc2ccccc2c1)NC1CCC[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)NC1CC[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)NC1C[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)NC1[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N[C@H](CO)C1
+RL Suggestion 0: Replace Oxygen Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CC[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1C[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1C[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1[C@H](CO)C1'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1ccc2ccccc2c1)N1CC[C@H](CO)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Tertiary Amine with Secondary Amine. . Can you give me new molecules?'}, {'role': 'assistant', 'content': 'Here are five modified molecules where the tertiary amine is replaced with a secondary amine, as per your suggestion:\n\n- O=C(NCc1ccc2ccccc2c1)NC1CCC[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)NC1CC[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)NC1C[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)NC1[C@H](CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N[C@H](CO)C1'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1ccc2ccccc2c1)NC1CCC[C@H](CO)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Oxygen Atom with Acetohydroxamate. . Can you give me new molecules?'}]
+AI answer 0: Here are five modified molecules where the oxygen atom is replaced with acetohydroxamate, as per your suggestion:
+
+- C(=NNC(=O)C)(Nc1ccc2ccccc2c1)N1CCC[C@H](CO)C1  
+- C(=NNC(=O)C)(Nc1ccc2ccccc2c1)NC1CC[C@H](CO)C1  
+- C(=NNC(=O)C)(Nc1ccc2ccccc2c1)NC1C[C@H](CO)C1  
+- C(=NNC(=O)C)(Nc1ccc2ccccc2c1)NC1[C@H](CO)C1  
+- C(=NNC(=O)C)(Nc1ccc2ccccc2c1)N[C@H](CO)C1
+Acc = 28/46
+Hit Ratio = 28/34
+----------------
+>>Sample 46
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=S(=O)(=O)O
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=S(=O)(=O)OC
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=S(=O)(=O)OCC
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=S(=O)(=O)OCC(=O)O
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=S(=O)(=O)OCCN
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 28/47
+Hit Ratio = 28/34
+----------------
+>>Sample 47
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1
+- C[S@@](=O)c1ccc(CN[S@](=O)(=O)[C@@H]2SCCc3sccc32)cc1
+- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@H]2SCCc3sccc32)cc1
+- C[S@@](=O)c1ccc(CN[S@](=O)(=O)[C@H]2SCCc3sccc32)cc1
+- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@](=O)(=O)[C@@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@](=O)(=O)[C@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1'}, {'role': 'user', 'content': 'Your provided sequence C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}]
+AI answer 0: - C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@](=O)(=O)[C@@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@](=O)(=O)[C@H]2SCCc3sccc32)cc1\n- C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1'}, {'role': 'user', 'content': 'Your provided sequence C[S@@](=O)c1ccc(CN[S@@](=O)(=O)[C@@H]2SCCc3sccc32)cc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1  \n- C[S@@](=O)c1ccc(CN=C(N)N[C@H]2SCCc3sccc32)cc1  \n- C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1  \n- C[S@@](=O)c1ccc(CN=C(N)N[C@H]2SCCc3sccc32)cc1  \n- C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1'}, {'role': 'user', 'content': 'Your provided sequence C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}]
+AI answer 0: - C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@H]2SCCc3sccc32)cc1  
+- C[S@@](=O)c1ccc(CN=C(N)N[C@@H]2SCCc3sccc32)cc1
+Acc = 28/48
+Hit Ratio = 28/35
+----------------
+>>Sample 48
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(c1cc(COc2ccc(S(=O)(=O)N)cc2)on1)N1CCOCC1  
+- O=C(c1cc(COc2ccc(S(=O)(=O)NH)cc2)on1)N1CCOCC1  
+- O=C(c1cc(COc2ccc(S(=O)(=O)N(C)C)cc2)on1)N1CCOCC1  
+- O=C(c1cc(COc2ccc(S(=O)(=O)NH2)cc2)on1)N1CCOCC1  
+- O=C(c1cc(COc2ccc(S(=O)(=O)N(C)C)cc2)on1)N1CCOCC1
+Acc = 29/49
+Hit Ratio = 29/36
+----------------
+>>Sample 49
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC
+- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC
+- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC
+- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC
+- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC\n- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC\n- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC\n- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC\n- CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC'}, {'role': 'user', 'content': 'Your provided sequence CCOc1ccc(NS(=O)(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}]
+AI answer 0: - CCOc1ccc(NC(=N)N)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC  
+- CCOc1ccc(NC(=N)N)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC  
+- CCOc1ccc(NC(=N)N)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC  
+- CCOc1ccc(NC(=N)N)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC  
+- CCOc1ccc(NC(=N)N)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 29/50
+Hit Ratio = 29/36
+----------------
+>>Sample 50
+RL Suggestion 0: Replace Oxygen Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Oxygen Atom with Acetohydroxamate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)c1
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)C(=O)NOc1
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)C(=O)NOc2
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)C(=O)NOc3
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)C(=O)NOc4
+Acc = 30/51
+Hit Ratio = 30/37
+----------------
+>>Sample 51
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1S(=O)(=O)O
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1S(=O)(=O)OC
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1S(=O)(=O)OCC
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1S(=O)(=O)OCCC
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1S(=O)(=O)OCCCC
+Acc = 31/52
+Hit Ratio = 31/38
+----------------
+>>Sample 52
+RL Suggestion 0: Replace Bromine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1Br more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Phosphorus.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1[P](=O)(O)O
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1[P](O)(O)O
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1[P](=O)(O)OC
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1[P](O)(O)OC
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1[P](=O)(O)OCC
+Acc = 32/53
+Hit Ratio = 32/39
+----------------
+>>Sample 53
+RL Suggestion 0: Replace Alkene with Bromine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C=CCN(C(=O)Cc1ccc(C)cc1)c1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1
+- BrCCN(C(=O)Cc1ccc(C)cc1)c1cccc(Br)c1
+- BrCCN(C(=O)Cc1ccc(C)cc1)c1cc(Br)ccc1
+- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccc(Br)cc1
+- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1Br
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C=CCN(C(=O)Cc1ccc(C)cc1)c1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1cccc(Br)c1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1cc(Br)ccc1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccc(Br)cc1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1Br'}, {'role': 'user', 'content': 'Your provided sequence BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate. . Can you give me new molecules?'}]
+AI answer 0: - BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1ccccc1
+- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1cccc(Br)c1
+- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1cc(Br)ccc1
+- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1ccc(Br)cc1
+- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1ccccc1Br
+RL Suggestion 0: Replace Bromoalkane with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C=CCN(C(=O)Cc1ccc(C)cc1)c1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Bromine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1cccc(Br)c1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1cc(Br)ccc1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccc(Br)cc1\n- BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1Br'}, {'role': 'user', 'content': 'Your provided sequence BrCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1ccccc1\n- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1cccc(Br)c1\n- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1cc(Br)ccc1\n- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1ccc(Br)cc1\n- BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1ccccc1Br'}, {'role': 'user', 'content': 'Your provided sequence BrCCN(S(=O)(=O)Cc1ccc(C)cc1)c1ccccc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Bromoalkane with Carboxylic Acid. . Can you give me new molecules?'}]
+AI answer 0: - O=C(O)CN(S(=O)(=O)Cc1ccc(C)cc1)c1ccccc1
+- O=C(O)CN(S(=O)(=O)Cc1ccc(C)cc1)c1cccc(O)c1
+- O=C(O)CN(S(=O)(=O)Cc1ccc(C)cc1)c1cc(O)ccc1
+- O=C(O)CN(S(=O)(=O)Cc1ccc(C)cc1)c1ccc(O)cc1
+- O=C(O)CN(S(=O)(=O)Cc1ccc(C)cc1)c1ccccc1O
+Acc = 33/54
+Hit Ratio = 33/40
+----------------
+>>Sample 54
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(CNC(=O)N2CCC(OCc3ccc(F)cc3)CC2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)N)cc3)CC2)n1
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)NH)cc3)CC2)n1
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)NMe)cc3)CC2)n1
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)NH2)cc3)CC2)n1
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)NHEt)cc3)CC2)n1
+Acc = 34/55
+Hit Ratio = 34/41
+----------------
+>>Sample 55
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1
+Acc = 34/56
+Hit Ratio = 34/42
+----------------
+>>Sample 56
+RL Suggestion 0: Replace N,N-Dimethylacrylamide with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace N,N-Dimethylacrylamide with Acetohydroxamate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1
+Acc = 34/57
+Hit Ratio = 34/43
+----------------
+>>Sample 57
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)S(=O)(=O)O2)cc1  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)S(=O)(=O)O2)cc1  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)S(=O)(=O)O2)cc1  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)S(=O)(=O)O2)cc1  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)S(=O)(=O)O2)cc1
+Acc = 35/58
+Hit Ratio = 35/44
+----------------
+>>Sample 58
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1
+- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1
+- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1
+- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1
+- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1\n- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1\n- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1\n- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1\n- COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc(OC)c(CNS(=O)(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}]
+AI answer 0: - COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1  
+- COc1ccc(OC)c(CNC(=N)N)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1  
+- COc1ccc(OC)c(CNC(=N)N)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1  
+- COc1ccc(OC)c(CNC(=N)N)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1  
+- COc1ccc(OC)c(CNC(=N)N)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 35/59
+Hit Ratio = 35/44
+----------------
+>>Sample 59
+RL Suggestion 0: Replace Bromine Atom with Phosphorus. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(Br)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Phosphorus.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(P)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(P(=O)(O)O)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(P(O)(O)O)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(P(O)O)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(P(O)(=O)O)cc1
+Acc = 36/60
+Hit Ratio = 36/45
+----------------
+>>Sample 60
+RL Suggestion 0: Replace Amide with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(CCSCc1ccccc1)Nc1nc[nH]n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1
+- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1
+- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1
+- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1
+- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1
+RL Suggestion 0: Replace Secondary Amine with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(CCSCc1ccccc1)Nc1nc[nH]n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1\n- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1\n- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1\n- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1\n- O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1'}, {'role': 'user', 'content': 'Your provided sequence O=S(=O)(O)CCSCc1ccccc1Nc1nc[nH]n1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Secondary Amine with Guanidine. . Can you give me new molecules?'}]
+AI answer 0: - O=C(NC(=N)N)CCSCc1ccccc1Nc1nc[nH]n1  
+- O=C(NC(=N)N)CCSCc1ccccc1Nc1nc[nH]n1  
+- O=C(NC(=N)N)CCSCc1ccccc1Nc1nc[nH]n1  
+- O=C(NC(=N)N)CCSCc1ccccc1Nc1nc[nH]n1  
+- O=C(NC(=N)N)CCSCc1ccccc1Nc1nc[nH]n1
+Acc = 37/61

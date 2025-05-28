@@ -1,0 +1,1888 @@
+args:  Namespace(rl_model_path='results/rl_model_checkpoint/reward_type_add_a0.0_b1.0_c1.0_tau0.02general_replay_buffer_mol_strict_101_best_reward_v1.pth', conversational_LLM='deepseek', planning_LLM='deepseek', fast_protein=False, cot=None, num_of_mol=200, task_id=101, constraint='strict', conversation_type='multi', planner='rl_planner', depth=3, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NC[C@H]1CCCO1)c1ccccc1N1CC(O)CC1=O  
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCC(O)C1=O  
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CC(O)C(O)C1=O  
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1C(O)CCC1=O  
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CC(O)C1(O)=O
+Acc = 1/1
+Hit Ratio = 1/1
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cn1ccc(C(=O)Nc2sc3c(c2C#N)CCC3)cc1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1ccc(C(=O)Nc2sc3c(c2C#N)CCC3)cc1O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)CC(O)C3)cc1=O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)C(O)CC3)cc1=O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)CC(O)C(O)3)cc1=O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)C(O)C(O)C3)cc1=O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 1/2
+Hit Ratio = 1/1
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C(CO)CCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=O  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)cc(CO)c1=O  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1O  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)c(CO)cc1=O  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)cc(O)c1=O
+Acc = 2/3
+Hit Ratio = 2/2
+----------------
+>>Sample 3
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C(CO))cs1  
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C(COH))cs1  
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C(CCO))cs1  
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C(CCOH))cs1  
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C(C(OH)(CO)))cs1
+Acc = 3/4
+Hit Ratio = 3/3
+----------------
+>>Sample 4
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)CCN1c2ccccc2C(=O)N(C)C2ccccc21)C1CC1
+- C[C@H](NC(=O)CCN1c2ccccc2C(=O)N(C)C2ccccc21)C1CC1
+- C[C@H](NC(=O)CCN1c2ccccc2C(=O)N(C)C2ccccc21)C1CC1
+- C[C@H](NC(=O)CCN1c2ccccc2C(=O)N(C)C2ccccc21)C1CC1
+- C[C@H](NC(=O)CCN1c2ccccc2C(=O)N(C)C2ccccc21)C1CC1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 3/5
+Hit Ratio = 3/3
+----------------
+>>Sample 5
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1O  
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1C(O)  
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1CC(O)  
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1C(O)C  
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1C(O)CC
+Acc = 4/6
+Hit Ratio = 4/4
+----------------
+>>Sample 6
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Fc1ccccc1N1CCN(c2ncc(Cl)cc2S(=O)(=O)N)CC1  
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2S(=O)(=O)NH2)CC1  
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2S(=O)(=O)N(C)C)CC1  
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2S(=O)(=O)NC)CC1  
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2S(=O)(=O)NCC)CC1
+Acc = 5/7
+Hit Ratio = 5/5
+----------------
+>>Sample 7
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)CSc1ncnc2sc(C)c(C)c12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12
+- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12
+- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12
+- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12
+- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)CSc1ncnc2sc(C)c(C)c12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12\n- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12\n- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12\n- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12\n- CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12'}, {'role': 'user', 'content': 'Your provided sequence CNC(=O)C=C(C)N(C)Cc1ncnc2sc(C)c(C)c12 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CNC(=O)C(O)Cc1ncnc2sc(C)c(C)c12  
+- CNC(=O)C(O)Cc1ncnc2sc(C)c(C)c12  
+- CNC(=O)C(O)Cc1ncnc2sc(C)c(C)c12  
+- CNC(=O)C(O)Cc1ncnc2sc(C)c(C)c12  
+- CNC(=O)C(O)Cc1ncnc2sc(C)c(C)c12
+Acc = 6/8
+Hit Ratio = 6/6
+----------------
+>>Sample 8
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2O  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2C(O)  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2CC(O)  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2CCC(O)  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2CCCC(O)
+Acc = 7/9
+Hit Ratio = 7/7
+----------------
+>>Sample 9
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2F)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)NC)CC1  
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)N)CC1  
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)N(C)C)CC1  
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)NC(=O)C)CC1  
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2S(=O)(=O)NCC)CC1
+Acc = 8/10
+Hit Ratio = 8/8
+----------------
+>>Sample 10
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O)C)ccc2C)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C(O))cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O))ccc2C)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C(O)C)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O)H)ccc2C)cc1
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O)C)ccc2C)cc1  \n- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C(O))cc1  \n- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O))ccc2C)cc1  \n- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C(O)C)cc1  \n- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O)H)ccc2C)cc1'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O)C)ccc2C)cc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O))ccc2C)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C(O))cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O)H)ccc2C)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C(O)H)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C(O)CC)ccc2C)cc1
+Acc = 9/11
+Hit Ratio = 9/9
+----------------
+>>Sample 11
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)N)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)NH2)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)Nc4ccccc4)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)NC(=O)C)c2)CCS1
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(S(=O)(=O)N(C)C)c2)CCS1
+Acc = 10/12
+Hit Ratio = 10/10
+----------------
+>>Sample 12
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(CO)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)N)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)C)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)CO)c1C
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(CO)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)N)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)C)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)CO)c1C'}, {'role': 'user', 'content': 'Your provided sequence Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(CO)c1C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)C)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)CO)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C#N)c1C  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C(O)C)c1C
+RL Suggestion 0: Replace Amide with Di-alkyl urea. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(CO)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)N)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)C)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)CO)c1C'}, {'role': 'user', 'content': 'Your provided sequence Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(CO)c1C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(CO)C)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)CO)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C#N)c1C  \n- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C(O)C)c1C'}, {'role': 'user', 'content': 'Your provided sequence Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C(O)C)c1C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Di-alkyl urea. . Can you give me new molecules?'}]
+AI answer 0: - Cc1sc(NC(=O)N(C)C)c2cccc(N(C)C)c2)c(C#N)c1C  
+- Cc1sc(NC(=O)N(C)C)c2cccc(N(C)C)c2)c(CO)c1C  
+- Cc1sc(NC(=O)N(C)C)c2cccc(N(C)C)c2)c(C(O)C)c1C  
+- Cc1sc(NC(=O)N(C)C)c2cccc(N(C)C)c2)c(C(CO)C)c1C  
+- Cc1sc(NC(=O)N(C)C)c2cccc(N(C)C)c2)c(C(O)CO)c1C
+Acc = 10/13
+Hit Ratio = 10/11
+----------------
+>>Sample 13
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)C(=C)N(C)C)ccc1C=O
+- Cc1cc(C(=O)C(C)=CN(C)C)ccc1C=O
+- Cc1cc(C(=O)C(C=C)N(C)C)ccc1C=O
+- Cc1cc(C(=O)C(C)C=CN(C)C)ccc1C=O
+- Cc1cc(C(=O)C(C)CCN(C)C)ccc1C=O
+Acc = 11/14
+Hit Ratio = 11/12
+----------------
+>>Sample 14
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(F)(F)F)c12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)N)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)NC)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)NCC)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)N(C)C)c12
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)NCC(F)(F)F)c12
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 11/15
+Hit Ratio = 11/12
+----------------
+>>Sample 15
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(C(C)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(C)(C)CO)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1  
+- Cc1ccc(C(C)(CO)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1  
+- Cc1ccc(C(CO)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1  
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CC(CO)C2)cc1  
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2O)cc1
+Acc = 12/16
+Hit Ratio = 12/13
+----------------
+>>Sample 16
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCN(CC#N)Cc1csc2ccccc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(CC#N)Cc1csc2ccccc1(O)2  
+- CCCN(CC#N)Cc1csc2cc(O)ccc12  
+- CCCN(CC#N)Cc1csc2ccc(O)cc12  
+- CCCN(CC#N)Cc1csc2cc(O)c(O)cc12  
+- CCCN(CC#N)Cc1csc2ccccc12O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 12/17
+Hit Ratio = 12/13
+----------------
+>>Sample 17
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1ccccc1F more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1ccccc1S(=O)(=O)N  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)N)ccc1  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1ccc(S(=O)(=O)N)cc1  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)N)c(O)cc1  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)N)c(N)cc1
+Acc = 13/18
+Hit Ratio = 13/14
+----------------
+>>Sample 18
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2c(S(=O)(=O)N)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1
+- Cc1onc(-c2c(S(=O)(=O)Nc3ccccc3)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1
+- Cc1onc(-c2c(S(=O)(=O)Nc3cccnc3)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1
+- Cc1onc(-c2c(S(=O)(=O)Nc3ccncc3)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1
+- Cc1onc(-c2c(S(=O)(=O)Nc3ccsc3)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1
+Acc = 14/19
+Hit Ratio = 14/15
+----------------
+>>Sample 19
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\\c1ccc(I)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)N(C(=O)C=C)C1=N\c1ccc(I)cc1
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)N(C(=O)C=C)C1=N\c1ccc(I)cc1
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)N(C(=O)C=C)C1=N\c1ccc(I)cc1
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)N(C(=O)C=C)C1=N\c1ccc(I)cc1
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)N(C(=O)C=C)C1=N\c1ccc(I)cc1
+Acc = 15/20
+Hit Ratio = 15/16
+----------------
+>>Sample 20
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1O
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CO
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CCO
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CCCO
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1\n- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1O\n- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CO\n- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CCO\n- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CCCO'}, {'role': 'user', 'content': 'Your provided sequence C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1C(O)  
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CC(O)  
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1CCC(O)  
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1C(O)C  
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1C(O)CC
+Acc = 16/21
+Hit Ratio = 16/17
+----------------
+>>Sample 21
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C(CO)O)O1  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C(CO)O)O1  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C(CO)O)O1  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C(CO)O)O1  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C(CO)O)O1
+Acc = 17/22
+Hit Ratio = 17/18
+----------------
+>>Sample 22
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](c1cccc2ccccc12)N(C(=O)CCCn1cncn1)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](c1cccc2ccccc12)N(C(=O)CCCOn1cncn1)C1CC1
+- C[C@H](c1cccc2ccccc12)N(C(=O)CCC(O)n1cncn1)C1CC1
+- C[C@H](c1cccc2ccccc12)N(C(=O)CCCOC1CC1)n1cncn1
+- C[C@H](c1cccc2ccccc12)N(C(=O)CCC(O)C1CC1)n1cncn1
+- C[C@H](c1cccc2ccccc12)N(C(=O)CCCOC1CC1)C1CC1
+Acc = 18/23
+Hit Ratio = 18/19
+----------------
+>>Sample 23
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule FC(F)(F)c1ccnc(NCc2cc[nH]n2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - FC(F)(F)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)C(F)(F)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)C(F)c1ccnc(NCc2cc[nH]n2)n1
+- O=S(=O)(N)Cc1ccnc(NCc2cc[nH]n2)n1
+Acc = 19/24
+Hit Ratio = 19/20
+----------------
+>>Sample 24
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1O  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC(O)C1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)C(O)C1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1C(O)C  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1C(O)
+Acc = 20/25
+Hit Ratio = 20/21
+----------------
+>>Sample 25
+RL Suggestion 0: Replace Alkene with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1NC(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1NC(=O)/C(C#N)=C(NC(N)=N)\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(NC(N)=N)\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(NC(N)=N)\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(NC(N)=N)\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C(NC(N)=N)\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C
+Acc = 21/26
+Hit Ratio = 21/22
+----------------
+>>Sample 26
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCn1c(C)cc(CNc2cccc(C(C)C)c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(C)cc(CNc2cccc(C(CO)C)c2)c1C  
+- CCn1c(C)cc(CNc2cccc(C(C)CO)c2)c1C  
+- CCn1c(C)cc(CNc2cccc(C(CO)CO)c2)c1C  
+- CCn1c(C)cc(CNc2cccc(C(C)C)c2)c1CO  
+- CCn1c(C)cc(CNc2cccc(C(C)C)c2)c1CCO
+Acc = 22/27
+Hit Ratio = 22/23
+----------------
+>>Sample 27
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1C(O)
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1C(O)C
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1C(O)CC
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1C(O)C(O)
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1C(O)C(O)C
+Acc = 23/28
+Hit Ratio = 23/24
+----------------
+>>Sample 28
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCCCC2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CC(O)CCC2)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(O)CN2CCCCC2)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CC(O)CC(O)C2)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(O)CN2CC(O)CCC2)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CC(O)CC(O)C(O)C2)CC1
+Acc = 24/29
+Hit Ratio = 24/25
+----------------
+>>Sample 29
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)c1ccc(C)c(NC(=O)CCCO)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1ccc(C)c(NC(=O)CCO)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCOC)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCOCC)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCOCCC)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCOCCCO)c1
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)c1ccc(C)c(NC(=O)CCCO)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCNC(=O)c1ccc(C)c(NC(=O)CCO)c1  \n- CCNC(=O)c1ccc(C)c(NC(=O)CCOC)c1  \n- CCNC(=O)c1ccc(C)c(NC(=O)CCOCC)c1  \n- CCNC(=O)c1ccc(C)c(NC(=O)CCOCCC)c1  \n- CCNC(=O)c1ccc(C)c(NC(=O)CCOCCCO)c1'}, {'role': 'user', 'content': 'Your provided sequence CCNC(=O)c1ccc(C)c(NC(=O)CCO)c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CCNC(=O)c1ccc(C)c(NC(=O)C(O)CO)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)C(O)CCO)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)C(O)CCCO)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)C(O)CCCCO)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)C(O)CCCCCO)c1
+Acc = 25/30
+Hit Ratio = 25/26
+----------------
+>>Sample 30
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)N)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)NH)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)NH2)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)NMe)c3)c2)n1
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(S(=O)(=O)NHEt)c3)c2)n1
+Acc = 26/31
+Hit Ratio = 26/27
+----------------
+>>Sample 31
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1O  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1CC(O)  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)C  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)CC
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1O  \n- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)  \n- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1CC(O)  \n- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)C  \n- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)CC'}, {'role': 'user', 'content': 'Your provided sequence N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1CC(O)  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)C  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)CC  
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1C(O)C(O)
+Acc = 27/32
+Hit Ratio = 27/28
+----------------
+>>Sample 32
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1Cl  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1ClO  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1ClO  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1ClO  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1ClO
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 27/33
+Hit Ratio = 27/28
+----------------
+>>Sample 33
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1O
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)C
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1CC(O)C
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)CC
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)C(O)C
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1O\n- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)C\n- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1CC(O)C\n- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)CC\n- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)C(O)C'}, {'role': 'user', 'content': 'Your provided sequence Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1CC(O)
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)C
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1CC(O)C
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1C(O)CC(O)
+Acc = 28/34
+Hit Ratio = 28/29
+----------------
+>>Sample 34
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](C(=O)N(C)CCC#N)n1cnc2c1c(=O)n(C)c(=O)n2C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)N(C)CCCO)n1cnc2c1c(=O)n(C)c(=O)n2C  
+- C[C@@H](C(=O)N(C)CCC(O)CO)n1cnc2c1c(=O)n(C)c(=O)n2C  
+- C[C@@H](C(=O)N(C)CC(O)CCO)n1cnc2c1c(=O)n(C)c(=O)n2C  
+- C[C@@H](C(=O)N(C)CC(O)CC(O)CO)n1cnc2c1c(=O)n(C)c(=O)n2C  
+- C[C@@H](C(=O)N(C)CC(O)C(O)CCO)n1cnc2c1c(=O)n(C)c(=O)n2C
+Acc = 29/35
+Hit Ratio = 29/30
+----------------
+>>Sample 35
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(-c2ccc(OC(F)(F)F)cc2)cn1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2ccc(OC(=O)NS(=O)(=O)C)cc2)cn1
+- COc1ccc(-c2ccc(OC(=O)NS(=O)(=O)CF)cc2)cn1
+- COc1ccc(-c2ccc(OC(=O)NS(=O)(=O)CCl)cc2)cn1
+- COc1ccc(-c2ccc(OC(=O)NS(=O)(=O)CBr)cc2)cn1
+- COc1ccc(-c2ccc(OC(=O)NS(=O)(=O)CI)cc2)cn1
+Acc = 30/36
+Hit Ratio = 30/31
+----------------
+>>Sample 36
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2
+RL Suggestion 0: Replace Thioalkyl ether with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc(C)cc1NC(=O)CCN(C)C(=O)C=Cc1ccc2c(c1)OCCO2 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2  \n- COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc(C)cc1NC(=O)CCOC(=O)C=Cc1ccc2c(c1)OCCO2 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with Secondary Amine. . Can you give me new molecules?'}]
+AI answer 0: - COc1ccc(C)cc1NC(=O)CCN(C)Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)Cc1ccc2c(c1)OCCO2  
+- COc1ccc(C)cc1NC(=O)CCN(C)Cc1ccc2c(c1)OCCO2
+Acc = 30/37
+Hit Ratio = 30/32
+----------------
+>>Sample 37
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1O  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1CC(O)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)C  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)CC
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1O  \n- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)  \n- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1CC(O)  \n- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)C  \n- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)CC'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1CC(O)  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)C  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1C(O)CC  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1CC(O)C
+Acc = 31/38
+Hit Ratio = 31/33
+----------------
+>>Sample 38
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)N)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)NH2)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)N(C)C)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)NC(=O)C)c2)n1
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(S(=O)(=O)N(C(=O)O)C)c2)n1
+Acc = 32/39
+Hit Ratio = 32/34
+----------------
+>>Sample 39
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1  
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1  
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1  
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1  
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1
+Acc = 32/40
+Hit Ratio = 32/35
+----------------
+>>Sample 40
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CC(C)C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)C[C@@H](O)CC  
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)C[C@H](O)C  
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)C[C@@H](C)O  
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)C[C@H](CC)O  
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)C[C@@H](O)C(C)C
+Acc = 33/41
+Hit Ratio = 33/36
+----------------
+>>Sample 41
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1O
+- CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1C(O)C
+- CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1C(O)CC
+- CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1C(O)CCC
+- CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1C(O)CCCC
+Acc = 34/42
+Hit Ratio = 34/37
+----------------
+>>Sample 42
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  \n- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+
+Let me provide new molecules by replacing specific carbon atoms with aliphatic alcohols:
+
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+
+Here are the revised molecules:
+
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+
+Let me try again with more specific replacements:
+
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+
+Here are the final revised molecules:
+
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1  
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C(O)C)c1
+Acc = 34/43
+Hit Ratio = 34/38
+----------------
+>>Sample 43
+RL Suggestion 0: Replace Alkene with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc2ccc(OC)c(/C=C3\\NC(=O)NC3=O)c2c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2ccc(OC)c(/C(=N\N)N)NC(=O)NC2=O)c2c1
+- COc1ccc2ccc(OC)c(/C(=N\N)N)NC(=O)NC2=O)c2c1
+- COc1ccc2ccc(OC)c(/C(=N\N)N)NC(=O)NC2=O)c2c1
+- COc1ccc2ccc(OC)c(/C(=N\N)N)NC(=O)NC2=O)c2c1
+- COc1ccc2ccc(OC)c(/C(=N\N)N)NC(=O)NC2=O)c2c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 34/44
+Hit Ratio = 34/38
+----------------
+>>Sample 44
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1O  
+- CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1CO  
+- CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1CCO  
+- CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1CCCO  
+- CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1CCCCO
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 34/45
+Hit Ratio = 34/38
+----------------
+>>Sample 45
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O))C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)C)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)CO)C1
+RL Suggestion 0: Replace Oxygen Atom with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O))C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)C)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)CO)C1'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Oxygen Atom with Carboxylic Acid. . Can you give me new molecules?'}]
+AI answer 0: - O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)=O)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)=O)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)C(O)=O)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)=O)C(O)=O  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)=O)C(O)=O
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)CO)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O))C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)C)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)CO)C1'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Oxygen Atom with Carboxylic Acid. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)=O)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)=O)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)C(O)=O)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)=O)C(O)=O  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)=O)C(O)=O'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)=O)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O))C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)CO)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](C(O)C(O)C(O))C1
+Acc = 35/46
+Hit Ratio = 35/39
+----------------
+>>Sample 46
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC(O)C1=O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)C(O)C1=O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1(O)=O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1(O)C=O
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1O  \n- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC(O)C1=O  \n- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)C(O)C1=O  \n- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1(O)=O  \n- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1(O)C=O'}, {'role': 'user', 'content': 'Your provided sequence CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)C(O)C1=O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC(O)C1=O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)C(O)C(O)C1=O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)C(O)C1(O)=O  
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)C(O)C1(O)C=O
+Acc = 36/47
+Hit Ratio = 36/40
+----------------
+>>Sample 47
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2C(=O)C(=C)N(C)C)cc1
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2C(=O)C(=C)N(C)C)cc1
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2C(=O)C(=C)N(C)C)cc1
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2C(=O)C(=C)N(C)C)cc1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 36/48
+Hit Ratio = 36/40
+----------------
+>>Sample 48
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(c1cc(COc2ccc(S(=O)(=O)N)cc2)on1)N1CCOCC1
+- O=C(c1cc(COc2ccc(S(=O)(=O)NH)cc2)on1)N1CCOCC1
+- O=C(c1cc(COc2ccc(S(=O)(=O)N(C)C)cc2)on1)N1CCOCC1
+- O=C(c1cc(COc2ccc(S(=O)(=O)NH2)cc2)on1)N1CCOCC1
+- O=C(c1cc(COc2ccc(S(=O)(=O)N(CC)CC)cc2)on1)N1CCOCC1
+Acc = 37/49
+Hit Ratio = 37/41
+----------------
+>>Sample 49
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OCO
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](CO)N(c3ccc(C)cc3)C2=O)cc1OC
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(CO)cc3)C2=O)cc1OC
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OCCCO
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OCCO
+Acc = 38/50
+Hit Ratio = 38/42
+----------------
+>>Sample 50
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)NCC(O)c2coc(-c3ccccc3)n2)c1  
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2(O))c1  
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)c1O  
+- COc1cccc(NC(=O)NCC(O)Cc2coc(-c3ccccc3)n2)c1  
+- COc1cccc(NC(=O)NCCc2coc(-c3cc(O)ccc3)n2)c1
+Acc = 39/51
+Hit Ratio = 39/43
+----------------
+>>Sample 51
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1O
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1C(O)
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1C(O)C
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1C(O)CC
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1C(O)CCC
+Acc = 40/52
+Hit Ratio = 40/44
+----------------
+>>Sample 52
+RL Suggestion 0: Replace Bromine Atom with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1Br more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Fluorine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1F  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1F  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1F  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1F  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1F
+Acc = 41/53
+Hit Ratio = 41/45
+----------------
+>>Sample 53
+RL Suggestion 0: Replace Alkene with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C=CCN(C(=O)Cc1ccc(C)cc1)c1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C(=N)NCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1
+- C(=N)NCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1C(=N)N
+- C(=N)NCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1NC(=N)N
+- C(=N)NCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1N=C(N)N
+- C(=N)NCCN(C(=O)Cc1ccc(C)cc1)c1ccccc1NC(=N)N
+Acc = 42/54
+Hit Ratio = 42/46
+----------------
+>>Sample 54
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(CNC(=O)N2CCC(OCc3ccc(F)cc3)CC2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)N)cc3)CC2)n1  
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)NH)cc3)CC2)n1  
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)N(C)C)cc3)CC2)n1  
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)NCC)cc3)CC2)n1  
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(S(=O)(=O)NC(=O)C)cc3)CC2)n1
+Acc = 43/55
+Hit Ratio = 43/47
+----------------
+>>Sample 55
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)C(O)C1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC(O)C1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)C1C(O)C1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)C(O)CC1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1C(O)
+Acc = 44/56
+Hit Ratio = 44/48
+----------------
+>>Sample 56
+RL Suggestion 0: Replace Alkene with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)Oc1ccccc1/C(=N\N)/C(=O)NCC1(O)CCOCC1  
+- CC[C@H](C)Oc1ccccc1/C(=N\N)/C(=O)NCC1(O)CCOCC1  
+- CC[C@H](C)Oc1ccccc1/C(=N\N)/C(=O)NCC1(O)CCOCC1  
+- CC[C@H](C)Oc1ccccc1/C(=N\N)/C(=O)NCC1(O)CCOCC1  
+- CC[C@H](C)Oc1ccccc1/C(=N\N)/C(=O)NCC1(O)CCOCC1
+Acc = 45/57
+Hit Ratio = 45/49
+----------------
+>>Sample 57
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1O  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1CC(O)  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)C  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)CC
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1O  \n- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)  \n- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1CC(O)  \n- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)C  \n- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)CC'}, {'role': 'user', 'content': 'Your provided sequence CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CC(=O)CC(O)c1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1CC(O)  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)C  
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1C(O)CC
+Acc = 46/58
+Hit Ratio = 46/50
+----------------
+>>Sample 58
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2O)c1  
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2CCO)c1  
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2CC(O)C)c1  
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2OCC(O)C)c1  
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2CC(O)CC(O))c1
+Acc = 47/59
+Hit Ratio = 47/51
+----------------
+>>Sample 59
+RL Suggestion 0: Replace Bromine Atom with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(Br)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Fluorine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(F)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(F)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(F)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(F)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(F)cc1
+Acc = 48/60
+Hit Ratio = 48/52
+----------------
+>>Sample 60
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(CCSCc1ccccc1)Nc1nc[nH]n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CCN(C)C(=O)C=C)Nc1nc[nH]n1  
+- O=C(CCN(C)C(=O)C=C)Nc1nc[nH]n1  
+- O=C(CCN(C)C(=O)C=C)Nc1nc[nH]n1  
+- O=C(CCN(C)C(=O)C=C)Nc1nc[nH]n1  
+- O=C(CCN(C)C(=O)C=C)Nc1nc[nH]n1
+Acc = 49/61
+Hit Ratio = 49/53
+----------------
+>>Sample 61
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ncsc1C(=O)Nc1ccccc1C(F)(F)F more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ncsc1C(=O)Nc1ccccc1S(=O)(=O)NC
+- Cc1ncsc1C(=O)Nc1ccccc1S(=O)(=O)N
+- Cc1ncsc1C(=O)Nc1ccccc1S(=O)(=O)NCC
+- Cc1ncsc1C(=O)Nc1ccccc1S(=O)(=O)NC1CC1
+- Cc1ncsc1C(=O)Nc1ccccc1S(=O)(=O)N(C)C
+Acc = 50/62
+Hit Ratio = 50/54
+----------------
+>>Sample 62
+RL Suggestion 0: Replace Bromine Atom with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OCCOc2cccc(Br)c2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Fluorine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OCCOc2cccc(F)c2)cc1
+- COc1ccc(OCCOc2cccc(F)c2)cc1
+- COc1ccc(OCCOc2cccc(F)c2)cc1
+- COc1ccc(OCCOc2cccc(F)c2)cc1
+- COc1ccc(OCCOc2cccc(F)c2)cc1
+Acc = 51/63
+Hit Ratio = 51/55
+----------------
+>>Sample 63
+RL Suggestion 0: Replace Bromine Atom with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(Br)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Fluorine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(F)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1C  
+- COc1ccc(F)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1C  
+- COc1ccc(F)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1C  
+- COc1ccc(F)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1C  
+- COc1ccc(F)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1C
+Acc = 52/64
+Hit Ratio = 52/56
+----------------
+>>Sample 64
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2CO)c1
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2CCO)c1
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2CCCO)c1
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2CCCCO)c1
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2CCCCCO)c1
+Acc = 53/65
+Hit Ratio = 53/57
+----------------
+>>Sample 65
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=c1[nH]c2c(c(=O)n1-c1ccccc1)CCCS2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=c1[nH]c2c(c(=O)n1-c1ccccc1)CCN(C)C(=O)C=C
+- O=c1[nH]c2c(c(=O)n1-c1ccccc1)CCN(C)C(=O)C=C
+- O=c1[nH]c2c(c(=O)n1-c1ccccc1)CCN(C)C(=O)C=C
+- O=c1[nH]c2c(c(=O)n1-c1ccccc1)CCN(C)C(=O)C=C
+- O=c1[nH]c2c(c(=O)n1-c1ccccc1)CCN(C)C(=O)C=C
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 53/66
+Hit Ratio = 53/57
+----------------
+>>Sample 66
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1O
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)C
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)CC
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)CCC
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1O\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)C\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)CC\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)CCC'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CCN(CC(=O)NC(C)C)C(=O)COc1cc(O)ccc1  
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccc(O)cc1  
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)  
+- CCN(CC(=O)NC(C)C)C(=O)COc1cc(O)cc(O)c1  
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1CC(O)
+RL Suggestion 0: Replace Aromatic Alcohol with Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1O\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)C\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)CC\n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)CCC'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- CCN(CC(=O)NC(C)C)C(=O)COc1cc(O)ccc1  \n- CCN(CC(=O)NC(C)C)C(=O)COc1ccc(O)cc1  \n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C(O)  \n- CCN(CC(=O)NC(C)C)C(=O)COc1cc(O)cc(O)c1  \n- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1CC(O)'}, {'role': 'user', 'content': 'Your provided sequence CCN(CC(=O)NC(C)C)C(=O)COc1cc(O)ccc1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Aromatic Alcohol with Aromatic Aldehyde. . Can you give me new molecules?'}]
+AI answer 0: - CCN(CC(=O)NC(C)C)C(=O)COc1cc(C=O)ccc1  
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccc(C=O)cc1  
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1C=O  
+- CCN(CC(=O)NC(C)C)C(=O)COc1cc(C=O)cc(C=O)c1  
+- CCN(CC(=O)NC(C)C)C(=O)COc1ccccc1CC=O
+Acc = 53/67
+Hit Ratio = 53/58
+----------------
+>>Sample 67
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H]1COC[C@@H](C)N1C(=O)c1cccc(Cl)c1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1COC[C@@H](C)N1C(=O)c1cccc(Cl)c1O  
+- C[C@H]1COC[C@@H](C)N1C(=O)c1cccc(O)c1Cl  
+- C[C@H]1COC[C@@H](C)N1C(=O)c1ccc(O)c(Cl)c1  
+- C[C@H]1COC[C@@H](C)N1C(=O)c1cc(O)cc(Cl)c1  
+- C[C@H]1COC[C@@H](C)N1C(=O)c1cc(Cl)c(O)cc1
+Acc = 54/68
+Hit Ratio = 54/59
+----------------
+>>Sample 68
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1O
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1CC(O)CC
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1CC(O)C
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1C(O)CC
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1C(O)C
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1O\n- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1CC(O)CC\n- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1CC(O)C\n- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1C(O)CC\n- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1C(O)C'}, {'role': 'user', 'content': 'Your provided sequence C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1C(O)  
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1CC(O)  
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1C(O)C  
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1CC(O)C  
+- C[C@@H](NC(=O)CCC(C)(C)C)c1cccc(N2CCOC2=O)c1C(O)CC
+Acc = 55/69
+Hit Ratio = 55/60
+----------------
+>>Sample 69
+RL Suggestion 0: Replace Alkene with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(/C=C/c1cccs1)N(Cc1ccc(Cl)cc1)C[C@@H]1CCCO1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(/C(N)=N\c1cccs1)N(Cc1ccc(Cl)cc1)C[C@@H]1CCCO1
+- O=C(/C(N)=N\c1cccs1)N(Cc1ccc(Cl)cc1)C[C@@H]1CCCO1
+- O=C(/C(N)=N\c1cccs1)N(Cc1ccc(Cl)cc1)C[C@@H]1CCCO1
+- O=C(/C(N)=N\c1cccs1)N(Cc1ccc(Cl)cc1)C[C@@H]1CCCO1
+- O=C(/C(N)=N\c1cccs1)N(Cc1ccc(Cl)cc1)C[C@@H]1CCCO1
+Acc = 56/70
+Hit Ratio = 56/61
+----------------
+>>Sample 70
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](CNC(=O)C(=O)Nc1ccc2c(c1)C(=O)CCC2)Cc1cccs1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CNC(=O)C(=O)Nc1ccc2c(c1)C(=O)CCC2)Cc1cccs1O
+- C[C@H](CNC(=O)C(=O)Nc1ccc2c(c1)C(=O)CCC2)Cc1cccs1CO
+- C[C@H](CNC(=O)C(=O)Nc1ccc2c(c1)C(=O)CCC2)Cc1cccs1CCO
+- C[C@H](CNC(=O)C(=O)Nc1ccc2c(c1)C(=O)CCC2)Cc1cccs1CCCO
+- C[C@H](CNC(=O)C(=O)Nc1ccc2c(c1)C(=O)CCC2)Cc1cccs1CCCCO
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 56/71
+Hit Ratio = 56/61
+----------------
+>>Sample 71
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)c1ccccc1NC(=O)COc1cccc(C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNC(=O)c1ccccc1NC(=O)COc1cccc(C(C)O)c1
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(CC(O)C)c1
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)CC)c1
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)C(C)C)c1
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)CCC)c1
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)c1ccccc1NC(=O)COc1cccc(C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(C)O)c1\n- CNC(=O)c1ccccc1NC(=O)COc1cccc(CC(O)C)c1\n- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)CC)c1\n- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)C(C)C)c1\n- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)CCC)c1'}, {'role': 'user', 'content': 'Your provided sequence CNC(=O)c1ccccc1NC(=O)COc1cccc(C(C)O)c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CNC(=O)c1ccccc1NC(=O)COc1cccc(CCO)c1  
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(CC(O)C)c1  
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)CC)c1  
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)CCO)c1  
+- CNC(=O)c1ccccc1NC(=O)COc1cccc(C(O)CCC)c1
+Acc = 57/72
+Hit Ratio = 57/62
+----------------
+>>Sample 72
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCC(=O)N1CCCN(C(=O)Nc2ccc3nc(C)oc3c2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC(=O)N1CCCN(C(=O)Nc2ccc3nc(C)oc3c2)C(O)C1  
+- CCC(=O)N1CCCN(C(=O)Nc2ccc3nc(C)oc3c2)CC(O)C1  
+- CCC(=O)N1CCCN(C(=O)Nc2ccc3nc(C)oc3c2)CC1O  
+- CCC(=O)N1CCCN(C(=O)Nc2ccc3nc(C)oc3c2)C(O)C(O)C1  
+- CCC(=O)N1CCCN(C(=O)Nc2ccc3nc(C)oc3c2)CC(O)C(O)C1
+Acc = 58/73
+Hit Ratio = 58/63
+----------------
+>>Sample 73
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc(C#N)c(NC(=O)CN2CCN(c3ccc(F)cc3)CC2)cc1OC more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C#N)c(NC(=O)CN2CCN(c3ccc(S(=O)(=O)NH2)cc3)CC2)cc1OC
+- COc1cc(C#N)c(NC(=O)CN2CCN(c3ccc(S(=O)(=O)NHMe)cc3)CC2)cc1OC
+- COc1cc(C#N)c(NC(=O)CN2CCN(c3ccc(S(=O)(=O)NMe2)cc3)CC2)cc1OC
+- COc1cc(C#N)c(NC(=O)CN2CCN(c3ccc(S(=O)(=O)NHCOMe)cc3)CC2)cc1OC
+- COc1cc(C#N)c(NC(=O)CN2CCN(c3ccc(S(=O)(=O)NHCOEt)cc3)CC2)cc1OC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 58/74
+Hit Ratio = 58/63
+----------------
+>>Sample 74
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(NC(=O)Nc2cccc([C@H](C)O)c2)c(C)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)Nc2cccc([C@H](C)O)c2)c(CO)n1  
+- Cc1ccc(NC(=O)Nc2cccc([C@H](C)O)c2)c(C(CO)O)n1  
+- Cc1ccc(NC(=O)Nc2cccc([C@H](C)O)c2)c(C(CO)CO)n1  
+- Cc1ccc(NC(=O)Nc2cccc([C@H](C)O)c2)c(C(CO)CCO)n1  
+- Cc1ccc(NC(=O)Nc2cccc([C@H](C)O)c2)c(C(CO)C(O)CO)n1
+Acc = 59/75
+Hit Ratio = 59/64
+----------------
+>>Sample 75
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOC(=O)c1ccc(NC(=O)CC2CCCCC2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(NC(=O)CC2CC(O)CCC2)cc1  
+- CCOC(=O)c1ccc(NC(=O)CC2CC(O)CC(O)C2)cc1  
+- CCOC(=O)c1ccc(NC(=O)CC2CC(O)CC(O)CC2)cc1  
+- CCOC(=O)c1ccc(NC(=O)CC2CC(O)CC(O)C(O)C2)cc1  
+- CCOC(=O)c1ccc(NC(=O)CC2CC(O)C(O)C(O)CC2)cc1
+Acc = 60/76
+Hit Ratio = 60/65
+----------------
+>>Sample 76
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(CCC(=O)c1ccc2c(c1)CCC2)Nc1ccc2c(c1)OC1(CCCC1)O2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CCC(=O)c1ccc2c(c1)CCC2)Nc1ccc2c(c1)OC1(CC(O)CC1)O2  
+- O=C(CCC(=O)c1ccc2c(c1)CCC2)Nc1ccc2c(c1)OC1(C(O)CCC1)O2  
+- O=C(CCC(=O)c1ccc2c(c1)CCC2)Nc1ccc2c(c1)OC1(CC(O)C(O)C1)O2  
+- O=C(CCC(=O)c1ccc2c(c1)CCC2)Nc1ccc2c(c1)OC1(CCCC(O)1)O2  
+- O=C(CCC(=O)c1ccc2c(c1)CCC2)Nc1ccc2c(c1)OC1(CC(O)C(O)C1)O2
+Acc = 61/77
+Hit Ratio = 61/66
+----------------
+>>Sample 77
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(Sc2nccnc2N2CCC(C(=O)N3CCOCC3)CC2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N(C(=O)C=C)C2nccnc2N2CCC(C(=O)N3CCOCC3)CC2)cc1
+- Cc1ccc(N(C(=O)C=C)C2nccnc2N2CCC(C(=O)N3CCOCC3)CC2)cc1
+- Cc1ccc(N(C(=O)C=C)C2nccnc2N2CCC(C(=O)N3CCOCC3)CC2)cc1
+- Cc1ccc(N(C(=O)C=C)C2nccnc2N2CCC(C(=O)N3CCOCC3)CC2)cc1
+- Cc1ccc(N(C(=O)C=C)C2nccnc2N2CCC(C(=O)N3CCOCC3)CC2)cc1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 61/78
+Hit Ratio = 61/66
+----------------
+>>Sample 78
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=S(=O)(c1ccc(Cl)cc1)N1CCC(O)(CSc2ccc(Br)cc2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=S(=O)(c1ccc(Cl)cc1)N1CCC(O)(C(=O)C(=C)N(C)C)CC1
+- O=S(=O)(c1ccc(Cl)cc1)N1CCC(O)(C(=O)C(=C)N(C)C)CC1
+- O=S(=O)(c1ccc(Cl)cc1)N1CCC(O)(C(=O)C(=C)N(C)C)CC1
+- O=S(=O)(c1ccc(Cl)cc1)N1CCC(O)(C(=O)C(=C)N(C)C)CC1
+- O=S(=O)(c1ccc(Cl)cc1)N1CCC(O)(C(=O)C(=C)N(C)C)CC1
+Acc = 62/79
+Hit Ratio = 62/67
+----------------
+>>Sample 79
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1O
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1C(O)C
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1CC(O)C
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1C(O)CC
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1C(O)C(O)C
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1O\n- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1C(O)C\n- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1CC(O)C\n- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1C(O)CC\n- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1C(O)C(O)C'}, {'role': 'user', 'content': 'Your provided sequence COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CCCC2)nc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CC(O)CC2)nc1  
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CC(O)C2)nc1  
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2C(O)CCC2)nc1  
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2CC(O)CC(O)C2)nc1  
+- COCCNC(=O)c1ccc(N2CCC[C@@H]2C2C(O)C(O)CC2)nc1
+Acc = 63/80
+Hit Ratio = 63/68
+----------------
+>>Sample 80
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CSc1cccc(NC(=O)CN(C)c2c(C)noc2C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1cccc(NC(=O)CN(C)c2c(C)noc2C)c1
+- CN(C)C(=O)C=Cc1cccc(NC(=O)CN(C)c2c(C)noc2C)c1
+- CN(C)C(=O)C=Cc1cccc(NC(=O)CN(C)c2c(C)noc2C)c1
+- CN(C)C(=O)C=Cc1cccc(NC(=O)CN(C)c2c(C)noc2C)c1
+- CN(C)C(=O)C=Cc1cccc(NC(=O)CN(C)c2c(C)noc2C)c1
+Acc = 64/81
+Hit Ratio = 64/69
+----------------
+>>Sample 81
+RL Suggestion 0: Replace Alkene with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C=CCNS(=O)(=O)c1cccc(C(=O)N2CCC(Cc3ccccc3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C(N=C(N)N)CS(=O)(=O)c1cccc(C(=O)N2CCC(Cc3ccccc3)CC2)c1  
+- C(N=C(N)N)CS(=O)(=O)c1cccc(C(=O)N2CCC(Cc3ccccc3)CC2)c1  
+- C(N=C(N)N)CS(=O)(=O)c1cccc(C(=O)N2CCC(Cc3ccccc3)CC2)c1  
+- C(N=C(N)N)CS(=O)(=O)c1cccc(C(=O)N2CCC(Cc3ccccc3)CC2)c1  
+- C(N=C(N)N)CS(=O)(=O)c1cccc(C(=O)N2CCC(Cc3ccccc3)CC2)c1
+Acc = 65/82
+Hit Ratio = 65/70
+----------------
+>>Sample 82
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)c1cccc(CCNC(=O)Nc2cc(F)ccc2C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1cccc(CCNC(=O)Nc2cc(S(=O)(=O)N)ccc2C)c1
+- COC(=O)c1cccc(CCNC(=O)Nc2cc(S(=O)(=O)NH)ccc2C)c1
+- COC(=O)c1cccc(CCNC(=O)Nc2cc(S(=O)(=O)NMe)ccc2C)c1
+- COC(=O)c1cccc(CCNC(=O)Nc2cc(S(=O)(=O)NHEt)ccc2C)c1
+- COC(=O)c1cccc(CCNC(=O)Nc2cc(S(=O)(=O)N(Me)Me)ccc2C)c1
+Acc = 66/83
+Hit Ratio = 66/71
+----------------
+>>Sample 83
+RL Suggestion 0: Replace Bromine Atom with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule OCC#Cc1ccc(Br)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Fluorine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OCC#Cc1ccc(F)cc1  
+- OCC#Cc1ccc(F)c(F)c1  
+- OCC#Cc1ccc(F)cc1O  
+- OCC#Cc1ccc(F)cc1N  
+- OCC#Cc1ccc(F)cc1C(=O)O
+Acc = 67/84
+Hit Ratio = 67/72
+----------------
+>>Sample 84
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCC[C@@H](C)NC(=O)[C@H](C)Sc1ccc(OC)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)NC(=O)[C@H](C)N(C)C(=O)C=Cc1ccc(OC)cc1
+- CCC[C@@H](C)NC(=O)[C@H](C)N(C)C(=O)C=Cc1cc(OC)ccc1
+- CCC[C@@H](C)NC(=O)[C@H](C)N(C)C(=O)C=Cc1c(OC)cccc1
+- CCC[C@@H](C)NC(=O)[C@H](C)N(C)C(=O)C=Cc1ccc(OCC)cc1
+- CCC[C@@H](C)NC(=O)[C@H](C)N(C)C(=O)C=Cc1cc(OCC)ccc1
+Acc = 68/85
+Hit Ratio = 68/73
+----------------
+>>Sample 85
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1O
+- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)C
+- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)CC
+- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)CCC
+- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)CCCC
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1O\n- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)C\n- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)CC\n- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)CCC\n- CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1C(O)CCCC'}, {'role': 'user', 'content': 'Your provided sequence CC[C@@H](Oc1ccccc1OC)C(=O)Nc1ccc(Cl)c(Cl)c1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CC[C@@H](Oc1ccccc1OC)C(O)C(=O)Nc1ccc(Cl)c(Cl)c1  
+- CC[C@@H](Oc1ccccc1OC)C(O)CC(=O)Nc1ccc(Cl)c(Cl)c1  
+- CC[C@@H](Oc1ccccc1OC)C(O)CCC(=O)Nc1ccc(Cl)c(Cl)c1  
+- CC[C@@H](Oc1ccccc1OC)C(O)CCCC(=O)Nc1ccc(Cl)c(Cl)c1  
+- CC[C@@H](Oc1ccccc1OC)C(O)CCCCC(=O)Nc1ccc(Cl)c(Cl)c1
+Acc = 69/86
+Hit Ratio = 69/74
+----------------
+>>Sample 86
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)Cc1ccc(Br)c(F)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)Cc1ccc(Br)c(S(=O)(=O)N)c1
+- CC(=O)Cc1ccc(Br)c(S(=O)(=O)NH2)c1
+- CC(=O)Cc1ccc(Br)c(S(=O)(=O)NMe)c1
+- CC(=O)Cc1ccc(Br)c(S(=O)(=O)NEt)c1
+- CC(=O)Cc1ccc(Br)c(S(=O)(=O)NC(=O)Me)c1
+Acc = 70/87
+Hit Ratio = 70/75
+----------------
+>>Sample 87
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cccc(CN(C(=O)[C@@H](C)Cc2c(C)n[nH]c2C)C2CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(CN(C(=O)[C@@H](C)Cc2c(C)n[nH]c2C)C2CC2O)c1
+- Cc1cccc(CN(C(=O)[C@@H](C)Cc2c(C)n[nH]c2C)C2CC(O)C2)c1
+- Cc1cccc(CN(C(=O)[C@@H](C)Cc2c(C)n[nH]c2C)C2CC2CO)c1
+- Cc1cccc(CN(C(=O)[C@@H](C)Cc2c(C)n[nH]c2C)C2CC(O)C2O)c1
+- Cc1cccc(CN(C(=O)[C@@H](C)Cc2c(C)n[nH]c2C)C2CC2C(O)O)c1
+Acc = 71/88
+Hit Ratio = 71/76
+----------------
+>>Sample 88
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)(C)NC(=O)CNC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)NC(=O)CNC(=O)NCc1ccc(Oc2ccc(S(=O)(=O)N)cc2)cc1
+- CC(C)(C)NC(=O)CNC(=O)NCc1ccc(Oc2ccc(S(=O)(=O)NH2)cc2)cc1
+- CC(C)(C)NC(=O)CNC(=O)NCc1ccc(Oc2ccc(S(=O)(=O)N(C)C)cc2)cc1
+- CC(C)(C)NC(=O)CNC(=O)NCc1ccc(Oc2ccc(S(=O)(=O)NCC)cc2)cc1
+- CC(C)(C)NC(=O)CNC(=O)NCc1ccc(Oc2ccc(S(=O)(=O)NC(=O)C)cc2)cc1
+Acc = 72/89
+Hit Ratio = 72/77
+----------------
+>>Sample 89
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1ccnc(OC2CCC2)c1)N1CCCSCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(c1ccnc(OC2CCC2)c1)N1CCC(=O)N(C)C1
+- O=C(c1ccnc(OC2CCC2)c1)N1CCCN(C)C1
+- O=C(c1ccnc(OC2CCC2)c1)N1CCCN(C)C(=O)C1
+- O=C(c1ccnc(OC2CCC2)c1)N1CCCN(C)C(=O)N1
+- O=C(c1ccnc(OC2CCC2)c1)N1CCCN(C)C(=O)C(C)C1
+Acc = 73/90
+Hit Ratio = 73/78
+----------------
+>>Sample 90
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(NC(=O)Nc2cc(C(=O)NCc3cccc(F)c3)ccc2N2CCOCC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)Nc2cc(C(=O)NCc3cccc(S(=O)(=O)N)cc3)ccc2N2CCOCC2)c1
+- COc1cccc(NC(=O)Nc2cc(C(=O)NCc3cccc(S(=O)(=O)NC)cc3)ccc2N2CCOCC2)c1
+- COc1cccc(NC(=O)Nc2cc(C(=O)NCc3cccc(S(=O)(=O)N(C)C)cc3)ccc2N2CCOCC2)c1
+- COc1cccc(NC(=O)Nc2cc(C(=O)NCc3cccc(S(=O)(=O)Nc4ccccc4)cc3)ccc2N2CCOCC2)c1
+- COc1cccc(NC(=O)Nc2cc(C(=O)NCc3cccc(S(=O)(=O)Nc4cc(C)cc(C)c4)cc3)ccc2N2CCOCC2)c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 73/91
+Hit Ratio = 73/78
+----------------
+>>Sample 91
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)NCCNC(=O)N1CCN(Cc2ccon2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)NCCNC(=O)N1CCN(Cc2ccon2)CC(O)1
+- CC(=O)NCCNC(=O)N1CCN(Cc2ccon2)C(O)C1
+- CC(=O)NCCNC(=O)N1CCN(Cc2ccon2)CC1O
+- CC(=O)NCCNC(=O)N1CCN(Cc2ccon2)C(O)C(O)1
+- CC(=O)NCCNC(=O)N1CCN(Cc2ccon2)C(O)C(O)C1
+Acc = 74/92
+Hit Ratio = 74/79
+----------------
+>>Sample 92
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)o1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)o1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1
+RL Suggestion 0: Replace Chloroalkane with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)o1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)o1  \n- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1  \n- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1  \n- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1  \n- O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1cccs1)c1ccc(COc2cc(Cl)ccc2Cl)O1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Chloroalkane with Carboxylic Acid. . Can you give me new molecules?'}]
+AI answer 0: - O=C(NCc1cccs1)c1ccc(COc2cc(C(=O)O)ccc2Cl)o1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(C(=O)O)ccc2Cl)o1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(C(=O)O)ccc2Cl)o1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(C(=O)O)ccc2Cl)o1  
+- O=C(NCc1cccs1)c1ccc(COc2cc(C(=O)O)ccc2Cl)o1
+Acc = 75/93
+Hit Ratio = 75/80
+----------------
+>>Sample 93
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccccc1C(=O)N[C@H](C(=O)Nc1cccc(-c2csc(C)n2)c1)C(C)C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1C(=O)N[C@H](C(=O)Nc1cccc(-c2csc(CO)n2)c1)C(C)C  
+- COc1ccccc1C(=O)N[C@H](C(=O)Nc1cccc(-c2csc(C(O))n2)c1)C(C)C  
+- COc1ccccc1C(=O)N[C@H](C(=O)Nc1cccc(-c2csc(C(O)C)n2)c1)C(C)C  
+- COc1ccccc1C(=O)N[C@H](C(=O)Nc1cccc(-c2csc(C(O)CC)n2)c1)C(C)C  
+- COc1ccccc1C(=O)N[C@H](C(=O)Nc1cccc(-c2csc(C(O)C(C)C)n2)c1)C(C)C
+Acc = 76/94
+Hit Ratio = 76/81
+----------------
+>>Sample 94
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCCNC(=O)Oc1cccc2cccnc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCNC(=O)Oc1cccc2cccnc12O
+- CCCCNC(=O)Oc1cccc2cccnc12C(O)CC
+- CCCCNC(=O)Oc1cccc2cccnc12C(O)C
+- CCCCNC(=O)Oc1cccc2cccnc12C(O)CCC
+- CCCCNC(=O)Oc1cccc2cccnc12C(O)CCCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 76/95
+Hit Ratio = 76/81
+----------------
+>>Sample 95
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(NC(=O)N2CCC(c3nnc(-c4ccco4)o3)CC2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)N2CCC(c3nnc(-c4ccco4)o3)C(O)CC2)cc1  
+- Cc1ccc(NC(=O)N2CCC(c3nnc(-c4ccco4)o3)CC(O)C2)cc1  
+- Cc1ccc(NC(=O)N2CCC(c3nnc(-c4ccco4)o3)C(O)C(O)C2)cc1  
+- Cc1ccc(NC(=O)N2CCC(c3nnc(-c4ccco4)o3)C(O)C2)cc1  
+- Cc1ccc(NC(=O)N2CCC(c3nnc(-c4ccco4)o3)CC2(O))cc1
+Acc = 77/96
+Hit Ratio = 77/82
+----------------
+>>Sample 96
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)N(Cc1cccc(Cl)c1)C(=O)Cn1ccc(=O)n(C)c1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N(Cc1cccc(Cl)c1)C(=O)Cn1ccc(=O)n(C)c1=O
+- CC(C)N(Cc1cccc(Cl)c1)C(=O)Cn1ccc(=O)n(C)c1O
+- CC(C)N(Cc1cccc(Cl)c1)C(=O)Cn1ccc(=O)n(C)c1O
+- CC(C)N(Cc1cccc(Cl)c1)C(=O)Cn1ccc(=O)n(C)c1O
+- CC(C)N(Cc1cccc(Cl)c1)C(=O)Cn1ccc(=O)n(C)c1O
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 77/97
+Hit Ratio = 77/82
+----------------
+>>Sample 97
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)NCCNC(=O)c1cn(Cc2ccccc2)nc1-c1cccs1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)NCCNC(=O)c1cn(Cc2ccccc2)nc1-c1cccs1O
+- CC(=O)NCCNC(=O)c1cn(Cc2ccccc2)nc1-c1cccs1C(O)
+- CC(=O)NCCNC(=O)c1cn(Cc2ccccc2)nc1-c1cccs1C(O)C
+- CC(=O)NCCNC(=O)c1cn(Cc2ccccc2)nc1-c1cccs1C(O)CC
+- CC(=O)NCCNC(=O)c1cn(Cc2ccccc2)nc1-c1cccs1C(O)CCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 77/98
+Hit Ratio = 77/82
+----------------
+>>Sample 98
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(Oc2ccc(NC(=O)N(C)Cc3ncnn3C)cc2)nn1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(Oc2ccc(NC(=O)N(C)Cc3ncnn3C)cc2)nn1O  
+- Cc1ccc(Oc2ccc(NC(=O)N(C)Cc3ncnn3CO)cc2)nn1  
+- Cc1ccc(Oc2ccc(NC(=O)N(C)Cc3ncnn3C)cc2)nn1CCO  
+- Cc1ccc(Oc2ccc(NC(=O)N(C)Cc3ncnn3C)cc2)nn1CC(O)C  
+- Cc1ccc(Oc2ccc(NC(=O)N(C)Cc3ncnn3C)cc2)nn1C(O)CO
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 77/99
+Hit Ratio = 77/82
+----------------
+>>Sample 99
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccc(NC(=O)Oc2ccccc2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccc(NC(=O)Oc2ccccc2)cc1O  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)C  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1CC(O)C  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)CC  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)C(O)C
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccc(NC(=O)Oc2ccccc2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1O  \n- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)C  \n- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1CC(O)C  \n- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)CC  \n- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)C(O)C'}, {'role': 'user', 'content': 'Your provided sequence N#Cc1ccc(NC(=O)Oc2ccccc2)cc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1CC(O)  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)C  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)CC  
+- N#Cc1ccc(NC(=O)Oc2ccccc2)cc1C(O)C(O)
+Acc = 78/100
+Hit Ratio = 78/83
+----------------
+>>Sample 100
+RL Suggestion 0: Replace Bromine Atom with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN1CCN(C(=O)Nc2ccccc2Br)Cc2ccccc21 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Fluorine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1CCN(C(=O)Nc2ccccc2F)Cc2ccccc21  
+- CN1CCN(C(=O)Nc2cc(F)ccc2)Cc2ccccc21  
+- CN1CCN(C(=O)Nc2ccc(F)cc2)Cc2ccccc21  
+- CN1CCN(C(=O)Nc2cc(F)c(F)cc2)Cc2ccccc21  
+- CN1CCN(C(=O)Nc2cc(F)c(F)c(F)c2)Cc2ccccc21
+Acc = 79/101
+Hit Ratio = 79/84
+----------------
+>>Sample 101
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCO more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)C  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CC  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCC  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCCC
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCO more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)C  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CC  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCC  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCCC'}, {'role': 'user', 'content': 'Your provided sequence O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O) could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)C  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CC  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCC  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCCC  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCCCC
+RL Suggestion 0: Replace Amide with Di-alkyl urea. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCO more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)C  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CC  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCC  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCCC'}, {'role': 'user', 'content': 'Your provided sequence O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O) could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}, {'role': 'assistant', 'content': '- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)C  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CC  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCC  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCCC  \n- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)CCCCC'}, {'role': 'user', 'content': 'Your provided sequence O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(O)C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Amide with Di-alkyl urea. . Can you give me new molecules?'}]
+AI answer 0: - O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(N(CCO)CCO)  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(N(CCO)CC)  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(N(CC)CC)  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(N(CC)CCCC)  
+- O=C(c1cnc(-c2ccccc2)[nH]c1=O)N(CCO)CCOC(N(CC)CCCCC)
+Acc = 80/102
+Hit Ratio = 80/85
+----------------
+>>Sample 102
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)c1cc(OC)ccc1NC(=O)C[C@@H](C)C(C)C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNC(=O)c1cc(OC)ccc1NC(=O)C[C@@H](C)C(C)(O)C
+- CNC(=O)c1cc(OC)ccc1NC(=O)C[C@@H](C(O))C(C)C
+- CNC(=O)c1cc(OC)ccc1NC(=O)C[C@@H](C)C(C(O))C
+- CNC(=O)c1cc(OC)ccc1NC(=O)C[C@@H](C(O))C(C)(O)C
+- CNC(=O)c1cc(OC)ccc1NC(=O)C[C@@H](C(O))C(C(O))C
+Acc = 81/103
+Hit Ratio = 81/86
+----------------
+>>Sample 103
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H]1C[C@@H](C)CN(S(=O)(=O)c2ccc(N3CCCCC3=O)cc2)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[C@@H](C)CN(S(=O)(=O)c2ccc(N3CCCCC3=O)cc2)C1O  
+- C[C@H]1C[C@@H](C)CN(S(=O)(=O)c2ccc(N3CCCCC3=O)cc2)C(O)C1  
+- C[C@H]1C[C@@H](C)CN(S(=O)(=O)c2ccc(N3CCCCC3=O)cc2)C1C(O)C  
+- C[C@H]1C[C@@H](C)CN(S(=O)(=O)c2ccc(N3CCCCC3=O)cc2)C1CC(O)C  
+- C[C@H]1C[C@@H](C)CN(S(=O)(=O)c2ccc(N3CCCCC3=O)cc2)C1C(O)CC
+Acc = 82/104
+Hit Ratio = 82/87
+----------------
+>>Sample 104
+RL Suggestion 0: Replace Bromine Atom with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cn1c(CNC(=O)c2ccc(Br)cc2)nc2ccccc21 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Bromine Atom with Fluorine Atom.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(CNC(=O)c2ccc(F)cc2)nc2ccccc21
+- Cn1c(CNC(=O)c2ccc(F)cc2)nc2ccccc21
+- Cn1c(CNC(=O)c2ccc(F)cc2)nc2ccccc21
+- Cn1c(CNC(=O)c2ccc(F)cc2)nc2ccccc21
+- Cn1c(CNC(=O)c2ccc(F)cc2)nc2ccccc21
+Acc = 83/105
+Hit Ratio = 83/88
+----------------
+>>Sample 105
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOc1ccccc1NC(=S)N1CCN(c2ccccc2F)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1NC(=S)N1CCN(c2ccccc2S(=O)(=O)N)CC1  
+- CCOc1ccccc1NC(=S)N1CCN(c2ccccc2S(=O)(=O)NH2)CC1  
+- CCOc1ccccc1NC(=S)N1CCN(c2ccccc2S(=O)(=O)N(C)C)CC1  
+- CCOc1ccccc1NC(=S)N1CCN(c2ccccc2S(=O)(=O)N(C)(C))CC1  
+- CCOc1ccccc1NC(=S)N1CCN(c2ccccc2S(=O)(=O)NC)CC1
+Acc = 84/106
+Hit Ratio = 84/89
+----------------
+>>Sample 106
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](C(=O)NC(c1cccs1)c1cccs1)n1cccn1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)NC(c1cccs1)c1cccs1)n1cccn1O  
+- C[C@@H](C(=O)NC(c1cccs1)c1cccs1)n1cccn1C(O)  
+- C[C@@H](C(=O)NC(c1cccs1)c1cccs1)n1cccn1C(O)C  
+- C[C@@H](C(=O)NC(c1cccs1)c1cccs1)n1cccn1C(O)CC  
+- C[C@@H](C(=O)NC(c1cccs1)c1cccs1)n1cccn1C(O)CCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 84/107
+Hit Ratio = 84/89
+----------------
+>>Sample 107
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1c(C(=O)N2CC[C@@H](C(=O)OC)c3ccccc32)cnn1CC(C)C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1c(C(=O)N2CC[C@@H](C(=O)OC)c3ccccc32)cnn1CC(C)O  
+- CCc1c(C(=O)N2CC[C@@H](C(=O)OC)c3ccccc32)cnn1CC(O)C  
+- CCc1c(C(=O)N2CC[C@@H](C(=O)OC)c3ccccc32)cnn1C(O)C(C)C  
+- CCc1c(C(=O)N2CC[C@@H](C(=O)OC)c3ccccc32)cnn1CC(CO)C  
+- CCc1c(C(=O)N2CC[C@@H](C(=O)OC)c3ccccc32)cnn1CC(C)CO
+Acc = 85/108
+Hit Ratio = 85/90
+----------------
+>>Sample 108
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1ccccn1)N(Cc1ccccc1[N+](=O)[O-])CC(F)(F)F more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(c1ccccn1)N(Cc1ccccc1[N+](=O)[O-])CC(=O)NS(=O)(=O)C  
+- O=C(c1ccccn1)N(Cc1ccccc1[N+](=O)[O-])CC(=O)NS(=O)(=O)N  
+- O=C(c1ccccn1)N(Cc1ccccc1[N+](=O)[O-])CC(=O)NS(=O)(=O)OC  
+- O=C(c1ccccn1)N(Cc1ccccc1[N+](=O)[O-])CC(=O)NS(=O)(=O)NC  
+- O=C(c1ccccn1)N(Cc1ccccc1[N+](=O)[O-])CC(=O)NS(=O)(=O)N(C)C
+Acc = 86/109
+Hit Ratio = 86/91
+----------------
+>>Sample 109
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc2[nH]c3c(c2c1)CN(C(=O)Cn1ccc2ccccc21)CC3 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2[nH]c3c(c2c1)CN(C(=O)Cn1ccc2ccccc21)C(CO)C3  
+- COc1ccc2[nH]c3c(c2c1)CN(C(=O)Cn1ccc2ccccc21)C(CCO)C3  
+- COc1ccc2[nH]c3c(c2c1)CN(C(=O)Cn1ccc2ccccc21)C(CCCO)C3  
+- COc1ccc2[nH]c3c(c2c1)CN(C(=O)Cn1ccc2ccccc21)C(CCCCCO)C3  
+- COc1ccc2[nH]c3c(c2c1)CN(C(=O)Cn1ccc2ccccc21)C(CCCCCCO)C3
+Acc = 87/110
+Hit Ratio = 87/92
+----------------
+>>Sample 110
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cc(C(=O)NCCSCc2ccccc2)c2c(C)noc2n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)NCC(=O)N(C)C)c2c(C)noc2n1
+- Cc1cc(C(=O)NCC(=O)N(C)C)c2c(C)noc2n1
+- Cc1cc(C(=O)NCC(=O)N(C)C)c2c(C)noc2n1
+- Cc1cc(C(=O)NCC(=O)N(C)C)c2c(C)noc2n1
+- Cc1cc(C(=O)NCC(=O)N(C)C)c2c(C)noc2n1
+Acc = 88/111
+Hit Ratio = 88/93
+----------------
+>>Sample 111
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(NC(=O)N2CCN(c3cc(N4CCCCC4)ncn3)CC2)cc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)N2CCN(c3cc(N4CCCCC4)ncn3)CCO)cc1Cl  
+- Cc1ccc(NC(=O)N2CCN(c3cc(N4CCCCC4)ncn3)CC(O)C2)cc1Cl  
+- Cc1ccc(NC(=O)N2CCN(c3cc(N4CCCCC4)ncn3)CC(O)CO)cc1Cl  
+- Cc1ccc(NC(=O)N2CCN(c3cc(N4CCCCC4)ncn3)CC(O)C(O)C2)cc1Cl  
+- Cc1ccc(NC(=O)N2CCN(c3cc(N4CCCCC4)ncn3)CC(O)C(O)CO)cc1Cl
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 88/112
+Hit Ratio = 88/93
+----------------
+>>Sample 112
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(C)O)c1C  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C(O)  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(CO))c1C  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C(O)C  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(CO))c1C(O)
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(C)O)c1C  \n- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C(O)  \n- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(CO))c1C  \n- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C(O)C  \n- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(CO))c1C(O)'}, {'role': 'user', 'content': 'Your provided sequence CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(C)O)c1C could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(CO))c1C  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C(O)  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(COH))c1C  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C)c1C(CO)  
+- CC[C@@H](NC(=O)NCC1(O)CCCCC1)c1c(C)nn(C(COH))c1C(O)
+Acc = 89/113
+Hit Ratio = 89/94
+----------------
+>>Sample 113
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1cc(NCc2cccc(S(N)(=O)=O)c2)nc2ccccc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1cc(NCc2cccc(S(N)(=O)=O)c2)nc2ccccc1C(O)
+- N#Cc1cc(NCc2cccc(S(N)(=O)=O)c2)nc2ccccc1C(O)C
+- N#Cc1cc(NCc2cccc(S(N)(=O)=O)c2)nc2ccccc1C(O)CC
+- N#Cc1cc(NCc2cccc(S(N)(=O)=O)c2)nc2ccccc1C(O)CCC
+- N#Cc1cc(NCc2cccc(S(N)(=O)=O)c2)nc2ccccc1C(O)CCCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 89/114
+Hit Ratio = 89/94
+----------------
+>>Sample 114
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1O  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)C  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)CC  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)C(O)
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1O  \n- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)  \n- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)C  \n- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)CC  \n- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)C(O)'}, {'role': 'user', 'content': 'Your provided sequence COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3)cc1C(O)  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC(O)3)cc1  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)C(O)C3)cc1  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC3O)cc1  
+- COc1ccc(C(=O)Nc2nc3c(s2)CN(C)CC(O)(O))cc1
+Acc = 90/115
+Hit Ratio = 90/95
+----------------
+>>Sample 115
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1cnc(CNC(=O)Nc2cccc([C@@H](C)OC)c2)s1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CNC(=O)Nc2cccc([C@@H](C)O)c2)s1  
+- CCc1cnc(CNC(=O)Nc2cccc([C@@H](C)CO)c2)s1  
+- CCc1cnc(CNC(=O)Nc2cccc([C@@H](C)CCO)c2)s1  
+- CCc1cnc(CNC(=O)Nc2cccc([C@@H](C)CCCO)c2)s1  
+- CCc1cnc(CNC(=O)Nc2cccc([C@@H](C)CCCCO)c2)s1
+Acc = 91/116
+Hit Ratio = 91/96
+----------------
+>>Sample 116
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule OC[C@@H](O)Cn1cnc2c(NO)ncnc21 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H](O)Cn1cnc2c(NO)ncnc21  
+- OC[C@@H](O)Cn1cnc2c(NO)ncnc21O  
+- OC[C@@H](O)Cn1cnc2c(NO)ncnc21CC(O)  
+- OC[C@@H](O)Cn1cnc2c(NO)ncnc21C(O)C(O)  
+- OC[C@@H](O)Cn1cnc2c(NO)ncnc21C(O)C(O)C(O)
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 91/117
+Hit Ratio = 91/96
+----------------
+>>Sample 117
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1nc(CN2CCN(Cc3ccncc3Cl)CC2)cs1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CN2CCN(Cc3ccncc3Cl)CC2)cs1O  
+- Cc1nc(CN2CCN(Cc3ccncc3Cl)CC2)cs1CO  
+- Cc1nc(CN2CCN(Cc3ccncc3Cl)CC2)cs1CCO  
+- Cc1nc(CN2CCN(Cc3ccncc3Cl)CC2)cs1CCCO  
+- Cc1nc(CN2CCN(Cc3ccncc3Cl)CC2)cs1CCCCO
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 91/118
+Hit Ratio = 91/96
+----------------
+>>Sample 118
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOC(=O)c1ccccc1NC(=O)c1ccc(N2CCCC2)nn1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccccc1NC(=O)c1ccc(N2CCCC2)nn1O  
+- CCOC(=O)c1ccccc1NC(=O)c1ccc(N2CCCC2)nn1C(O)  
+- CCOC(=O)c1ccccc1NC(=O)c1ccc(N2CCCC2)nn1C(O)C  
+- CCOC(=O)c1ccccc1NC(=O)c1ccc(N2CCCC2)nn1C(O)CC  
+- CCOC(=O)c1ccccc1NC(=O)c1ccc(N2CCCC2)nn1C(O)CCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 91/119
+Hit Ratio = 91/96
+----------------
+>>Sample 119
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2ccccc2)s1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(O)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(CO)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)C)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)CO)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)C(O)C)ccc2)s1
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2ccccc2)s1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(O)ccc2)s1  \n- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(CO)ccc2)s1  \n- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)C)ccc2)s1  \n- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)CO)ccc2)s1  \n- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)C(O)C)ccc2)s1'}, {'role': 'user', 'content': 'Your provided sequence O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(O)ccc2)s1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(CO)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)C)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)CO)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)C(O)C)ccc2)s1  
+- O=C(Nc1cn[nH]c1)C(=O)Nc1cnc(-c2cc(C(O)C(O)CO)ccc2)s1
+Acc = 92/120
+Hit Ratio = 92/97
+----------------
+>>Sample 120
+RL Suggestion 0: Replace Alkene with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)CNC(=O)/C=C/c1ccco1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Alkene with Guanidine.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)CNC(=O)C(N)=Nc1ccco1  
+- CCNC(=O)CNC(=O)C(N)=NC1=CC=CO1  
+- CCNC(=O)CNC(=O)C(=N)Nc1ccco1  
+- CCNC(=O)CNC(=O)C(=N)NC1=CC=CO1  
+- CCNC(=O)CNC(=O)C(N)=Nc1ccc(O)o1
+Acc = 93/121
+Hit Ratio = 93/98
+----------------
+>>Sample 121
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1nc(CC(C)C)sc1C(=O)N(c1ccc(C#N)cc1)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)CO)sc1C(=O)N(c1ccc(C#N)cc1)C1CC1  
+- Cc1nc(CC(C)C(O)C)sc1C(=O)N(c1ccc(C#N)cc1)C1CC1  
+- Cc1nc(CC(C)CC(O)C)sc1C(=O)N(c1ccc(C#N)cc1)C1CC1  
+- Cc1nc(CC(C)CO)sc1C(=O)N(c1ccc(C#N)cc1)C1CC(O)C1  
+- Cc1nc(CC(C)C(O)C)sc1C(=O)N(c1ccc(C#N)cc1)C1CC(O)C1
+Acc = 94/122
+Hit Ratio = 94/99
+----------------
+>>Sample 122
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN(C)C(=O)c1cccc(C(=O)N2CCC(COc3ccccn3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)c1cccc(C(=O)N2CCC(COc3ccccn3)CCO)c1  
+- CN(C)C(=O)c1cccc(C(=O)N2CCC(COc3ccccn3)C(O)C2)c1  
+- CN(C)C(=O)c1cccc(C(=O)N2CCC(COc3ccccn3)CC(O)C2)c1  
+- CN(C)C(=O)c1cccc(C(=O)N2CCC(COc3ccccn3)C(O)CC2)c1  
+- CN(C)C(=O)c1cccc(C(=O)N2CCC(COc3ccccn3)C(O)C(O)C2)c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 94/123
+Hit Ratio = 94/99
+----------------
+>>Sample 123
+RL Suggestion 0: Replace Thioalkyl ether with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](c1ccc(Cl)cc1)N(C(=O)CN1C(=O)CSc2ccccc21)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Thioalkyl ether with N,N-Dimethylacrylamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](c1ccc(Cl)cc1)N(C(=O)CN1C(=O)C(=O)N(C)CSc2ccccc21)C1CC1
+- C[C@H](c1ccc(Cl)cc1)N(C(=O)CN1C(=O)C(=O)N(C)CSc2ccccc21)C1CC1
+- C[C@H](c1ccc(Cl)cc1)N(C(=O)CN1C(=O)C(=O)N(C)CSc2ccccc21)C1CC1
+- C[C@H](c1ccc(Cl)cc1)N(C(=O)CN1C(=O)C(=O)N(C)CSc2ccccc21)C1CC1
+- C[C@H](c1ccc(Cl)cc1)N(C(=O)CN1C(=O)C(=O)N(C)CSc2ccccc21)C1CC1
+Acc = 95/124
+Hit Ratio = 95/100
+----------------
+>>Sample 124
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)NC(=O)[C@H](C)Sc1nnc(-c2ccc(F)cc2)n1Cc1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)NC(=O)[C@H](C)Sc1nnc(-c2ccc(S(=O)(=O)N)cc2)n1Cc1ccccc1
+- CCNC(=O)NC(=O)[C@H](C)Sc1nnc(-c2ccc(S(=O)(=O)NH)cc2)n1Cc1ccccc1
+- CCNC(=O)NC(=O)[C@H](C)Sc1nnc(-c2ccc(S(=O)(=O)N(C)C)cc2)n1Cc1ccccc1
+- CCNC(=O)NC(=O)[C@H](C)Sc1nnc(-c2ccc(S(=O)(=O)NH2)cc2)n1Cc1ccccc1
+- CCNC(=O)NC(=O)[C@H](C)Sc1nnc(-c2ccc(S(=O)(=O)N(C)C)cc2)n1Cc1ccccc1
+Acc = 96/125
+Hit Ratio = 96/101
+----------------
+>>Sample 125
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(C1CCOCC1)N1CCC[C@H](CNC(=O)C2(c3ccc(Cl)cc3)CC2)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(C1CCOCC1)N1CCC[C@H](CNC(=O)C2(c3ccc(Cl)cc3)CC(O)C2)C1  
+- O=C(C1CCOCC1)N1CCC[C@H](CNC(=O)C2(c3ccc(Cl)cc3)C(O)C2)C1  
+- O=C(C1CCOCC1)N1CCC[C@H](CNC(=O)C2(c3ccc(Cl)cc3)CC2)C1O  
+- O=C(C1CCOCC1)N1CCC[C@H](CNC(=O)C2(c3ccc(Cl)cc3)CC2(O))C1  
+- O=C(C1CCOCC1)N1CCC[C@H](CNC(=O)C2(c3ccc(Cl)cc3)CC2)C(O)C1
+Acc = 97/126
+Hit Ratio = 97/102
+----------------
+>>Sample 126
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1COC1CCN(c2cc(-n3cccn3)nc(N)n2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1COC1CCN(c2cc(-n3cccn3)nc(N)n2)C(O)C1  
+- Cc1ccccc1COC1CCN(c2cc(-n3cccn3)nc(N)n2)CC(O)1  
+- Cc1ccccc1COC1CCN(c2cc(-n3cccn3)nc(N)n2)C(O)C(O)1  
+- Cc1ccccc1COC1CCN(c2cc(-n3cccn3)nc(N)n2)C(O)C(O)C1  
+- Cc1ccccc1COC1CCN(c2cc(-n3cccn3)nc(N)n2)C(O)C(O)C(O)1
+Acc = 98/127
+Hit Ratio = 98/103
+----------------
+>>Sample 127
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1O  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1cc(O)ccc1  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccc(O)cc1  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1cc(O)c(O)cc1  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1CC(O)
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1O  \n- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1cc(O)ccc1  \n- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccc(O)cc1  \n- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1cc(O)c(O)cc1  \n- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1CC(O)'}, {'role': 'user', 'content': 'Your provided sequence O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol. . Can you give me new molecules?'}]
+AI answer 0: - O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1C(O)  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1CC(O)  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1C(O)C  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1C(O)CC  
+- O=C(Cn1nc(-c2ccccc2)ccc1=O)N(CCO)Cc1ccccc1C(O)C(O)
+Acc = 99/128
+Hit Ratio = 99/104
+----------------
+>>Sample 128
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1c(NC(=S)NC2CCCCC2)c(=O)n(-c2ccccc2)n1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(NC(=S)NC2CCCCC2)c(=O)n(-c2ccccc2)n1C(O)
+- Cc1c(NC(=S)NC2CCCCC2)c(=O)n(-c2ccccc2)n1C(O)C
+- Cc1c(NC(=S)NC2CCCCC2)c(=O)n(-c2ccccc2)n1C(O)CC
+- Cc1c(NC(=S)NC2CCCCC2)c(=O)n(-c2ccccc2)n1C(O)CCC
+- Cc1c(NC(=S)NC2CCCCC2)c(=O)n(-c2ccccc2)n1C(O)CCCC
+Acc = 100/129
+Hit Ratio = 100/105
+----------------
+>>Sample 129
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](c1ccccc1)c1nnc(NC(=O)N(C[C@@H](C)O)C(C)C)s1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](c1ccccc1)c1nnc(NC(=O)N(C[C@@H](C)O)C(C)C)s1  
+- CC[C@H](c1ccccc1)c1nnc(NC(=O)N(C[C@@H](C)O)C(C)CO)s1  
+- CC[C@H](c1ccccc1)c1nnc(NC(=O)N(C[C@@H](C)O)C(C)C(O)C)s1  
+- CC[C@H](c1ccccc1)c1nnc(NC(=O)N(C[C@@H](C)O)C(C)C(O)CO)s1  
+- CC[C@H](c1ccccc1)c1nnc(NC(=O)N(C[C@@H](C)O)C(C)C(O)C(O)C)s1
+Acc = 101/130
+Hit Ratio = 101/106
+----------------
+>>Sample 130
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOc1ccc(N(Cc2nnc3n2CCCCC3)C(=O)Nc2cccc(Cl)c2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccc(N(Cc2nnc3n2CC(CO)CC3)C(=O)Nc2cccc(Cl)c2)cc1
+- CCOc1ccc(N(Cc2nnc3n2CCC(CO)CC3)C(=O)Nc2cccc(Cl)c2)cc1
+- CCOc1ccc(N(Cc2nnc3n2CCCC(CO)C3)C(=O)Nc2cccc(Cl)c2)cc1
+- CCOc1ccc(N(Cc2nnc3n2CC(CO)C(O)CC3)C(=O)Nc2cccc(Cl)c2)cc1
+- CCOc1ccc(N(Cc2nnc3n2CC(CO)CC(O)C3)C(=O)Nc2cccc(Cl)c2)cc1
+Acc = 102/131
+Hit Ratio = 102/107
+----------------
+>>Sample 131
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cc2c(c(NC(=O)c3ccccc3C(F)(F)F)c1)OCC(=O)NC2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc2c(c(NC(=O)c3ccccc3S(=O)(=O)N)c1)OCC(=O)NC2  
+- Cc1cc2c(c(NC(=O)c3ccccc3S(=O)(=O)NC)c1)OCC(=O)NC2  
+- Cc1cc2c(c(NC(=O)c3ccccc3S(=O)(=O)N(C)C)c1)OCC(=O)NC2  
+- Cc1cc2c(c(NC(=O)c3ccccc3S(=O)(=O)NH2)c1)OCC(=O)NC2  
+- Cc1cc2c(c(NC(=O)c3ccccc3S(=O)(=O)NCC)c1)OCC(=O)NC2
+Acc = 103/132
+Hit Ratio = 103/108
+----------------
+>>Sample 132
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(-n2cc(CNC(=O)N(C3CC3)[C@@H](C)C(C)C)nn2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNC(=O)N(C3CC3)[C@@H](C)C(CO)CO)nn2)cc1  
+- COc1ccc(-n2cc(CNC(=O)N(C3CC3)[C@@H](C)C(C)CO)nn2)cc1  
+- COc1ccc(-n2cc(CNC(=O)N(C3CC3)[C@@H](C)C(CO)C(C)O)nn2)cc1  
+- COc1ccc(-n2cc(CNC(=O)N(C3CC3)[C@@H](C)C(CO)CO)nn2)cc1  
+- COc1ccc(-n2cc(CNC(=O)N(C3CC3)[C@@H](C)C(C)CO)nn2)cc1
+Acc = 104/133
+Hit Ratio = 104/109
+----------------
+>>Sample 133
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)C[C@@H](C)CC(=O)N1CCC(Nc2ccccc2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](C)CC(=O)N1CCC(Nc2ccccc2)CC(O)C1
+- CC(C)C[C@@H](C)CC(=O)N1CCC(Nc2ccccc2)C(O)C1C
+- CC(C)C[C@@H](C)CC(=O)N1CCC(Nc2ccccc2)CC1CO
+- CC(C)C[C@@H](C)CC(=O)N1CCC(Nc2ccccc2)C(O)C1
+- CC(C)C[C@@H](C)CC(=O)N1CCC(Nc2ccccc2)CC1C(O)C
+Acc = 105/134
+Hit Ratio = 105/110
+----------------
+>>Sample 134
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1c(NCc2ccccc2)nc(-c2ccccn2)nc1-c1cccc(C(F)(F)F)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NCc2ccccc2)nc(-c2ccccn2)nc1-c1cccc(S(=O)(=O)N)c1  
+- N#Cc1c(NCc2ccccc2)nc(-c2ccccn2)nc1-c1cccc(S(=O)(=O)NC)c1  
+- N#Cc1c(NCc2ccccc2)nc(-c2ccccn2)nc1-c1cccc(S(=O)(=O)N(C)C)c1  
+- N#Cc1c(NCc2ccccc2)nc(-c2ccccn2)nc1-c1cccc(S(=O)(=O)NCC)c1  
+- N#Cc1c(NCc2ccccc2)nc(-c2ccccn2)nc1-c1cccc(S(=O)(=O)NC(=O)C)c1
+Acc = 106/135
+Hit Ratio = 106/111
+----------------
+>>Sample 135
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC1CCC(N(C(=O)CCc2ccsc2)C2CC2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1CCC(N(C(=O)CCc2ccsc2)C2CC2)CC1O  
+- CC1CCC(N(C(=O)CCc2ccsc2)C2CC2O)CC1  
+- CC1CCC(N(C(=O)CCc2ccsc2)C2CC2)CC1(O)  
+- CC1CCC(N(C(=O)CCc2ccsc2)C2CC2(O))CC1  
+- CC1CCC(N(C(=O)CCc2ccsc2)C2CC2)CC1O
+Acc = 107/136
+Hit Ratio = 107/112
+----------------
+>>Sample 136
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccccc1S(=O)(=O)NCCc1c[nH]c2ccccc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1S(=O)(=O)NCC(O)c1c[nH]c2ccccc12  
+- COc1ccccc1S(=O)(=O)NCC(O)Cc1c[nH]c2ccccc12  
+- COc1ccccc1S(=O)(=O)NCCc1c(O)[nH]c2ccccc12  
+- COc1ccccc1S(=O)(=O)NCCc1c[nH]c2ccc(O)ccc12  
+- COc1ccccc1S(=O)(=O)NCCc1c[nH]c2cc(O)ccc12
+Acc = 108/137
+Hit Ratio = 108/113
+----------------
+>>Sample 137
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1nccc2ccccc12)N1CCn2ncnc2C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(c1nccc2ccccc12)N1CCn2ncnc2C1O  
+- O=C(c1nccc2ccccc12)N1CCn2ncnc2C1CC(O)  
+- O=C(c1nccc2ccccc12)N1CCn2ncnc2C1C(O)C  
+- O=C(c1nccc2ccccc12)N1CCn2ncnc2C1C(O)CC  
+- O=C(c1nccc2ccccc12)N1CCn2ncnc2C1C(O)C(O)
+Acc = 109/138
+Hit Ratio = 109/114
+----------------
+>>Sample 138
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(Nc1cccc(OC(F)F)c1)c1coc(-c2ccccc2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1cccc(OC(S(=O)(=O)N)c1)c1coc(-c2ccccc2)n1  
+- O=C(Nc1cccc(OC(S(=O)(=O)NC)c1)c1coc(-c2ccccc2)n1  
+- O=C(Nc1cccc(OC(S(=O)(=O)NCC)c1)c1coc(-c2ccccc2)n1  
+- O=C(Nc1cccc(OC(S(=O)(=O)NC(=O)C)c1)c1coc(-c2ccccc2)n1  
+- O=C(Nc1cccc(OC(S(=O)(=O)NCC(=O)N)c1)c1coc(-c2ccccc2)n1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 109/139
+Hit Ratio = 109/114
+----------------
+>>Sample 139
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccccc1N1CCN(C(=O)c2nc(C)sc2-c2ccccc2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1N1CCN(C(=O)c2nc(CO)sc2-c2ccccc2)CC1  
+- COc1ccccc1N1CCN(C(=O)c2nc(C(O)C)sc2-c2ccccc2)CC1  
+- COc1ccccc1N1CCN(C(=O)c2nc(C(O)CC)sc2-c2ccccc2)CC1  
+- COc1ccccc1N1CCN(C(=O)c2nc(C(O)C(O)C)sc2-c2ccccc2)CC1  
+- COc1ccccc1N1CCN(C(=O)c2nc(C(O)CC(O)C)sc2-c2ccccc2)CC1
+Acc = 110/140
+Hit Ratio = 110/115
+----------------
+>>Sample 140
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NC[C@@H]1CCCO1)[C@H]1CC(=O)N(c2ccc(OCC(=O)N3CCCC3)cc2)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NC[C@@H]1CCCO1)[C@H]1CC(=O)N(c2ccc(OCC(=O)N3CCCC3)cc2)C1O
+- O=C(NC[C@@H]1CCCO1)[C@H]1CC(=O)N(c2ccc(OCC(=O)N3CCCC3)cc2)C(O)C1
+- O=C(NC[C@@H]1CCCO1)[C@H]1CC(=O)N(c2ccc(OCC(=O)N3CCCC3)cc2)C1CC(O)
+- O=C(NC[C@@H]1CCCO1)[C@H]1CC(=O)N(c2ccc(OCC(=O)N3CCCC3)cc2)C1C(O)C
+- O=C(NC[C@@H]1CCCO1)[C@H]1CC(=O)N(c2ccc(OCC(=O)N3CCCC3)cc2)C1CC(O)C
+Acc = 111/141
+Hit Ratio = 111/116
+----------------
+>>Sample 141
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOC(=O)c1c(NC(=O)CC(C)C)sc2c1CC[C@@H](C)C2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)CC(C)C)sc2c1CC[C@@H](C(O)C)C2  
+- CCOC(=O)c1c(NC(=O)CC(C)C)sc2c1CC[C@@H](C)C(O)C2  
+- CCOC(=O)c1c(NC(=O)CC(C)C)sc2c1CC[C@@H](C)C2O  
+- CCOC(=O)c1c(NC(=O)CC(C)C)sc2c1CC(O)[C@@H](C)C2  
+- CCOC(=O)c1c(NC(=O)CC(C)C)sc2c1CC[C@@H](C)CC2O
+Acc = 112/142
+Hit Ratio = 112/117
+----------------
+>>Sample 142
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](Cn1cccn1)NC(=O)NCc1cccnc1OC1CCCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cn1cccn1)NC(=O)NCc1cccnc1OC1CC(O)CC1  
+- C[C@@H](Cn1cccn1)NC(=O)NCc1cccnc1OC1CCC(O)C1  
+- C[C@@H](Cn1cccn1)NC(=O)NCc1cccnc1OC1CC(O)C(O)C1  
+- C[C@@H](Cn1cccn1)NC(=O)NCc1cccnc1OC1C(O)CCC1  
+- C[C@@H](Cn1cccn1)NC(=O)NCc1cccnc1OC1CCCC1O
+Acc = 113/143
+Hit Ratio = 113/118
+----------------
+>>Sample 143
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Fc1ccc(-n2nc(CSc3ccccn3)c3c2CCC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Fc1ccc(-n2nc(CSc3ccccn3)c3c2CCC3)cc1
+- Fc1ccc(-n2nc(CS(=O)(=O)Nc3ccccn3)c3c2CCC3)cc1
+- Fc1ccc(-n2nc(CS(=O)(=O)Nc3ccccc3)c3c2CCC3)cc1
+- Fc1ccc(-n2nc(CS(=O)(=O)Nc3cccnc3)c3c2CCC3)cc1
+- Fc1ccc(-n2nc(CS(=O)(=O)Nc3ccncc3)c3c2CCC3)cc1
+Acc = 114/144
+Hit Ratio = 114/119
+----------------
+>>Sample 144
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cccc(C)c1C(=O)NCC(C)(C)c1ccncc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1C(=O)NCC(C)(C)c1ccnc(CO)c1  
+- Cc1cccc(C)c1C(=O)NCC(C)(C)c1cc(CO)cc1  
+- Cc1cccc(C)c1C(=O)NCC(C)(C)c1cc(O)ccc1  
+- Cc1cccc(C)c1C(=O)NCC(C)(C)c1cc(CO)nc1  
+- Cc1cccc(C)c1C(=O)NCC(C)(C)c1cc(O)nc1
+Acc = 115/145
+Hit Ratio = 115/120
+----------------
+>>Sample 145
+RL Suggestion 0: Replace Fluoroalkane with Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1nn2c(=O)cc(COc3ccc(NC(=O)c4ccccc4F)cc3)nc2s1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Sulfonamide.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nn2c(=O)cc(COc3ccc(NC(=O)c4ccccc4S(=O)(=O)N)cc3)nc2s1
+- CCc1nn2c(=O)cc(COc3ccc(NC(=O)c4cc(S(=O)(=O)N)ccc4)cc3)nc2s1
+- CCc1nn2c(=O)cc(COc3ccc(NC(=O)c4ccc(S(=O)(=O)N)cc4)cc3)nc2s1
+- CCc1nn2c(=O)cc(COc3ccc(NC(=O)c4cc(S(=O)(=O)N)cc4)cc3)nc2s1
+- CCc1nn2c(=O)cc(COc3ccc(NC(=O)c4cccc(S(=O)(=O)N)c4)cc3)nc2s1
+Acc = 116/146
+Hit Ratio = 116/121
+----------------
+>>Sample 146
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1NC(=O)C1CCN(c2nc3ccccc3s2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1NC(=O)C1CCN(c2nc3ccccc3s2)C(CO)C1  
+- Cc1ccccc1NC(=O)C1CCN(c2nc3ccccc3s2)CC(CO)C1  
+- Cc1ccccc1NC(=O)C1CCN(c2nc3ccccc3s2)C(O)CC1  
+- Cc1ccccc1NC(=O)C1CCN(c2nc3ccccc3s2)C(O)C1  
+- Cc1ccccc1NC(=O)C1CCN(c2nc3ccccc3s2)C(O)C(O)C1
+Acc = 117/147
+Hit Ratio = 117/122
+----------------
+>>Sample 147
+RL Suggestion 0: Replace Carbon Atom with Aliphatic Alcohol. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cn1ncc2c(N3CCCN(C(=O)c4ccccc4)CC3)ncnc21 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Aliphatic Alcohol.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]

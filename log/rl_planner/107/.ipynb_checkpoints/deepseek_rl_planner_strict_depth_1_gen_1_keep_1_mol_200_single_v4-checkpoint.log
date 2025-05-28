@@ -1,0 +1,939 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_107_best_reward_v1.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=107, constraint='strict', conversation_type='single', planner='rl_planner', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.S(=O)(=O)N
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.S(=O)(=O)NC
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.S(=O)(=O)NCC
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.S(=O)(=O)NCCO
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.S(=O)(=O)N(C)C
+Acc = 1/1
+Sim_hit = 0.88/1
+HV = 1.76*1/1
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(O)ccc1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1ccc(O)c(F)c1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1ccc(O)c(Cl)c1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1ccc(F)c(O)c1NC(=O)C(=O)NCCc1ccncc1C
+- C#CCOc1ccc(O)c(I)c1NC(=O)C(=O)NCCc1ccncc1C
+Acc = 1/2
+Sim_hit = 0.88/2
+HV = 1.76*1/2
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(OCC(=O)N)cccc1OCC(=O)N
+- CCC[NH2+]Cc1ncoc1-c1c(F)ccc1OCC(=O)N
+- CCC[NH2+]Cc1ncoc1-c1cc(OCC(=O)N)cc1F
+- CCC[NH2+]Cc1ncoc1-c1ccc(OCC(=O)N)c1F
+- CCC[NH2+]Cc1ncoc1-c1cccc1OCC(=O)N
+Acc = 2/3
+Sim_hit = 1.468235294117647/3
+HV = 4.1129411764705885*2/3
+----------------
+>>Sample 3
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1.S
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1.O=S(=O)(O)
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1.NS(=O)(=O)N
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1.CS(=O)(=O)N
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1.OS(=O)(=O)N
+Acc = 2/4
+Sim_hit = 1.468235294117647/4
+HV = 4.1129411764705885*2/4
+----------------
+>>Sample 4
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1.S(=O)(=O)N
+- CCC[C@H]1CCc2c(sc(NC(=O)c3ccc(S(=O)(=O)N)c3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(S(=O)(=O)N)cs3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1S(=O)(=O)N
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1C(S(=O)(=O)N)
+Acc = 3/5
+Sim_hit = 2.3968067226890755/5
+HV = 5.970084033613446*3/5
+----------------
+>>Sample 5
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1[S](=O)(=O)N
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3[n+]2([O-])C)C1[S](=O)(=O)N
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3[n+]2([O-])C)C1[S](=O)(=O)NC
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3[n+]2([O-])C)C1[S](=O)(=O)NCC
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3[n+]2([O-])C)C1[S](=O)(=O)N[C@@H](C)C
+Acc = 4/6
+Sim_hit = 3.0779661429789305/6
+HV = 7.332402874193156*4/6
+----------------
+>>Sample 6
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccsc2S(=O)(=O)N
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2S(=O)(=O)N
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2cccnc2S(=O)(=O)N
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2cccoc2S(=O)(=O)N
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2cccnc2S(=O)(=O)N
+Acc = 4/7
+Sim_hit = 3.0779661429789305/7
+HV = 7.332402874193156*4/7
+----------------
+>>Sample 7
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(S(=O)(=O)NCCl)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1S(=O)(=O)N
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(S(=O)(=O)N)c1Cl
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1N(S(=O)(=O)O)
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(S(=O)(=O)Nc2ccccc2)s1Cl
+Acc = 5/8
+Sim_hit = 3.732511597524385/8
+HV = 8.641493783284066*5/8
+----------------
+>>Sample 8
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(S(=O)(=O)Nc3ccccc3)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCCS(=O)(=O)Nc3ccccc3
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCCS(=O)(=O)Nc3ccc(F)cc3
+- N#Cc1c(NC(=O)c2ccc(S(=O)(=O)Nc3cncc3)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCCS(=O)(=O)Nc3ccc(Cl)cc3
+Acc = 6/9
+Sim_hit = 4.371855859819467/9
+HV = 9.92018230787423*6/9
+----------------
+>>Sample 9
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1cc(s(=O)(=O)Nc3ccccc3)ccc1F
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(s(=O)(=O)Nc3ccccc3)cc1F
+- Nc1c(NCc2ccccc2)ncnc1Nc1cccc(s(=O)(=O)Nc3ccccc3)c1F
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(c(F)s(=O)(=O)Nc3ccccc3)cc1
+- Nc1c(NCc2ccccc2)ncnc1Nc1cc(c(s(=O)(=O)Nc3ccccc3)F)cc1
+Acc = 6/10
+Sim_hit = 4.371855859819467/10
+HV = 9.92018230787423*6/10
+----------------
+>>Sample 10
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1.S(=O)(=O)N
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(S(=O)(=O)N)c(Br)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(Br)c(S(=O)(=O)N)c1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(Br)c1S(=O)(=O)N
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cc(S(=O)(=O)N)c(Br)cc1
+Acc = 7/11
+Sim_hit = 5.271855859819468/11
+HV = 11.72018230787423*7/11
+----------------
+>>Sample 11
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1.S
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1S(=O)(=O)N
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1NS(=O)(=O)O
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1NS(=O)(=O)N
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1O.S(=O)(=O)O
+Acc = 7/12
+Sim_hit = 5.271855859819468/12
+HV = 11.72018230787423*7/12
+----------------
+>>Sample 12
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOS(=O)(=O)N
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1S(=O)(=O)N
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOS(=O)(=O)NC
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOS(=O)(=O)NC(C)C
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOS(=O)(=O)N(C)C
+Acc = 7/13
+Sim_hit = 5.271855859819468/13
+HV = 11.72018230787423*7/13
+----------------
+>>Sample 13
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1.S
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1.N#S
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1.O=S(=O)(O)
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1.N(S(=O)(=O)O)C
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1.C(F)(F)S(=O)(=O)N
+Acc = 7/14
+Sim_hit = 5.271855859819468/14
+HV = 11.72018230787423*7/14
+----------------
+>>Sample 14
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OCC(=O)N)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OCC(=O)N)cc2)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(OCC(=O)N)c2)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3cc(OCC(=O)N)cc2)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3c(OCC(=O)N)ccc2)c1
+Acc = 8/15
+Sim_hit = 6.066376407764673/15
+HV = 13.30922340376464*8/15
+----------------
+>>Sample 15
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c(S(=O)(=O)N)c([S-])nnc1-c1cccs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(S(=O)(=O)N)s1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(S(=O)(=O)N)cs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nn(S(=O)(=O)N)c1-c1cccs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnC(=S)N(S(=O)(=O)N)c1-c1cccs1
+Acc = 8/16
+Sim_hit = 6.066376407764673/16
+HV = 13.30922340376464*8/16
+----------------
+>>Sample 16
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1(SO2N(C)c4ccccc4)
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1(SO2N(C)C)
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1(SO2N(C)O)
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1(SO2N(C)CC)
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1(SO2N(C)CO)
+Acc = 8/17
+Sim_hit = 6.066376407764673/17
+HV = 13.30922340376464*8/17
+----------------
+>>Sample 17
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccnc(OS(=O)(=O)N)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccc(S(=O)(=O)N)c(OC)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccc(S(=O)(=O)N)c(F)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1ccc(Cl)c(S(=O)(=O)N)c1
+- CC[C@H](NC(=O)NCc1ccc(S(=O)(=O)N)c(Cl)c1)c1cccc(Cl)c1
+Acc = 9/18
+Sim_hit = 6.859479856040535/18
+HV = 14.895430300316365*9/18
+----------------
+>>Sample 18
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(N(O)C(C)=O)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(O)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(N(O)C(C)=O)c(C)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3c(O)cc(N(O)C(C)=O)c3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)c(CN(O)C(C)=O)c3C2=O)c1
+Acc = 10/19
+Sim_hit = 7.563183559744239/19
+HV = 16.30283770772377*10/19
+----------------
+>>Sample 19
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1cccc(S(O)(=O)N)c1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(S(O)(=O)N)c(c1)Cl
+- C[NH2+][C@](C)(C(=O)[O-])c1cc(Cl)cc(S(O)(=O)N)c1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(Cl)c(S(O)(=O)N)c1
+- C[NH2+][C@](C)(C(=O)[O-])c1cc(S(O)(=O)N)c(Cl)c1
+Acc = 10/20
+Sim_hit = 7.563183559744239/20
+HV = 16.30283770772377*10/20
+----------------
+>>Sample 20
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2cc(s(=O)(=O)N)c2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccc(s(=O)(=O)N)cc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2cc(s(=O)(=O)N)ccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2cccc(s(=O)(=O)N)c2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccc(s(=O)(=O)N)c(c2)C)C1
+Acc = 10/21
+Sim_hit = 7.563183559744239/21
+HV = 16.30283770772377*10/21
+----------------
+>>Sample 21
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(S(=O)(=O)N)cs1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(S(=O)(=O)NCC)cs1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(S(=O)(=O)N(C)C)cs1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(S(=O)(=O)N(C)O)cs1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(S(=O)(=O)N(C)F)cs1
+Acc = 10/22
+Sim_hit = 7.563183559744239/22
+HV = 16.30283770772377*10/22
+----------------
+>>Sample 22
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[NH2+]C1S(=O)(=O)N
+- Cc1cccc(C)c1OC1C[NH2+]C1S(=O)(=O)NC
+- Cc1cccc(C)c1OC1C[NH2+]C1S(=O)(=O)NCC
+- Cc1cccc(C)c1OC1C[NH2+]C1S(=O)(=O)N(C)C
+- Cc1cccc(C)c1OC1C[NH2+]C1S(=O)(=O)N(C)
+Acc = 11/23
+Sim_hit = 8.0247220212827/23
+HV = 17.225914630800695*11/23
+----------------
+>>Sample 23
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(S(O)(=O)=N[NH2])cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1S(O)(=O)=N[NH2]
+- CC(C)C[C@@H]([NH3+])c1ccc(F)cc1S(O)(=O)=N[NH2]
+- CC(C)C[C@@H]([NH3+])c1ccc(I)cc1S(O)(=O)=N[NH2]
+- CC(C)C[C@@H]([NH3+])c1ccc(Br)cc1S(O)(=O)=N[NH2]
+Acc = 12/24
+Sim_hit = 8.511208507769187/24
+HV = 18.198887603773667*12/24
+----------------
+>>Sample 24
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)SO2Nc5ccccc5COC4)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1.SO2N
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)SO2Nc5ccc(cc5)F)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)SO2Nc5ccccc5)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)SO2Nc5ccc(cc5)Cl)cc2)cc1
+Acc = 12/25
+Sim_hit = 8.511208507769187/25
+HV = 18.198887603773667*12/25
+----------------
+>>Sample 25
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=N)S(=O)(=O)N2)n1
+- CCCCc1noc([C@H]2C=CC(=N)S(=O)(=O)N(C)2)n1
+- CCCCc1noc([C@H]2C=CC(=N)S(=O)(=O)N(C)2)n1.O
+- CCCCc1noc([C@H]2C=CC(=N)S(=O)(=O)N(C)2)n1.C
+- CCCCc1noc([C@H]2C=CC(=N)S(=O)(=O)N(C)2)n1.N
+Acc = 12/26
+Sim_hit = 8.511208507769187/26
+HV = 18.198887603773667*12/26
+----------------
+>>Sample 26
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(S(=O)(=O)NCC)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(S(=O)(=O)NCO)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(S(=O)(=O)Nc3ccccc3)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(S(=O)(=O)Nc3ncccc3)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(S(=O)(=O)Nc3cccnc3)cc2)s1
+Acc = 12/27
+Sim_hit = 8.511208507769187/27
+HV = 18.198887603773667*12/27
+----------------
+>>Sample 27
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOS(=O)(=O)N
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)COS(=O)(=O)N
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOS(=O)(=O)NC
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOS(=O)(=O)NCC
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOS(=O)(=O)N(C)C
+Acc = 12/28
+Sim_hit = 8.511208507769187/28
+HV = 18.198887603773667*12/28
+----------------
+>>Sample 28
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCS(=O)(=O)N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCS(=O)(=O)N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCS(=O)(=O)NC)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCS(=O)(=O)N(C)C)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCS(=O)(=O)N(C)CC)cc1
+Acc = 12/29
+Sim_hit = 8.511208507769187/29
+HV = 18.198887603773667*12/29
+----------------
+>>Sample 29
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCC#N)CC2.S
+- CCO[C@H]1C[C@@H](S(=O)(=O)N)C12CC[NH+](CCC(=O)N(C)CCC#N)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCC#N)CC2.S(=O)(=O)N
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCC#N)CC2.O.S(=O)(=O)N
+- CCO[C@H]1C[C@@H](S(=O)(=O)N)C12CC[NH+](CCC(=O)N(C)CCC#N)CC2.O
+Acc = 12/30
+Sim_hit = 8.511208507769187/30
+HV = 18.198887603773667*12/30
+----------------
+>>Sample 30
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C(=O)[C@@H](C)c1ccncc1.S
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(s1)NCC(=O)N
+- CC[C@H](C)C(=O)[C@@H](C)c1ccc(s1)NCC(=O)N
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(c(c1)N)S(=O)(=O)N
+- CC[C@H](C)C(=O)[C@@H](C)c1ccc(cc1)S(=O)(=O)N
+Acc = 12/31
+Sim_hit = 8.511208507769187/31
+HV = 18.198887603773667*12/31
+----------------
+>>Sample 31
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1SO2N
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1NSO2
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1O.SO2N
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1NSO2O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1NSO2NH
+Acc = 12/32
+Sim_hit = 8.511208507769187/32
+HV = 18.198887603773667*12/32
+----------------
+>>Sample 32
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1S(=O)(=O)N
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1S(=O)(=O)NCC
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1S(=O)(=O)Nc2ccc(F)cc2
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1S(=O)(=O)Nc2ccccc2
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1S(=O)(=O)NCCCN
+Acc = 12/33
+Sim_hit = 8.511208507769187/33
+HV = 18.198887603773667*12/33
+----------------
+>>Sample 33
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(S(=O)(=O)N)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc3S(=O)(=O)N)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc3C(S(=O)(=O)N))cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1S(=O)(=O)N
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1C(S(=O)(=O)N)
+Acc = 13/34
+Sim_hit = 9.220299416860096/34
+HV = 19.617069421955485*13/34
+----------------
+>>Sample 34
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H](NS(=O)(=O)O)2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H](NS(=O)(=O)C)2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H](NS(=O)(=O)N)2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H](NS(=O)(=O)NC)2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H](NS(=O)(=O)CF)2C)o1
+Acc = 13/35
+Sim_hit = 9.220299416860096/35
+HV = 19.617069421955485*13/35
+----------------
+>>Sample 35
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1.S(=O)(=O)N
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1.S(=O)(=O)NC
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1.S(=O)(=O)NCC
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1.S(=O)(=O)NCCC
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1.S(=O)(=O)NCCCC
+Acc = 14/36
+Sim_hit = 10.140934337495016/36
+HV = 21.458339263225326*14/36
+----------------
+>>Sample 36
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21S(=O)(=O)N
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21S(=O)(=O)Nc4ccccc4
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21S(=O)(=O)Nc4ccc(O)cc4
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21S(=O)(=O)Nc4ccc(F)cc4
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21S(=O)(=O)Nc4ccc(Cl)cc4
+Acc = 14/37
+Sim_hit = 10.140934337495016/37
+HV = 21.458339263225326*14/37
+----------------
+>>Sample 37
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(O))cc1N(C)=O
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1OC(=O)NH2
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(O))cc1OC(=O)NH2
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1N(C(=O)O)H
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(O))cc1N(C(=O)O)H
+Acc = 14/38
+Sim_hit = 10.140934337495016/38
+HV = 21.458339263225326*14/38
+----------------
+>>Sample 38
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(C(=O)NHO)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(C(=O)NHO)c1c
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cc(C(=O)NHO)cc1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cc(C(=O)NHO)c1c
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(C(=O)NHO)c1F
+Acc = 14/39
+Sim_hit = 10.140934337495016/39
+HV = 21.458339263225326*14/39
+----------------
+>>Sample 39
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1S(=O)(=O)N
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC(=O)N
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1S(=O)(=O)NC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1S(=O)(=O)NCC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1S(=O)(=O)NCCO
+Acc = 14/40
+Sim_hit = 10.140934337495016/40
+HV = 21.458339263225326*14/40
+----------------
+>>Sample 40
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nn(S(=O)(=O)N)c1
+- Cc1nc2ccccn2c1-c1nnc(S(=O)(=O)N)o1
+- Cc1nc2ccccn2c1-c1nn(S(=O)(=O)N(C))o1
+- Cc1nc2ccccn2c1-c1nn(S(=O)(=O)N(C)C)o1
+- Cc1nc2ccccn2c1-c1nn(S(=O)(=O)N(C)CC)o1
+Acc = 14/41
+Sim_hit = 10.140934337495016/41
+HV = 21.458339263225326*14/41
+----------------
+>>Sample 41
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(C(=O)NO)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(C(=O)N(O)O)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(C(=O)NO)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(C(=O)N(O)O)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(C(=O)NO)cc1
+Acc = 15/42
+Sim_hit = 10.908791480352159/42
+HV = 22.99405354893961*15/42
+----------------
+>>Sample 42
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1cc(-c2cccs2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(S(=O)(=O)N)o2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(S(=O)(=O)Nc3ccco3)o2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(S(=O)(=O)Nc3cnnc3)o2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1cc(-c2ccc(S(=O)(=O)Nc3ccncc3)o2)on1)[C@H]1CCCO1
+Acc = 15/43
+Sim_hit = 10.908791480352159/43
+HV = 22.99405354893961*15/43
+----------------
+>>Sample 43
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCS(=O)(=O)N
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCS(=O)(=O)NC
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCCS(=O)(=O)N
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCS(=O)(=O)NCC
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCS(=O)(=O)N(C)C
+Acc = 15/44
+Sim_hit = 10.908791480352159/44
+HV = 22.99405354893961*15/44
+----------------
+>>Sample 44
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[NH+](CC(=O)NC(S(=O)(=O)N)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=S(=O)(=O)N)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(S(=O)(=O)N(C))=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=S(=O)(=O)N(C))C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(S(=O)(=O)N(C)C)=O)C1
+Acc = 16/45
+Sim_hit = 11.642124813685491/45
+HV = 24.460720215606276*16/45
+----------------
+>>Sample 45
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1.S(=O)(=O)N
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2S(=O)(=O)N)c(C)[nH+]1
+- Cc1ccc(S(=O)(=O)N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2S(=O)(=O)N)c(C)[nH+]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)S(=O)(=O)N[nH+]1
+Acc = 17/46
+Sim_hit = 12.508791480352158/46
+HV = 26.19405354893961*17/46
+----------------
+>>Sample 46
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(S(=O)(=O)N)cn1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cc(cnc1)S(=O)(=O)N
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cc(S(=O)(=O)N)c1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cnc(S(=O)(=O)N)c1
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cc(c1S(=O)(=O)N)c2cc(Cl)ccc2
+Acc = 17/47
+Sim_hit = 12.508791480352158/47
+HV = 26.19405354893961*17/47
+----------------
+>>Sample 47
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=S(=O)(=O)N
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=N(S(=O)(=O)O)O
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=S(=O)(=O)N(O)
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=N(S(=O)(=O)O)C
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=S(=O)(=O)N(C)O
+Acc = 17/48
+Sim_hit = 12.508791480352158/48
+HV = 26.19405354893961*17/48
+----------------
+>>Sample 48
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(N(O)=S)(cnn12)
+- CSc1nnc2n(N)cnn12(S(=O)(=O)N)
+- CSc1nnc2n(N)cnn12(S(=O)(=O)O)
+- CSc1nnc2n(N(S(=O)(=O)O))cnn1
+- CSc1nnc2n(N)cnn12(S(=O)(=O)NH)
+Acc = 17/49
+Sim_hit = 12.508791480352158/49
+HV = 26.19405354893961*17/49
+----------------
+>>Sample 49
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1.S(=O)(=O)N
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1.S(=O)(=O)NC
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1.S(=O)(=O)NCC
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1.S(=O)(=O)NCCC
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1.S(=O)(=O)NCCCC
+Acc = 18/50
+Sim_hit = 13.440994870182667/50
+HV = 28.058460328600628*18/50
+----------------
+>>Sample 50
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOS(=O)(=O)NCC2)CC1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCS(=O)(=O)NCC2)CC1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1OS(=O)(=O)N
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOS(=O)(=O)NCC2)CC1O
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1OS(=O)(=O)N
+Acc = 19/51
+Sim_hit = 14.195380835094948/51
+HV = 29.56723225842519*19/51
+----------------
+>>Sample 51
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccc(S(=O)(=O)N)cc12
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc1S(=O)(=O)N
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccc(S(=O)(=O)N(C))cc12
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccc(S(=O)(=O)N(C)C)cc12
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccc(S(=O)(=O)N(C)C(C)C)cc12
+Acc = 20/52
+Sim_hit = 14.941143546959355/52
+HV = 31.058757682154003*20/52
+----------------
+>>Sample 52
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)N(Cc1nnnn1C1CC1)Cc1nnnn1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)N(Cc1nnnn1C1CC1)Cc1nncn1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)N(Cc1nnnn1C1CC1)Cc1nnnc1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)N(Cc1nnnn1C1CC1)Cc1nn[nH]1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)N(Cc1nnnn1C1CC1)Cc1nn[nH]1C1CC1
+Acc = 21/53
+Sim_hit = 15.695241907615092/53
+HV = 34.07515112477695*21/53
+----------------
+>>Sample 53
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(OCC(=O)O)c1)c1ccc(C#N)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(OCC(=O)O)c1)c1ccc(C#N)c(F)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1(OCC(=O)O)
+- CCN(C(=O)c1ccc(Cl)c(OCC(=O)O)c1)c1ccc(C#N)c(Br)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1(OCC(=O)OH)
+Acc = 22/54
+Sim_hit = 16.368318830692015/54
+HV = 35.4213049709308*22/54
+----------------
+>>Sample 54
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1.S(=O)(=O)N
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncc(S(=O)(=O)N)c4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5nccc5n4S(=O)(=O)N)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccc5S(=O)(=O)N4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccc5S(=O)(=O)N)C3)cc2[nH]1
+Acc = 23/55
+Sim_hit = 17.306780369153554/55
+HV = 37.298228047853875*23/55
+----------------
+>>Sample 55
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1ccc(S(=O)(=O)N)cs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1.S(=O)(=O)N
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)N)cns1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)N)c(c1)S
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cc(S(=O)(=O)N)c(c1)O
+Acc = 23/56
+Sim_hit = 17.306780369153554/56
+HV = 37.298228047853875*23/56
+----------------
+>>Sample 56
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOS(=O)(=O)NCC1)C(C)(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)S(=O)(=O)N
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)NS(=O)(=O)C(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)COS(=O)(=O)N
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)SC(=O)NS(=O)(=O)
+Acc = 24/57
+Sim_hit = 18.069492233560332/57
+HV = 38.82365177666743*24/57
+----------------
+>>Sample 57
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32S(=O)(=O)N
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32S(=O)(=O)NC
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32S(=O)(=O)NCC
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32S(=O)(=O)NCCC
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32S(=O)(=O)NCCCC
+Acc = 24/58
+Sim_hit = 18.069492233560332/58
+HV = 38.82365177666743*24/58
+----------------
+>>Sample 58
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N(S(=O)(=O)N1)
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N(S(=O)(=O)NCC1)
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N(S(=O)(=O)N(C)C1)
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N(S(=O)(=O)NC1)
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N(S(=O)(=O)N(C)1)
+Acc = 25/59
+Sim_hit = 18.81459027277602/59
+HV = 40.31384785509881*25/59
+----------------
+>>Sample 59
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NS(=O)(=O)N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nons1NS(=O)(=O)N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NC(=O)NS(=O)(=O)N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NOS(=O)(=O)N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NCCS(=O)(=O)N
+Acc = 25/60
+Sim_hit = 18.81459027277602/60
+HV = 40.31384785509881*25/60
+----------------
+>>Sample 60
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(O)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(O)cccc1O
+- C[C@@H](c1ccc(O)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)ccc(O)c1
+- C[C@@H](c1ccc(O)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1ccc(O)cc1F
+- C[C@@H](c1ccc(O)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cc(O)c(F)cc1
+- C[C@@H](c1ccc(O)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1ccc(F)c(O)c1
+Acc = 26/61
+Sim_hit = 19.450953909139656/61
+HV = 42.22293876418971*26/61
+----------------
+>>Sample 61
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(s(=O)(=O)N)c(c1)c1ccccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(c(s(=O)(=O)N)c(c1))c1ccccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1c(c(s(=O)(=O)N)c(c1)c1ccccc1)c1ccccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(c(s(=O)(=O)N)c(c1)c1ccccc1)c1ccccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(c(c1)c1cc(s(=O)(=O)N)c(c1))c1ccccc1
+Acc = 26/62
+Sim_hit = 19.450953909139656/62
+HV = 42.22293876418971*26/62
+----------------
+>>Sample 62
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(N(S(=O)(=O)O)c4ccco4)cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(N(S(=O)(=O)O)c4cccc4)cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1S(=O)(=O)O
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(N(S(=O)(=O)O)c4ccc(F)cc4)cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(N(S(=O)(=O)O)c4ccc(Cl)cc4)cc3s2)cc1
+Acc = 26/63
+Sim_hit = 19.450953909139656/63
+HV = 42.22293876418971*26/63
+----------------
+>>Sample 63
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=S(=O)(=O)NC32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)S(=O)(=O)N32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NS(=O)(=O)NC32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=S(=O)(=O)NC3C(O)=O2)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=S(=O)(=O)NC3C(O)C2)cc1
+Acc = 26/64
+Sim_hit = 19.450953909139656/64
+HV = 42.22293876418971*26/64
+----------------
+>>Sample 64
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1.S(=O)(=O)N
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1.S(=O)(=O)O
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1.S(=O)(=O)NC
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1.S(=O)(=O)NCC
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1.S(=O)(=O)NCCC
+Acc = 27/65
+Sim_hit = 20.304612445725024/65
+HV = 43.93025583736045*27/65
+----------------
+>>Sample 65
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=S(=O)(=O)N)cc1
+- CCCCCOc1ccc(C(S(=O)(=O)N)=S)cc1
+- CCCCCOc1ccc(CC(N)=S(=O)(=O)N)cc1
+- CCCCCOc1ccc(C(N)=S(=O)(=O)NCC)cc1
+- CCCCCOc1ccc(C(N)=S(=O)(=O)N(C)C)cc1
+Acc = 27/66
+Sim_hit = 20.304612445725024/66
+HV = 43.93025583736045*27/66
+----------------
+>>Sample 66
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1O
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(S(N)(=O)=O)c(F)cc1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(S(N)(=O)=O)c(Cl)cc1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(S(N)(=O)=O)c(Br)cc1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(S(N)(=O)=O)c(I)cc1
+Acc = 27/67
+Sim_hit = 20.304612445725024/67
+HV = 43.93025583736045*27/67
+----------------
+>>Sample 67
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)CS(=O)(=O)N
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)CS(=O)(=O)NC
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)CCS(=O)(=O)N
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)CS(=O)(=O)NCC
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)CS(=O)(=O)N(C)C
+Acc = 28/68
+Sim_hit = 21.030102641803456/68
+HV = 45.38123622951731*28/68
+----------------
+>>Sample 68
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCCOS(=O)(=O)N)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccc(S(=O)(=O)N)cc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCOS(=O)(=O)N)c2cccc(c2)C#N)cc1
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccc(S(=O)(=O)N(C))cc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCOS(=O)(=O)N(C))c2ccccc2)cc1
+Acc = 29/69
+Sim_hit = 21.682276554846933/69
+HV = 46.68558405560427*29/69
+----------------
+>>Sample 69
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(S(=O)(=O)NCC)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(S(=O)(=O)NC(C)C)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(S(=O)(=O)NCC(C)C)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(S(=O)(=O)NCCO)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(S(=O)(=O)NC(C)(C)C)
+Acc = 30/70
+Sim_hit = 22.211688319552817/70
+HV = 47.744407585016035*30/70
+----------------
+>>Sample 70
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(S(=O)(=O)N(C)C)o2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(S(=O)(=O)N(C)O)o2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(S(=O)(=O)N(C)C)c2o)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nn(S(=O)(=O)N(C)C)c2o)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nn(S(=O)(=O)N(C)C)c2)c1Cl
+Acc = 31/71
+Sim_hit = 22.95454546240996/71
+HV = 49.23012187073032*31/71
+----------------
+>>Sample 71
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1.S(O)(=O)(N)
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1S(O)(=O)(NCC)
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1S(O)(=O)(N(C)C)
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1S(O)(=O)(N(C)CC)
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1S(O)(=O)(N(C)C(C)C)
+Acc = 31/72
+Sim_hit = 22.95454546240996/72
+HV = 49.23012187073032*31/72
+----------------
+>>Sample 72
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CSCN(S(=O)(=O)NCC)1C(=O)[C@H]1COc2ccc(F)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN(S(=O)(=O)NCC)1C(=O)[C@H]1COc2ccc(Cl)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN(S(=O)(=O)NCC)1C(=O)[C@H]1COc2ccc(I)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN(S(=O)(=O)NCC)1C(=O)[C@H]1COc2ccc(Br)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN(S(=O)(=O)NCC)1C(=O)[C@H]1COc2ccc(CN)cc2C1
+Acc = 31/73
+Sim_hit = 22.95454546240996/73
+HV = 49.23012187073032*31/73
+----------------
+>>Sample 73
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)CS(=O)(=O)N
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)CN(CS(=O)(=O)O)
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)CS(=O)(=O)NC
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)CS(=O)(=O)NCC
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)CS(=O)(=O)N(C)C
+Acc = 32/74
+Sim_hit = 23.69367589719257/74
+HV = 50.70838274029554*32/74
+----------------
+>>Sample 74
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1.S(=O)(=O)N
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1.O=S(=O)(N)
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1.NS(=O)(=O)
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1.OS(=O)(=O)N
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1.NS(=O)(=O)O
+Acc = 33/75
+Sim_hit = 24.571724677680375/75
+HV = 52.46448030127115*33/75
+----------------
+>>Sample 75
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(OCC(=O)O)c(F)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(OCC(=O)O)c(Cl)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(OCC(=O)O)c(F)c3)cc2F)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(OCC(=O)O)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2OCC(=O)O)CCN1
+Acc = 34/76
+Sim_hit = 25.309429595713162/76
+HV = 53.939890137336725*34/76
+----------------
+>>Sample 76
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)N(S(=O)(=O)NCC)
+- CC(C)(CO[N+](=O)[O-])C(=O)NS(=O)(=O)N(C)C
+- CC(C)(CO[N+](=O)[O-])C(=O)N(S(=O)(=O)NC)
+- CC(C)(CO[N+](=O)[O-])C(=O)NS(=O)(=O)N(C)O
+- CC(C)(CO[N+](=O)[O-])C(=O)N(S(=O)(=O)N(C)C)
+Acc = 35/77
+Sim_hit = 25.783113806239477/77
+HV = 54.887258558389355*35/77
+----------------
+>>Sample 77
+RL Suggestion 0: Replace Fluorine Atom with Acetohydroxamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] with more hydrogen bond acceptors and increase HBA by at least 1. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion: Replace Fluorine Atom with Acetohydroxamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(C(=O)NO)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(C(=O)NO)cc2)cc1O
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(C(=O)NO)cc2)cc1S
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(C(=O)NO)cc2)cc1N
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(C(=O)NO)cc2)cc1[C@H](O)C
+Acc = 36/78
+Sim_hit = 26.56277482318863/78
+HV = 56.44658059228766*36/78
+----------------
+>>Sample 78
+RL Suggestion 0: Add a Sulfonamide. 

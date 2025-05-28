@@ -1,0 +1,109 @@
+args:  Namespace(rl_model_path='results/rl_model_checkpoint/rl_model_checkpoint/general_replay_buffer_mol_logP_strict_102_best_reward.pth', conversational_LLM='dfm', planning_LLM='deepseek', fast_protein=False, cot=None, num_of_mol=10, task_id=102, constraint='loose', conversation_type='multi', planner='rl_planner', depth=3, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc2c(cc1OC)CC([NH3+])C2 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  COc1cc2c(cc1OC)CC([NH3+])C2C=O
+RL Suggestion 0: Add a Iodoalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc2c(cc1OC)CC([NH3+])C2 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': ' COc1cc2c(cc1OC)CC([NH3+])C2C=O'}, {'role': 'user', 'content': 'Your provided sequence COc1cc2c(cc1OC)CC([NH3+])C2C=O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Add a Iodoalkane. . Can you give me new molecules?'}]
+AI answer 0:  COc1cc2c(cc1OC)CC([NH3+])C2CI
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc2c(cc1OC)CC([NH3+])C2 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': ' COc1cc2c(cc1OC)CC([NH3+])C2C=O'}, {'role': 'user', 'content': 'Your provided sequence COc1cc2c(cc1OC)CC([NH3+])C2C=O could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Add a Iodoalkane. . Can you give me new molecules?'}, {'role': 'assistant', 'content': ' COc1cc2c(cc1OC)CC([NH3+])C2CI'}, {'role': 'user', 'content': 'Your provided sequence COc1cc2c(cc1OC)CC([NH3+])C2CI could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde. . Can you give me new molecules?'}]
+AI answer 0: Oc1cc2c(cc1OC)CC([NH3+])C2C=O
+Acc = 0/1
+Hit Ratio = 0/1
+----------------
+>>Sample 1
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  *C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1
+*CCCCCCC[C@H](NC(=O)[C@H](CC(C)C)NC(=O)c1ccccc1)C(=O)NCC(N)=O
+*CCC[C@H](NC(=O)[C@H](CO)NC(=O)c1ccccc1)C(=O)N[C@@H](CC(N)=O)C(=O)O
+*CC[C@H](C)[C@H](NC(=O)[C@H](Cc1c[nH]c2ccccc12)NC(=O)c1ccccc1)C(=O)N[C@@H](CC(N)=O)C(=O)O
+*CC[C@H](C)[C@H](NC(=O)[C@H](CO)NC(=O)c1ccccc1)C(=O)N[C@@H](CC(N)=O)C(=O)O
+Acc = 1/2
+Hit Ratio = 1/2
+----------------
+>>Sample 2
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  *O=Cc1ccccc1
+*O=Cc1ccc(=O)[nH]c1C=O
+*O=Cc1ccc(O)cc1
+*O=Cc1ccc(C(=O)O)cc1
+*O=Cc1cccc(O)c1
+Acc = 2/3
+Hit Ratio = 2/3
+----------------
+>>Sample 3
+RL Suggestion 0: Replace Fluoroalkane with Chloroalkane. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule OC[C@@H](Br)C(F)(F)Br less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Fluoroalkane with Chloroalkane.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  *OC[C@@H](Br)C(Cl)(Cl)Br
+*OC[C@H](Br)C(Cl)(Cl)Br
+*F[C@H](F)[C@@H](O)CBr
+=F[C@@H](F)[C@H](O)CBr
+=F[C@H](F)[C@H](O)CBr
+Acc = 3/4
+Hit Ratio = 3/4
+----------------
+>>Sample 4
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)/C(C#N)=C(/[O-])C1=NN(c2cc(C)ccc2C)C(=O)CC1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  Cc1ccc(C)c(N2N=C(c3cnoc3/C(C#N)=C(\O)C3CC(=O)N(c4cc(C)ccc4C)N3)c3ccccc32)c1
+Acc = 4/5
+Hit Ratio = 4/5
+----------------
+>>Sample 5
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[NH+](C)CCS[C@@H]1C[C@H](C(C)(C)C)CC[C@@H]1C#N less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  *C[NH+](C)CCS[C@@H]1C[C@H](C(C)(C)C)CC[C@@H]1C#N
+*O=Cc1ccccc1C=O
+*O=Cc1ccccc1
+*CN(C)C=O
+*O
+Acc = 5/6
+Hit Ratio = 5/6
+----------------
+>>Sample 6
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN(c1ncnc(N2CCN(c3cccc[nH+]3)CC2)c1[N+](=O)[O-])C1CC[NH+](C)CC1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  CN(c1ncnc(N2CCN(c3cccc[nH+]3)CC2)c1[N+](=O)[O-])C1CC[NH+](C)CC1
+c1ccc(C=O)cc1.CN(c1ncnc(N2CCN(c3cccc[nH+]3)CC2)c1[N+](=O)[O-])C1CC[NH+](C)CC1c1ccc(C=O)cc1.CN(c1ncnc(N2CCN(c3cccc[nH+]3)CC2)c1[N+](=O)[O-])C1CC[NH+](C)CC1c1ccc(C=O)cc1.CN(c1ncnc(N2CCN(c3cccc[nH+]3)CC2)c1[N+](=O)[O-])C1CC[NH+](C)CC1c1ccc(C=O)cc1.CN(c1ncnc(N2CCN(c3cccc[nH+]3)CC2)c1[N+](=O)[O-])C1CC[NH+](C)CC1c1ccc(C=O)cc1
+Acc = 6/7
+Hit Ratio = 6/7
+----------------
+>>Sample 7
+RL Suggestion 0: Replace Amide with Thioalkyl ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc(C[NH+]2CC[C@@H]([NH+]3CCCC3)C2)ccc1OCC(=O)N1CCCC1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Thioalkyl ether.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  *CS(=O)(=O)CCNC[C@H]1CC[NH+](C2CCCC2)C1
+*COc1cc(C[NH+]2CC[C@@H]([NH+]3CCCC3)C2)ccc1OCCSCCNC(=O)OCc1ccccc1
+*CS(=O)(=O)CCN(Cc1ccc(OCC(=O)N2CCCC2)c(OC)c1)C[C@H]1CC[NH+](C2CCCC2)C1
+*COc1cc(C[NH+]2CC[C@@H]([NH+]3CCCC3)C2)ccc1OCC(=S)NC1CCCC1
+*CS(=O)(=O)CCN(Cc1ccc(OCC(=S)NC2CCCC2)c(OC)c1)C[C@H]1CC[NH+](C2CCCC2)C1
+RL Suggestion 0: Replace Oxygen Atom with Iodine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc(C[NH+]2CC[C@@H]([NH+]3CCCC3)C2)ccc1OCC(=O)N1CCCC1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Amide with Thioalkyl ether.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': ' *CS(=O)(=O)CCNC[C@H]1CC[NH+](C2CCCC2)C1\n*COc1cc(C[NH+]2CC[C@@H]([NH+]3CCCC3)C2)ccc1OCCSCCNC(=O)OCc1ccccc1\n*CS(=O)(=O)CCN(Cc1ccc(OCC(=O)N2CCCC2)c(OC)c1)C[C@H]1CC[NH+](C2CCCC2)C1\n*COc1cc(C[NH+]2CC[C@@H]([NH+]3CCCC3)C2)ccc1OCC(=S)NC1CCCC1\n*CS(=O)(=O)CCN(Cc1ccc(OCC(=S)NC2CCCC2)c(OC)c1)C[C@H]1CC[NH+](C2CCCC2)C1'}, {'role': 'user', 'content': 'Your provided sequence CS(=O)(=O)CCNC[C@H]1CC[NH+](C2CCCC2)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Oxygen Atom with Iodine. . Can you give me new molecules?'}]
+AI answer 0: I'm sorry, but it is not possible to replace an oxygen atom with iodine in the molecule CS(=O)(=O)CCNC[C@H]1CC[NH+](C2CCCC2)C1 as it is a sulfoxide group and cannot be replaced by an iodine atom. The suggestion to replace the oxygen atom with iodine is not valid for this molecule.
+Acc = 6/8
+Hit Ratio = 6/8
+----------------
+>>Sample 8
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COCCN1C[C@@]23C=C[C@@H](O2)[C@H](C(=O)N(C)Cc2cnccn2)[C@H]3C1=O less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  *COCCN1C[C@@]23C=C[C@@H](O2)[C@H](C(=O)N(C)Cc2cnccn2)[C@H]3C1=O;O=Cc1ccc(Br)o1
+*COCCN1C[C@@]23C=C[C@@H](O2)[C@H](C(=O)N(C)Cc2cnccn2)[C@H]3C1=O;O=Cc1ccco1
+*COCCN1C[C@@]23C=C[C@@H](O2)[C@H](C(=O)N(C)Cc2cnccn2)[C@H]3C1=O;O=Cc1ccc(F)o1
+*COCCN1C[C@@]23C=C[C@@H](O2)[C@H](C(=O)N(C)Cc2cnccn2)[C@H]3C1=O;O=Cc1cc(Cl)cc(Cl)c1
+*COCCN1C[C@@]23C=C[C@@H](O2)[C@H](C(=O)N(C)Cc2cnccn2)[C@H]3C1=O;O=Cc1ccc(C)o1
+Acc = 7/9
+Hit Ratio = 7/9
+----------------
+>>Sample 9
+RL Suggestion 0: Add a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(/C=C2\\SC(=O)N(CC(=O)NCC(=O)[O-])C2=O)cc1OC less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Aromatic Aldehyde.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0:  O=Cc1ccccc1-n1c(=O)sc(=O)n1CC(=O)NCC(=O)N1C(=O)S/C(=C\c2ccc(OC)c(OC)c2)C1=O
+Acc = 8/10
+Hit Ratio = 8/10
+----------------
+--------Final Acc--------
+Acc = 8/10
+Hit Ratio = 8/10
+----------------

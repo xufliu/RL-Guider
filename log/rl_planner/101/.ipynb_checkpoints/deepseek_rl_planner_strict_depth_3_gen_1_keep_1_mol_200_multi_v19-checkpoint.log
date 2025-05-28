@@ -1,0 +1,746 @@
+args:  Namespace(rl_model_path='results/rl_model_checkpoint/reward_type_add_a0.2_b1.0_c1.0_tau0.02general_replay_buffer_mol_strict_101_best_reward_v1.pth', conversational_LLM='deepseek', planning_LLM='deepseek', fast_protein=False, cot=None, num_of_mol=200, task_id=101, constraint='strict', conversation_type='multi', planner='rl_planner', depth=3, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCS(=O)(=O)O1
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=O.[Na+].[O-]S(=O)(=O)C1
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCS(=O)(=O)O.[Na+]
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCC1=O.[K+].[O-]S(=O)(=O)C1
+- O=C(NC[C@H]1CCCO1)c1ccccc1N1CCCS(=O)(=O)O.[K+]
+Acc = 1/1
+Hit Ratio = 1/1
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cn1ccc(C(=O)Nc2sc3c(c2C#N)CCC3)cc1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1ccc(C(=O)Nc2sc3c(c2S(=O)(=O)O)CCC3)cc1=O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)CCC3)cc1S(=O)(=O)O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)CCCS(=O)(=O)O)cc1=O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)S(=O)(=O)OCC3)cc1=O  
+- Cn1ccc(C(=O)Nc2sc3c(c2C#N)CCCS(=O)(=O)O3)cc1=O
+Acc = 2/2
+Hit Ratio = 2/2
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=O  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)(=O)O  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)(O)O  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)(O)[O-]  
+- CCCCn1nc(C(=O)Nc2ccc(N3CCOCC3)nc2)ccc1=S(=O)([O-])[O-]
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 2/3
+Hit Ratio = 2/2
+----------------
+>>Sample 3
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1S(=O)(=O)O
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1S(=O)(=O)OC
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1S(=O)(=O)OCC
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1S(=O)(=O)O[C@@H](C)O
+- CC[C@@](C)(NCC(=O)N(C)OC)c1nc(C)cs1S(=O)(=O)O[C@H](C)CO
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 2/4
+Hit Ratio = 2/2
+----------------
+>>Sample 4
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)O
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)[O-]
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)[O-].[Na+]
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)[O-].[K+]
+- C[C@H](NC(=O)CCN1c2ccccc2Sc2ccccc21)C1CC1S(=O)(=O)[O-].[NH4+]
+Acc = 3/5
+Hit Ratio = 3/3
+----------------
+>>Sample 5
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1S(=O)(=O)O
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1S(=O)(=O)[O-]
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1S(=O)(=O)[Na]
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1S(=O)(=O)[K]
+- CCOC(=O)N1CCc2c(sc(NC(=O)c3ccc4c(c3)OCCO4)c2C(N)=O)C1S(=O)(=O)[NH4]
+Acc = 4/6
+Hit Ratio = 4/4
+----------------
+>>Sample 6
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1S(=O)(=O)O
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1S(=O)(=O)OC
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1S(=O)(=O)OCC
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1S(=O)(=O)OCCC
+- Fc1ccccc1N1CCN(c2ncc(Cl)cc2F)CC1S(=O)(=O)OCCCC
+Acc = 5/7
+Hit Ratio = 5/5
+----------------
+>>Sample 7
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CNC(=O)CSc1ncnc2sc(C)c(C)c12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNC(=O)CSc1ncnc2sc(C)c(C(O)=O)c12  
+- CNC(=O)CSc1ncnc2sc(C)c(C(S(=O)(=O)O))c12  
+- CNC(=O)CSc1ncnc2sc(C(S(=O)(=O)O))c(C)c12  
+- CNC(=O)CSc1ncnc2sc(C)c(C)c12S(=O)(=O)O  
+- CNC(=O)CSc1ncnc2sc(C)c(C)c12S(=O)(=O)OC
+Acc = 6/8
+Hit Ratio = 6/6
+----------------
+>>Sample 8
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2S(=O)(=O)O  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2S(=O)(=O)[O-]  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2S(=O)(=O)[O-].[Na+]  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2S(=O)(=O)[O-].[K+]  
+- COC(=O)c1cc2n(n1)CCN(c1cc(OC)nc(OC)n1)C2S(=O)(=O)[O-].[NH4+]
+Acc = 7/9
+Hit Ratio = 7/7
+----------------
+>>Sample 9
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OCc2ccccc2F)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OS(=O)(=O)c2ccccc2F)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OS(=O)(=O)Cc2ccccc2F)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OS(=O)(=O)c2ccc(F)cc2)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OS(=O)(=O)Cc2ccc(F)cc2)CC1
+- O=C(N[C@@H](c1ccccc1)C1CC1)N1CCC(OS(=O)(=O)c2cc(F)ccc2)CC1
+Acc = 8/10
+Hit Ratio = 8/8
+----------------
+>>Sample 10
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2C)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(S(=O)(=O)O)ccc2C)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2S(=O)(=O)O)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(S(=O)(=O)O)ccc2S(=O)(=O)O)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(C)ccc2S(=O)(=O)O)cc1  
+- Cc1ccc(S(=O)(=O)N(CC(=O)NCc2ccccn2)c2cc(S(=O)(=O)O)ccc2C)cc1
+Acc = 9/11
+Hit Ratio = 9/9
+----------------
+>>Sample 11
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS(=O)(=O)O1  
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS(=O)(=O)O  
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS(=O)(=O)OC  
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS(=O)(=O)OCC  
+- CC1(C)CN(C(=O)Nc2ccc(N3CCOCC3)c(F)c2)CCS(=O)(=O)OCCC
+Acc = 10/12
+Hit Ratio = 10/10
+----------------
+>>Sample 12
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1CS(=O)(=O)O  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1CS(=O)(=O)ON  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1CS(=O)(=O)OCC  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1CS(=O)(=O)OCCN  
+- Cc1sc(NC(=O)c2cccc(N(C)C)c2)c(C#N)c1CS(=O)(=O)OCCCC
+Acc = 11/13
+Hit Ratio = 11/11
+----------------
+>>Sample 13
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C(=O)CS(=O)(=O)O  
+- Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C(=O)CCS(=O)(=O)O  
+- Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C(=O)CS(=O)(=O)OC  
+- Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C(=O)CS(=O)(=O)OCC  
+- Cc1cc(Sc2cc3ccccc3[nH]2)ccc1C(=O)CS(=O)(=O)OCCC
+Acc = 12/14
+Hit Ratio = 12/12
+----------------
+>>Sample 14
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(F)(F)F)c12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)O)(S(=O)(=O)O)S(=O)(=O)O)c12  
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)O)F)c12  
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)O)C)c12  
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)O)O)c12  
+- Cc1noc2nc(-c3ccc(F)cc3)cc(C(=O)NCC(=O)NCC(S(=O)(=O)O)N)c12
+Acc = 13/15
+Hit Ratio = 13/13
+----------------
+>>Sample 15
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(C(C)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(C)(C)S(=O)(=O)O)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1  
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1S(=O)(=O)O  
+- Cc1ccc(C(C)(C)S(=O)(=O)O)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCC2)cc1S(=O)(=O)O  
+- Cc1ccc(C(C)(C)C)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCS(=O)(=O)O2)cc1  
+- Cc1ccc(C(C)(C)S(=O)(=O)O)cc1S(=O)(=O)Nc1ccc(C(=O)N2CCS(=O)(=O)O2)cc1
+Acc = 14/16
+Hit Ratio = 14/14
+----------------
+>>Sample 16
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCCN(CC#N)Cc1csc2ccccc12 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(CC#N)Cc1csc2ccccc12S(=O)(=O)O
+- CCCN(CC#N)Cc1csc2ccccc12S(=O)(=O)OC
+- CCCN(CC#N)Cc1csc2ccccc12S(=O)(=O)OCC
+- CCCN(CC#N)Cc1csc2ccccc12S(=O)(=O)OCCC
+- CCCN(CC#N)Cc1csc2ccccc12S(=O)(=O)OCCCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 14/17
+Hit Ratio = 14/14
+----------------
+>>Sample 17
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1ccccc1F more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)O)ccc1F  
+- O=C(NC[C@H](O)c1cc(S(=O)(=O)O)co1)[C@@H]1C[C@@H]1c1ccccc1F  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)O)ccc1F  
+- O=C(NC[C@H](O)c1ccco1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)O)ccc1F  
+- O=C(NC[C@H](O)c1cc(S(=O)(=O)O)co1)[C@@H]1C[C@@H]1c1cc(S(=O)(=O)O)ccc1F
+Acc = 15/18
+Hit Ratio = 15/15
+----------------
+>>Sample 18
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)S(=O)(=O)O
+- Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)S(=O)(=O)[O-]
+- Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)S(=O)(=O)Oc1ccccc1
+- Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)S(=O)(=O)Oc1ccccc1C(=O)O
+- Cc1onc(-c2c(F)cccc2Cl)c1C(=O)Nc1ccc(S(=O)(=O)Nc2nccs2)S(=O)(=O)Oc1ccccc1C(=O)[O-]
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 15/19
+Hit Ratio = 15/15
+----------------
+>>Sample 19
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\\c1ccc(I)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(I)cc1S(=O)(=O)O
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(I)cc1S(=O)(=O)[O-]
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(I)cc1S(=O)(=O)[O-].[Na+]
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(I)cc1S(=O)(=O)[O-].[K+]
+- CN1C(=O)[C@H](CC(=O)NCCc2ccccc2)S/C1=N\c1ccc(I)cc1S(=O)(=O)[O-].[NH4+]
+Acc = 16/20
+Hit Ratio = 16/16
+----------------
+>>Sample 20
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1S(=O)(=O)O
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1S(=O)(=O)OC
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1S(=O)(=O)OCC
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1S(=O)(=O)OCCC
+- C[C@@H](CNC(=O)CC1(O)CCCC1)c1ccsc1S(=O)(=O)OCCCC
+Acc = 17/21
+Hit Ratio = 17/17
+----------------
+>>Sample 21
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C[SO3H])O1  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C)O1[SO3H]  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2[SO3H])C[C@@H](C)O1  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3[SO3H])s2)C[C@@H](C)O1  
+- COC(=O)[C@@H]1CN(Cc2cnc(C3CC3)s2)C[C@@H](C[SO3H])O1[SO3H]
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 17/22
+Hit Ratio = 17/17
+----------------
+>>Sample 22
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@H](c1cccc2ccccc12)N(C(=O)CCCn1cncn1)C1CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](c1cccc2ccccc12)N(C(=O)CCCn1cncn1)C1(S(=O)(=O)O)CC1  
+- C[C@H](c1cccc2ccccc12)N(C(=O)CCCn1cncn1)C1CC1(S(=O)(=O)O)  
+- C[C@H](c1cccc2ccccc12)N(C(=O)CCCn1cncn1(S(=O)(=O)O))C1CC1  
+- C[C@H](c1cccc2ccccc12)N(C(=O)CCCS(=O)(=O)O)C1CC1  
+- C[C@H](c1cccc2ccccc12(S(=O)(=O)O))N(C(=O)CCCn1cncn1)C1CC1
+Acc = 18/23
+Hit Ratio = 18/18
+----------------
+>>Sample 23
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule FC(F)(F)c1ccnc(NCc2cc[nH]n2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - FC(F)(F)c1ccnc(NCc2cc[nH]n2)S(=O)(=O)O1  
+- FC(F)(F)c1ccnc(NCc2cc[nH]n2)S(=O)(=O)c1  
+- FC(F)(F)c1ccnc(NCc2cc[nH]n2)S(=O)(=O)Oc1  
+- FC(F)(F)c1ccnc(NCc2cc[nH]n2)S(=O)(=O)Nc1  
+- FC(F)(F)c1ccnc(NCc2cc[nH]n2)S(=O)(=O)Cc1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 18/24
+Hit Ratio = 18/18
+----------------
+>>Sample 24
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3ccc(S(=O)(=O)O)s3)s2)CC1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cc(S(=O)(=O)O)cs3)s2)CC1  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cccs3)s2)CC1S(=O)(=O)O  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3cc(S(=O)(=O)O)s3)s2)CC1S(=O)(=O)O  
+- CC(C)[C@H](C#N)N1CCN(C(=O)c2cnc(-c3ccc(S(=O)(=O)O)s3)s2)CC1S(=O)(=O)O
+Acc = 19/25
+Hit Ratio = 19/19
+----------------
+>>Sample 25
+RL Suggestion 0: Replace Nitro Group with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccccc1NC(=O)/C(C#N)=C\\c1cc(C)n(-c2ccc(C)c([N+](=O)[O-])c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Nitro Group with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1NC(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([S](=O)(=O)[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([S](=O)(=O)O)c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([S](=O)([O-])[O-])c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([S](=O)(=O)OCC)c2)c1C
+- Cc1ccccc1NC(=O)/C(C#N)=C\c1cc(C)n(-c2ccc(C)c([S](=O)(=O)OCC(O)CO)c2)c1C
+Acc = 20/26
+Hit Ratio = 20/20
+----------------
+>>Sample 26
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCn1c(C)cc(CNc2cccc(C(C)C)c2)c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(C)cc(CNc2cccc(C(C)S(=O)(=O)O)c2)c1C  
+- CCn1c(C)cc(CNc2cccc(S(=O)(=O)O)c2)c1C  
+- CCn1c(C)cc(CNc2cccc(C(C)C)c2(S(=O)(=O)O))c1C  
+- CCn1c(C)cc(CNc2cccc(C(C)S(=O)(=O)O)c2(S(=O)(=O)O))c1C  
+- CCn1c(C)cc(CNc2cccc(S(=O)(=O)O)c2(S(=O)(=O)O))c1C
+Acc = 21/27
+Hit Ratio = 21/21
+----------------
+>>Sample 27
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(Cl)cc2)nc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(S(=O)(=O)O)cc2)nc1  
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(S(=O)(=O)O)cc2)nc1  
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(S(=O)(=O)O)cc2)nc1  
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(S(=O)(=O)O)cc2)nc1  
+- O=C(NCc1ccco1)C(=O)Nc1ccc(Oc2ccc(S(=O)(=O)O)cc2)nc1
+Acc = 22/28
+Hit Ratio = 22/22
+----------------
+>>Sample 28
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCCCC2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCCCC2S(=O)(=O)O)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCCCS(=O)(=O)O)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCS(=O)(=O)O)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCCCCS(=O)(=O)O)CC1  
+- N#Cc1ccccc1N1CCCN(C(=O)NCC(=O)N2CCCCCCS(=O)(=O)O)CC1
+Acc = 23/29
+Hit Ratio = 23/23
+----------------
+>>Sample 29
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)c1ccc(C)c(NC(=O)CCCO)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)O)c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CS(=O)(=O)O)c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CCS(=O)(=O)O)c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CCCCS(=O)(=O)O)c1
+- CCNC(=O)c1ccc(C)c(NC(=O)CCS(=O)(=O)OCC)c1
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCNC(=O)c1ccc(C)c(NC(=O)CCCO)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)O)c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CS(=O)(=O)O)c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CCS(=O)(=O)O)c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CCCCS(=O)(=O)O)c1\n- CCNC(=O)c1ccc(C)c(NC(=O)CCS(=O)(=O)OCC)c1'}, {'role': 'user', 'content': 'Your provided sequence CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)O)c1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate. . Can you give me new molecules?'}]
+AI answer 0: - CCNC(=O)c1ccc(C)c(NC(=O)CS(=O)(=O)O)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCS(=O)(=O)O)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCCS(=O)(=O)O)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCCCS(=O)(=O)O)c1  
+- CCNC(=O)c1ccc(C)c(NC(=O)CCS(=O)(=O)OCC)c1
+Acc = 24/30
+Hit Ratio = 24/24
+----------------
+>>Sample 30
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1S(=O)(=O)O
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1S(=O)(=O)[O-]
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1S(=O)(=O)[O-].[Na+]
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1S(=O)(=O)[O-].[K+]
+- O=C(NCC1CC1)c1csc(-c2cccc(OCc3cccc(F)c3)c2)n1S(=O)(=O)[O-].[NH4+]
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 24/31
+Hit Ratio = 24/24
+----------------
+>>Sample 31
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1S(=O)(=O)O
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2S(=O)(=O)O)cc1
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2)cc1S(=O)(=O)OC
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2S(=O)(=O)OC)cc1
+- N#Cc1ccc(C(=O)Nc2ccc(Cl)c(S(=O)(=O)N3CCCC3)c2S(=O)(=O)O)cc1S(=O)(=O)O
+Acc = 25/32
+Hit Ratio = 25/25
+----------------
+>>Sample 32
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1nncn1CCNC(=O)N1CCC[C@H]1c1ccccc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nncn1CCNC(=O)N1CCC[C@H]1c1cc(S(=O)(=O)O)ccc1Cl  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1cc(S(=O)(=O)O)cc(S(=O)(=O)O)c1Cl  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1c(S(=O)(=O)O)ccc(S(=O)(=O)O)c1Cl  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1cc(S(=O)(=O)O)c(S(=O)(=O)O)c1Cl  
+- CCc1nncn1CCNC(=O)N1CCC[C@H]1c1c(S(=O)(=O)O)cc(S(=O)(=O)O)c1Cl
+Acc = 26/33
+Hit Ratio = 26/26
+----------------
+>>Sample 33
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1S(=O)(=O)O
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1S(=O)(=O)OC
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1S(=O)(=O)OCC
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1S(=O)(=O)OCCC
+- Cc1ccc(-c2cc(C(=O)N3CCC[C@H](CNS(C)(=O)=O)C3)on2)cc1S(=O)(=O)OCCCC
+Acc = 27/34
+Hit Ratio = 27/27
+----------------
+>>Sample 34
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H](C(=O)N(C)CCC#N)n1cnc2c1c(=O)n(C)c(=O)n2C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)N(C)CCCS(=O)(=O)O)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)N(C)CCCS(=O)(=O)O)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)N(C)CCCS(=O)(=O)O)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)N(C)CCCS(=O)(=O)O)n1cnc2c1c(=O)n(C)c(=O)n2C
+- C[C@@H](C(=O)N(C)CCCS(=O)(=O)O)n1cnc2c1c(=O)n(C)c(=O)n2C
+Acc = 28/35
+Hit Ratio = 28/28
+----------------
+>>Sample 35
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(-c2ccc(OC(F)(F)F)cc2)cn1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2ccc(OC(F)(F)F)cc2)c(S(=O)(=O)O)n1  
+- COc1ccc(-c2ccc(OC(F)(F)F)cc2)c(S(=O)(=O)O)c1  
+- COc1ccc(-c2ccc(OC(F)(F)F)cc2)c(S(=O)(=O)O)o1  
+- COc1ccc(-c2ccc(OC(F)(F)F)cc2)c(S(=O)(=O)O)s1  
+- COc1ccc(-c2ccc(OC(F)(F)F)cc2)c(S(=O)(=O)O)p1
+Acc = 29/36
+Hit Ratio = 29/29
+----------------
+>>Sample 36
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2S(=O)(=O)O
+- COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2S(=O)(=O)OC
+- COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2S(=O)(=O)OCC
+- COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2S(=O)(=O)OCCC
+- COc1ccc(C)cc1NC(=O)CCS(=O)(=O)c1ccc2c(c1)OCCO2S(=O)(=O)OCCCC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 29/37
+Hit Ratio = 29/29
+----------------
+>>Sample 37
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)CS(=O)(=O)O3)cc1  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)COC3)CS(=O)(=O)O  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)CS(=O)(=O)O3)CS(=O)(=O)O  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)CS(=O)(=O)O3)cc1CS(=O)(=O)O  
+- CCN(CC)c1ccc(NC(=O)c2ccc3c(c2)CS(=O)(=O)O3)cc1CS(=O)(=O)O
+Acc = 30/38
+Hit Ratio = 30/30
+----------------
+>>Sample 38
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1S(=O)(=O)O
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1S(=O)(=O)[O-]
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1S(=O)(=O)[O-].[Na+]
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1S(=O)(=O)[O-].[K+]
+- CC(C)c1noc([C@H](C)S(=O)(=O)c2cccc(F)c2)n1S(=O)(=O)[O-].[NH4+]
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 30/39
+Hit Ratio = 30/30
+----------------
+>>Sample 39
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1S(=O)(=O)O
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1S(=O)(=O)[O-]
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1S(=O)(=O)[O-].[Na+]
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1S(=O)(=O)[O-].[K+]
+- COCc1cc(C(=O)N2CCC[C@@H](COC)C2)no1S(=O)(=O)[O-].[NH4+]
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 30/40
+Hit Ratio = 30/30
+----------------
+>>Sample 40
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CC(C)C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CC(C)S(=O)(=O)O
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CS(=O)(=O)O
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CC(S(=O)(=O)O)C
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CC(C)S(=O)(=O)OC
+- COc1ncccc1CNC(=O)[C@H]1Cc2ccccc2CN1C(=O)CC(C)S(=O)(=O)ON
+Acc = 31/41
+Hit Ratio = 31/31
+----------------
+>>Sample 41
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl)S(=O)(=O)O
+- O=C(Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl)S(=O)(=O)[O-]
+- O=C(Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl)S(=O)(=O)OCC
+- O=C(Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl)S(=O)(=O)OCC(=O)O
+- O=C(Oc1ccccc1C(=O)Nc1ccc(Cl)cc1Cl)S(=O)(=O)OCCN
+Acc = 32/42
+Hit Ratio = 32/32
+----------------
+>>Sample 42
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C([S](=O)(=O)O)c2C)c1
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C([S](=O)(=O)O))c1
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C([S](=O)(=O)O)c2C([S](=O)(=O)O))c1
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C([S](=O)(=O)O)c2C)c1
+- COc1ccc(OC)c([C@@H]2CCCN2C(=O)Cc2c(C)nn(C)c2C([S](=O)(=O)O))c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 32/43
+Hit Ratio = 32/32
+----------------
+>>Sample 43
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc2ccc(OC)c(/C=C3\\NC(=O)NC3=O)c2c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2ccc(OC)c(/C=C3\NC(=O)NC3=O)c2c1S(=O)(=O)O
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)NC3=O)c2c1S(=O)(=O)OC
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)NC3=O)c2c1S(=O)(=O)ONa
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)NC3=O)c2c1S(=O)(=O)OCC
+- COc1ccc2ccc(OC)c(/C=C3\NC(=O)NC3=O)c2c1S(=O)(=O)OCCN
+Acc = 33/44
+Hit Ratio = 33/33
+----------------
+>>Sample 44
+RL Suggestion 0: Replace Nitro Group with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(C)c1noc(CCNc2ccccc2[N+](=O)[O-])n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Nitro Group with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1noc(CCNc2ccccc2S(=O)(=O)[O-])n1
+- CC(C)c1noc(CCNc2ccccc2S(=O)(=O)O)n1
+- CC(C)c1noc(CCNc2ccccc2S(=O)([O-])[O-])n1
+- CC(C)c1noc(CCNc2ccccc2S(=O)(O)O)n1
+- CC(C)c1noc(CCNc2ccccc2S(=O)([O-])O)n1
+Acc = 34/45
+Hit Ratio = 34/34
+----------------
+>>Sample 45
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1CS(=O)(=O)O  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1CS(=O)(=O)O  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1CCS(=O)(=O)O  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1CCS(=O)(=O)O
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1CS(=O)(=O)O  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1CS(=O)(=O)O  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1CCS(=O)(=O)O  \n- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1CCS(=O)(=O)O'}, {'role': 'user', 'content': 'Your provided sequence O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate. . Can you give me new molecules?'}]
+AI answer 0: - O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1CS(=O)(=O)O  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1CS(=O)(=O)O  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CO)C1CCS(=O)(=O)O  
+- O=C(NCc1ccc2ccccc2c1)N1CCC[C@H](CS(=O)(=O)O)C1CCS(=O)(=O)O
+Acc = 35/46
+Hit Ratio = 35/35
+----------------
+>>Sample 46
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=O more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CC1=O
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CS1(=O)O
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CS1(=O)[O-]
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CS1(=O)[O-].[Na+]
+- CCc1ccccc1N1C[C@@H](C(=O)N(C)c2cccnc2N(C)C)CS1(=O)[O-].[K+]
+Acc = 36/47
+Hit Ratio = 36/36
+----------------
+>>Sample 47
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1S(=O)(=O)O
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1S(=O)(=O)ON
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1S(=O)(=O)OCC
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1S(=O)(=O)OC
+- C[S@@](=O)c1ccc(CNC(=O)[C@@H]2SCCc3sccc32)cc1S(=O)(=O)O[C@@H](C)O
+Acc = 37/48
+Hit Ratio = 37/37
+----------------
+>>Sample 48
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1S(=O)(=O)O
+- O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1S(=O)(=O)[O-]
+- O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1S(=O)(=O)[O-].[Na+]
+- O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1S(=O)(=O)[O-].[K+]
+- O=C(c1cc(COc2ccc(F)c(F)c2)on1)N1CCOCC1S(=O)(=O)[O-].[NH4+]
+Acc = 38/49
+Hit Ratio = 38/38
+----------------
+>>Sample 49
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OC more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(S(=O)(=O)O)cc3)C2=O)cc1OC  
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3S(=O)(=O)O)C2=O)cc1OC  
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2S(=O)(=O)O)cc1OC  
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1S(=O)(=O)OC  
+- CCOc1ccc(NC(=O)CN2C(=O)[C@@H](C)N(c3ccc(C)cc3)C2=O)cc1OCS(=O)(=O)O
+Acc = 39/50
+Hit Ratio = 39/39
+----------------
+>>Sample 50
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)c1S(=O)(=O)O
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2S(=O)(=O)O)c1
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3S(=O)(=O)O)n2)c1
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2)c1S(=O)(=O)OC
+- COc1cccc(NC(=O)NCCc2coc(-c3ccccc3)n2S(=O)(=O)O)c1
+Acc = 40/51
+Hit Ratio = 40/40
+----------------
+>>Sample 51
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1Cl more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1S(=O)(=O)O
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1cc(Cl)ccc1S(=O)(=O)O
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1cc(S(=O)(=O)O)ccc1Cl
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1ccccc1S(=O)(=O)OC
+- O=C1C[C@@H](N2CCC3(CC2)OCCO3)C(=O)N1c1cc(S(=O)(=O)O)c(Cl)cc1
+Acc = 41/52
+Hit Ratio = 41/41
+----------------
+>>Sample 52
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4ccccc43)cc2)cc1Br more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4cc(S(=O)(=O)O)ccc43)cc2)cc1Br  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4cc(S(=O)(=O)O)cc(S(=O)(=O)O)c43)cc2)cc1Br  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4cc(S(=O)(=O)O)cc(S(=O)(=O)O)c4C3)cc2)cc1Br  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4cc(S(=O)(=O)O)cc(S(=O)(=O)O)c4C3)cc2)cc1Br  
+- COc1ccc(C(=O)Nc2ccc(S(=O)(=O)N3CCc4cc(S(=O)(=O)O)cc(S(=O)(=O)O)c4C3)cc2)cc1Br
+Acc = 42/53
+Hit Ratio = 42/42
+----------------
+>>Sample 53
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C=CCN(C(=O)Cc1ccc(C)cc1)c1ccccc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCN(C(=O)Cc1ccc(C(S(=O)(=O)O)cc1)c1ccccc1
+- C=CCN(C(=O)Cc1ccc(C)cc1)c1ccc(S(=O)(=O)O)cc1
+- C=CCN(C(=O)Cc1ccc(C)cc1(S(=O)(=O)O))c1ccccc1
+- C=CCN(C(=O)Cc1ccc(C)cc1)c1cc(S(=O)(=O)O)ccc1
+- C=CCN(C(=O)Cc1ccc(C)cc1)c1cccc(S(=O)(=O)O)c1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 42/54
+Hit Ratio = 42/42
+----------------
+>>Sample 54
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cccc(CNC(=O)N2CCC(OCc3ccc(F)cc3)CC2)n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(CNC(=O)N2CCC(OCc3ccc(F)cc3)CC2)S(=O)(=O)O1  
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(F)cc3)S(=O)(=O)CC2)n1  
+- COc1cccc(CNC(=O)N2CCC(OCc3ccc(F)S(=O)(=O)cc3)CC2)n1  
+- COc1cccc(CNC(=O)N2CCC(OCc3S(=O)(=O)ccc(F)cc3)CC2)n1  
+- COc1cccc(CNC(=O)N2S(=O)(=O)CC(OCc3ccc(F)cc3)CC2)n1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 42/55
+Hit Ratio = 42/42
+----------------
+>>Sample 55
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1S(=O)(=O)O
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2S(=O)(=O)O)CC1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3S(=O)(=O)O)CC2)CC1
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3)CC2)CC1S(=O)(=O)OS(=O)(=O)O
+- CS(=O)(=O)N1CCC(C(=O)N2CCN(Cc3ccc(Cl)cc3S(=O)(=O)O)CC2S(=O)(=O)O)CC1
+Acc = 43/56
+Hit Ratio = 43/43
+----------------
+>>Sample 56
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1S(=O)(=O)O
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1S(=O)(=O)OC
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1S(=O)(=O)OCC
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1S(=O)(=O)OCCC
+- CC[C@H](C)Oc1ccccc1/C=C/C(=O)NCC1(O)CCOCC1S(=O)(=O)OCCCC
+Acc = 44/57
+Hit Ratio = 44/44
+----------------
+>>Sample 57
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1S(=O)(=O)O
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1S(=O)(=O)OC
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1S(=O)(=O)OCC
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1S(=O)(=O)OCCC
+- CC(=O)CCc1ccc(OC(=O)[C@H]2CCN(c3ccc(C)cc3)C2=O)cc1S(=O)(=O)OCCCC
+Acc = 45/58
+Hit Ratio = 45/45
+----------------
+>>Sample 58
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2(S(=O)(=O)O))c1
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2(S(=O)(=O)O))c1
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2(S(=O)(=O)O))c1
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2(S(=O)(=O)O))c1
+- COc1ccc(OC)c(CNC(=O)C2CCN(c3ncc(-c4ccccc4)cn3)CC2(S(=O)(=O)O))c1
+Acc = 46/59
+Hit Ratio = 46/46
+----------------
+>>Sample 59
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(Br)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(Br)S(=O)(=O)Oc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccc(S(=O)(=O)O)cc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1cc(S(=O)(=O)O)ccc1
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1ccccc1S(=O)(=O)O
+- O=C(NCN1C(=O)c2ccccc2C1=O)c1c(S(=O)(=O)O)cccc1
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 46/60
+Hit Ratio = 46/46
+----------------
+>>Sample 60
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule O=C(CCSCc1ccccc1)Nc1nc[nH]n1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CCS(=O)(=O)Cc1ccccc1)Nc1nc[nH]n1
+- O=C(CCSCc1cc(S(=O)(=O)O)ccc1)Nc1nc[nH]n1
+- O=C(CCSCc1ccccc1)Nc1nc(S(=O)(=O)O)[nH]n1
+- O=C(CCSCc1ccccc1)Nc1nc[nH]n1S(=O)(=O)O
+- O=C(CCSCc1ccccc1)Nc1nc(S(=O)(=O)O)[nH]n1
+Acc = 47/61
+Hit Ratio = 47/47
+----------------
+>>Sample 61
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1ncsc1C(=O)Nc1ccccc1C(F)(F)F more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ncsc1C(=O)Nc1ccccc1C(F)(F)S(=O)(=O)O  
+- Cc1ncsc1C(=O)Nc1ccccc1C(F)S(=O)(=O)O  
+- Cc1ncsc1C(=O)Nc1ccccc1S(=O)(=O)OC(F)(F)F  
+- Cc1ncsc1C(=O)Nc1ccccc1C(S(=O)(=O)O)(F)F  
+- Cc1ncsc1C(=O)Nc1ccccc1C(F)(S(=O)(=O)O)F
+Acc = 48/62
+Hit Ratio = 48/48
+----------------
+>>Sample 62
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(OCCOc2cccc(Br)c2)cc1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(OCCOc2cccc(S(=O)(=O)O)c2)cc1  
+- COc1ccc(OCCOc2cccc(S(=O)(=O)O)c2)cc1  
+- COc1ccc(OCCOc2cccc(S(=O)(=O)O)c2)cc1  
+- COc1ccc(OCCOc2cccc(S(=O)(=O)O)c2)cc1  
+- COc1ccc(OCCOc2cccc(S(=O)(=O)O)c2)cc1
+Acc = 49/63
+Hit Ratio = 49/49
+----------------
+>>Sample 63
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1ccc(Br)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1C more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(Br)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1S(=O)(=O)O
+- COc1ccc(Br)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1S(=O)(O)O
+- COc1ccc(Br)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1S(=O)(=O)ON
+- COc1ccc(Br)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1S(=O)(O)ON
+- COc1ccc(Br)cc1CN(C)C(=O)CCc1c(C)nc2cc(C)nn2c1S(=O)(=O)OCC
+Acc = 50/64
+Hit Ratio = 50/50
+----------------
+>>Sample 64
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2)c1 more soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Replace Carbon Atom with Sulfonate.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2)c1S(=O)(=O)O  
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2)c1S(=O)(=O)OC  
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2)c1S(=O)(=O)N  
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2)c1S(=O)(=O)ON  
+- Cc1cccc(OCCNC(=O)N2CCN(c3cnccn3)CC2)c1S(=O)(=O)OCC
+Acc = 51/65
+Hit Ratio = 51/51
+----------------
+>>Sample 65
+RL Suggestion 0: Replace Carbon Atom with Sulfonate. 

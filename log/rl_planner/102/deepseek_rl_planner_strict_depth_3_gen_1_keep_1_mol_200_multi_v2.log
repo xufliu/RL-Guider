@@ -1,0 +1,65 @@
+args:  Namespace(rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_logP_loose_102_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', fast_protein=False, cot=None, num_of_mol=200, task_id=102, constraint='strict', conversation_type='multi', planner='rl_planner', depth=3, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc2c(cc1OC)CC([NH3+])C2 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Alkene.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc2c(cc1OC)C=C([NH3+])C2  
+- COc1cc2c(cc1OC)CC([NH3+])C=C2  
+- COc1cc2c(cc1OC)C=C([NH3+])C=C2  
+- COc1cc2c(cc1OC)C=C([NH3+])C2C=C  
+- COc1cc2c(cc1OC)C=C([NH3+])C2C=C=C
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule COc1cc2c(cc1OC)CC([NH3+])C2 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Alkene.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- COc1cc2c(cc1OC)C=C([NH3+])C2  \n- COc1cc2c(cc1OC)CC([NH3+])C=C2  \n- COc1cc2c(cc1OC)C=C([NH3+])C=C2  \n- COc1cc2c(cc1OC)C=C([NH3+])C2C=C  \n- COc1cc2c(cc1OC)C=C([NH3+])C2C=C=C'}, {'role': 'user', 'content': 'Your provided sequence COc1cc2c(cc1OC)C=C([NH3+])C2 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Add a Alkene. . Can you give me new molecules?'}]
+AI answer 0: - COc1cc2c(cc1OC)C=C([NH3+])C=C2  
+- COc1cc2c(cc1OC)C=C([NH3+])C2C=C  
+- COc1cc2c(cc1OC)C=C([NH3+])C2C=C=C  
+- COc1cc2c(cc1OC)C=C([NH3+])C2C=C(C)C  
+- COc1cc2c(cc1OC)C=C([NH3+])C2C=C(OC)C
+Acc = 1/1
+Hit Ratio = 1/1
+----------------
+>>Sample 1
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Alkene.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1C=C  
+- C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1/C=C\  
+- C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1C=C(C)  
+- C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1/C=C/C  
+- C[C@@H]1CC[C@@H](C(N)=O)CN1C(=O)c1nnn[n-]1C=CC
+All nodes in last layer is invalid, Tree search process ends.
+Acc = 1/2
+Hit Ratio = 1/1
+----------------
+>>Sample 2
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Alkene.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C=C1  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=C  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1CC=C  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=CC  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=C(C)C
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1 less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Alkene.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C=C1  \n- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=C  \n- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1CC=C  \n- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=CC  \n- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=C(C)C'}, {'role': 'user', 'content': 'Your provided sequence CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C=C1 could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Add a Alkene. . Can you give me new molecules?'}]
+AI answer 0: - CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1=CC  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=CC  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=C(C)C  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=CC=C  
+- CC[NH+]1CC[C@@H](CNCc2ccc([O-])c[nH+]2)C1C=CC(C)C
+Acc = 2/3
+Hit Ratio = 2/2
+----------------
+>>Sample 3
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule OC[C@@H](Br)C(F)(F)Br less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Alkene.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H](Br)C(F)(F)C=CBr  
+- OC[C@@H](Br)C(F)(F)C=CF  
+- OC[C@@H](Br)C(F)(F)C=CC  
+- OC[C@@H](Br)C(F)(F)C=CCl  
+- OC[C@@H](Br)C(F)(F)C=CI
+RL Suggestion 0: Add a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make molecule OC[C@@H](Br)C(F)(F)Br less soluble in water? The output molecule should be similar to the input molecule. You are suggested to do the modification according to the suggestion: Add a Alkene.  Give me five molecules in SMILES only and list them using bullet points. No explanation is needed. '}, {'role': 'assistant', 'content': '- OC[C@@H](Br)C(F)(F)C=CBr  \n- OC[C@@H](Br)C(F)(F)C=CF  \n- OC[C@@H](Br)C(F)(F)C=CC  \n- OC[C@@H](Br)C(F)(F)C=CCl  \n- OC[C@@H](Br)C(F)(F)C=CI'}, {'role': 'user', 'content': 'Your provided sequence OC[C@@H](Br)C(F)(F)C=CBr could not achieve goal. You are suggested to edit the molecule according to the suggestion: You are suggested to do the modification according to the suggestion: Add a Alkene. . Can you give me new molecules?'}]
+AI answer 0: - OC[C@@H](Br)C(F)(F)C=C  
+- OC[C@@H](Br)C=C(F)(F)Br  
+- OC[C@@H](C=C)C(F)(F)Br  
+- OC[C@@H](Br)C(F)(F)C=CCBr  
+- OC[C@@H](Br)C(F)(F)C=CFBr
+RL Suggestion 0: Add a Bromoalkane. 

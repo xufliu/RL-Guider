@@ -1,0 +1,3 @@
+python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='deepseek' --depth=1 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=103 --planner='baseline' --constraint='strict' --conversation_type='single'
+
+python run_planner_tree.py --conversational_LLM='deepseek' --planning_LLM='deepseek' --depth=1 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=106 --planner='baseline' --constraint='strict' --conversation_type='single'

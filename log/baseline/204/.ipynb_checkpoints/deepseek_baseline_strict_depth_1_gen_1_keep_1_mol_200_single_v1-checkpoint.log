@@ -1,0 +1,2204 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=204, constraint='strict', conversation_type='single', planner='baseline', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1O
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1N
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1OC
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1NC
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1ON
+Acc = 0/1
+Sim_hit = 0/1
+HV = 0*0/1
+----------------
+>>Sample 1
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(O)O  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(C)O  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(C)OC  
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C(C)OC(O)C
+Acc = 0/2
+Sim_hit = 0/2
+HV = 0*0/2
+----------------
+>>Sample 2
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(F)cccc1OC
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1N
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1NC
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1O
+- CCC[NH2+]Cc1ncoc1-c1c(F)cccc1SC
+Acc = 0/3
+Sim_hit = 0/3
+HV = 0*0/3
+----------------
+>>Sample 3
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1O  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1F  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1Cl  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1Br  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1I
+Acc = 0/4
+Sim_hit = 0/4
+HV = 0*0/4
+----------------
+>>Sample 4
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1O  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1N  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1(N)  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1(NC)  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1(NH2)
+Acc = 0/5
+Sim_hit = 0/5
+HV = 0*0/5
+----------------
+>>Sample 5
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1O  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1N  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1N(H)O  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1OCCN  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1NC(=O)O
+Acc = 0/6
+Sim_hit = 0/6
+HV = 0*0/6
+----------------
+>>Sample 6
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2C1O  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2C1(O)  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2C1(O)C  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2C1(O)CC  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc2C1(O)O
+Acc = 0/7
+Sim_hit = 0/7
+HV = 0*0/7
+----------------
+>>Sample 7
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1O  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1N  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1NC  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1NH2  
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1OH
+Acc = 0/8
+Sim_hit = 0/8
+HV = 0*0/8
+----------------
+>>Sample 8
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(O)C2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC(O)C2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC(O)CC2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1C(O)CCC2  
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCCC(O)2
+Acc = 0/9
+Sim_hit = 0/9
+HV = 0*0/9
+----------------
+>>Sample 9
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1Cl
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1Br
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1I
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1OC(=O)C
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1NC(=O)C
+Acc = 0/10
+Sim_hit = 0/10
+HV = 0*0/10
+----------------
+>>Sample 10
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1O
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1N
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1NC
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1NH2
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1NHC(=O)
+Acc = 0/11
+Sim_hit = 0/11
+HV = 0*0/11
+----------------
+>>Sample 11
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1O  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1N  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1CC  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1OC  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1NC
+Acc = 0/12
+Sim_hit = 0/12
+HV = 0*0/12
+----------------
+>>Sample 12
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1O
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1NH2
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1OH
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1NH
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1SH
+Acc = 0/13
+Sim_hit = 0/13
+HV = 0*0/13
+----------------
+>>Sample 13
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1O
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1N
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1NH2
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1OH
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1SH
+Acc = 0/14
+Sim_hit = 0/14
+HV = 0*0/14
+----------------
+>>Sample 14
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1OC  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)c(Cl)c23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)c(Br)c23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)c(I)c23)c1  
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)c(OC)c23)c1
+Acc = 0/15
+Sim_hit = 0/15
+HV = 0*0/15
+----------------
+>>Sample 15
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1O  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(O)s1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1N  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(N)s1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1C(O)
+Acc = 0/16
+Sim_hit = 0/16
+HV = 0*0/16
+----------------
+>>Sample 16
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1O  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1N  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1NC  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1NH2  
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1NHC(=O)C
+Acc = 0/17
+Sim_hit = 0/17
+HV = 0*0/17
+----------------
+>>Sample 17
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1C  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1NC  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cc(Cl)cc(O)c1  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1O  
+- CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cc(Cl)ccc1O
+Acc = 0/18
+Sim_hit = 0/18
+HV = 0*0/18
+----------------
+>>Sample 18
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1O  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1N  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1Cl  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1Br  
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1I
+Acc = 0/19
+Sim_hit = 0/19
+HV = 0*0/19
+----------------
+>>Sample 19
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1OC  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1NC  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1SC  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1OCC  
+- C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1NCC
+Acc = 0/20
+Sim_hit = 0/20
+HV = 0*0/20
+----------------
+>>Sample 20
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1C
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(C)O
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(C)Cl
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(C)Br
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(C)F
+Acc = 0/21
+Sim_hit = 0/21
+HV = 0*0/21
+----------------
+>>Sample 21
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)s1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(N)s1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(NH2)s1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(OH)s1  
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(Cl)s1
+Acc = 0/22
+Sim_hit = 0/22
+HV = 0*0/22
+----------------
+>>Sample 22
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[NH2+]C1C(=O)O  
+- Cc1cccc(C)c1OC1C[NH2+]C1O  
+- Cc1cccc(C)c1OC1C[NH2+]C1NC  
+- Cc1cccc(C)c1OC1C[NH2+]C1C(=O)N  
+- Cc1cccc(C)c1OC1C[NH2+]C1C(=O)NH2
+Acc = 0/23
+Sim_hit = 0/23
+HV = 0*0/23
+----------------
+>>Sample 23
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1O  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1N  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1[N+](=O)[O-]  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1C(=O)O  
+- CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1NC(=O)N
+Acc = 0/24
+Sim_hit = 0/24
+HV = 0*0/24
+----------------
+>>Sample 24
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc(C)C  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc(N)C  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc(OC)C  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc(Cl)C  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc(Br)C
+Acc = 0/25
+Sim_hit = 0/25
+HV = 0*0/25
+----------------
+>>Sample 25
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=N)S2)n1O
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1N
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1NC
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1NCC
+- CCCCc1noc([C@H]2C=CC(=N)S2)n1NCCO
+Acc = 0/26
+Sim_hit = 0/26
+HV = 0*0/26
+----------------
+>>Sample 26
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC(C)C)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC(C)C)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCCCC)cc2)s1  
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC(C)(C)C)cc2)s1
+Acc = 0/27
+Sim_hit = 0/27
+HV = 0*0/27
+----------------
+>>Sample 27
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CC(O)O1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)c(O)c32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CC(O)C1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCOC(O)1
+Acc = 0/28
+Sim_hit = 0/28
+HV = 0*0/28
+----------------
+>>Sample 28
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)c(O)c1  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCN)c(Cl)c1  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCN)c(N)c1  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCN)c(F)c1  
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCN)c(Br)c1
+Acc = 0/29
+Sim_hit = 0/29
+HV = 0*0/29
+----------------
+>>Sample 29
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2O
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)C(O)C2
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)C(O)C2O
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)C(O)C2(O)
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)C(O)C2(O)O
+Acc = 0/30
+Sim_hit = 0/30
+HV = 0*0/30
+----------------
+>>Sample 30
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C(=O)[C@@H](C)c1ccnc(N)c1  
+- CC[C@H](C)C(=O)[C@@H](C)c1ccnc(NH2)c1  
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(O)nc(N)c1  
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(O)nc(NH2)c1  
+- CC[C@H](C)C(=O)[C@@H](C)c1cc(N)nc(N)c1
+Acc = 0/31
+Sim_hit = 0/31
+HV = 0*0/31
+----------------
+>>Sample 31
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1O  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1N  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3N)c2c1=O  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3O)c2c1=O  
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3Cl)c2c1=O
+Acc = 0/32
+Sim_hit = 0/32
+HV = 0*0/32
+----------------
+>>Sample 32
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1NC
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1N
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1NH
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1OHN
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1NH2
+Acc = 0/33
+Sim_hit = 0/33
+HV = 0*0/33
+----------------
+>>Sample 33
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)c(C#N)n1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)c(O)n1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)c(N)n1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)c(Cl)n1  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)c(F)n1
+Acc = 0/34
+Sim_hit = 0/34
+HV = 0*0/34
+----------------
+>>Sample 34
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(O)O)o1  
+- CCc1ccc([C@@H](CO)NC(=O)N[C@H]2CCCC[C@@H]2C)o1  
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(N)O)o1  
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(Cl)Cl)o1  
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(F)F)o1
+Acc = 0/35
+Sim_hit = 0/35
+HV = 0*0/35
+----------------
+>>Sample 35
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1O  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1N  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1Cl  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1F  
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1Br
+Acc = 0/36
+Sim_hit = 0/36
+HV = 0*0/36
+----------------
+>>Sample 36
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C(=O)O1
+* Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C(=O)N1
+* Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C(=O)C1
+* Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C(=O)OC1
+* Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n2C(=O)N(C)C1
+Acc = 0/37
+Sim_hit = 0/37
+HV = 0*0/37
+----------------
+>>Sample 37
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1Cl  
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1Br  
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1I  
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1OC  
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1N
+Acc = 0/38
+Sim_hit = 0/38
+HV = 0*0/38
+----------------
+>>Sample 38
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1O  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1Cl  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1Br  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1I  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1F
+Acc = 0/39
+Sim_hit = 0/39
+HV = 0*0/39
+----------------
+>>Sample 39
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)c(SC)c(O)c1  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)c(SC)c(N)c1  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)c(SC)c(Cl)c1  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)c(SC)c(Br)c1  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)c(SC)c(I)c1
+Acc = 0/40
+Sim_hit = 0/40
+HV = 0*0/40
+----------------
+>>Sample 40
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nnc([S-])o1C
+- Cc1nc2ccccn2c1-c1nnc([S-])o1O
+- Cc1nc2ccccn2c1-c1nnc([S-])o1N
+- Cc1nc2ccccn2c1-c1nnc([S-])o1Cl
+- Cc1nc2ccccn2c1-c1nnc([S-])o1F
+Acc = 0/41
+Sim_hit = 0/41
+HV = 0*0/41
+----------------
+>>Sample 41
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1O  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1N  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1Cl  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1Br  
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(F)cc1I
+Acc = 0/42
+Sim_hit = 0/42
+HV = 0*0/42
+----------------
+>>Sample 42
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1C(O)(O)O
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1C(F)(F)F
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1C(Cl)(Cl)Cl
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1C(Br)(Br)Br
+- C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1C(I)(I)I
+Acc = 0/43
+Sim_hit = 0/43
+HV = 0*0/43
+----------------
+>>Sample 43
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1O  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1NC  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1NH2  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1OH  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1NH
+Acc = 0/44
+Sim_hit = 0/44
+HV = 0*0/44
+----------------
+>>Sample 44
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C(C)(C)C1  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1CC  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1C=C  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1C#C  
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1C(C)C
+Acc = 0/45
+Sim_hit = 0/45
+HV = 0*0/45
+----------------
+>>Sample 45
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1O  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1N  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1NC  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1N(C)C  
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1NC(=O)N
+Acc = 0/46
+Sim_hit = 0/46
+HV = 0*0/46
+----------------
+>>Sample 46
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1O  
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1ccc(O)n1  
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cc(O)cn1  
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cc(O)c(O)n1  
+- C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1c(O)cc(O)n1
+Acc = 0/47
+Sim_hit = 0/47
+HV = 0*0/47
+----------------
+>>Sample 47
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O  
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O
+Acc = 0/48
+Sim_hit = 0/48
+HV = 0*0/48
+----------------
+>>Sample 48
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(N)cnn12C(=O)O  
+- CSc1nnc2n(N)cnn12C(=O)N  
+- CSc1nnc2n(N)cnn12NC(=O)C  
+- CSc1nnc2n(N)cnn12NC(=S)N  
+- CSc1nnc2n(N)cnn12OC(=O)C
+Acc = 0/49
+Sim_hit = 0/49
+HV = 0*0/49
+----------------
+>>Sample 49
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1O  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1NC  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1N  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1OCC  
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1OC
+Acc = 0/50
+Sim_hit = 0/50
+HV = 0*0/50
+----------------
+>>Sample 50
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1O  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1N  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1N(C)O  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1NC  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1NCC
+Acc = 0/51
+Sim_hit = 0/51
+HV = 0*0/51
+----------------
+>>Sample 51
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(Cl)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cccc(OC)c12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2cc(Br)ccc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccc(CF3)cc12  
+- CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccc(N)c12
+Acc = 0/52
+Sim_hit = 0/52
+HV = 0*0/52
+----------------
+>>Sample 52
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1O  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1N  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1C(O)C1  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC(O)1  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1NH2
+Acc = 0/53
+Sim_hit = 0/53
+HV = 0*0/53
+----------------
+>>Sample 53
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1O  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1N  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1Cl  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1Br  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1I
+Acc = 0/54
+Sim_hit = 0/54
+HV = 0*0/54
+----------------
+>>Sample 54
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1O
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1OC
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1OCC
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1OCCC
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1OC(C)C
+Acc = 0/55
+Sim_hit = 0/55
+HV = 0*0/55
+----------------
+>>Sample 55
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1O  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1N  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1Cl  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1F  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1Br
+Acc = 0/56
+Sim_hit = 0/56
+HV = 0*0/56
+----------------
+>>Sample 56
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)O
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)OC
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)NC
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)SC
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)Cl
+Acc = 0/57
+Sim_hit = 0/57
+HV = 0*0/57
+----------------
+>>Sample 57
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(C)C)cc1c32  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)CC)cc1c32  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(C)(C)C)cc1c32  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(C)C(C)C)cc1c32  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C(CC)C)cc1c32
+Acc = 0/58
+Sim_hit = 0/58
+HV = 0*0/58
+----------------
+>>Sample 58
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(O)C  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(N)C  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(O)CC  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(N)CC  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1C(O)C(O)
+Acc = 0/59
+Sim_hit = 0/59
+HV = 0*0/59
+----------------
+>>Sample 59
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NC  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NCC  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NC(O)  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NCC(O)  
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nonc1NC(O)C
+Acc = 0/60
+Sim_hit = 0/60
+HV = 0*0/60
+----------------
+>>Sample 60
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)c(Cl)ccc1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)c(Br)ccc1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)c(I)ccc1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)c(NO2)ccc1F
+Acc = 0/61
+Sim_hit = 0/61
+HV = 0*0/61
+----------------
+>>Sample 61
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1O
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(O)c(O)cc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1Cl
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(Cl)cc1
+Acc = 0/62
+Sim_hit = 0/62
+HV = 0*0/62
+----------------
+>>Sample 62
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)c(F)c1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)c(Cl)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)c(Br)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)c(I)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)c(C)cc1
+Acc = 0/63
+Sim_hit = 0/63
+HV = 0*0/63
+----------------
+>>Sample 63
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1O  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1F  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1Cl  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1Br  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1I
+Acc = 0/64
+Sim_hit = 0/64
+HV = 0*0/64
+----------------
+>>Sample 64
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(F)c(-F)c3F)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c(O)c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c(N)c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c(Cl)c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c(Br)c2n1
+Acc = 0/65
+Sim_hit = 0/65
+HV = 0*0/65
+----------------
+>>Sample 65
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=S)cc1O  
+- CCCCCOc1ccc(C(N)=S)cc1N  
+- CCCCCOc1ccc(C(N)=S)cc1NC  
+- CCCCCOc1ccc(C(N)=S)cc1NH2  
+- CCCCCOc1ccc(C(N)=S)cc1NHOH
+Acc = 0/66
+Sim_hit = 0/66
+HV = 0*0/66
+----------------
+>>Sample 66
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1O  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1OC  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1N  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1Cl  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1F
+Acc = 0/67
+Sim_hit = 0/67
+HV = 0*0/67
+----------------
+>>Sample 67
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)(C)O
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)(C)Cl
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)(C)F
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)(C)Br
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)(C)I
+Acc = 0/68
+Sim_hit = 0/68
+HV = 0*0/68
+----------------
+>>Sample 68
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1O
+- Cc1ccc([C@@H](NC(=O)NCCN)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1Cl
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1F
+- Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1Br
+Acc = 0/69
+Sim_hit = 0/69
+HV = 0*0/69
+----------------
+>>Sample 69
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC(C)C  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC(O)C  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC(CC)C  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC(N)C  
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC(OC)C
+Acc = 0/70
+Sim_hit = 0/70
+HV = 0*0/70
+----------------
+>>Sample 70
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1OC  
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1O  
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1N  
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1S  
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1F
+Acc = 0/71
+Sim_hit = 0/71
+HV = 0*0/71
+----------------
+>>Sample 71
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1O  
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1N  
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1Cl  
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1Br  
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1I
+Acc = 0/72
+Sim_hit = 0/72
+HV = 0*0/72
+----------------
+>>Sample 72
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1O  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1N  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1NH  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1OH  
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1NH2
+Acc = 0/73
+Sim_hit = 0/73
+HV = 0*0/73
+----------------
+>>Sample 73
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)O  
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)Cl  
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)F  
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)Br  
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)I
+Acc = 0/74
+Sim_hit = 0/74
+HV = 0*0/74
+----------------
+>>Sample 74
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: 1. C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1C(=O)O
+2. C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1O
+3. C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1Cl
+4. C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1Br
+5. C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1F
+Acc = 0/75
+Sim_hit = 0/75
+HV = 0*0/75
+----------------
+>>Sample 75
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN(C)C1  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(C)=O  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1CC  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1CCO  
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1CC(C)=O
+Acc = 0/76
+Sim_hit = 0/76
+HV = 0*0/76
+----------------
+>>Sample 76
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)OC
+- CC(C)(CO[N+](=O)[O-])C(=O)NC
+- CC(C)(CO[N+](=O)[O-])C(=O)SC
+- CC(C)(CO[N+](=O)[O-])C(=O)N(C)C
+- CC(C)(CO[N+](=O)[O-])C(=O)OCC
+Acc = 0/77
+Sim_hit = 0/77
+HV = 0*0/77
+----------------
+>>Sample 77
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OC  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCC  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OCCC  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1OC(C)C
+Acc = 0/78
+Sim_hit = 0/78
+HV = 0*0/78
+----------------
+>>Sample 78
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1OC
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1O
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1NC
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1N
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1SC
+Acc = 0/79
+Sim_hit = 0/79
+HV = 0*0/79
+----------------
+>>Sample 79
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1O  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1N  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1OH  
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2N)CC1
+Acc = 0/80
+Sim_hit = 0/80
+HV = 0*0/80
+----------------
+>>Sample 80
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH2+]CC3)C2)c1F
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH2+]CC3)C2)c1Cl
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH2+]CC3)C2)c1Br
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH2+]CC3)C2)c1I
+Acc = 0/81
+Sim_hit = 0/81
+HV = 0*0/81
+----------------
+>>Sample 81
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OC
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NC
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)N(C)C
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NCC
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NCCC
+Acc = 0/82
+Sim_hit = 0/82
+HV = 0*0/82
+----------------
+>>Sample 82
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])c(Cl)c1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])c(O)c1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])c(F)c1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])c(Br)c1
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])c(I)c1
+Acc = 0/83
+Sim_hit = 0/83
+HV = 0*0/83
+----------------
+>>Sample 83
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])c1O
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1cc(O)c([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1cc(O)c([N+](=O)[O-])c1O
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])c1OC
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])c1OCl
+Acc = 0/84
+Sim_hit = 0/84
+HV = 0*0/84
+----------------
+>>Sample 84
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1O  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1N  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1NC  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1C(O)=O  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1OC=O
+Acc = 0/85
+Sim_hit = 0/85
+HV = 0*0/85
+----------------
+>>Sample 85
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1N
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(O)c1OC
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1O
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1NC
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1NH2
+Acc = 0/86
+Sim_hit = 0/86
+HV = 0*0/86
+----------------
+>>Sample 86
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1NC(=O)CC[NH2+]1C[C@H](O)[C@H](O)C1  
+- N#Cc1ccccc1NC(=O)C[C@H](O)C[NH2+]1C[C@H](O)C1  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1C  
+- N#Cc1ccccc1NC(=O)C[C@H](O)C[NH+]1C[C@H](O)C1C  
+- N#Cc1ccccc1NC(=O)CC[NH2+]1C[C@H](O)[C@H](O)C1C
+Acc = 0/87
+Sim_hit = 0/87
+HV = 0*0/87
+----------------
+>>Sample 87
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCC(C(=O)O)C1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCC(CC(=O)O)C1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCC(CC(C)=O)C1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCC(CC(O)=O)C1
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCC(CC(=O)N)C1
+Acc = 0/88
+Sim_hit = 0/88
+HV = 0*0/88
+----------------
+>>Sample 88
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2O)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2Cl)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2F)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2Br)s1  
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2I)s1
+Acc = 0/89
+Sim_hit = 0/89
+HV = 0*0/89
+----------------
+>>Sample 89
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1O  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2O)c1  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1N  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1NC  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1NH2
+Acc = 0/90
+Sim_hit = 0/90
+HV = 0*0/90
+----------------
+>>Sample 90
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)c(O)c1C  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)c(O)c1C(O)  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)c(O)c1C(N)  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)c(O)c1C(Cl)  
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)c(O)c1C(F)
+Acc = 0/91
+Sim_hit = 0/91
+HV = 0*0/91
+----------------
+>>Sample 91
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1O  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1N  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1C#N  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1Cl  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1F
+Acc = 0/92
+Sim_hit = 0/92
+HV = 0*0/92
+----------------
+>>Sample 92
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * CCOC[C@H]1CC[NH2+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1  
+* CCOC[C@H]1CC[NH2+](Cc2cc(OC)cc3c2O[C@@H](C)C3)C1  
+* CCOC[C@H]1CC[NH2+](Cc2cc(OC)cc3c2OC(C)C3)C1  
+* CCOC[C@H]1CC[NH2+](Cc2cc(OC)cc3c2OC(C3)C)C1  
+* CCOC[C@H]1CC[NH2+](Cc2cc(OC)cc3c2O[C@@H](C)C3)C1
+Acc = 0/93
+Sim_hit = 0/93
+HV = 0*0/93
+----------------
+>>Sample 93
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12O  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12S  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12Cl  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12F  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12Br
+Acc = 0/94
+Sim_hit = 0/94
+HV = 0*0/94
+----------------
+>>Sample 94
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)(F)F  
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)Cl  
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(Cl)Cl  
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)Br  
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)I
+Acc = 0/95
+Sim_hit = 0/95
+HV = 0*0/95
+----------------
+>>Sample 95
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(O)cc1  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1cc(O)c(O)cc1  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1cc(O)ccc1O  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1cc(O)cc(O)c1  
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(O)c(O)c1
+Acc = 0/96
+Sim_hit = 0/96
+HV = 0*0/96
+----------------
+>>Sample 96
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOC(C)C1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOC(C(F)(F)F)C1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOC(C#N)C1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOC(C1CC1)C1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOC(C1=CC=CC=C1)C1
+Acc = 0/97
+Sim_hit = 0/97
+HV = 0*0/97
+----------------
+>>Sample 97
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)c(O)c1  
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)c(N)c1  
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)c(O)c1O  
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)c(N)c1O  
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)c(O)c1N
+Acc = 0/98
+Sim_hit = 0/98
+HV = 0*0/98
+----------------
+>>Sample 98
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2O
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2NC
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2N
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2NH
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2NH2
+Acc = 0/99
+Sim_hit = 0/99
+HV = 0*0/99
+----------------
+>>Sample 99
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNc3cccc[nH+]3C)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3C(=O)O)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3CC(=O)O)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3C(=O)NH2)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cccc[nH+]3C(=O)N)nn2)cc1
+Acc = 0/100
+Sim_hit = 0/100
+HV = 0*0/100
+----------------
+>>Sample 100
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1occc1C(=O)N1CCC[C@@H]1C(N)=OCC  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=ON  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=OCC(C)=O  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=OCC(O)=O  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=OCC(N)=O
+Acc = 0/101
+Sim_hit = 0/101
+HV = 0*0/101
+----------------
+>>Sample 101
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)(C)O
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CC
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CO
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CCl
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CBr
+Acc = 0/102
+Sim_hit = 0/102
+HV = 0*0/102
+----------------
+>>Sample 102
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](C)NC(=O)[C@H](C)OCCOC less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)NC(=O)[C@H](C)OCCOC(C)C  
+- CC[C@@H](C)NC(=O)[C@H](C)OCC(O)CC  
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)CCO  
+- CC[C@@H](C)NC(=O)[C@H](C)OCC(O)C(C)C  
+- CC[C@@H](C)NC(=O)[C@H](C)OCCOC(C)CC
+Acc = 0/103
+Sim_hit = 0/103
+HV = 0*0/103
+----------------
+>>Sample 103
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1O  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1N  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1OH  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1NH2  
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1OCH3
+Acc = 0/104
+Sim_hit = 0/104
+HV = 0*0/104
+----------------
+>>Sample 104
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)c1O  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)c1OC  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)c1N  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)c1Cl  
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)c1F
+Acc = 0/105
+Sim_hit = 0/105
+HV = 0*0/105
+----------------
+>>Sample 105
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1Cl
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(Br)cc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1cc(Cl)ccc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1c(Cl)cccc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(F)cc1Br
+Acc = 0/106
+Sim_hit = 0/106
+HV = 0*0/106
+----------------
+>>Sample 106
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1O  
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1N  
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1NC  
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1OCC  
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1NC(=O)C
+Acc = 0/107
+Sim_hit = 0/107
+HV = 0*0/107
+----------------
+>>Sample 107
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N2C)cc1O
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N2C)cc1N
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N2C)cc1Cl
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N2C)cc1Br
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N2C)cc1F
+Acc = 0/108
+Sim_hit = 0/108
+HV = 0*0/108
+----------------
+>>Sample 108
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)c(O)n3)CC2)cc1OC  
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)c(N)n3)CC2)cc1OC  
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)c(NH2)n3)CC2)cc1OC  
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)c(OH)n3)CC2)cc1OC  
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)c(NH)n3)CC2)cc1OC
+Acc = 0/109
+Sim_hit = 0/109
+HV = 0*0/109
+----------------
+>>Sample 109
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1O  
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1N  
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1Cl  
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1Br  
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1F
+Acc = 0/110
+Sim_hit = 0/110
+HV = 0*0/110
+----------------
+>>Sample 110
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1O  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1N  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1Cl  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1Br  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1F
+Acc = 0/111
+Sim_hit = 0/111
+HV = 0*0/111
+----------------
+>>Sample 111
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)(C)OH  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(O)  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(Cl)  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(Br)  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C(F)
+Acc = 0/112
+Sim_hit = 0/112
+HV = 0*0/112
+----------------
+>>Sample 112
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(O)  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(NH2)  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(NH)  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(Cl)  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C(Br)
+Acc = 0/113
+Sim_hit = 0/113
+HV = 0*0/113
+----------------
+>>Sample 113
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H]1CS/C(=N\\c2ccccc2Oc2ccccc2)N1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C(O)=O  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C(O)C  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C(O)CC  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C(O)C(O)  
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccccc2)N1C(O)C(C)O
+Acc = 0/114
+Sim_hit = 0/114
+HV = 0*0/114
+----------------
+>>Sample 114
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1O  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1N  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1C(O)  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1C(N)  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1C(O)N
+Acc = 0/115
+Sim_hit = 0/115
+HV = 0*0/115
+----------------
+>>Sample 115
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C(O)  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C(N)  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C(NH2)  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C(OH)NH2  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C(NH)OH
+Acc = 0/116
+Sim_hit = 0/116
+HV = 0*0/116
+----------------
+>>Sample 116
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)C
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)CC
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)C(C)C
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)C(CC)C
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)C(C)(C)C
+Acc = 0/117
+Sim_hit = 0/117
+HV = 0*0/117
+----------------
+>>Sample 117
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1O  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1Cl  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1Br  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1F  
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1I
+Acc = 0/118
+Sim_hit = 0/118
+HV = 0*0/118
+----------------
+>>Sample 118
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1C(=O)O
+- COc1ccc(NC(=O)Cn2nc(C)c(NH)c2C)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1C(=O)NC
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1C(=O)N
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1C(=O)NH2
+Acc = 0/119
+Sim_hit = 0/119
+HV = 0*0/119
+----------------
+>>Sample 119
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1O  
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1Cl  
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1Br  
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1F  
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1I
+Acc = 0/120
+Sim_hit = 0/120
+HV = 0*0/120
+----------------
+>>Sample 120
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Cl less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1F
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Br
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1I
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1OC
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1O
+Acc = 0/121
+Sim_hit = 0/121
+HV = 0*0/121
+----------------
+>>Sample 121
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1O  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1ccc(O)s1  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1N  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1ccc(N)s1  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1NH2
+Acc = 0/122
+Sim_hit = 0/122
+HV = 0*0/122
+----------------
+>>Sample 122
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1O
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1N
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1NC
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1NH2
+- Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1NHC
+Acc = 0/123
+Sim_hit = 0/123
+HV = 0*0/123
+----------------
+>>Sample 123
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1C(=O)CCC1=O)NCCc1ccccc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1C(=O)CCC1=O)NCCc1ccccc1O
+- O=C(CN1C(=O)CCC1=O)NCCc1cc(O)ccc1
+- O=C(CN1C(=O)CCC1=O)NCCc1cccc(O)c1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccc(O)cc1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccccc1OC
+Acc = 0/124
+Sim_hit = 0/124
+HV = 0*0/124
+----------------
+>>Sample 124
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1O  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1C(O)O  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1N  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1C(O)(N)O  
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1CC(O)O
+Acc = 0/125
+Sim_hit = 0/125
+HV = 0*0/125
+----------------
+>>Sample 125
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1O
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1N
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1C(O)O
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1C(N)N
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1C(O)N
+Acc = 0/126
+Sim_hit = 0/126
+HV = 0*0/126
+----------------
+>>Sample 126
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCNC(=O)c1ccccc1)Nc1cc(Cl)ccc1  
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(O)cc1  
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1O  
+- O=C(NCCNC(=O)c1ccccc1)Nc1cc(C)ccc1  
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(F)cc1
+Acc = 0/127
+Sim_hit = 0/127
+HV = 0*0/127
+----------------
+>>Sample 127
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1O
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1OH
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1NH2
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1OCH3
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1OC
+Acc = 0/128
+Sim_hit = 0/128
+HV = 0*0/128
+----------------
+>>Sample 128
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC(=O)Nc1cccc[n+]1Cc1ccccc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC(=O)Nc1cccc[n+]1Cc1ccccc1O
+- CCCC(=O)Nc1cccc[n+]1Cc1ccccc1Cl
+- CCCC(=O)Nc1cccc[n+]1Cc1ccccc1Br
+- CCCC(=O)Nc1cccc[n+]1Cc1ccccc1NH2
+- CCCC(=O)Nc1cccc[n+]1Cc1ccccc1F
+Acc = 0/129
+Sim_hit = 0/129
+HV = 0*0/129
+----------------
+>>Sample 129
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1O
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1Oc5ccccc5
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1Oc5cc(C)cc(C)c5
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1Oc5cc(C(F)(F)F)cc(C(F)(F)F)c5
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1Oc5cc(C#N)cc(C#N)c5
+Acc = 0/130
+Sim_hit = 0/130
+HV = 0*0/130
+----------------
+>>Sample 130
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1O
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(O)C
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(O)CC
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(O)C(C)C
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(O)CC(C)(C)C
+Acc = 0/131
+Sim_hit = 0/131
+HV = 0*0/131
+----------------
+>>Sample 131
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2O)s1  
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CC(CC2)O)s1  
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CC(CCC2)OH)s1  
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CC(CC2)OH)s1  
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CC(CCCC2)OH)s1
+Acc = 0/132
+Sim_hit = 0/132
+HV = 0*0/132
+----------------
+>>Sample 132
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1OC  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1O  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3Cl)CC2=O)c1  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3Br)CC2=O)c1  
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3I)CC2=O)c1
+Acc = 0/133
+Sim_hit = 0/133
+HV = 0*0/133
+----------------
+>>Sample 133
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1O
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1[N+H2]
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1C(=O)N
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1C(=O)OH
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1C(=O)N[N+H2]
+Acc = 0/134
+Sim_hit = 0/134
+HV = 0*0/134
+----------------
+>>Sample 134
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1O  
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC(O)C1  
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1C(O)C  
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1C(O)  
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1OC
+Acc = 0/135
+Sim_hit = 0/135
+HV = 0*0/135
+----------------
+>>Sample 135
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)Oc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)Nc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)NC1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)N(C)C1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)Nc1C
+Acc = 0/136
+Sim_hit = 0/136
+HV = 0*0/136
+----------------
+>>Sample 136
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - `CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1O`
+- `CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1C(=O)O`
+- `CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1NC(=O)C`
+- `CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1C(=O)N`
+- `CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1C(=O)NH2`
+Acc = 0/137
+Sim_hit = 0/137
+HV = 0*0/137
+----------------
+>>Sample 137
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2c(n1)O[C@H](c1cc(F)c(F)cc1F)N(C(C)=O)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)c(Cl)cc1F)N(C(C)=O)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)c(Br)cc1F)N(C(C)=O)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)c(I)cc1F)N(C(C)=O)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)c(NO2)cc1F)N(C(C)=O)c1ccc(Cl)cc1-2
+Acc = 0/138
+Sim_hit = 0/138
+HV = 0*0/138
+----------------
+>>Sample 138
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)c(O)c1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)c(N)c1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)c(NH2)c1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)c(Cl)c1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)c(Br)c1
+Acc = 0/139
+Sim_hit = 0/139
+HV = 0*0/139
+----------------
+>>Sample 139
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCC  
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCC(C)C  
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCC(O)C  
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCCCC  
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCC(O)CC
+Acc = 0/140
+Sim_hit = 0/140
+HV = 0*0/140
+----------------
+>>Sample 140
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2c(CN(CCO)Cc3ccccc3O)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3ccccc3N)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cc(O)ccc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cc(O)cc(O)c3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cc(N)ccc3)cc(=O)oc2c1
+Acc = 0/141
+Sim_hit = 0/141
+HV = 0*0/141
+----------------
+>>Sample 141
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2O)s1  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2Cl)s1  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2F)s1  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2Br)s1  
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2I)s1
+Acc = 0/142
+Sim_hit = 0/142
+HV = 0*0/142
+----------------
+>>Sample 142
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)c3NH)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)c3OH)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)c3NH2)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)c3SH)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)c3CH2OH)[nH]c2c1
+Acc = 0/143
+Sim_hit = 0/143
+HV = 0*0/143
+----------------
+>>Sample 143
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=C(C)C[C@@H](O)c1ncccn1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C(C)C[C@@H](O)c1ncccn1O  
+- C=C(C)C[C@@H](O)c1nc(O)ccn1  
+- C=C(C)C[C@@H](O)c1ncc(O)cn1  
+- C=C(C)C[C@@H](O)c1nc(O)c(O)cn1  
+- C=C(C)C[C@@H](O)c1ncc(O)c(O)n1
+Acc = 0/144
+Sim_hit = 0/144
+HV = 0*0/144
+----------------
+>>Sample 144
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)OC  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)N  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)Cl  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)F
+Acc = 0/145
+Sim_hit = 0/145
+HV = 0*0/145
+----------------
+>>Sample 145
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]21 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCN(C(=O)CSCC(F)(F)O)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)Cl)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)Br)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSC(C(F)(F)F)O)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSC(C(F)(F)F)Cl)[C@H]2CCCC[C@@H]21
+Acc = 0/146
+Sim_hit = 0/146
+HV = 0*0/146
+----------------
+>>Sample 146
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H](OC)1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H](O)[C@@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H](OC(=O)C)1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H](OC(C)=O)1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H](OCC)1O
+Acc = 0/147
+Sim_hit = 0/147
+HV = 0*0/147
+----------------
+>>Sample 147
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1C  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1O  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1N  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1S  
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1Cl
+Acc = 0/148
+Sim_hit = 0/148
+HV = 0*0/148
+----------------
+>>Sample 148
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)[O-] less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)OC  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)N  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)NC  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)NCC  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)N(C)C
+Acc = 0/149
+Sim_hit = 0/149
+HV = 0*0/149
+----------------
+>>Sample 149
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(O))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(NH2))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(OH))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(NH))cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(NHOH))cc1
+Acc = 0/150
+Sim_hit = 0/150
+HV = 0*0/150
+----------------
+>>Sample 150
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1O  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)C(C)(C)C1  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1NC(=O)C  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1N  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1OCC
+Acc = 0/151
+Sim_hit = 0/151
+HV = 0*0/151
+----------------
+>>Sample 151
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1O less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OC  
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OCC  
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OCCC  
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OC(C)C  
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OCCO
+Acc = 0/152
+Sim_hit = 0/152
+HV = 0*0/152
+----------------
+>>Sample 152
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(O)ccc1  
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(N)ccc1  
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(Cl)ccc1  
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(Br)ccc1  
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cc(I)ccc1
+Acc = 0/153
+Sim_hit = 0/153
+HV = 0*0/153
+----------------
+>>Sample 153
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)COC(=O)c4ccccc4  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)COC(=O)c4ccccc4OC  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)COC(=O)c4ccccc4Cl  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)COC(=O)c4ccccc4Br  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)COC(=O)c4ccccc4NO2
+Acc = 0/154
+Sim_hit = 0/154
+HV = 0*0/154
+----------------
+>>Sample 154
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1N
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1NH
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1NH2
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1NHC(=O)
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1NHC(=O)NH2
+Acc = 0/155
+Sim_hit = 0/155
+HV = 0*0/155
+----------------
+>>Sample 155
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\\c2ccc(OC)cc2OC)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2O)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(O)cc2OC)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2OC)CC1O  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2O)CC1O  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(O)cc2O)CC1
+Acc = 0/156
+Sim_hit = 0/156
+HV = 0*0/156
+----------------
+>>Sample 156
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccccc1[C@@H]([NH3+])c1ccc(C)o1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccccc1[C@@H]([NH3+])c1ccc(C(O)O)o1  
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C(N)N)o1  
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C(O)C)o1  
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C(NH2)N)o1  
+- CSc1ccccc1[C@@H]([NH3+])c1ccc(C(CO)O)o1
+Acc = 0/157
+Sim_hit = 0/157
+HV = 0*0/157
+----------------
+>>Sample 157
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1O  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1NC  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1N  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1CC  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1Cl
+Acc = 0/158
+Sim_hit = 0/158
+HV = 0*0/158
+----------------
+>>Sample 158
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1O  
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1C(=O)O  
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1CC(=O)O  
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1OCC(=O)O  
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1OC(=O)C
+Acc = 0/159
+Sim_hit = 0/159
+HV = 0*0/159
+----------------
+>>Sample 159
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)C  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)Br  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)I  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)Cl  
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)NO2
+Acc = 0/160
+Sim_hit = 0/160
+HV = 0*0/160
+----------------
+>>Sample 160
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(O)cc1  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1cccc(O)c1  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1cc(O)ccc1O  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1cc(O)c(O)cc1  
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(OC)cc1
+Acc = 0/161
+Sim_hit = 0/161
+HV = 0*0/161
+----------------
+>>Sample 161
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1CCl  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1CBr  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1CCO  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C(NH2)  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C(O)C
+Acc = 0/162
+Sim_hit = 0/162
+HV = 0*0/162
+----------------
+>>Sample 162
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1O  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1N  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1NC  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1NH  
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1OH
+Acc = 0/163
+Sim_hit = 0/163
+HV = 0*0/163
+----------------
+>>Sample 163
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1O  
+- Cc1nsnc1COc1cccc(C(=O)NC(O)Cc2ccco2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1N  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1OH  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1NH2
+Acc = 0/164
+Sim_hit = 0/164
+HV = 0*0/164
+----------------
+>>Sample 164
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COCCNC(=O)c1csc(COc2ccccc2Cl)n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1csc(COc2ccccc2Cl)n1O  
+- COCCNC(=O)c1csc(COc2ccccc2Cl)n1N  
+- COCCNC(=O)c1csc(COc2ccccc2Cl)n1OH  
+- COCCNC(=O)c1csc(COc2ccccc2Cl)n1NH2  
+- COCCNC(=O)c1csc(COc2ccccc2ClO)n1
+Acc = 0/165
+Sim_hit = 0/165
+HV = 0*0/165
+----------------
+>>Sample 165
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)c(O)c2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)c(O)c2Cl)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)c(O)c2Br)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)c(O)c2F)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)c(O)c2I)C1
+Acc = 0/166
+Sim_hit = 0/166
+HV = 0*0/166
+----------------
+>>Sample 166
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N(C)C1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cc(O)ccc2S(=O)(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)NC1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cc(O)ccc2S(=O)(=O)N(C)C1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1C
+Acc = 0/167
+Sim_hit = 0/167
+HV = 0*0/167
+----------------
+>>Sample 167
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(S(=O)(=O)O)s1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(S(=O)(NH2))s1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(C(O)=O)s1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(S(N)(=O)=O)s1  
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1ccc(S(=O)(NH))s1
+Acc = 0/168
+Sim_hit = 0/168
+HV = 0*0/168
+----------------
+>>Sample 168
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccoc1C(=O)Nc1ccc(F)cc1Br less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccoc1C(=O)Nc1ccc(F)cc1BrO
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1BrN
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1BrS
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1BrP
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1BrCl
+Acc = 0/169
+Sim_hit = 0/169
+HV = 0*0/169
+----------------
+>>Sample 169
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1O  
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1N  
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1NC=O  
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1Oc3ccccc3  
+- CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1NH2
+Acc = 0/170
+Sim_hit = 0/170
+HV = 0*0/170
+----------------
+>>Sample 170
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc21 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)c(Cl)ccc21
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)c(O)ccc21
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)c(N)ccc21
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)c(Br)ccc21
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)c(I)ccc21
+Acc = 0/171
+Sim_hit = 0/171
+HV = 0*0/171
+----------------
+>>Sample 171
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1O
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1N
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1OC
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1NC
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1SC
+Acc = 0/172
+Sim_hit = 0/172
+HV = 0*0/172
+----------------
+>>Sample 172
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C(O)O  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C(O)(O)C  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C(N)C  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C(O)CC  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2C(O)C(O)
+Acc = 0/173
+Sim_hit = 0/173
+HV = 0*0/173
+----------------
+>>Sample 173
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C(O)  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C(O)O  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH2+]1C  
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C(O)C
+Acc = 0/174
+Sim_hit = 0/174
+HV = 0*0/174
+----------------
+>>Sample 174
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCNS(=O)(=O)c1cccnc1Cl less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCNS(=O)(=O)c1cccnc1O  
+- C=CCNS(=O)(=O)c1cccnc1NC  
+- C=CCNS(=O)(=O)c1cccnc1NH2  
+- C=CCNS(=O)(=O)c1cccnc1NHC(=O)H  
+- C=CCNS(=O)(=O)c1cccnc1NHC(=O)CH3
+Acc = 0/175
+Sim_hit = 0/175
+HV = 0*0/175
+----------------
+>>Sample 175
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NOc3ccccc3  
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NOc3ccc(O)cc3  
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NOc3cc(O)c(O)cc3  
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NOc3ccccc3OC  
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NOc3cc(OC)c(O)cc3
+Acc = 0/176
+Sim_hit = 0/176
+HV = 0*0/176
+----------------
+>>Sample 176
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2Oc3ccccc3)n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2OCC(O)C)n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2Oc3cc(O)ccc3)n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2OCC(O)CC(O))n1  
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2Oc3cc(O)c(O)cc3)n1
+Acc = 0/177
+Sim_hit = 0/177
+HV = 0*0/177
+----------------
+>>Sample 177
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2O)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2Cl)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2F)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2Br)C1  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2I)C1
+Acc = 0/178
+Sim_hit = 0/178
+HV = 0*0/178
+----------------
+>>Sample 178
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC(O)C1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC(N)C1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC(F)C1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC(Cl)C1  
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC(Br)C1
+Acc = 0/179
+Sim_hit = 0/179
+HV = 0*0/179
+----------------
+>>Sample 179
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1O  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1C(C)=O  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1C(O)CC  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1C(O)CCC  
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1C(O)CC(C)C
+Acc = 0/180
+Sim_hit = 0/180
+HV = 0*0/180
+----------------
+>>Sample 180
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(N2C(=O)S/C(=C\\c3cccc(F)c3)C2=O)c1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1O  
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1N  
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1NC  
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1NC=O  
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)C2=O)c1NCC
+Acc = 0/181
+Sim_hit = 0/181
+HV = 0*0/181
+----------------
+>>Sample 181
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C(C)C1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C(CC)C1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C(C(=O)O)C1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C(C(C)O)C1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)C(CC(C)C)C1
+Acc = 0/182
+Sim_hit = 0/182
+HV = 0*0/182
+----------------
+>>Sample 182
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)CCl  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH2+](C)C  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)CCBr  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)CCF  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)CCO
+Acc = 0/183
+Sim_hit = 0/183
+HV = 0*0/183
+----------------
+>>Sample 183
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C(=O)O
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C(O)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C(N)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C(=O)N
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C(O)N
+Acc = 0/184
+Sim_hit = 0/184
+HV = 0*0/184
+----------------
+>>Sample 184
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=NC
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=NC(O)
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=NC(O)C
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=NC(O)CC
+- CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=NC(O)CCC
+Acc = 0/185
+Sim_hit = 0/185
+HV = 0*0/185
+----------------
+>>Sample 185
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)NCC1  
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CC(CO)C2)N1  
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)C(CC2)OH)N1  
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CC(O)C2)N1  
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CC(O)CC2)N1
+Acc = 0/186
+Sim_hit = 0/186
+HV = 0*0/186
+----------------
+>>Sample 186
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc1OC  
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc1O  
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc1NC  
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc1N  
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc1Cl
+Acc = 0/187
+Sim_hit = 0/187
+HV = 0*0/187
+----------------
+>>Sample 187
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1C
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1OC
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1NC
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1CC
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1Cl
+Acc = 0/188
+Sim_hit = 0/188
+HV = 0*0/188
+----------------
+>>Sample 188
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2O  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2Cl  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2Br  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2I  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2F
+Acc = 0/189
+Sim_hit = 0/189
+HV = 0*0/189
+----------------
+>>Sample 189
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1O  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1N  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1NC  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1N(C)C  
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1NCC
+Acc = 0/190
+Sim_hit = 0/190
+HV = 0*0/190
+----------------
+>>Sample 190
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1O  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3O)=NO2)N=N1  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1N  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3cc(O)ccc3C)=NO2)N=N1  
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1NH
+Acc = 0/191
+Sim_hit = 0/191
+HV = 0*0/191
+----------------
+>>Sample 191
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-] less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)O  
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)OC  
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)N  
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)SC  
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)NC
+Acc = 0/192
+Sim_hit = 0/192
+HV = 0*0/192
+----------------
+>>Sample 192
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1O
+* Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1N
+* Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1F
+* Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1Cl
+* Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1Br
+Acc = 0/193
+Sim_hit = 0/193
+HV = 0*0/193
+----------------
+>>Sample 193
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1O
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1(N)
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1(NH2)
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1(OH)
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1(NH)
+Acc = 0/194
+Sim_hit = 0/194
+HV = 0*0/194
+----------------
+>>Sample 194
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1cc(OC)c(O)cc1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1cc(O)c(O)cc1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)c(O)c3)CC2)nnc1-c1ccco1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(O)c(OC)c3)CC2)nnc1-c1ccco1  
+- CCn1c(SCC(=O)N2CCN(c3ccc(O)c(O)c3)CC2)nnc1-c1ccco1
+Acc = 0/195
+Sim_hit = 0/195
+HV = 0*0/195
+----------------
+>>Sample 195
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1O  
+* Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1N  
+* Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1NH2  
+* Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1OH  
+* Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1NH
+Acc = 0/196
+Sim_hit = 0/196
+HV = 0*0/196
+----------------
+>>Sample 196
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1O  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1N  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1NC  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1OC  
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1SC
+Acc = 0/197
+Sim_hit = 0/197
+HV = 0*0/197
+----------------
+>>Sample 197
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C(C)=O
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1OC(=O)C
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C(=O)O
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C(=O)N
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C(=O)S
+Acc = 0/198
+Sim_hit = 0/198
+HV = 0*0/198
+----------------
+>>Sample 198
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-] less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)Oc2ccccc2  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)Oc3cc(O)c(O)cc3  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)Oc4cc(O)cc(O)c4  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)Oc5cc(O)c(O)c(O)c5  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)Oc6cc(O)c(O)cc6
+Acc = 0/199
+Sim_hit = 0/199
+HV = 0*0/199
+----------------
+>>Sample 199
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1 less soluble in water and more hydrogen bond donors and increase logP by at least 0.5. increase HBD by at least 1. ? The output molecules should be similar to the input molecule.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1O  
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1N  
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1S  
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1C(O)O  
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1NC
+Acc = 0/200
+Sim_hit = 0/200
+HV = 0*0/200
+----------------
+--------Final Acc--------
+Acc = 0/200
+----------------

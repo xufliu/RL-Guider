@@ -1,0 +1,7 @@
+python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='strict' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/reward_type_add_a0.1_b1.0_c1.0_tau0.02general_replay_buffer_mol_strict_101_best_reward_v1.pth'
+
+python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='strict' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/reward_type_add_a0.2_b1.0_c1.0_tau0.02general_replay_buffer_mol_strict_101_best_reward_v1.pth'
+
+python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='strict' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/reward_type_add_a0.0_b1.0_c1.0_tau0.02general_replay_buffer_mol_strict_101_best_reward_v1.pth'
+
+python run_planner_tree.py --conversational_LLM='deepseek' --depth=3 --num_generate=1 --num_keep=1 --num_of_mol=200 --task_id=101 --planner='rl_planner' --constraint='strict' --conversation_type='multi' --rl_model_path='results/rl_model_checkpoint/reward_type_mul_a1.0_b1.0_c1.0_tau0.01general_replay_buffer_mol_strict_101_best_reward_v1.pth'

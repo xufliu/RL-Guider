@@ -1,0 +1,2204 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_strict_101_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=103, constraint='loose', conversation_type='single', planner='baseline', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH+]CC1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)N(C)C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]CC1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C(C)C1
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C(F)C1
+Acc = 1/1
+Sim_hit = 0.6181818181818182/1
+HV = 0.006687254809536069*1/1
+----------------
+>>Sample 1
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cnccc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cccnc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccccn1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccnnc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccc2c(c1)nn2C
+Acc = 1/2
+Sim_hit = 0.6181818181818182/2
+HV = 0.006687254809536069*1/2
+----------------
+>>Sample 2
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(F)ccc(F)c1
+- CCC[NH2+]Cc1ncoc1-c1cc(F)ccc1
+- CCC[NH2+]Cc1ncoc1-c1cccc1F
+- CCC[NH2+]Cc1ncoc1-c1c(F)ccc1Cl
+- CCC[NH2+]Cc1ncoc1-c1cc(F)cc1F
+Acc = 1/3
+Sim_hit = 0.6181818181818182/3
+HV = 0.006687254809536069*1/3
+----------------
+>>Sample 3
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@@H](c3ccccc3)Sc3ccccc32)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)OC2)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)SC2)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)NC2)cc1
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)N(C)C2)cc1
+Acc = 1/4
+Sim_hit = 0.6181818181818182/4
+HV = 0.006687254809536069*1/4
+----------------
+>>Sample 4
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3ccc(O)cc3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(F)cs3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(Cl)cs3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(Br)cs3)c2C(N)=O)C1
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cc(I)cs3)c2C(N)=O)C1
+Acc = 1/5
+Sim_hit = 0.6181818181818182/5
+HV = 0.006687254809536069*1/5
+----------------
+>>Sample 5
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(F)ccc3n2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Br)ccc3n2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(I)ccc3n2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(S)ccc3n2C)C1
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(N)ccc3n2C)C1
+Acc = 2/6
+Sim_hit = 1.4214605067064083/6
+HV = 0.014581693949113857*2/6
+----------------
+>>Sample 6
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@@H]1CC(=O)Nc2ccccc21
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccc(O)cc2
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccc(F)cc2
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccc(Cl)cc2
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccc(I)cc2
+Acc = 2/7
+Sim_hit = 1.4214605067064083/7
+HV = 0.014581693949113857*2/7
+----------------
+>>Sample 7
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(F)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Br)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(I)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(N)s1
+- C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(O)s1
+Acc = 2/8
+Sim_hit = 1.4214605067064083/8
+HV = 0.014581693949113857*2/8
+----------------
+>>Sample 8
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(Cl)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(I)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(F)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(CN)nc2)sc2c1CCC2
+- N#Cc1c(NC(=O)c2ccc(NO2)nc2)sc2c1CCC2
+Acc = 3/9
+Sim_hit = 2.1861663890593492/9
+HV = 0.02970613433821723*3/9
+----------------
+>>Sample 9
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1c(NCc2ccccc2)ncnc1Nc1cccc(c1)Cl
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(F)cc1
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1Br
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccc(O)cc1
+- Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1I
+Acc = 3/10
+Sim_hit = 2.1861663890593492/10
+HV = 0.02970613433821723*3/10
+----------------
+>>Sample 10
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(F)cc1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(I)cc1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(Cl)cc1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(CN)cc1
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(c2ccccc2)cc1
+Acc = 4/11
+Sim_hit = 2.8592433121362726/11
+HV = 0.06427922346805312*4/11
+----------------
+>>Sample 11
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)Nc2ccc(F)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(C)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2cc(Br)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(I)nn2)c1
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(O)nn2)c1
+Acc = 5/12
+Sim_hit = 3.4774251303180908/12
+HV = 0.1749705598352923*5/12
+----------------
+>>Sample 12
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCNCC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCC(CC)C1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC(O)CC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CC(C)CC1
+- CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCSCC1
+Acc = 5/13
+Sim_hit = 3.4774251303180908/13
+HV = 0.1749705598352923*5/13
+----------------
+>>Sample 13
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=[N+]([O-])c1ccc(C2=NOc3cc(F)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(Br)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(I)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(S)ccc3N2)cc1
+- O=[N+]([O-])c1ccc(C2=NOc3cc(N)ccc3N2)cc1
+Acc = 5/14
+Sim_hit = 3.4774251303180908/14
+HV = 0.1749705598352923*5/14
+----------------
+>>Sample 14
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(Cl)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(I)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(O)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(S)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(CN)cc23)c1
+Acc = 5/15
+Sim_hit = 3.4774251303180908/15
+HV = 0.1749705598352923*5/15
+----------------
+>>Sample 15
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(Cl)c1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(O)cs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cc(F)cs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(OCC)cs1
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1ccc(N)cs1
+Acc = 5/16
+Sim_hit = 3.4774251303180908/16
+HV = 0.1749705598352923*5/16
+----------------
+>>Sample 16
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C(=O)N2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3CN2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C(O)N2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C(F)N2)n1
+- CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C#N)n1
+Acc = 5/17
+Sim_hit = 3.4774251303180908/17
+HV = 0.1749705598352923*5/17
+----------------
+>>Sample 17
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)NCc1ccc(O)cc1)c1cccc(F)c1
+- CC[C@H](NC(=O)NCc1ccc(OCC)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccn(C)c1)c1cccc(Cl)c1
+- CC[C@H](NC(=O)NCc1ccnc(N)c1)c1ccc(F)cc1
+- CC[C@H](NC(=O)NCc1ccc(O)cn1)c1cccc(Cl)c1
+Acc = 5/18
+Sim_hit = 3.4774251303180908/18
+HV = 0.1749705598352923*5/18
+----------------
+>>Sample 18
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(Cl)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(I)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(Br)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(OH)cc3C2=O)c1
+- CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(N)cc3C2=O)c1
+Acc = 5/19
+Sim_hit = 3.4774251303180908/19
+HV = 0.1749705598352923*5/19
+----------------
+>>Sample 19
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)[O-])c1ccc(F)cc1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(I)cc1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(Br)cc1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(CF3)cc1
+- C[NH2+][C@](C)(C(=O)[O-])c1ccc(OH)cc1
+Acc = 5/20
+Sim_hit = 3.4774251303180908/20
+HV = 0.1749705598352923*5/20
+----------------
+>>Sample 20
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccc(F)cc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(C)C
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccc(O)cc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(C)O
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1(C#N)
+Acc = 5/21
+Sim_hit = 3.4774251303180908/21
+HV = 0.1749705598352923*5/21
+----------------
+>>Sample 21
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)cc1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccn1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccc(F)c1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(Cl)cc1
+- COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(I)cc1
+Acc = 5/22
+Sim_hit = 3.4774251303180908/22
+HV = 0.1749705598352923*5/22
+----------------
+>>Sample 22
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[NH2+]CC1
+- Cc1cccc(C)c1OC1C[NH2+]CC(C)C1
+- Cc1cccc(C)c1OC1C[NH2+]CC(C)(C)C1
+- Cc1cccc(C)c1OC1C[NH2+]CC(F)C1
+- Cc1cccc(C)c1OC1C[NH2+]CC(Cl)C1
+Acc = 6/23
+Sim_hit = 4.210758463651424/23
+HV = 0.2025598921736801*6/23
+----------------
+>>Sample 23
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H]([NH3+])c1ccc(F)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(Br)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(I)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(N)cc1
+- CC(C)C[C@@H]([NH3+])c1ccc(O)cc1
+Acc = 6/24
+Sim_hit = 4.210758463651424/24
+HV = 0.2025598921736801*6/24
+----------------
+>>Sample 24
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc(n3)cc2)cc1)
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3cccn3)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3cccs3)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc(c3)OC)cc2)cc1
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc(c3)F)cc2)cc1
+Acc = 6/25
+Sim_hit = 4.210758463651424/25
+HV = 0.2025598921736801*6/25
+----------------
+>>Sample 25
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=O)N2)n1
+- CCCCc1noc([C@H]2C=CC(=N)O2)n1
+- CCCCc1noc([C@H]2C=CC(=N)S(=O)2)n1
+- CCCCc1noc([C@H]2C=CC(=N)N(C)2)n1
+- CCCCc1noc([C@H]2C=CC(=N)SC2)n1
+Acc = 6/26
+Sim_hit = 4.210758463651424/26
+HV = 0.2025598921736801*6/26
+----------------
+>>Sample 26
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC(C)C)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCH2Ph)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC(CH3)2)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OEt)cc2)s1
+Acc = 6/27
+Sim_hit = 4.210758463651424/27
+HV = 0.2025598921736801*6/27
+----------------
+>>Sample 27
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Cl)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(I)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(F)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(CN)cc32)CCO1
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(NO2)cc32)CCO1
+Acc = 7/28
+Sim_hit = 4.988536241429202/28
+HV = 0.2209887487157151*7/28
+----------------
+>>Sample 28
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CC(C)C)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCCN)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCOC)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCSC)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)C(C)CC#N)cc1
+Acc = 7/29
+Sim_hit = 4.988536241429202/29
+HV = 0.2209887487157151*7/29
+----------------
+>>Sample 29
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCCN)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCOC)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCSC)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCCl)CC2
+- CCO[C@H]1C[C@@H](O)C12CC[NH+](CCC(=O)N(C)CCBr)CC2
+Acc = 7/30
+Sim_hit = 4.988536241429202/30
+HV = 0.2209887487157151*7/30
+----------------
+>>Sample 30
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C(=O)[C@@H](Cc1ccncc1)O
+- CC[C@H](C)C(=O)[C@@H](Cc1ccncc1)N
+- CC[C@H](C)C(=O)[C@@H](Cc1ccc(O)cc1)n2ccnc2
+- CC[C@H](C)C(=O)[C@@H](Cc1ccc(F)cc1)n2ccnc2
+- CC[C@H](C)C(=O)[C@@H](Cc1ccc(Cl)cc1)n2ccnc2
+Acc = 8/31
+Sim_hit = 5.571869574762535/31
+HV = 0.25911726687935854*8/31
+----------------
+>>Sample 31
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccc(F)cc3)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(O)ccc3)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3cc(Cl)ccc3)c2c1=O
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1N
+- COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1S=O
+Acc = 8/32
+Sim_hit = 5.571869574762535/32
+HV = 0.25911726687935854*8/32
+----------------
+>>Sample 32
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(Cl)cc(Cl)cc2s1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(F)c2s1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(Cl)c2s1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(Br)c2s1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)c(I)c2s1
+Acc = 8/33
+Sim_hit = 5.571869574762535/33
+HV = 0.25911726687935854*8/33
+----------------
+>>Sample 33
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(Cl)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(F)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(I)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(C)ccc32)cn1
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(O)ccc32)cn1
+Acc = 9/34
+Sim_hit = 6.351869574762535/34
+HV = 0.27219661364452147*9/34
+----------------
+>>Sample 34
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2CC(O))o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCC(C)C[C@@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CC(C)CC[C@@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C(O))o1
+- CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCC(O)CC[C@@H]2C)o1
+Acc = 9/35
+Sim_hit = 6.351869574762535/35
+HV = 0.27219661364452147*9/35
+----------------
+>>Sample 35
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccc(-c2noc(Cn3c(=O)n(CCc4ccc(F)cs4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(C)cs4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(O)cs4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(Cl)cs4)c(=O)c4ccccc43)n2)cc1
+- CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cc(N)cs4)c(=O)c4ccccc43)n2)cc1
+Acc = 9/36
+Sim_hit = 6.351869574762535/36
+HV = 0.27219661364452147*9/36
+----------------
+>>Sample 36
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccc(O)cc3n21
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(C)c(C)c3n21
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(Cl)c(Cl)c3n21
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3cc(F)c(F)c3n21
+- Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccc(S)cc3n21
+Acc = 9/37
+Sim_hit = 6.351869574762535/37
+HV = 0.27219661364452147*9/37
+----------------
+>>Sample 37
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CCOC[C@@H]2C)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@H]2C)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C(F)F)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2CF)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2CCl)cc1F
+Acc = 10/38
+Sim_hit = 7.092610315503276/38
+HV = 0.2774892385332075*10/38
+----------------
+>>Sample 38
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(F)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cc(F)cc1
+- C[C@@H](Nc1ccc(N2CCC(C)C2=O)cc1)C(=O)Nc1cccc(F)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(Cl)c1
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cc(O)c1
+Acc = 10/39
+Sim_hit = 7.092610315503276/39
+HV = 0.2774892385332075*10/39
+----------------
+>>Sample 39
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CCCC3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3C(CC)CO3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCC(O)O3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CC(C)O3)CC2)ccc1SC
+- COc1cc(C[NH+]2CCC(OC[C@H]3CC(C)CO3)CC2)ccc1SC
+Acc = 11/40
+Sim_hit = 7.819883042776003/40
+HV = 0.27866487079712265*11/40
+----------------
+>>Sample 40
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nnco1
+- Cc1nc2ccccn2c1-c1nncc1[S-]
+- Cc1nc2ccccn2c1-c1nn(c1)O
+- Cc1nc2ccccn2c1-c1nn(C)c1
+- Cc1nc2ccccn2c1-c1nnC(=O)O1
+Acc = 12/41
+Sim_hit = 8.462740185633146/41
+HV = 0.2813413255510545*12/41
+----------------
+>>Sample 41
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(Cl)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(I)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(O)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(S)cc1
+- CCCC1=NN(c2ccccc2)C(=O)/C1=C(\C)NCCc1ccc(Br)cc1
+Acc = 12/42
+Sim_hit = 8.462740185633146/42
+HV = 0.2813413255510545*12/42
+----------------
+>>Sample 42
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1ccc(-c2ccco2)on1)[C@@H]1CCCO1
+- C[C@@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1ccc(-c2ccc(O)cc2)on1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1ccc(-c2ccco2)o1)[C@H]1CCCO1
+- C[C@H](NC(=O)c1ccc(-c2ccc(F)cc2)on1)[C@H]1CCCO1
+Acc = 12/43
+Sim_hit = 8.462740185633146/43
+HV = 0.2813413255510545*12/43
+----------------
+>>Sample 43
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)CC)CCCC1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCC(C)C1
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1(O)
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1(F)
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CC(C)CC1
+Acc = 12/44
+Sim_hit = 8.462740185633146/44
+HV = 0.2813413255510545*12/44
+----------------
+>>Sample 44
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[NH+](CC(=O)NCC(N)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(C)N=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NCC(N)=S)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)N(C)C(N)=O)C1
+- CCO[C@@H]1CCC[NH+](CC(=O)NC(NC)=O)C1
+Acc = 12/45
+Sim_hit = 8.462740185633146/45
+HV = 0.2813413255510545*12/45
+----------------
+>>Sample 45
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)c1[nH]
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)c1[NH2+]
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)c1[NH-]1
+- Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)c1N1
+Acc = 12/46
+Sim_hit = 8.462740185633146/46
+HV = 0.2813413255510545*12/46
+----------------
+>>Sample 46
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]Cc1cn2cc(F)ccc2n1)[C@@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(Br)ccc2n1)[C@@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(I)ccc2n1)[C@@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(CN)ccc2n1)[C@@H](C)n1cccn1
+- C[C@@H]([NH2+]Cc1cn2cc(OC)ccc2n1)[C@@H](C)n1cccn1
+Acc = 12/47
+Sim_hit = 8.462740185633146/47
+HV = 0.2813413255510545*12/47
+----------------
+>>Sample 47
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](O)Cn1nn(c2ccccc2)c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nc(c2ccccc2)c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nnc2cccc(c2)c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nn(c2ccc(F)cc2)c1=O
+- Cc1ccccc1OC[C@H](O)Cn1nnc2ccc(Cl)cc2c1=O
+Acc = 12/48
+Sim_hit = 8.462740185633146/48
+HV = 0.2813413255510545*12/48
+----------------
+>>Sample 48
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2n(C)cnn12
+- CSc1nnc2n(O)cnn12
+- CSc1nnc2n(N)cnn1C
+- CSc1nnc2n(N)cnn1O
+- CSc1nnc2n(N)cnn1F
+Acc = 13/49
+Sim_hit = 9.107901475955726/49
+HV = 0.3564951345445352*13/49
+----------------
+>>Sample 49
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@H]2c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(C))cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H](Cc2ccc(C)cc2)ON=C[C@@H]2c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(F))cc2)n1
+- CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C#N)cc2)n1
+Acc = 13/50
+Sim_hit = 9.107901475955726/50
+HV = 0.3564951345445352*13/50
+----------------
+>>Sample 50
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOC(C)C2)CC1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1(C)
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)C(C)C1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOC(C)C2)C(C)C1
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC(C)C1
+Acc = 13/51
+Sim_hit = 9.107901475955726/51
+HV = 0.3564951345445352*13/51
+----------------
+>>Sample 51
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1cc(=O)[nH]c2ccccc12)C
+- CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1ccc(=O)[nH]c2ccccc12)C
+- CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1cc(=O)[nH]c2cccc(F)c12)C
+- CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1cc(=O)[nH]c2ccc(Cl)c12)C
+- CC[C@H](C)[C@](C)(O)CN(C(=O)Nc1cc(=O)[nH]c2ccc(Br)c12)C
+Acc = 14/52
+Sim_hit = 9.647584015638266/52
+HV = 0.42901832073143387*14/52
+----------------
+>>Sample 52
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nn(C)nn1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CCC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnn(C)n1C1CC1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1C(C)C1
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnn(C)c1C1CC1
+Acc = 14/53
+Sim_hit = 9.647584015638266/53
+HV = 0.42901832073143387*14/53
+----------------
+>>Sample 53
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Br)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C=C)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(I)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(CN)c(Cl)c1
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(CF3)c1
+Acc = 14/54
+Sim_hit = 9.647584015638266/54
+HV = 0.42901832073143387*14/54
+----------------
+>>Sample 54
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cc(=O)n2nc([C@@H]3CCCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5nccc5n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccc5n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncc(c5)n4)C3)cc2[nH]1
+- CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncc(c5)c4)C3)cc2[nH]1
+Acc = 14/55
+Sim_hit = 9.647584015638266/55
+HV = 0.42901832073143387*14/55
+----------------
+>>Sample 55
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)n(C)c1)c1cccs1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1ccc(Cl)c1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1ccco1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1ccc(F)c1
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)n(C)c1)c1cccs1
+Acc = 14/56
+Sim_hit = 9.647584015638266/56
+HV = 0.42901832073143387*14/56
+----------------
+>>Sample 56
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOC(C)C1)C(C)(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)O
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)C(C)C
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)F
+- C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)CN
+Acc = 14/57
+Sim_hit = 9.647584015638266/57
+HV = 0.42901832073143387*14/57
+----------------
+>>Sample 57
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)C(C))cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)Cc4ccccc4)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)Cc4ccc(O)cc4)cc1c32
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)Cc4ccncc4)cc1c32
+Acc = 14/58
+Sim_hit = 9.647584015638266/58
+HV = 0.42901832073143387*14/58
+----------------
+>>Sample 58
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3ccc(F)cc3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cc(F)c(cc3)c2)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scn(-c3cccc(F)c3)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3ccc(F)(c3)c2)c2N1
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cc(F)ccc3)c2N1
+Acc = 14/59
+Sim_hit = 9.647584015638266/59
+HV = 0.42901832073143387*14/59
+----------------
+>>Sample 59
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N/C(=N\OCc1ccc(F)c(Cl)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Br)c(Cl)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Cl)c(F)c1)c1nonc1N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nocc1N
+- N/C(=N\OCc1ccc(Cl)c(Cl)c1)c1nocn1N
+Acc = 14/60
+Sim_hit = 9.647584015638266/60
+HV = 0.42901832073143387*14/60
+----------------
+>>Sample 60
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1ccc(F)c(F)c1
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cc(F)ccc1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cc(F)c(F)c1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cccc(F)c1F
+- C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1cc(F)c(F)c1Cl
+Acc = 14/61
+Sim_hit = 9.647584015638266/61
+HV = 0.42901832073143387*14/61
+----------------
+>>Sample 61
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN1C(=O)[C@H]2CCCC[C@@H]2C(=O)[C@@H]1c1ccccc1
+- CN1C(=O)[C@H]2CCC[C@H](C)CN2C(=O)[C@@H]1c1ccccc1
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cccc(c1)F
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(cc1)OC
+- CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(cc1)Cl
+Acc = 15/62
+Sim_hit = 10.195203063257313/62
+HV = 0.43342113576460484*15/62
+----------------
+>>Sample 62
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(O)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(F)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(Cl)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(Br)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccc(I)cn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1
+Acc = 16/63
+Sim_hit = 10.974614827963196/63
+HV = 0.4435138837373817*16/63
+----------------
+>>Sample 63
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OCC)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OCH3)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OC(C)C)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OS(=O)(=O)O)=C32)cc1
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(OP(=O)(O)O)=C32)cc1
+Acc = 17/64
+Sim_hit = 11.681511379687333/64
+HV = 0.44657395992087695*17/64
+----------------
+>>Sample 64
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(Cl)c(Cl)c3F)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3Cl)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3OCH3)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3CN)[nH]c2n1
+- CNc1ccc2nc(-c3ccc(F)c(F)c3CF3)[nH]c2n1
+Acc = 17/65
+Sim_hit = 11.681511379687333/65
+HV = 0.44657395992087695*17/65
+----------------
+>>Sample 65
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=O)cc1
+- CCCCCOc1ccc(C(S)=O)cc1
+- CCCCCOc1ccc(C(N)=N)cc1
+- CCCCCOc1ccc(C(NH2)=S)cc1
+- CCCCCOc1ccc(C(NH2)=O)cc1
+Acc = 18/66
+Sim_hit = 12.37848107665703/66
+HV = 0.5393778028977858*18/66
+----------------
+>>Sample 66
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(F)cc1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(Cl)cc1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(Br)cc1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(I)cc1
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(O)cc1
+Acc = 19/67
+Sim_hit = 13.06269160297282/67
+HV = 0.5690623012969728*19/67
+----------------
+>>Sample 67
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNc1nc(-c2cc(F)cs2)nc(C)c1C(C)C
+- CCNc1nc(-c2ccc(Cl)cc2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc(Cl)cc2)nc(C)c1C(C)C
+- CCNc1nc(-c2ccc(Cl)cs2)nc(C)c1C(C)C
+- CCNc1nc(-c2cc(Cl)cs2)nc(C)c1CC(C)C
+Acc = 20/68
+Sim_hit = 13.801822037755429/68
+HV = 0.5870153305601888*20/68
+----------------
+>>Sample 68
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([C@@H](NC(=O)NCCOC)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCCN)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NC(C)CCO)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCC(O)CO)c2ccccc2)cc1
+- Cc1ccc([C@@H](NC(=O)NCCSC)c2ccccc2)cc1
+Acc = 21/69
+Sim_hit = 14.5335293548286/69
+HV = 0.5989263855312529*21/69
+----------------
+>>Sample 69
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH3+]CC2
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(C)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(O)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(F)
+- CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2(Cl)
+Acc = 21/70
+Sim_hit = 14.5335293548286/70
+HV = 0.5989263855312529*21/70
+----------------
+>>Sample 70
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)O2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nn(C)C2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)c2)cc1F
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnC2)cc1Cl
+- C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc2C)cc1Cl
+Acc = 21/71
+Sim_hit = 14.5335293548286/71
+HV = 0.5989263855312529*21/71
+----------------
+>>Sample 71
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)c1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)O1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)F1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)Cl1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)Br1
+Acc = 21/72
+Sim_hit = 14.5335293548286/72
+HV = 0.5989263855312529*21/72
+----------------
+>>Sample 72
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(Cl)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(I)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(O)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(S)cc2C1
+- CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(c3ccccc3)cc2C1
+Acc = 21/73
+Sim_hit = 14.5335293548286/73
+HV = 0.5989263855312529*21/73
+----------------
+>>Sample 73
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@@H]1C)CC(C)(C)C
+- C[C@H](CC(=O)N[C@@H]1CCC[NH2+][C@H]1C)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH][C@H]1C)CC(C)(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)C(C)C
+- C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)F
+Acc = 21/74
+Sim_hit = 14.5335293548286/74
+HV = 0.5989263855312529*21/74
+----------------
+>>Sample 74
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(F)F)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3CC(O)C)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C(=O)N)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C#N)n2C1
+- C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1(C)C
+Acc = 22/75
+Sim_hit = 15.24464046593971/75
+HV = 0.6968314004749412*22/75
+----------------
+>>Sample 75
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Br)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(Cl)c(Cl)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(I)c(I)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(CN)c(CN)c3)cc2Cl)CCN1
+- O=C1CN(c2ccc(NC(=O)c3ccc(#N)c(#N)c3)cc2Cl)CCN1
+Acc = 22/76
+Sim_hit = 15.24464046593971/76
+HV = 0.6968314004749412*22/76
+----------------
+>>Sample 76
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)O
+- CC(C)(CO[N+](=O)[O-])C(=O)N
+- CC(C)(CO[N+](=O)[O-])CC(=O)Cl
+- CC(C)(CO[N+](=O)[O-])C(=O)F
+- CC(C)(CO[N+](=O)[O-])C(=O)OC
+Acc = 23/77
+Sim_hit = 15.911307132606376/77
+HV = 0.7680497807101893*23/77
+----------------
+>>Sample 77
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(Cl)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(Br)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(I)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(CF3)cc2)cc1[O-]
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(O)cc2)cc1[O-]
+Acc = 23/78
+Sim_hit = 15.911307132606376/78
+HV = 0.7680497807101893*23/78
+----------------
+>>Sample 78
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2ccc(F)c(F)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1(F)
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(Cl)c(F)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(Br)c(F)c2)c1
+- CCn1cc[nH+]c1CNc1cnn(-c2ccc(CN)c(F)c2)c1
+Acc = 24/79
+Sim_hit = 16.607735704034948/79
+HV = 0.77401538348345*24/79
+----------------
+>>Sample 79
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(Cl)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(O)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(S)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(C)cc2)CC1
+- CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(N)cc2)CC1
+Acc = 24/80
+Sim_hit = 16.607735704034948/80
+HV = 0.77401538348345*24/80
+----------------
+>>Sample 80
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1Cl
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1Br
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1I
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1O
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1S
+Acc = 24/81
+Sim_hit = 16.607735704034948/81
+HV = 0.77401538348345*24/81
+----------------
+>>Sample 81
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)O
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)N
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)NH2
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)OC
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)F
+Acc = 24/82
+Sim_hit = 16.607735704034948/82
+HV = 0.77401538348345*24/82
+----------------
+>>Sample 82
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCC1)c1ccc([N+](=O)[O-])cc1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc(O)cc1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc(S)cc1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc(N)cc1
+- C[C@@H]([NH2+]C1CCCCC1)c1ccc(F)cc1
+Acc = 25/83
+Sim_hit = 17.607735704034948/83
+HV = 0.916651088030079*25/83
+----------------
+>>Sample 83
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(Cc1nnc(-c2ccc(O)cc2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2ccc(F)cc2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2ccc(Cl)cc2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2ccc(I)cc2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+- CCCN(Cc1nnc(-c2ccc(N)cc2)o1)C(=O)c1ccc([N+](=O)[O-])o1
+Acc = 26/84
+Sim_hit = 18.336549263356982/84
+HV = 0.93277856076696*26/84
+----------------
+>>Sample 84
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)NC2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCSC2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCOC2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCNC2)C1
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCCC2)C1
+Acc = 26/85
+Sim_hit = 18.336549263356982/85
+HV = 0.93277856076696*26/85
+----------------
+>>Sample 85
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH2][C@@H]4[C@@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+](C)[C@@H]4[C@@]3(C)C2=O)c(OC)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1F
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1Cl
+- COc1ccc(N2C(=O)N3CCC4=c5ccc(O)c(O)c5[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1
+Acc = 26/86
+Sim_hit = 18.336549263356982/86
+HV = 0.93277856076696*26/86
+----------------
+>>Sample 86
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@@H](O)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@@H](O)[C@@H](O)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](F)[C@H](O)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](F)C1
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C(F)C1
+Acc = 26/87
+Sim_hit = 18.336549263356982/87
+HV = 0.93277856076696*26/87
+----------------
+>>Sample 87
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)NCc1ccc(OCc2ccccc2)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2cccc(F)c2)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2cccnc2)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2ccc(c2)C)cc1)C1CCCCC1
+- CCN(C(=O)NCc1ccc(OCc2ccc(c2)O)cc1)C1CCCCC1
+Acc = 26/88
+Sim_hit = 18.336549263356982/88
+HV = 0.93277856076696*26/88
+----------------
+>>Sample 88
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(F)cc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2F)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(Cl)cc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(O)cc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccc(Br)cc2)s1
+Acc = 26/89
+Sim_hit = 18.336549263356982/89
+HV = 0.93277856076696*26/89
+----------------
+>>Sample 89
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(NC)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(O)=O)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=S)cc2)c1
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=N)cc2)c1
+Acc = 26/90
+Sim_hit = 18.336549263356982/90
+HV = 0.93277856076696*26/90
+----------------
+>>Sample 90
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N2C[C@H](C(=O)NCC(C)C)CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)c1Cl
+- Cc1ccc(N2C[C@H](C(=O)NCCCC)CC2=O)cc1C
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1F
+- Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1OC
+Acc = 27/91
+Sim_hit = 19.166336497399534/91
+HV = 0.9458796208970214*27/91
+----------------
+>>Sample 91
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)C1CCN(C(=O)NC(C)Cc2c(C)noc2C)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2F)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2Cl)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2Br)CC1
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2I)CC1
+Acc = 28/92
+Sim_hit = 19.838750290502983/92
+HV = 1.004343072766373*28/92
+----------------
+>>Sample 92
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1(C)
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@@H](C)C3)C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1(F)
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3(C))C1
+- CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1(Cl)
+Acc = 29/93
+Sim_hit = 20.522960816818774/93
+HV = 1.0074936079412562*29/93
+----------------
+>>Sample 93
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([N+](=O)[O-])cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([N+](=O)[O-])c4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([N+](=O)[O-])cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([N+](=O)[O-])cc4)CC3)nc12
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4ccc([N+](=O)[O-])cc4)CC3)nc12
+Acc = 29/94
+Sim_hit = 20.522960816818774/94
+HV = 1.0074936079412562*29/94
+----------------
+>>Sample 94
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)N[C@@H]2CCCCO2)cc1OC(F)F
+- COc1ccc(NC(=O)NC[C@@H]2CC(O)CO2)cc1OC(F)F
+- COc1ccc(NC(=O)N[C@@H]2CCCO2)cc1OCC(F)F
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)Cl
+- COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(CF3)F
+Acc = 30/95
+Sim_hit = 21.183977765971317/95
+HV = 1.0272439106042448*30/95
+----------------
+>>Sample 95
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(O)cc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(F)cc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(Cl)cc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(Br)cc1
+- CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccc(I)cc1
+Acc = 31/96
+Sim_hit = 21.94588252787608/96
+HV = 1.0409470712511777*31/96
+----------------
+>>Sample 96
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCc1cccc(F)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(O)c(C)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(S)c(C)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(Cl)c(C)c1)N1CCC[C@H]1CN1CCOCC1
+- O=C(NCCc1ccc(Br)c(C)c1)N1CCC[C@H]1CN1CCOCC1
+Acc = 32/97
+Sim_hit = 22.764064346057896/97
+HV = 1.071811186067452*32/97
+----------------
+>>Sample 97
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)C(=O)O)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)CO)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)CN)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)CF)cc1
+- C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)Cl)cc1
+Acc = 33/98
+Sim_hit = 23.39821068752131/98
+HV = 1.0763501293526043*33/98
+----------------
+>>Sample 98
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2[C@H](C)
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2Cc
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2CF
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2Cc1ccccc1
+- CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C(O)
+Acc = 33/99
+Sim_hit = 23.39821068752131/99
+HV = 1.0763501293526043*33/99
+----------------
+>>Sample 99
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNc3cccc[nH]3)nn2)cc1
+- COc1ccc(-n2cc(C)cnc2)cc1
+- COc1ccc(-n2cc(CNc3ccc([NH+]4)cc3)nn2)cc1
+- COc1ccc(-n2cc(CNc3ccc(S(=O)(=O)[O-])c3)nn2)cc1
+- COc1ccc(-n2cc(CNc3ccc(Cl)c3)nn2)cc1
+Acc = 33/100
+Sim_hit = 23.39821068752131/100
+HV = 1.0763501293526043*33/100
+----------------
+>>Sample 100
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1occc1C(=O)N1CCC[C@@H]1C(N)=OCC
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N(C)C)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N(C)=O
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N(C)C)=OCC
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N(C)C)=OOC
+Acc = 33/101
+Sim_hit = 23.39821068752131/101
+HV = 1.0763501293526043*33/101
+----------------
+>>Sample 101
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CO
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CN
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CCl
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CF
+- Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)CBr
+Acc = 33/102
+Sim_hit = 23.39821068752131/102
+HV = 1.0763501293526043*33/102
+----------------
+>>Sample 102
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](C)NC(=O)[C@H](C)OCCOC more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)NC(=O)[C@H](CC)OCCOC
+- CC[C@@H](C)NC(=O)[C@H](C)OC(C)COC
+- CC[C@@H](C)NC(=O)[C@H](C)OCC(O)C
+- CC[C@@H](C)NC(=O)[C@H](Cc1ccccc1)OCCOC
+- CC[C@@H](C)NC(=O)[C@H](C)OCCSC
+Acc = 33/103
+Sim_hit = 23.39821068752131/103
+HV = 1.0763501293526043*33/103
+----------------
+>>Sample 103
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(Cl)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1ccc(C#N)c2cc(Cl)ccc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(Br)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(F)cc2n1
+- CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2ccc(I)cc2n1
+Acc = 33/104
+Sim_hit = 23.39821068752131/104
+HV = 1.0763501293526043*33/104
+----------------
+>>Sample 104
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@H]([NH3+])C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH2]C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@@H]([NH3+])C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@H](C)[NH3+]C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CC[C@@H](C)[NH3+]C2)o1
+Acc = 34/105
+Sim_hit = 24.02978963488973/105
+HV = 1.087325235618751*34/105
+----------------
+>>Sample 105
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CCCC[C@H]1[NH2+]C[C@@H](O)COc1ccccc1Cl
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(F)cc1
+- CC1(C)CCCC[C@H]1[NH3+]C[C@H](O)COc1ccccc1F
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(Cl)cc1
+- CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccc(I)cc1
+Acc = 35/106
+Sim_hit = 24.789789634889733/106
+HV = 1.0901314278254504*35/106
+----------------
+>>Sample 106
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1O
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3cccc(F)c2)c(C)c1
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1F
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1Cl
+- Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1Br
+Acc = 35/107
+Sim_hit = 24.789789634889733/107
+HV = 1.0901314278254504*35/107
+----------------
+>>Sample 107
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@@H](C)C(=O)N23)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N(C)23)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N2C)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)NC2=O)cc1
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N2C(F)(F)F)cc1
+Acc = 35/108
+Sim_hit = 24.789789634889733/108
+HV = 1.0901314278254504*35/108
+----------------
+>>Sample 108
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)Cl)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OCH3
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(Cl)(Cl)Cl)n3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OCC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1SC
+Acc = 35/109
+Sim_hit = 24.789789634889733/109
+HV = 1.0901314278254504*35/109
+----------------
+>>Sample 109
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1cccc(NC(=O)C[C@H]2C[C@@H]3CC[C@@H]2C3)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@H]2C3)c1
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1F
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1Cl
+- CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1Br
+Acc = 35/110
+Sim_hit = 24.789789634889733/110
+HV = 1.0901314278254504*35/110
+----------------
+>>Sample 110
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](NC(=O)CN1c2cccc3c(c23)S1(=O)=O)c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2ccc3c(c2)cccc3S1(=O)=O)c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2ccc3cc(c2)ccc3S1(=O)=O)c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2ccc3cccc(c2)cc3S1(=O)=O)c1cc2ccccc2o1
+- C[C@@H](NC(=O)CN1c2ccc3cc(c23)S1(=O)=O)c1cc2ccccc2o1
+Acc = 35/111
+Sim_hit = 24.789789634889733/111
+HV = 1.0901314278254504*35/111
+----------------
+>>Sample 111
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)CC(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](F)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@@H](O)C1)C(C)C
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)O
+Acc = 36/112
+Sim_hit = 25.485441808802776/112
+HV = 1.0978414850194993*36/112
+----------------
+>>Sample 112
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1CC
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1CF
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1CO
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1Cl
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1CN
+Acc = 36/113
+Sim_hit = 25.485441808802776/113
+HV = 1.0978414850194993*36/113
+----------------
+>>Sample 113
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H]1CS/C(=N\\c2ccccc2Oc2ccccc2)N1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H]1CSC(=N\c2ccccc2Oc2ccccc2)N1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2cccc(=O)c2)N1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccc(O)c(C)c2)N1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccc(F)c(C)c2)N1
+- CC[C@H]1CS/C(=N\c2ccccc2Oc2ccc(Cl)c(C)c2)N1
+Acc = 36/114
+Sim_hit = 25.485441808802776/114
+HV = 1.0978414850194993*36/114
+----------------
+>>Sample 114
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccccc1-n1cccc1)c1ccc(F)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(Cl)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(CN)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(CO)s1
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(NO2)s1
+Acc = 36/115
+Sim_hit = 25.485441808802776/115
+HV = 1.0978414850194993*36/115
+----------------
+>>Sample 115
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@](C)(c1cccc(F)c1)N(C)C
+- COC(=O)[C@](C)(c1ccc(Cl)cc1)N(C)C
+- COC(=O)[C@](C)(c1ccc(I)cc1)N(C)C
+- COC(=O)[C@](C)(c1ccc(OC)cc1)N(C)C
+- COC(=O)[C@](C)(c1ccc(S)cc1)N(C)C
+Acc = 36/116
+Sim_hit = 25.485441808802776/116
+HV = 1.0978414850194993*36/116
+----------------
+>>Sample 116
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@@H](C(O)=O)CC1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@H](CO)CC1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@H](C(C)O)CC1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@H](C(F)O)CC1
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CC[C@H](C#N)CC1
+Acc = 36/117
+Sim_hit = 25.485441808802776/117
+HV = 1.0978414850194993*36/117
+----------------
+>>Sample 117
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)n1)O
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)c1)F
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)c1)Cl
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)c1)Br
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nn(c3c2)c1)CN
+Acc = 36/118
+Sim_hit = 25.485441808802776/118
+HV = 1.0978414850194993*36/118
+----------------
+>>Sample 118
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)Cn2nc(C)c(N)c2C(F))cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2CCl)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2CF)cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C(O))cn1
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C#N)cn1
+Acc = 36/119
+Sim_hit = 25.485441808802776/119
+HV = 1.0978414850194993*36/119
+----------------
+>>Sample 119
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1ccc(C)cc1
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1ccc(O)cc1
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1ccccc1C
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1ccccc1O
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1ccc(F)cc1
+Acc = 37/120
+Sim_hit = 26.152108475469444/120
+HV = 1.1146345237023136*37/120
+----------------
+>>Sample 120
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Cl more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OCH3)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OCF)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OCC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(F)on3)[C@H]2c2ccccc2OC)cc1Cl
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccc(O)c2OC)cc1Cl
+Acc = 37/121
+Sim_hit = 26.152108475469444/121
+HV = 1.1146345237023136*37/121
+----------------
+>>Sample 121
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CNC(=O)c1csc2c1CCOC2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CCN2)c1cccs1
+- O=C(CNC(=O)c1csc2c1C(O)CC2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CFCC2)c1cccs1
+- O=C(CNC(=O)c1csc2c1CCSC2)c1cccs1
+Acc = 38/122
+Sim_hit = 26.896789326533273/122
+HV = 1.1161500389230958*38/122
+----------------
+>>Sample 122
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Nc1nc(Cc2nc3ccc(Cl)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(I)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(F)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(CN)cc3s2)cs1
+- Nc1nc(Cc2nc3ccc(OCC)cc3s2)cs1
+Acc = 38/123
+Sim_hit = 26.896789326533273/123
+HV = 1.1161500389230958*38/123
+----------------
+>>Sample 123
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1C(=O)CCC1=O)NCCc1ccccc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1C(=O)CCC1=O)NCCc1ccc(O)cc1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccccc1Cl
+- O=C(CN1C(=O)CCC1=O)NCCc1ccc(F)cc1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccncc1
+- O=C(CN1C(=O)CCC1=O)NCCc1ccccc1O
+Acc = 38/124
+Sim_hit = 26.896789326533273/124
+HV = 1.1161500389230958*38/124
+----------------
+>>Sample 124
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1OCC[C@@H]1C(=O)Nc1ccc(COCc2ccccc2)cc1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(COCc2ccccc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(CO)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(CO)c(COCc2ccccc2)c1
+- C[C@H]1OCC[C@@H]1C(=O)NCc1ccc(C=C(COCc2ccccc2))c1
+Acc = 39/125
+Sim_hit = 27.583063836337196/125
+HV = 1.142851250490465*39/125
+----------------
+>>Sample 125
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(Cl)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(I)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(CN)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(NO2)cc2)cc1
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(S)cc2)cc1
+Acc = 39/126
+Sim_hit = 27.583063836337196/126
+HV = 1.142851250490465*39/126
+----------------
+>>Sample 126
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCNC(=O)c1ccccc1)Nc1ccc(O)c(C)c1
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(Cl)c(C)c1
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(F)c(C)c1
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(S)c(C)c1
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(N)c(C)c1
+Acc = 39/127
+Sim_hit = 27.583063836337196/127
+HV = 1.142851250490465*39/127
+----------------
+>>Sample 127
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1(C)
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccc(-c2nnc3n2CCC3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1cccs(-c2nnc3n2CCC3)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccc(-c2nnC3CCN32)c1
+- Cc1noc(C)c1CN(C)C(=O)Nc1ccc(-c2nnc3n2CC(C)C3)c1
+Acc = 39/128
+Sim_hit = 27.583063836337196/128
+HV = 1.142851250490465*39/128
+----------------
+>>Sample 128
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC(=O)Nc1cccc[n+]1Cc1ccccc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC(=O)Nc1cccc[n+]1Cc1ccc(O)cc1
+- CCCC(=O)Nc1cccc[n+]1Cc1ccc(F)cc1
+- CCCC(=O)Nc1cccc[n+]1Cc1ccc(Cl)cc1
+- CCCC(=O)Nc1cccc[n+]1Cc1ccc(N)cc1
+- CCCC(=O)Nc1cccc[n+]1Cc1ccc(S)cc1
+Acc = 40/129
+Sim_hit = 28.403576656850017/129
+HV = 1.1445147129925304*40/129
+----------------
+>>Sample 129
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CC(C)CC4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OCC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1SC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CC(C)C4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CC(C)C4)no2)cc1OCCCC
+Acc = 40/130
+Sim_hit = 28.403576656850017/130
+HV = 1.1445147129925304*40/130
+----------------
+>>Sample 130
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(O)
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(F)
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(Cl)
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(S(=O)(=O)O)
+- CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1(C(C)C)
+Acc = 40/131
+Sim_hit = 28.403576656850017/131
+HV = 1.1445147129925304*40/131
+----------------
+>>Sample 131
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CCNC(=O)C[C@H](C)C2CCCC2C)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)CC2CCC2C)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCC2C)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCCC2C)s1
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCC(C)C2C)s1
+Acc = 41/132
+Sim_hit = 29.153576656850017/132
+HV = 1.1473364484163313*41/132
+----------------
+>>Sample 132
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1(F)
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1(Cl)
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1(O)
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1(C#N)
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1(C=C)
+Acc = 41/133
+Sim_hit = 29.153576656850017/133
+HV = 1.1473364484163313*41/133
+----------------
+>>Sample 133
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1(C)
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1(C#N)
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1(F)
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1(Cl)
+- C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1(C=C)
+Acc = 42/134
+Sim_hit = 29.79643379970716/134
+HV = 1.1711953768463905*42/134
+----------------
+>>Sample 134
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(F)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(Cl)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(O)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(S)
+- CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1(C#N)
+Acc = 42/135
+Sim_hit = 29.79643379970716/135
+HV = 1.1711953768463905*42/135
+----------------
+>>Sample 135
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CC(C)CC2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2(C))cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCC(C)C2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CC(C)C(C)C2)cc1
+- COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CC(C)C(C)C(C)C2)cc1
+Acc = 42/136
+Sim_hit = 29.79643379970716/136
+HV = 1.1711953768463905*42/136
+----------------
+>>Sample 136
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3Cl)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3)C2)c1F
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3Br)C2)c1
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3)C2)c1CN
+- CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3)C2)c1O
+Acc = 42/137
+Sim_hit = 29.79643379970716/137
+HV = 1.1711953768463905*42/137
+----------------
+>>Sample 137
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Br)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(Cl)ccc1Cl)N(C(C)=O)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(I)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(CN)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2
+- CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(NO2)cc1-2
+Acc = 42/138
+Sim_hit = 29.79643379970716/138
+HV = 1.1711953768463905*42/138
+----------------
+>>Sample 138
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)ccc(Cl)c2F)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(Cl)cccc2Cl)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)ccc(I)c2F)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(CN)cccc2F)cc1
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)ccc(OCC)c2F)cc1
+Acc = 42/139
+Sim_hit = 29.79643379970716/139
+HV = 1.1711953768463905*42/139
+----------------
+>>Sample 139
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCC
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC(C)
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC(C)C
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC(C)CC
+- CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC(CC)C
+Acc = 42/140
+Sim_hit = 29.79643379970716/140
+HV = 1.1711953768463905*42/140
+----------------
+>>Sample 140
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2c(CN(CCO)Cc3cccc(O)c3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3ccc(F)cc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cc(O)ccc3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cccn3)cc(=O)oc2c1
+- COc1ccc2c(CN(CCO)Cc3cccs3)cc(=O)oc2c1
+Acc = 42/141
+Sim_hit = 29.79643379970716/141
+HV = 1.1711953768463905*42/141
+----------------
+>>Sample 141
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(O)cn2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccccc2)s1
+- Cc1nc(CC(C)C)c(NC(=O)Nc2ccncc2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(F)cn2)s1
+- Cc1nc(CC(C)C)c(NC(=O)NCc2ccc(Cl)cn2)s1
+Acc = 42/142
+Sim_hit = 29.79643379970716/142
+HV = 1.1711953768463905*42/142
+----------------
+>>Sample 142
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1(O)
+- COc1ccc2nc(CNc3ncc(Cl)c(N4CCOCC4)n3)[nH]c2c1
+- COc1ccc2nc(CNc3ncc(F)c(N4CC(C)OCC4)n3)[nH]c2c1
+- COc1ccc2nc(CNc3ncc(F)c(N4CCC(O)CC4)n3)[nH]c2c1
+- COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)nc2c1
+Acc = 42/143
+Sim_hit = 29.79643379970716/143
+HV = 1.1711953768463905*42/143
+----------------
+>>Sample 143
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=C(C)C[C@@H](O)c1ncccn1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C(C)C[C@@H](O)c1ncccc1
+- C=C(C)C[C@@H](O)c1cccnc1
+- C=C(C)C[C@@H](O)c1ccncc1
+- C=C(C)C[C@@H](O)c1cnccc1
+- C=C(C)C[C@@H](O)c1ccnnc1
+Acc = 43/144
+Sim_hit = 30.42143379970716/144
+HV = 1.1736098334097358*43/144
+----------------
+>>Sample 144
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CNC(=O)c1ccnc(OC2CC2)c1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccc(OC2CCC2)cc1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccnc(OC2CCCC2)c1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccc(OC2CC2)cc1)C[C@@H](C)O
+- C[C@H](CNC(=O)c1ccnc(OC2CC(C)C2)c1)C[C@@H](C)O
+Acc = 43/145
+Sim_hit = 30.42143379970716/145
+HV = 1.1736098334097358*43/145
+----------------
+>>Sample 145
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]21 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCN(C(=O)CSCC(F)(F)Cl)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]2O
+- C[C@@H]1CCN(C(=O)CSCC(F)(Cl)F)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]2F
+Acc = 43/146
+Sim_hit = 30.42143379970716/146
+HV = 1.1736098334097358*43/146
+----------------
+>>Sample 146
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H]1O[C@H](Oc2c[nH]c3ccc(O)cc23)[C@H](O)[C@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3cc(O)ccc23)[C@H](O)[C@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3cccc(c23)F)[C@H](O)[C@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3cc(Cl)ccc23)[C@H](O)[C@H](O)[C@@H]1O
+- OC[C@@H]1O[C@H](Oc2c[nH]c3cc(I)ccc23)[C@H](O)[C@H](O)[C@@H]1O
+Acc = 43/147
+Sim_hit = 30.42143379970716/147
+HV = 1.1736098334097358*43/147
+----------------
+>>Sample 147
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1CCN([C@@H]2CCN(CC(F)(F)Cl)C2=O)CC1)NC1CC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCC1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCO1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCN1
+- O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CCCC1
+Acc = 43/148
+Sim_hit = 30.42143379970716/148
+HV = 1.1736098334097358*43/148
+----------------
+>>Sample 148
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)[O-] more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@](C)(NC(=O)CNC(=O)c1ccc(F)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(Br)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(I)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(OCC)cc1)C(=O)[O-]
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(S)cc1)C(=O)[O-]
+Acc = 43/149
+Sim_hit = 30.42143379970716/149
+HV = 1.1736098334097358*43/149
+----------------
+>>Sample 149
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)c2cc(-c3cccnc3)cn2C)cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2CC)cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2CF)cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2Cc4ccccc4)cc1
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C(O)C)cc1
+Acc = 43/150
+Sim_hit = 30.42143379970716/150
+HV = 1.1736098334097358*43/150
+----------------
+>>Sample 150
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(-c3ccccc3F)c2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(-c3ccc(F)cc3)c2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(-c3cc(O)ccc3)c2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(-c3ccncc3)c2)CC1
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(-c3ccccc3)c2)CC1
+Acc = 43/151
+Sim_hit = 30.42143379970716/151
+HV = 1.1736098334097358*43/151
+----------------
+>>Sample 151
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1O more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1S
+- COc1cc(CNc2ccc(Cl)c(C)c2)cc([N+](=O)[O-])c1O
+- COc1cc(CNc2ccc(F)c(C)c2)cc(O)c1O
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1OC
+- COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1N
+Acc = 43/152
+Sim_hit = 30.42143379970716/152
+HV = 1.1736098334097358*43/152
+----------------
+>>Sample 152
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccc(O)cc1
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1F
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1Cl
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1cccnc1
+- Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccncc1
+Acc = 44/153
+Sim_hit = 31.23393379970716/153
+HV = 1.2123864271692275*44/153
+----------------
+>>Sample 153
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@@H](C)CO1
+- C[C@@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](O)CO1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CCO1
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)COC1
+Acc = 44/154
+Sim_hit = 31.23393379970716/154
+HV = 1.2123864271692275*44/154
+----------------
+>>Sample 154
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@]1(NC(=O)c2ccc(-c3csc(C)n3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2ccn(-c3csc(C)c3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2ccc(-c3cssc3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2coc(-c3ccscc3)c2)CCOC1
+- COC(=O)[C@]1(NC(=O)c2ccc(-c3ccccc3)c2)CCOC1
+Acc = 44/155
+Sim_hit = 31.23393379970716/155
+HV = 1.2123864271692275*44/155
+----------------
+>>Sample 155
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\\c2ccc(OC)cc2OC)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(F)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(Cl)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(Br)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(I)cc2OC)CC1
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OCH3)cc2OC)CC1
+Acc = 45/156
+Sim_hit = 32.03393379970716/156
+HV = 1.2325809369655505*45/156
+----------------
+>>Sample 156
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccccc1[C@@H]([NH3+])c1ccc(C)o1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSc1ccccc1[C@@H](N)c1ccc(C)c(F)c1
+- CSc1ccccc1[C@@H](N)c1ccc(C)cc1
+- CSc1ccccc1[C@@H](N)c1ccc(CO)c1
+- CSc1ccccc1[C@@H](N)c1ccc(CC)c1
+- CSc1ccccc1[C@@H](N)c1ccc(C#N)c1
+Acc = 46/157
+Sim_hit = 32.38948935526271/157
+HV = 1.2391491027495332*46/157
+----------------
+>>Sample 157
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2CN)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2OC)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2CF)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2Cc3ccccc3)N2CCOCC2)cc1
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2SC)N2CCOCC2)cc1
+Acc = 46/158
+Sim_hit = 32.38948935526271/158
+HV = 1.2391491027495332*46/158
+----------------
+>>Sample 158
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](N)C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH2])C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](O)C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](F)C1
+- CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H](Cl)C1
+Acc = 47/159
+Sim_hit = 33.103775069548426/159
+HV = 1.251469126056761*47/159
+----------------
+>>Sample 159
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN[C@@H](c1[nH]cc[nH+]1)c1ccc(OCC)cc1OC(F)(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccc(OCCl)cc1OC(F)(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccc(O[Si](C)(C)C)cc1OC(F)(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccc(OCCO)cc1OC(F)(F)F
+- CN[C@@H](c1[nH]cc[nH+]1)c1ccc(OCCCCN)cc1OC(F)(F)F
+Acc = 47/160
+Sim_hit = 33.103775069548426/160
+HV = 1.251469126056761*47/160
+----------------
+>>Sample 160
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(O)c(C)c1
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(Cl)c(C)c1
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(F)c(C)c1
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(I)c(C)c1
+- C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccc(Br)c(C)c1
+Acc = 47/161
+Sim_hit = 33.103775069548426/161
+HV = 1.251469126056761*47/161
+----------------
+>>Sample 161
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCOC[C@H]1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCOC[C@@H]1C
+- Cc1cc(C(=O)N2CCCNC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@@H]1C
+- Cc1cc(C(=O)N2CCCSC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C
+Acc = 47/162
+Sim_hit = 33.103775069548426/162
+HV = 1.251469126056761*47/162
+----------------
+>>Sample 162
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(CCNC(=O)NCC(C)C(=O)N2CCCCCC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCC(C)C2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCC(C)CCC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC(C)CC2)cn1
+- Cc1ccc(CCNC(=O)NCCC(=O)N2CCCC(CC)CC2)cn1
+Acc = 47/163
+Sim_hit = 33.103775069548426/163
+HV = 1.251469126056761*47/163
+----------------
+>>Sample 163
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(O)cc2)c1
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccccc2)c1
+- Cc1nsnc1COc1cccc(C(=O)NCCc2cccn2)c1
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(F)cc2)c1
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(Cl)cc2)c1
+Acc = 47/164
+Sim_hit = 33.103775069548426/164
+HV = 1.251469126056761*47/164
+----------------
+>>Sample 164
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COCCNC(=O)c1csc(COc2ccccc2Cl)n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1csc(COc2ccc(F)cc2)n1
+- COCCNC(=O)c1csc(COc2ccc(Cl)cc2)n1
+- COCCNC(=O)c1csc(COc2ccccc2Br)n1
+- COCCNC(=O)c1csc(COc2ccccc2OCH3)n1
+- COCCNC(=O)c1csc(COc2ccc(N)cc2)n1
+Acc = 48/165
+Sim_hit = 33.77044173621509/165
+HV = 1.2528480431056361*48/165
+----------------
+>>Sample 165
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC[NH2])cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCO)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCF)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCN)cc2)C1
+- CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCCI)cc2)C1
+Acc = 49/166
+Sim_hit = 34.511821046559916/166
+HV = 1.2665158973258492*49/166
+----------------
+>>Sample 166
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)NC1=C
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(O)cc2S(=O)(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(F)cc2S(=O)(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(Cl)cc2S(=O)(=O)N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(N)cc2S(=O)(=O)N1
+Acc = 49/167
+Sim_hit = 34.511821046559916/167
+HV = 1.2665158973258492*49/167
+----------------
+>>Sample 167
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)N[C@H](CO)c1ccc(F)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(I)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(CN)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(OC)cc1)c1cccs1
+- CC[C@@H](NC(=O)N[C@H](CO)c1ccc(NO2)cc1)c1cccs1
+Acc = 50/168
+Sim_hit = 35.289598824337695/168
+HV = 1.278491184911596*50/168
+----------------
+>>Sample 168
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccoc1C(=O)Nc1ccc(F)cc1Br more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccoc1C(=O)Nc1ccc(Cl)cc1Br
+- Cc1ccoc1C(=O)Nc1ccc(I)cc1Br
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1Cl
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1I
+- Cc1ccoc1C(=O)Nc1ccc(CN)cc1Br
+Acc = 50/169
+Sim_hit = 35.289598824337695/169
+HV = 1.278491184911596*50/169
+----------------
+>>Sample 169
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)N)CCCC1
+- CC(C)CC1(CNC(=O)c2ccc(O)c(S(C)(=O)=O)c2)CCCC1
+- CC(C)CC1(CNC(=O)c2ccc(F)c(S(C)(=O)=O)c2)CCCC1
+- CC(C)CC1(CNC(=O)c2ccc(Cl)c(S(C)(=O)=O)c2)CCCC1
+- CC(C)CC1(CNC(=O)c2ccc(Br)c(S(C)(=O)=O)c2)CCCC1
+Acc = 50/170
+Sim_hit = 35.289598824337695/170
+HV = 1.278491184911596*50/170
+----------------
+>>Sample 170
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc21 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2ccccc2Cl)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccccc2F)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccc(O)c(Br)c2)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccc(S)c(Br)c2)cc2c(F)cccc21
+- Cn1c(C(=O)Nc2ccccc2I)cc2c(F)cccc21
+Acc = 51/171
+Sim_hit = 36.03427967540152/171
+HV = 1.2931324514971176*51/171
+----------------
+>>Sample 171
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)c2nnn(-c3ccc(Cl)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(Br)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(I)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(OCC)cc3)c2C)c(C)c1
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(S)cc3)c2C)c(C)c1
+Acc = 51/172
+Sim_hit = 36.03427967540152/172
+HV = 1.2931324514971176*51/172
+----------------
+>>Sample 172
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(F)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Br)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(CN)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(O)cc1)CS(=O)(=O)C2
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(S)cc1)CS(=O)(=O)C2
+Acc = 52/173
+Sim_hit = 36.83820124402897/173
+HV = 1.3117742617797061*52/173
+----------------
+>>Sample 173
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCCC[NH+]1C
+- Cc1nn(C)c(N2CCOCC2)c1CNCC[C@@H]1CCC[NH+]1C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1CC
+- Cc1nn(C)c(N2CCOC(C)C2)c1CNC[C@@H]1CCC[NH+]1C
+- Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CC(C)[NH+]1C
+Acc = 53/174
+Sim_hit = 37.776976754233054/174
+HV = 1.3356062706636647*53/174
+----------------
+>>Sample 174
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCNS(=O)(=O)c1cccnc1Cl more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCNS(=O)(=O)c1cccnc1F
+- C=CCNS(=O)(=O)c1ccccc1Cl
+- C=CCNS(=O)(=O)c1cccnc1Br
+- C=CCNS(=O)(=O)c1ccncc1Cl
+- C=CCN(C)S(=O)(=O)c1cccnc1Cl
+Acc = 53/175
+Sim_hit = 37.776976754233054/175
+HV = 1.3356062706636647*53/175
+----------------
+>>Sample 175
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NNC1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)C=NO1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)C=NOC1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)C=NN1
+- CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)C=NCC1
+Acc = 53/176
+Sim_hit = 37.776976754233054/176
+HV = 1.3356062706636647*53/176
+----------------
+>>Sample 176
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cc(Br)c(C(=O)N/N=C/c2ccc(O)cc2)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)cc2F)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2ccc(Cl)c2O)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2)n1
+- Cn1cc(Br)c(C(=O)N/N=C/c2ccc(Cl)c2)n1
+Acc = 54/177
+Sim_hit = 38.399618263667016/177
+HV = 1.34338164179104*54/177
+----------------
+>>Sample 177
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C(F)(F)F)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nn[nH]3C)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nnC(=O)Oc3)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nnC(=S)Nc3)cc2)C1
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nnC(=O)Cc3)cc2)C1
+Acc = 54/178
+Sim_hit = 38.399618263667016/178
+HV = 1.34338164179104*54/178
+----------------
+>>Sample 178
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O[C@H](C[NH2+]C[C@@H]1COc2ccccc21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccccn21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccc(F)cc21)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2ccccc2O1)C1CC1
+- O[C@H](C[NH2+]C[C@H]1COc2cccnc21)C1CC1
+Acc = 54/179
+Sim_hit = 38.399618263667016/179
+HV = 1.34338164179104*54/179
+----------------
+>>Sample 179
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(F)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Br)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(I)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(CN)cc3)no2)CC1
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(OCC)cc3)no2)CC1
+Acc = 55/180
+Sim_hit = 39.20731057135932/180
+HV = 1.3681302012944772*55/180
+----------------
+>>Sample 180
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(N2C(=O)S/C(=C\\c3cccc(F)c3)C2=O)c1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)NC2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3ccc(F)cc3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cc(F)ccc3)C2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cc(F)cc3)NC2=O)c1
+- Cc1cccc(N2C(=O)S/C(=C\c3cccc(F)c3)CC2=O)c1
+Acc = 56/181
+Sim_hit = 39.88731057135932/181
+HV = 1.442559960193176*56/181
+----------------
+>>Sample 181
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccc(O)c2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1(C)
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1(C#N)
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccc(F)c2)CC1
+- COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1(O)
+Acc = 56/182
+Sim_hit = 39.88731057135932/182
+HV = 1.442559960193176*56/182
+----------------
+>>Sample 182
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nnc2n1CCC[C@H]2NC(=O)NCCc1ccccc1C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1cccc(c1)C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccc(O)c(c1)C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccc(F)c(c1)C[NH+](C)C
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccc(Cl)c(c1)C[NH+](C)C
+Acc = 56/183
+Sim_hit = 39.88731057135932/183
+HV = 1.442559960193176*56/183
+----------------
+>>Sample 183
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccc(O)cc1)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccc(S)cc1)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccc(Cl)cc1)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccc(Br)cc1)C2
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccc(N)cc1)C2
+Acc = 56/184
+Sim_hit = 39.88731057135932/184
+HV = 1.442559960193176*56/184
+----------------
+>>Sample 184
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC2CC[NH+](Cc3cc(F)cc(Cl)c3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)ccc3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3ccc(F)cc3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)c(CF3)c3)CC2)n[nH]c1=O
+- CCn1c(CC2CC[NH+](Cc3cc(F)c(O)c3)CC2)n[nH]c1=O
+Acc = 57/185
+Sim_hit = 40.752695186743935/185
+HV = 1.4441677721912864*57/185
+----------------
+>>Sample 185
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccc(O)cc3)CCC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3cc(O)ccc3)CCC2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCCO2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCCN2)N1
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCCC2)N1
+Acc = 57/186
+Sim_hit = 40.752695186743935/186
+HV = 1.4441677721912864*57/186
+----------------
+>>Sample 186
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC[C@H](C)C43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4C[C@@H]43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC[C@H](O)C43)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CC[C@@H](C)C43)cc12
+Acc = 57/187
+Sim_hit = 40.752695186743935/187
+HV = 1.4441677721912864*57/187
+----------------
+>>Sample 187
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)C)CC2)ccn1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)c(O)n1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)c(F)n1
+- CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)c(Cl)n1
+Acc = 57/188
+Sim_hit = 40.752695186743935/188
+HV = 1.4441677721912864*57/188
+----------------
+>>Sample 188
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@]12CC3CC(N4CC[C@H](N)C4=O)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH2])C4=O)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=C)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=S)(C1)C[C@](C)(C3)C2
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=N)(C1)C[C@](C)(C3)C2
+Acc = 58/189
+Sim_hit = 41.44500287905163/189
+HV = 1.458680796872436*58/189
+----------------
+>>Sample 189
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)c1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccf5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccc(Cl)c5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccc(O)c5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccc(S)c5[nH]4)C3)nn2)n1
+Acc = 59/190
+Sim_hit = 42.16375287905163/190
+HV = 1.4618215241251236*59/190
+----------------
+>>Sample 190
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1.O
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1.C
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3F)=NO2)N=N1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3cccc(F)c3)=NO2)N=N1
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3Cl)=NO2)N=N1
+Acc = 59/191
+Sim_hit = 42.16375287905163/191
+HV = 1.4618215241251236*59/191
+----------------
+>>Sample 191
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-] more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NCC[C@@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)O
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NCC[C@@H](C)C(=O)O
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)N
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)OC
+Acc = 60/192
+Sim_hit = 42.993540113094184/192
+HV = 1.4849570311811267*60/192
+----------------
+>>Sample 192
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NCC)=O)cc1
+- Cc1onc(-c2ccccc2F)c1C(=O)Nc1ccc(C(N)=O)cc1
+- Cc1onc(-c2ccc(O)cc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NH2)=O)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(NMe)=O)cc1
+Acc = 60/193
+Sim_hit = 42.993540113094184/193
+HV = 1.4849570311811267*60/193
+----------------
+>>Sample 193
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C1CCN(c2cnc(N3CCC(C)CC3)nc2)CC1
+- O=C(NCc1ccc(O)cc1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+- O=C(NCc1ccncc1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+- O=C(NCc1ccc(F)cc1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+- O=C(NCc1ccc(Cl)cc1)C1CCN(c2cnc(N3CCCC3)nc2)CC1
+Acc = 60/194
+Sim_hit = 42.993540113094184/194
+HV = 1.4849570311811267*60/194
+----------------
+>>Sample 194
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(SCC(=O)N2CCN(c3ccc(OCC)cc3)CC2)nnc1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC(C)C)cc3)CC2)nnc1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)cnc1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnC1=CN=C1-c1ccco1
+- CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccc(Cl)o1
+Acc = 60/195
+Sim_hit = 42.993540113094184/195
+HV = 1.4849570311811267*60/195
+----------------
+>>Sample 195
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc(O)cc2)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc(F)cc2)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccccc2)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccccc2O)CC1
+- Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2ccc(Cl)cc2)CC1
+Acc = 61/196
+Sim_hit = 43.73547559696515/196
+HV = 1.6155774935858482*61/196
+----------------
+>>Sample 196
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCN
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCCF
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCCCl
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCOC
+- N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCCBr
+Acc = 61/197
+Sim_hit = 43.73547559696515/197
+HV = 1.6155774935858482*61/197
+----------------
+>>Sample 197
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)N1CCC[C@@H]1C(=O)N1CC[NH2+]CC1
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH+]CC1(C)
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1(C)C
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1(C#N)
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1(F)
+Acc = 61/198
+Sim_hit = 43.73547559696515/198
+HV = 1.6155774935858482*61/198
+----------------
+>>Sample 198
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-] more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)O
+- CC(C)[C@H](Nc1cc(C#N)c(O)c1)C(=O)[O-]
+- CC(C)[C@H](Nc1cc(C#N)ccc1)C(=O)[O-]
+- CC(C)[C@H](Nc1cc(C#N)c(F)cn1)C(=O)[O-]
+- CC(C)[C@H](Nc1cc(C#N)c(Cl)cn1)C(=O)[O-]
+Acc = 62/199
+Sim_hit = 44.51047559696515/199
+HV = 1.6345159352637921*62/199
+----------------
+>>Sample 199
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1 more like a drug and increase QED by at least 0. ? The output molecules should be similar to the input molecule. You are suggested to edit root_molecule according to the suggestion:  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(NC(=O)CCc2ccc(Cl)cc2Cl)no1
+- Cc1cc(NC(=O)CCc2ccc(F)c2F)no1
+- Cc1cc(NC(=O)CCc2ccc(Br)c2Br)no1
+- Cc1cc(NC(=O)CCc2ccc(I)c2I)no1
+- Cc1cc(NC(=O)CCc2ccc(CN)c2CN)no1
+Acc = 62/200
+Sim_hit = 44.51047559696515/200
+HV = 1.6345159352637921*62/200
+----------------
+--------Final Acc--------
+Acc = 62/200
+----------------

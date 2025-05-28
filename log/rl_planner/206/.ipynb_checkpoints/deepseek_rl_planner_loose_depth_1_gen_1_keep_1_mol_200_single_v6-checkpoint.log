@@ -1,0 +1,81 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/general_replay_buffer_mol_llama_loose_206_best_reward_v1.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=206, constraint='loose', conversation_type='single', planner='rl_planner', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 more soluble in water and lower permeability and decrease logP by at least 0. increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1. Start the modification from C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1. Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.NS(=O)(=O)C  
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.NS(=O)(=O)CC  
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.NS(=O)(=O)C(O)=O  
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.NS(=O)(=O)C1CC1  
+- C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1.NS(=O)(=O)C1CCC1
+Acc = 1/1
+Sim_hit = 0.8627450980392157/1
+HV = 52.84770980392155*1/1
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more soluble in water and lower permeability and decrease logP by at least 0. increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C. Start the modification from C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C. Replace Fluorine Atom with Carbamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(OC(=O)N)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(OC(=O)NH)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(OC(=O)NH2)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(OC(=O)N(C)C)ccc1NC(=O)C(=O)NCCc1ccncc1C  
+- C#CCOc1cc(OC(=O)NCC)ccc1NC(=O)C(=O)NCCc1ccncc1C
+Acc = 2/2
+Sim_hit = 1.6165912518853696/2
+HV = 92.80276211161386*2/2
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Fluorine Atom with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F more soluble in water and lower permeability and decrease logP by at least 0. increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F. Start the modification from CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F. Replace Fluorine Atom with Carbamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[NH2+]Cc1ncoc1-c1c(OC(=O)N)cccc1F  
+- CCC[NH2+]Cc1ncoc1-c1c(F)c(OC(=O)N)ccc1F  
+- CCC[NH2+]Cc1ncoc1-c1c(F)cc(OC(=O)N)cc1F  
+- CCC[NH2+]Cc1ncoc1-c1c(F)ccc(OC(=O)N)c1F  
+- CCC[NH2+]Cc1ncoc1-c1c(OC(=O)N)c(F)ccc1F
+Acc = 3/3
+Sim_hit = 2.330876966171084/3
+HV = 130.66104782589957*3/3
+----------------
+>>Sample 3
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 more soluble in water and lower permeability and decrease logP by at least 0. increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1. Start the modification from CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1. Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)S(=O)(=O)Nc3ccccc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)S(=O)(=O)Nc3cc(C)cc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)S(=O)(=O)Nc3ccc(F)cc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)S(=O)(=O)Nc3cc(OC)cc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)S(=O)(=O)Nc3cccc(Cl)c32)cc1
+Acc = 4/4
+Sim_hit = 2.9462615815556994/4
+HV = 159.90437090282265*4/4
+----------------
+>>Sample 4
+RL Suggestion 0: Replace Carbon Atom with Guanidine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 more soluble in water and lower permeability and decrease logP by at least 0. increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1. Start the modification from CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1. Replace Carbon Atom with Guanidine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(=N)N)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(=N)N)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(=N)N)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(=N)N)C1  
+- CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(=N)N)C1
+Acc = 4/5
+Sim_hit = 2.9462615815556994/5
+HV = 159.90437090282265*4/5
+----------------
+>>Sample 5
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 more soluble in water and lower permeability and decrease logP by at least 0. increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1. Start the modification from COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1. Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)S(=O)(=O)NC1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)S(=O)(=O)N(C)C1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)S(=O)(=O)N1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)S(=O)(=O)NC(C)C1  
+- COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)S(=O)(=O)NCC1
+Acc = 5/6
+Sim_hit = 3.652143934496876/6
+HV = 193.317735608705*5/6
+----------------
+>>Sample 6
+RL Suggestion 0: Add a Sulfonamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 more soluble in water and lower permeability and decrease logP by at least 0. increase tPSA by at least 0. ? The output molecules should be similar to the input molecule. The molecule closest to the goal so far is current_best_mol = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21. Start the modification from Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21. Add a Sulfonamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(S(=O)(=O)N)c2ccccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(S(=O)(=O)Nc2ccccc2)c2ccccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(S(=O)(=O)Nc2ccc(O)cc2)c2ccccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(S(=O)(=O)Nc2ccncc2)c2ccccc21  
+- Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)N(S(=O)(=O)Nc2ccccn2)c2ccccc21

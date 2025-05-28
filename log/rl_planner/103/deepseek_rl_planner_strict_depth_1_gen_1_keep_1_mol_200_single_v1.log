@@ -1,0 +1,2404 @@
+args:  Namespace(val_mol_list='Data/small_molecule_editing_new.txt', rl_model_path='results/rl_model_checkpoint/xufeng_pth/general_replay_buffer_mol_QED_strict_103_best_reward.pth', conversational_LLM='deepseek', planning_LLM='deepseek', cot=None, exact=None, num_of_mol=200, task_id=103, constraint='strict', conversation_type='single', planner='rl_planner', depth=1, num_generate=1, num_keep=1)
+>>Sample 0
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C1CC[C@@H](CCc2nc([C@@H]3CSCCO3)no2)[NH2+]C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C1CC[C@@H](CCc2nc([C@@H]3CCCO3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CCCCO3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CCO3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CCN3)no2)[NH2+]C1  
+- C1CC[C@@H](CCc2nc([C@@H]3CCCO3)no2)[NH2+]C1
+Acc = 0/1
+Sim_hit = 0/1
+HV = 0*0/1
+----------------
+>>Sample 1
+RL Suggestion 0: Replace Acetylide with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Acetylide with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccncc1N
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cc(N)cc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccnc(N)c1
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1cc(N)nc1C
+- C#CCOc1cc(F)ccc1NC(=O)C(=O)NCCc1ccn(N)c1C
+Acc = 0/2
+Sim_hit = 0/2
+HV = 0*0/2
+----------------
+>>Sample 2
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[NH2+]Cc1ncoc1-c1c(F)cccc1F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C+](C)(C)Cc1ncoc1-c1c(F)cccc1F  
+- CCC[C+](C)(C)(O)Cc1ncoc1-c1c(F)cccc1F  
+- CCC[C+](C)(C)(N)Cc1ncoc1-c1c(F)cccc1F  
+- CCC[C+](C)(C)(CN)Cc1ncoc1-c1c(F)cccc1F  
+- CCC[C+](C)(C)(OC)Cc1ncoc1-c1c(F)cccc1F
+Acc = 0/3
+Sim_hit = 0/3
+HV = 0*0/3
+----------------
+>>Sample 3
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Sc3ccccc32)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)c3ccccc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Oc3ccccc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Nc3ccccc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Cc3ccccc32)cc1  
+- CCc1ccc(NC(=O)CN2C(=O)C[C@H](c3ccccc3)Clc3ccccc32)cc1
+Acc = 0/4
+Sim_hit = 0/4
+HV = 0*0/4
+----------------
+>>Sample 4
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * CC[C@H]1CCc2c(sc(NC(=O)c3cccs3)c2C(N)=O)C1
+* CCC[C@H]1CCc2c(sc(NC(=O)c3ccc(O)cc3)c2C(N)=O)C1
+* CCC[C@H]1CCc2c(sc(NC(=O)C3CCCC3)c2C(N)=O)C1
+* CCC[C@H]1CCc2c(sc(NC(=O)c3ccncc3)c2C(N)=O)C1
+* CCC[C@H]1CCc2c(sc(NC(=O)c3ccco3)c2C(N)=O)C1
+Acc = 0/5
+Sim_hit = 0/5
+HV = 0*0/5
+----------------
+>>Sample 5
+RL Suggestion 0: Replace Ester with Ketone. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Ketone.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1  
+- CC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1  
+- CC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1  
+- CC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1  
+- CC(=O)C(C)(C)[C@H]1CCC[NH+](Cc2nc3cc(Cl)ccc3n2C)C1
+Acc = 0/6
+Sim_hit = 0/6
+HV = 0*0/6
+----------------
+>>Sample 6
+RL Suggestion 0: Replace Nitro Group with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([N+](=O)[O-])cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2ccccc21  
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2cccc(C)c21  
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2cc(C)ccc21  
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2ccc(C)cc21  
+- Cc1ccc(Cl)cc1OC(=O)[C@H]1CC(=O)Nc2cc(C(F)(F)F)ccc21
+Acc = 1/7
+Sim_hit = 0.7090909090909091/7
+HV = 0.19472249695288424*1/7
+----------------
+>>Sample 7
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NCC(C)(C)[NH+]1CCN(C)CC1)c1ccc(Cl)s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NCC(C)(C)C#N)c1ccc(Cl)s1  
+- C[C@H](NCC(C)(C)C#N)c1ccc(Br)s1  
+- C[C@H](NCC(C)(C)C#N)c1ccc(F)s1  
+- C[C@H](NCC(C)(C)C#N)c1ccc(I)s1  
+- C[C@H](NCC(C)(C)C#N)c1ccc(O)s1
+Acc = 1/8
+Sim_hit = 0.7090909090909091/8
+HV = 0.19472249695288424*1/8
+----------------
+>>Sample 8
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC2 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CCC(=O)O
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC(N)C2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC(O)C2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC(C(=O)N)C2
+- N#Cc1c(NC(=O)c2ccc(Br)nc2)sc2c1CC(F)C2
+Acc = 1/9
+Sim_hit = 0.7090909090909091/9
+HV = 0.19472249695288424*1/9
+----------------
+>>Sample 9
+RL Suggestion 0: Replace Aromatic Amine with Aliphatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1c(NCc2ccccc2)ncnc1Nc1ccccc1F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Aromatic Amine with Aliphatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - NC1C(NCC2CCCCC2)ncnc1Nc1ccccc1F  
+- NC1C(NCC2CCCC2)ncnc1Nc1ccccc1F  
+- NC1C(NCC2CCC2)ncnc1Nc1ccccc1F  
+- NC1C(NCC2CC2)ncnc1Nc1ccccc1F  
+- NC1C(NCC2C2)ncnc1Nc1ccccc1F
+Acc = 2/10
+Sim_hit = 1.0041728763040239/10
+HV = 0.23214320354252183*2/10
+----------------
+>>Sample 10
+RL Suggestion 0: Replace Bromine Atom with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(Br)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cccc(C)c1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cc(C)cc1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1ccc(C)c1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1cc(C)c(C)c1  
+- O=C(NCCC(=O)N1CCCCC1)[C@H]1C[C@@H]1c1c(C)cccc1
+Acc = 2/11
+Sim_hit = 1.0041728763040239/11
+HV = 0.23214320354252183*2/11
+----------------
+>>Sample 11
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1C  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1OC  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1CC  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1NC  
+- CCNC(=O)c1cccc(NC(=O)NNc2ccc(Cl)nn2)c1C(O)C
+Acc = 2/12
+Sim_hit = 1.0041728763040239/12
+HV = 0.23214320354252183*2/12
+----------------
+>>Sample 12
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)n1nccc1NC(=O)N(C)C[C@H](O)CN1CCOCC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)n1nccc1NC(=O)N(C[C@H](O)CN1CCOCC1)C#N  
+- CC(C)n1nccc1NC(=O)N(C[C@H](O)CN1CCOCC1)C#N  
+- CC(C)n1nccc1NC(=O)N(C[C@H](O)CN1CCOCC1)C#N  
+- CC(C)n1nccc1NC(=O)N(C[C@H](O)CN1CCOCC1)C#N  
+- CC(C)n1nccc1NC(=O)N(C[C@H](O)CN1CCOCC1)C#N
+Acc = 2/13
+Sim_hit = 1.0041728763040239/13
+HV = 0.23214320354252183*2/13
+----------------
+>>Sample 13
+RL Suggestion 0: Replace Nitro Group with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=[N+]([O-])c1ccc(C2=NOc3cc(Cl)ccc3N2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C2=NOc3cc(Cl)ccc3N2)cc1
+- Cc1ccc(C2=NOc3cc(Br)ccc3N2)cc1
+- Cc1ccc(C2=NOc3cc(F)ccc3N2)cc1
+- Cc1ccc(C2=NOc3cc(I)ccc3N2)cc1
+- Cc1ccc(C2=NOc3cc(O)ccc3N2)cc1
+Acc = 3/14
+Sim_hit = 1.6785914809551867/14
+HV = 0.34349752531574634*3/14
+----------------
+>>Sample 14
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+- COc1cccc(NC(=O)CCCc2c(-c3ccc4ccccc4n3)[nH]c3ccc(F)cc23)c1
+Acc = 3/15
+Sim_hit = 1.6785914809551867/15
+HV = 0.34349752531574634*3/15
+----------------
+>>Sample 15
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSC(C)(C)CNC(=O)[C@H](C)n1c([S-])nnc1-c1cccs1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CSC(C)(C)CNC(=O)[C@H](C)n1c([O-])nnc1-c1cccs1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([N-])nnc1-c1cccs1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([Cl])nnc1-c1cccs1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([F])nnc1-c1cccs1  
+- CSC(C)(C)CNC(=O)[C@H](C)n1c([Br])nnc1-c1cccs1
+Acc = 3/16
+Sim_hit = 1.6785914809551867/16
+HV = 0.34349752531574634*3/16
+----------------
+>>Sample 16
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[NH2+]Cc1cncc(N2Cc3ccccc3C2)n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * CC(C)C(#[N])Cc1cncc(N2Cc3ccccc3C2)n1
+* CC(C)C(#[N])CN1c2cncc(CC#N)c2N(C)Cc3ccccc31
+* CC(C)C(#[N])CN1c2cncc(CC#N)c2N(Cc3ccccc3)C1
+* CC(C)C(#[N])CN1c2cncc(CC#N)c2N(C)C1Cc3ccccc3
+* CC(C)C(#[N])CN1c2cncc(CC#N)c2N(Cc3ccccc3)Cc4ccccc41
+Acc = 3/17
+Sim_hit = 1.6785914809551867/17
+HV = 0.34349752531574634*3/17
+----------------
+>>Sample 17
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](NC(=O)NCc1ccnc(OC)c1)c1cccc(Cl)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](NC(=O)C(C)Cc1ccnc(OC)c1)c1cccc(Cl)c1  
+- CC[C@H](NC(=O)C(C)(C)Cc1ccnc(OC)c1)c1cccc(Cl)c1  
+- CC[C@H](NC(=O)C(N(C)C)Cc1ccnc(OC)c1)c1cccc(Cl)c1  
+- CC[C@H](NC(=O)C(C)N(C)Cc1ccnc(OC)c1)c1cccc(Cl)c1  
+- CC[C@H](NC(=O)C(C)C(N(C)C)c1ccnc(OC)c1)c1cccc(Cl)c1
+Acc = 3/18
+Sim_hit = 1.6785914809551867/18
+HV = 0.34349752531574634*3/18
+----------------
+>>Sample 18
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)Sc1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)c1cccc(CN2C(=O)c3ccc(F)cc3C2=O)c1  
+- CN(C)C(=O)c1cccc(CN2C(=O)c3ccc(F)cc3C2)c1  
+- CN(C)C(=O)c1cccc(CN2C(=O)c3ccc(F)cc3N2)c1  
+- CN(C)C(=O)c1cccc(CN2C(=O)c3ccc(F)cc3NC2=O)c1  
+- CN(C)C(=O)c1cccc(CN2C(=O)c3ccc(F)cc3OC2=O)c1
+Acc = 4/19
+Sim_hit = 2.3648659907591085/19
+HV = 0.47404126437375216*4/19
+----------------
+>>Sample 19
+RL Suggestion 0: Replace Oxygen Atom with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[NH2+][C@](C)(C(=O)[O-])c1cccc(Cl)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with N,N-Dimethylacrylamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[NH2+][C@](C)(C(=O)N(C)C=C)c1cccc(Cl)c1  
+- C[NH2+][C@](C)(C(=O)N(C)C=C)c1ccc(Cl)cc1  
+- C[NH2+][C@](C)(C(=O)N(C)C=C)c1cc(Cl)ccc1  
+- C[NH2+][C@](C)(C(=O)N(C)C=C)c1c(Cl)cccc1  
+- C[NH2+][C@](C)(C(=O)N(C)C=C)c1cccc(Cl)c1Cl
+Acc = 5/20
+Sim_hit = 2.9695171535498064/20
+HV = 0.5515259435011384*5/20
+----------------
+>>Sample 20
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(-c2nnco2)cc1NC(=O)N1CCO[C@@H](c2ccccc2)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(=O)[C@@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(=O)[C@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)=O[C@@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)=O[C@H](c2ccccc2)C1
+- Cc1ccc(-c2nnco2)cc1NC(=O)N1CC(O)=O[C@@H](c2cccc(F)c2)C1
+Acc = 5/21
+Sim_hit = 2.9695171535498064/21
+HV = 0.5515259435011384*5/21
+----------------
+>>Sample 21
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(Br)c(S(N)(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(Br)c(N(=O)=O)cc1C(=O)N[C@@H](C)Cc1cccs1  
+- COc1cc(Br)c(N(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(N)s1  
+- COc1cc(Br)c(N(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(O)s1  
+- COc1cc(Br)c(N(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(F)s1  
+- COc1cc(Br)c(N(=O)=O)cc1C(=O)N[C@@H](C)Cc1ccc(Cl)s1
+Acc = 5/22
+Sim_hit = 2.9695171535498064/22
+HV = 0.5515259435011384*5/22
+----------------
+>>Sample 22
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(C)c1OC1C[NH2+]C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(C)c1OC1C[N+](C)(C)C1
+- Cc1cccc(C)c1OC1C[N+](C)(CC)C1
+- Cc1cccc(C)c1OC1C[N+](CC)(CC)C1
+- Cc1cccc(C)c1OC1C[N+](C)(C1CC1)C1
+- Cc1cccc(C)c1OC1C[N+](C1CC1)(C1CC1)C1
+Acc = 5/23
+Sim_hit = 2.9695171535498064/23
+HV = 0.5515259435011384*5/23
+----------------
+>>Sample 23
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H]([NH3+])c1ccc(Cl)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@H](C(C)(C)N)c1ccc(Cl)cc1  
+- CC(C)C[C@H](C(N(C)C)C)c1ccc(Cl)cc1  
+- CC(C)C[C@H](C(N1CCCC1)C)c1ccc(Cl)cc1  
+- CC(C)C[C@H](C(N(C)C)C)c1ccc(Cl)cc1  
+- CC(C)C[C@H](C(N1CCOCC1)C)c1ccc(Cl)cc1
+Acc = 5/24
+Sim_hit = 2.9695171535498064/24
+HV = 0.5515259435011384*5/24
+----------------
+>>Sample 24
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)COC4)cc2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)C(O)=O)cc2)cc1  
+- CC(=O)c1ccc(Oc2cc(C(=O)Nc3ccc4c(c3)C(O)=O)cc2)cc1  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3cc4c(cc3)OCC4)cc2)cc1  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)C(O)O)cc2)cc1  
+- CC(=O)c1ccc(Oc2ccc(C(=O)Nc3ccc4c(c3)C(=O)O)cc2)cc1
+Acc = 5/25
+Sim_hit = 2.9695171535498064/25
+HV = 0.5515259435011384*5/25
+----------------
+>>Sample 25
+RL Suggestion 0: Replace Sulfur Atom with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCc1noc([C@H]2C=CC(=N)S2)n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Sulfur Atom with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCc1noc([C@H]2C=CC(=N)C2)n1  
+- CCCCc1noc([C@H]2C=CC(=O)C2)n1  
+- CCCCc1noc([C@H]2C=CC(=N)C(C)(C)C2)n1  
+- CCCCc1noc([C@H]2C=CC(=N)CC2)n1  
+- CCCCc1noc([C@H]2C=CC(=N)C2(C)C)n1
+Acc = 5/26
+Sim_hit = 2.9695171535498064/26
+HV = 0.5515259435011384*5/26
+----------------
+>>Sample 26
+RL Suggestion 0: Replace Ester with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OC)cc2)s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Carbamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)ON)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)OCC)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)Oc3ccccc3)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)Oc3cccnc3)cc2)s1
+- CCc1ccc(CNC(=O)C(=O)Nc2ccc(C(=O)Oc3ccco3)cc2)s1
+Acc = 5/27
+Sim_hit = 2.9695171535498064/27
+HV = 0.5515259435011384*5/27
+----------------
+>>Sample 27
+RL Suggestion 0: Replace Bromine Atom with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Br)cc32)CCO1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(C)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(Cl)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(F)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(N)cc32)CCO1  
+- CCC[C@H]1CN(C(=O)[C@@H]2COc3ccc(O)cc32)CCO1
+Acc = 5/28
+Sim_hit = 2.9695171535498064/28
+HV = 0.5515259435011384*5/28
+----------------
+>>Sample 28
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)Cc1ccc(NC(=O)N(C)CCC#N)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)Cc1ccc(NC(=Cl)N(C)CCC#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=Cl)N(C)CC#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=Cl)N(C)CCCN)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=Cl)N(C)C#N)cc1
+- CCN(CC)C(=O)Cc1ccc(NC(=Cl)N(C)CCCC#N)cc1
+Acc = 5/29
+Sim_hit = 2.9695171535498064/29
+HV = 0.5515259435011384*5/29
+----------------
+>>Sample 29
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC2 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CCC#N)CC#N
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CC#N)C(=O)N(C)CCC#N
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC#N)CC2
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CCC(=O)N(C)CC#N)CC#N
+- CCO[C@H]1C[C@@H]([O-])C12CC[NH+](CC#N)C(=O)N(C)CC2
+Acc = 5/30
+Sim_hit = 2.9695171535498064/30
+HV = 0.5515259435011384*5/30
+----------------
+>>Sample 30
+RL Suggestion 0: Replace Ketone with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)C(=O)[C@@H](C)c1ccncc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ketone with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)C#N[C@@H](C)c1ccncc1
+- CC[C@H](C)C#N[C@H](C)c1ccncc1
+- CC[C@H](C)C#N[C@@H](C)c1ccccc1
+- CC[C@H](C)C#N[C@H](C)c1ccccc1
+- CC[C@H](C)C#N[C@@H](C)c1ccc(O)cc1
+Acc = 5/31
+Sim_hit = 2.9695171535498064/31
+HV = 0.5515259435011384*5/31
+----------------
+>>Sample 31
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O
+- CC(=O)Oc1ccccc1NC(=O)Cn1ncc2c3ccccc3n(Cc3ccccc3)c2c1=O
+- C1(=O)OC2=C(C=CC=C2)C(=O)Nc2cccc(C(=O)O)c2
+- C1(=O)OC2=C(C=CC=C2)C(=O)Nc2cccc(C(=O)O)c2C(=O)O
+- C1(=O)OC2=C(C=CC=C2)C(=O)Nc2cccc(C(=O)O)c2C(=O)OC
+Acc = 5/32
+Sim_hit = 2.9695171535498064/32
+HV = 0.5515259435011384*5/32
+----------------
+>>Sample 32
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2[nH]1
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2[n+]1[O-]
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2[nH+]1[O-]
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2[nH+]1[Cl-]
+- COc1nn(C)cc1C(=O)Nc1nc2c(F)cc(F)cc2[nH+]1[Br-]
+Acc = 5/33
+Sim_hit = 2.9695171535498064/33
+HV = 0.5515259435011384*5/33
+----------------
+>>Sample 33
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1O  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1N  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1F  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1Cl  
+- Cc1ccc(C(=O)N2CC(=O)Nc3cc(Br)ccc32)cn1S
+Acc = 5/34
+Sim_hit = 2.9695171535498064/34
+HV = 0.5515259435011384*5/34
+----------------
+>>Sample 34
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc([C@@H](COC)NC(=O)N[C@H]2CCCC[C@@H]2C)o1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc([C@@H](COC)NC(=O)C(C)(C)N[C@H]2CCCC[C@@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)C(C)N(C)[C@H]2CCCC[C@@H]2C)o1
+- CCc1ccc([C@@H](COC)NC(=O)C(C)N[C@H]2CCCC[C@@H]2C(C)(C)C)o1
+- CCc1ccc([C@@H](COC)NC(=O)C(C)N(C)[C@H]2CCCC[C@@H]2C(C)C)o1
+- CCc1ccc([C@@H](COC)NC(=O)C(C)N[C@H]2CCCC[C@@H]2C(C)(C)N)o1
+Acc = 5/35
+Sim_hit = 2.9695171535498064/35
+HV = 0.5515259435011384*5/35
+----------------
+>>Sample 35
+RL Suggestion 0: Replace Sulfur Atom with Ester. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Sulfur Atom with Ester.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(-c2noc(Cn3c(=O)n(CCc4cccs4)c(=O)c4ccccc43)n2)cc1  
+- CCOC(=O)c1ccc(-c2noc(Cn3c(=O)n(CCc4ccc(OC(=O)C)cc4)c(=O)c4ccccc43)n2)cc1  
+- CCOC(=O)c1ccc(-c2noc(Cn3c(=O)n(CCc4ccc(OC(=O)C)c(O)cc4)c(=O)c4ccccc43)n2)cc1  
+- CCOC(=O)c1ccc(-c2noc(Cn3c(=O)n(CCc4ccc(OC(=O)C)c(Cl)cc4)c(=O)c4ccccc43)n2)cc1  
+- CCOC(=O)c1ccc(-c2noc(Cn3c(=O)n(CCc4ccc(OC(=O)C)c(N)cc4)c(=O)c4ccccc43)n2)cc1
+Acc = 5/36
+Sim_hit = 2.9695171535498064/36
+HV = 0.5515259435011384*5/36
+----------------
+>>Sample 36
+RL Suggestion 0: Replace Guanidine with Secondary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1[C@@H]1NC(=[NH2+])Nc2nc3ccccc3n21 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Guanidine with Secondary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1[C@@H]1NC(=NCc2nc3ccccc3n21)C  
+- Cc1ccccc1[C@@H]1N(C)C(=NCc2nc3ccccc3n21)C  
+- Cc1ccccc1[C@@H]1NC(=NCCc2nc3ccccc3n21)C  
+- Cc1ccccc1[C@@H]1NC(=NC(C)Cc2nc3ccccc3n21)C  
+- Cc1ccccc1[C@@H]1NCC(=NCc2nc3ccccc3n21)C
+Acc = 6/37
+Sim_hit = 3.5295171535498064/37
+HV = 0.6207070667959734*6/37
+----------------
+>>Sample 37
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1Cl
+- COc1ccc(CN(C)Cl[C@@H]2CCO[C@@H]2C)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2Cl)cc1F
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2C)cc1ClF
+- COc1ccc(CN(C)C(=O)[C@@H]2CCO[C@@H]2CCl)cc1F
+Acc = 6/38
+Sim_hit = 3.5295171535498064/38
+HV = 0.6207070667959734*6/38
+----------------
+>>Sample 38
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cccc(F)c1#C#N  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cc(C#N)cc1  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1ccc(C#N)c1  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cc(F)c(C#N)c1  
+- C[C@@H](Nc1ccc(N2CCCC2=O)cc1)C(=O)Nc1cc(F)cc1C#N
+Acc = 6/39
+Sim_hit = 3.5295171535498064/39
+HV = 0.6207070667959734*6/39
+----------------
+>>Sample 39
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1SC more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1O  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1N  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1F  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1Cl  
+- COc1cc(C[NH+]2CCC(OC[C@H]3CCCO3)CC2)ccc1Br
+Acc = 6/40
+Sim_hit = 3.5295171535498064/40
+HV = 0.6207070667959734*6/40
+----------------
+>>Sample 40
+RL Suggestion 0: Replace Sulfur Atom with Ester. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc2ccccn2c1-c1nnc([S-])o1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Sulfur Atom with Ester.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc2ccccn2c1-c1nnc(C(=O)OC)o1  
+- Cc1nc2ccccn2c1-c1nnc(C(=O)OCC)o1  
+- Cc1nc2ccccn2c1-c1nnc(C(=O)OCH3)o1  
+- Cc1nc2ccccn2c1-c1nnc(C(=O)OCH2CH3)o1  
+- Cc1nc2ccccn2c1-c1nnc(C(=O)OCH(CH3)2)o1
+Acc = 6/41
+Sim_hit = 3.5295171535498064/41
+HV = 0.6207070667959734*6/41
+----------------
+>>Sample 41
+RL Suggestion 0: Remove a Alkene. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC1=NN(c2ccccc2)C(=O)/C1=C(\\C)NCCc1ccc(F)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Alkene.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC1=NN(c2ccccc2)C(=O)C1(C)NCCc1ccc(F)cc1  
+- CCCC1=NN(c2ccccc2)C(=O)C1(C)NCCc1ccc(F)c(OC)c1  
+- CCCC1=NN(c2ccccc2)C(=O)C1(C)NCCc1ccc(F)c(N)c1  
+- CCCC1=NN(c2ccccc2)C(=O)C1(C)NCCc1ccc(F)c(Cl)c1  
+- CCCC1=NN(c2ccccc2)C(=O)C1(C)NCCc1ccc(F)c(Br)c1
+Acc = 6/42
+Sim_hit = 3.5295171535498064/42
+HV = 0.6207070667959734*6/42
+----------------
+>>Sample 42
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](NC(=O)c1cc(-c2ccco2)on1)[C@H]1CCCO1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](NC(=O)c1cc(-c2cccn2)on1)[C@H]1CCCO1  
+- C[C@H](NC(=O)c1cc(-c2ccccn2)on1)[C@H]1CCCO1  
+- C[C@H](NC(=O)c1cc(-c2ccncc2)on1)[C@H]1CCCO1  
+- C[C@H](NC(=O)c1cc(-c2cnccc2)on1)[C@H]1CCCO1  
+- C[C@H](NC(=O)c1cc(-c2ncccc2)on1)[C@H]1CCCO1
+Acc = 6/43
+Sim_hit = 3.5295171535498064/43
+HV = 0.6207070667959734*6/43
+----------------
+>>Sample 43
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N(C)C)CCCC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N=C)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(C#N)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(C≡N)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(N#C)CCCC1  
+- CC[NH2+][C@@H](Cc1cnn(C)c1)C1(CN)CCCC1
+Acc = 6/44
+Sim_hit = 3.5295171535498064/44
+HV = 0.6207070667959734*6/44
+----------------
+>>Sample 44
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCO[C@@H]1CCC[NH+](CC(=O)NC(N)=O)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCO[C@@H]1CCC[C@H](CC(=O)NC(N)=O)C1#N
+- CCO[C@@H]1CCC[C@@H](CC(=O)NC(N)=O)C1#N
+- CCO[C@@H]1CCC[C@H](CC(=O)NC(=N)O)C1#N
+- CCO[C@@H]1CCC[C@@H](CC(=O)NC(=N)O)C1#N
+- CCO[C@@H]1CCC[C@H](CC(=O)NC(N)=O)C#N
+Acc = 6/45
+Sim_hit = 3.5295171535498064/45
+HV = 0.6207070667959734*6/45
+----------------
+>>Sample 45
+RL Suggestion 0: Replace Secondary Amine with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N[C@H](C)c2sc(C(C)(C)C)nc2C)c(C)[nH+]1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Secondary Amine with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(Nc2nc(C(C)(C)C)sc2C)c(C)[nH+]1  
+- Cc1ccc(Nc2nc(C(C)(C)C)sc2CC)c(C)[nH+]1  
+- Cc1ccc(Nc2nc(C(C)(C)C)sc2C(C)C)c(C)[nH+]1  
+- Cc1ccc(Nc2nc(C(C)(C)C)sc2CCl)c(C)[nH+]1  
+- Cc1ccc(Nc2nc(C(C)(C)C)sc2CF)c(C)[nH+]1
+Acc = 6/46
+Sim_hit = 3.5295171535498064/46
+HV = 0.6207070667959734*6/46
+----------------
+>>Sample 46
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([N+](C)(C)Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1  
+- C[C@@H]([N+](C)(Cc1cn2cc(Cl)ccc2n1)C)[C@@H](C)n1cccn1  
+- C[C@@H]([N+](C)(C1CC1)Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1  
+- C[C@@H]([N+](C)(CCO)Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1  
+- C[C@@H]([N+](C)(CCN)Cc1cn2cc(Cl)ccc2n1)[C@@H](C)n1cccn1
+Acc = 6/47
+Sim_hit = 3.5295171535498064/47
+HV = 0.6207070667959734*6/47
+----------------
+>>Sample 47
+RL Suggestion 0: Replace Aliphatic Alcohol with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1OC[C@H](O)Cn1nnc2ccccc2c1=O more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Aliphatic Alcohol with Fluorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1OC[C@H](F)Cn1nnc2ccccc2c1=O  
+- Cc1ccccc1OC[C@H](F)Cn1nnc2ccc(F)cc2c1=O  
+- Cc1ccccc1OC[C@H](F)Cn1nnc2cc(F)ccc2c1=O  
+- Cc1ccccc1OC[C@H](F)Cn1nnc2cccc(F)c2c1=O  
+- Cc1ccccc1OC[C@H](F)Cn1nnc2ccccc2c1F
+Acc = 6/48
+Sim_hit = 3.5295171535498064/48
+HV = 0.6207070667959734*6/48
+----------------
+>>Sample 48
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2n(N)cnn12 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1n[nH]c2n(N)cnn12  
+- Cc1nnc2n(N)cnn12  
+- Cc1n[nH]c2n(N)c(O)nn12  
+- Cc1n[nH]c2n(N)c(Cl)nn12  
+- Cc1n[nH]c2n(N)c(F)nn12
+Acc = 6/49
+Sim_hit = 3.5295171535498064/49
+HV = 0.6207070667959734*6/49
+----------------
+>>Sample 49
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCc1cc(=O)[nH]c(SCC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCc1cc(=O)[nH]c(CC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C)cc2)n1
+- CCCc1cc(=O)[nH]c(CC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(C(C)C)cc2)n1
+- CCCc1cc(=O)[nH]c(CC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(OC)cc2)n1
+- CCCc1cc(=O)[nH]c(CC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(Cl)cc2)n1
+- CCCc1cc(=O)[nH]c(CC(=O)N[C@@H]2ON=C[C@@H]2c2ccc(F)cc2)n1
+Acc = 7/50
+Sim_hit = 4.25532360516271/50
+HV = 0.8125568015720721*7/50
+----------------
+>>Sample 50
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N2CCOCC2)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(C#N)CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(N#C)CC1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(C#N)C(C)C1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(C#N)C1  
+- Cc1[nH]c2c(C)ccc(C)c2c1CC(=O)N1CCC(C#N)C(C1)CC1
+Acc = 7/51
+Sim_hit = 4.25532360516271/51
+HV = 0.8125568015720721*7/51
+----------------
+>>Sample 51
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)[C@](C)(O)CNC(=O)NCc1cc(=O)[nH]c2ccccc12 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)[C@](C)(O)C(N(C)C)C(=O)NCc1cc(=O)[nH]c2ccccc12  
+- CC[C@H](C)[C@](C)(O)C(N(C)C)C(=O)N(C)Cc1cc(=O)[nH]c2ccccc12  
+- CC[C@H](C)[C@](C)(O)C(N(C)C)C(=O)NCc1cc(=O)[nH]c2cccc(C)c12  
+- CC[C@H](C)[C@](C)(O)C(N(C)C)C(=O)NCc1cc(=O)[nH]c2cccc(O)c12  
+- CC[C@H](C)[C@](C)(O)C(N(C)C)C(=O)NCc1cc(=O)[nH]c2cccc(F)c12
+Acc = 7/52
+Sim_hit = 4.25532360516271/52
+HV = 0.8125568015720721*7/52
+----------------
+>>Sample 52
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](C(=O)Nc1ccc(F)cc1F)[S@@](=O)Cc1nnnn1C1CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)Nc1ccc(F)cc1F)O(=O)Cc1nnnn1C1CC1  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)O(=O)Cc1nnnn1C1C(C1)  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)O(=O)Cc1nnnn1C1C1  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)O(=O)Cc1nnnn1C1C(C)C  
+- C[C@@H](C(=O)Nc1ccc(F)cc1F)O(=O)Cc1nnnn1C1CC(C)C
+Acc = 7/53
+Sim_hit = 4.25532360516271/53
+HV = 0.8125568015720721*7/53
+----------------
+>>Sample 53
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1C  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1O  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1N  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1CC  
+- CCN(C(=O)c1ccc(Cl)c(F)c1)c1ccc(C#N)c(Cl)c1CO
+Acc = 7/54
+Sim_hit = 4.25532360516271/54
+HV = 0.8125568015720721*7/54
+----------------
+>>Sample 54
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cc(=O)n2nc([C@@H]3CCCN(C(=O)c4cc5ncccn5n4)C3)cc2[nH]1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C(=O)N1CCC[C@@H]1C(=O)c2cc3ncccn3n2)c4cc(=O)n5nc([C@@H]6CCCNC6)cc5[nH]4
+- C[C@@H](C(=O)N1CCC[C@@H]1C(=O)c2cc3ncccn3n2)c4cc(=O)n5nc([C@@H]6CCCNC6)cc5[nH]4
+- C[C@@H](C(=O)N1CCC[C@@H]1C(=O)c2cc3ncccn3n2)c4cc(=O)n5nc([C@@H]6CCCNC6)cc5[nH]4
+- C[C@@H](C(=O)N1CCC[C@@H]1C(=O)c2cc3ncccn3n2)c4cc(=O)n5nc([C@@H]6CCCNC6)cc5[nH]4
+- C[C@@H](C(=O)N1CCC[C@@H]1C(=O)c2cc3ncccn3n2)c4cc(=O)n5nc([C@@H]6CCCNC6)cc5[nH]4
+Acc = 7/55
+Sim_hit = 4.25532360516271/55
+HV = 0.8125568015720721*7/55
+----------------
+>>Sample 55
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C)no1)c1cccs1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C[N+](C)(C)C)no1)c1cccs1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C[N+](C)(C)CC)no1)c1cccs1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C[N+](C)(C)C1CC1)no1)c1cccs1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C[N+](C)(C)C1CCCC1)no1)c1cccs1  
+- CC(C)C[C@@H](NC(=O)N[C@H](C)c1nc(C(C)(C)C[N+](C)(C)C1CC(O)CC1)no1)c1cccs1
+Acc = 7/56
+Sim_hit = 4.25532360516271/56
+HV = 0.8125568015720721*7/56
+----------------
+>>Sample 56
+RL Suggestion 0: Replace Alkene with Amide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C/C(=C/C(=O)NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(C)(C)C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Alkene with Amide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=C(NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(=O)C(C)(C)C)C  
+- C/C(=C(NCC1(c2ccc3c(c2)OCO3)CCOCC1)/C(=O)C(C)(C)C)C  
+- CC(=C(NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(=O)C(C)(C)C)OC  
+- C/C(=C(NCC1(c2ccc3c(c2)OCO3)CCOCC1)/C(=O)C(C)(C)C)OC  
+- CC(=C(NCC1(c2ccc3c(c2)OCO3)CCOCC1)C(=O)C(C)(C)C)N
+Acc = 7/57
+Sim_hit = 4.25532360516271/57
+HV = 0.8125568015720721*7/57
+----------------
+>>Sample 57
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C)cc1c32 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C#N)cc1c32  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@H](O)C(C)(C)C#N)cc1c32  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C#N)ccc12  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@H](O)C(C)(C)C#N)ccc12  
+- C[C@H]1C(=O)N2CCCc3cc(NC(=O)C(=O)NCC[C@@H](O)C(C)(C)C#N)c(O)cc12
+Acc = 7/58
+Sim_hit = 4.25532360516271/58
+HV = 0.8125568015720721*7/58
+----------------
+>>Sample 58
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2N1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2Cl1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2Cl1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2Cl1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2Cl1  
+- O=C1C[C@@H](c2ccccc2)c2scc(-c3cccc(F)c3)c2Cl1
+Acc = 7/59
+Sim_hit = 4.25532360516271/59
+HV = 0.8125568015720721*7/59
+----------------
+>>Sample 59
+RL Suggestion 0: Replace Dialkylaminomethyleneimine with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N/C(=N\\OCc1ccc(Cl)c(Cl)c1)c1nonc1N more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Dialkylaminomethyleneimine with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - NC(=O)c1nonc1N.CC(=O)Oc1ccc(Cl)c(Cl)c1
+- NC(=O)c1nonc1N.OC(=O)Cc1ccc(Cl)c(Cl)c1
+- NC(=O)c1nonc1N.O=C(O)Cc1ccc(Cl)c(Cl)c1
+- NC(=O)c1nonc1N.CC(=O)Nc1ccc(Cl)c(Cl)c1
+- NC(=O)c1nonc1N.O=C(O)Nc1ccc(Cl)c(Cl)c1
+Acc = 8/60
+Sim_hit = 4.6997680496071546/60
+HV = 0.867943105712778*8/60
+----------------
+>>Sample 60
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](c1ccc(F)cc1)S(=O)(=O)[C@H](C)C(=O)Nc1c(F)cccc1F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](c1ccc(F)cc1)C(=O)[C@H](C)C(=O)Nc1c(F)cccc1F  
+- C[C@@H](c1ccc(F)cc1)C(=O)[C@](C)(C(=O)Nc1c(F)cccc1F)  
+- C[C@@H](c1ccc(F)cc1)C(=O)[C@H](C)C(=O)Nc1ccc(F)cc1F  
+- C[C@@H](c1ccc(F)cc1)C(=O)[C@H](C)C(=O)Nc1cccc(F)c1F  
+- C[C@@H](c1ccc(F)cc1)C(=O)[C@H](C)C(=O)Nc1cc(F)ccc1F
+Acc = 8/61
+Sim_hit = 4.6997680496071546/61
+HV = 0.867943105712778*8/61
+----------------
+>>Sample 61
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccccc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(C#N)ccc1  
+* CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1ccc(C#N)cc1  
+* CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(ccc1)C#N  
+* CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(cc(C#N)c1)  
+* CN1C(=O)[C@H]2CCCCN2C(=O)[C@@H]1c1cc(C#N)c(cc1)C#N
+Acc = 8/62
+Sim_hit = 4.6997680496071546/62
+HV = 0.867943105712778*8/62
+----------------
+>>Sample 62
+RL Suggestion 0: Replace Nitro Group with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc([N+](=O)[O-])cc3s2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccc(C)cc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3cc(C)ccc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3ccccc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3c(C)cccc3s2)cc1  
+- CCS(=O)(=O)c1ccc(C(=O)N(Cc2ccccn2)c2nc3c(C)cc(C)c3s2)cc1
+Acc = 9/63
+Sim_hit = 5.484383434222539/63
+HV = 0.9790491279187546*9/63
+----------------
+>>Sample 63
+RL Suggestion 0: Replace Ketone with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)c1ccc([C@@H]2C3=C(CCCC3=O)N[C@H]3N=NC(O)=C32)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ketone with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)c1ccc([C@@H]2C3=C(CCCC3#N)N[C@H]3N=NC(O)=C32)cc1  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3#N)N[C@H]3N=NC(O)=C32)cc1  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3#N)N[C@H]3N=NC(O)=C32)cc1  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3#N)N[C@H]3N=NC(O)=C32)cc1  
+- CC(C)c1ccc([C@@H]2C3=C(CCCC3#N)N[C@H]3N=NC(O)=C32)cc1
+Acc = 9/64
+Sim_hit = 5.484383434222539/64
+HV = 0.9790491279187546*9/64
+----------------
+>>Sample 64
+RL Suggestion 0: Replace Secondary Amine with Aromatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Secondary Amine with Aromatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CNc1ccc2nc(-c3ccc(F)c(F)c3F)[nH]c2c1  
+- CNc1ccc2nc(-c3ccc(F)c(Cl)c3F)[nH]c2n1  
+- CNc1ccc2nc(-c3ccc(F)c(Br)c3F)[nH]c2n1  
+- CNc1ccc2nc(-c3ccc(F)c(I)c3F)[nH]c2n1  
+- CNc1ccc2nc(-c3ccc(F)c(OC)c3F)[nH]c2n1
+Acc = 9/65
+Sim_hit = 5.484383434222539/65
+HV = 0.9790491279187546*9/65
+----------------
+>>Sample 65
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCCCOc1ccc(C(N)=S)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCCCOc1ccc(C(N)=O)cc1  
+- CCCCCOc1ccc(C(N)=N)cc1  
+- CCCCCOc1ccc(C(N)=C)cc1  
+- CCCCCOc1ccc(C(N)=NC)cc1  
+- CCCCCOc1ccc(C(N)=C(N)N)cc1
+Acc = 10/66
+Sim_hit = 6.181353131192236/66
+HV = 1.0718529708956634*10/66
+----------------
+>>Sample 66
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(S(N)(=O)=O)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cccc(N(=O)=O)c1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cc(N(=O)=O)cc1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1ccc(N(=O)=O)c1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1cc(N(=O)=O)c(O)c1  
+- CC(C)(C)OC(=O)N1CCC[C@@H]1[C@@H]1CCCCN1S(=O)(=O)c1c(N(=O)=O)cccc1
+Acc = 10/67
+Sim_hit = 6.181353131192236/67
+HV = 1.0718529708956634*10/67
+----------------
+>>Sample 67
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCNc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(C)c1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C  
+- CCN(C)Cc1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C  
+- CCN(CC)c1nc(-c2cc(Cl)cs2)nc(C)c1C(C)C  
+- CCN(C)c1nc(-c2cc(Cl)cs2)nc(C)c1C(C)CC  
+- CCN(C)c1nc(-c2cc(Cl)cs2)nc(C)c1C(C)(C)C
+Acc = 10/68
+Sim_hit = 6.181353131192236/68
+HV = 1.0718529708956634*10/68
+----------------
+>>Sample 68
+RL Suggestion 0: Replace Aliphatic Alcohol with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Aliphatic Alcohol with Fluorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: 1. Fc1ccc([C@@H](NC(=O)NCCO)c2ccccc2)cc1  
+2. Fc1ccc([C@@H](NC(=O)NC(F)F)c2ccccc2)cc1  
+3. Fc1ccc([C@@H](NC(=O)NCF)c2ccccc2)cc1  
+4. Fc1ccc([C@@H](NC(=O)NC(F)C(F)F)c2ccccc2)cc1  
+5. Fc1ccc([C@@H](NC(=O)NCC(F)(F)F)c2ccccc2)cc1
+Acc = 10/69
+Sim_hit = 6.181353131192236/69
+HV = 1.0718529708956634*10/69
+----------------
+>>Sample 69
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc2c(cc1OCC)[C@H]([C@H](C)CC)[NH2+]CC2 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc2c(cc1O)[C@H]([C@H](C)CC)[NH2+]CC2  
+- CC(=O)Oc1cc2c(cc1O)[C@H]([C@H](C)CC)[NH2+]CC2  
+- CCOc1cc2c(cc1C(=O)O)[C@H]([C@H](C)CC)[NH2+]CC2  
+- CC(=O)Oc1cc2c(cc1C(=O)O)[C@H]([C@H](C)CC)[NH2+]CC2  
+- CCOc1cc2c(cc1OC(=O)C)[C@H]([C@H](C)CC)[NH2+]CC2
+Acc = 10/70
+Sim_hit = 6.181353131192236/70
+HV = 1.0718529708956634*10/70
+----------------
+>>Sample 70
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCOc1ccc(CN2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCOc1ccc(CN2Cc3ccccc3C[C@H]2c2nnc(C)o2)cc1Cl
+- C=CCOc1ccc(C#N2Cc3ccccc3C[C@H]2c2nnc(C)o2)cc1Cl
+- C=CCOc1ccc(C#N2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1Cl
+- C=CCOc1ccc(C#N2Cc3ccccc3C[C@H]2c2nnc(C)o2)cc1F
+- C=CCOc1ccc(C#N2Cc3ccccc3C[C@@H]2c2nnc(C)o2)cc1F
+Acc = 10/71
+Sim_hit = 6.181353131192236/71
+HV = 1.0718529708956634*10/71
+----------------
+>>Sample 71
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(C)s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(Cl)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(Cl)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(Cl)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(Cl)s1
+- Cc1nc(CNC(=O)CNC(=O)CC23CC4CC(CC(C4)C2)C3)c(Cl)s1
+Acc = 10/72
+Sim_hit = 6.181353131192236/72
+HV = 1.0718529708956634*10/72
+----------------
+>>Sample 72
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CNC(=O)[C@H]1CSCN1C(=O)[C@H]1COc2ccc(F)cc2C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CNC(=O)[C@H]1CCOCN1C(=O)[C@H]1COc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CCOCN1C(=O)[C@H]1COc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CCOCN1C(=O)[C@H]1COc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CCOCN1C(=O)[C@H]1COc2ccc(F)cc2C1  
+- CC(C)CNC(=O)[C@H]1CCOCN1C(=O)[C@H]1COc2ccc(F)cc2C1
+Acc = 10/73
+Sim_hit = 6.181353131192236/73
+HV = 1.0718529708956634*10/73
+----------------
+>>Sample 73
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CC(=O)N[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CC(Cl)[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C  
+- C[C@H](CC(Cl)[C@H]1CCC[NH2+][C@@H]1C)CC(C)(C)C  
+- C[C@@H](CC(Cl)[C@H]1CCC[NH2+][C@H]1C)CC(C)(C)C  
+- C[C@@H](CC(Cl)[C@@H]1CCC[NH2+][C@H]1C)CC(C)(C)C  
+- C[C@H](CC(Cl)[C@@H]1CCC[NH2+][C@@H]1C)CC(C)(C)C
+Acc = 10/74
+Sim_hit = 6.181353131192236/74
+HV = 1.0718529708956634*10/74
+----------------
+>>Sample 74
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CN(C)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: * C[C@@H]1CN(C#N)c2nc3c(c(=O)[nH]c(=O)n3C)n2C1  
+* C[C@@H]1CN(C#N)c2nc3c(c(=O)[nH]c(=O)n3C(=O))n2C1  
+* C[C@@H]1CN(C#N)c2nc3c(c(=O)[nH]c(=O)n3C(F)(F)F)n2C1  
+* C[C@@H]1CN(C#N)c2nc3c(c(=O)[nH]c(=O)n3C(C)C)n2C1  
+* C[C@@H]1CN(C#N)c2nc3c(c(=O)[nH]c(=O)n3C(Cl)(Cl)Cl)n2C1
+Acc = 10/75
+Sim_hit = 6.181353131192236/75
+HV = 1.0718529708956634*10/75
+----------------
+>>Sample 75
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)O
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)N
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)C
+- O=C1CN(c2ccc(NC(=O)c3ccc(F)c(F)c3)cc2Cl)CCN1C(=O)OC
+Acc = 10/76
+Sim_hit = 6.181353131192236/76
+HV = 1.0718529708956634*10/76
+----------------
+>>Sample 76
+RL Suggestion 0: Replace Chlorine Atom with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CO[N+](=O)[O-])C(=O)Cl more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Chlorine Atom with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CO[N+](=O)[O-])C(=O)C
+- CC(C)(CO[N+](=O)[O-])C(=O)CC
+- CC(C)(CO[N+](=O)[O-])C(=O)C(C)C
+- CC(C)(CO[N+](=O)[O-])C(=O)C=O
+- CC(C)(CO[N+](=O)[O-])C(=O)C#N
+Acc = 10/77
+Sim_hit = 6.181353131192236/77
+HV = 1.0718529708956634*10/77
+----------------
+>>Sample 77
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1[O-] more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(F)cc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccccc2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2cc(F)cc(F)c2)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccccc2Cl)cc1O  
+- C[C@H](Cc1ccsc1)N(C)C(=O)c1nn(-c2ccc(Cl)cc2)cc1O
+Acc = 10/78
+Sim_hit = 6.181353131192236/78
+HV = 1.0718529708956634*10/78
+----------------
+>>Sample 78
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C1N(C)C  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C1N(C)C  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C1N(C)CC  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C1N(C)CC  
+- CCn1cc[nH+]c1CNc1cnn(-c2cccc(C(F)(F)F)c2)C1N(C)C(C)C
+Acc = 10/79
+Sim_hit = 6.181353131192236/79
+HV = 1.0718529708956634*10/79
+----------------
+>>Sample 79
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CS[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2)CC1  
+- C[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2O)CC1  
+- C[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2Cl)CC1  
+- C[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2Br)CC1  
+- C[C@@H](C)C(=O)N1CCC(C(=O)NCc2ccc(F)cc2OC)CC1
+Acc = 10/80
+Sim_hit = 6.181353131192236/80
+HV = 1.0718529708956634*10/80
+----------------
+>>Sample 80
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C)C3CC[NH+](C)CC3)C2)c1F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C#N)C3CC[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)C#NC3CC[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)C#N(C)C3CC[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)N(C#N)C3C[NH+](C)CC3)C2)c1F  
+- CCc1ncnc(N2CCC[C@@H](CCC(=O)C#NC3C[NH+](C)CC3)C2)c1F
+Acc = 10/81
+Sim_hit = 6.181353131192236/81
+HV = 1.0718529708956634*10/81
+----------------
+>>Sample 81
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-] more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+- COC[C@H](C)CNC(=O)N[C@@H]1CCCCC[C@@H]1C(=O)[O-]
+Acc = 10/82
+Sim_hit = 6.181353131192236/82
+HV = 1.0718529708956634*10/82
+----------------
+>>Sample 82
+RL Suggestion 0: Replace Nitro Group with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]([NH2+]C1CCCCCC1)c1ccc([N+](=O)[O-])cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]([NH2+]C1CCCCCC1)c1ccc(C)cc1  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(C(C)C)cc1  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(CC)cc1  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(C(=O)C)cc1  
+- C[C@@H]([NH2+]C1CCCCCC1)c1ccc(C#N)cc1
+Acc = 11/83
+Sim_hit = 6.820242020081125/83
+HV = 1.2342790518206423*11/83
+----------------
+>>Sample 83
+RL Suggestion 0: Replace Nitro Group with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc([N+](=O)[O-])o1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc(C)o1
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc(C(C)C)o1
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc(C#C)o1
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc(C(=O)O)o1
+- CCCN(Cc1nnc(-c2ccco2)o1)C(=O)c1ccc(C1CC1)o1
+Acc = 12/84
+Sim_hit = 7.5746279849934055/84
+HV = 1.4018470669665133*12/84
+----------------
+>>Sample 84
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCS(=O)(=O)C2)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCOC2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCC(=O)O2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCN(C)C2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCC(O)C2)C1  
+- CC[NH2+][C@@]1(C(N)=O)CCC[C@H](N(C)[C@@H]2CCN2)C1
+Acc = 12/85
+Sim_hit = 7.5746279849934055/85
+HV = 1.4018470669665133*12/85
+----------------
+>>Sample 85
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(O)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC(=O)c)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC(O)=O)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC(=O)C(O)=O)c1
+- COc1ccc(N2C(=O)N3CCC4=c5ccccc5=[NH+][C@@H]4[C@@]3(C)C2=O)c(OC(=O)OC)c1
+Acc = 12/86
+Sim_hit = 7.5746279849934055/86
+HV = 1.4018470669665133*12/86
+----------------
+>>Sample 86
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1CN  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1C(F)F  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1C(=O)O  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1C#N  
+- N#Cc1ccccc1NC(=O)CC[NH+]1C[C@H](O)[C@H](O)C1C(Cl)Cl
+Acc = 12/87
+Sim_hit = 7.5746279849934055/87
+HV = 1.4018470669665133*12/87
+----------------
+>>Sample 87
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCCC1N#C  
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCCN1C#N  
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CCN(C#N)CC1  
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1CN(C#N)CCC1  
+- CCN(C(=O)NCc1ccc(OCc2ccccn2)cc1)C1C(C#N)NCCC1
+Acc = 12/88
+Sim_hit = 7.5746279849934055/88
+HV = 1.4018470669665133*12/88
+----------------
+>>Sample 88
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)c1nnc(NC(=O)CCS(=O)(=O)c2ccccc2)s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)c1nnc(NC(=O)CCO(=O)c2ccccc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCOC(=O)c2ccccc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCOC(=O)c2ccc(F)cc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCOC(=O)c2cc(F)ccc2)s1
+- CC(C)(C)c1nnc(NC(=O)CCOC(=O)c2cc(Cl)ccc2)s1
+Acc = 12/89
+Sim_hit = 7.5746279849934055/89
+HV = 1.4018470669665133*12/89
+----------------
+>>Sample 89
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1OC  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1F  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1Cl  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1Br  
+- Cc1ccsc1-c1cccc(NC(=O)COc2ccc(C(N)=O)cc2)c1I
+Acc = 12/90
+Sim_hit = 7.5746279849934055/90
+HV = 1.4018470669665133*12/90
+----------------
+>>Sample 90
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=O)cc1C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(N2C[C@H](C(=O)NCCC(C)C)CC2=Cl)cc1C  
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)C)CC2=Cl)cc1C  
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)(C)C)CC2=Cl)cc1C  
+- Cc1ccc(N2C[C@H](C(=O)NCCCC)CC2=Cl)cc1C  
+- Cc1ccc(N2C[C@H](C(=O)NCC(C)CC)CC2=Cl)cc1C
+Acc = 12/91
+Sim_hit = 7.5746279849934055/91
+HV = 1.4018470669665133*12/91
+----------------
+>>Sample 91
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1#N  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1#N  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1#N  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1#N  
+- CCN(CC)C(=O)C1CCN(C(=O)NCCCc2c(C)noc2C)CC1#N
+Acc = 12/92
+Sim_hit = 7.5746279849934055/92
+HV = 1.4018470669665133*12/92
+----------------
+>>Sample 92
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CC[NH+](Cc2cc(OC)cc3c2O[C@H](C)C3)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CC[C@H](Cc2cc(OC)cc3c2O[C@H](C)C3)C#N
+- CCOC[C@H]1CC[C@H](Cc2cc(OC)cc3c2O[C@H](C)C3)C(=N)OC
+- CCOC[C@H]1CC[C@H](Cc2cc(OC)cc3c2O[C@H](C)C3)C#N
+- CCOC[C@H]1CC[C@H](Cc2cc(OC)cc3c2O[C@H](C)C3)C#N
+- CCOC[C@H]1CC[C@H](Cc2cc(OC)cc3c2O[C@H](C)C3)C#N
+Acc = 12/93
+Sim_hit = 7.5746279849934055/93
+HV = 1.4018470669665133*12/93
+----------------
+>>Sample 93
+RL Suggestion 0: Replace Nitro Group with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc([N+](=O)[O-])c4)CC3)nc12 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(C)c4)CC3)nc12  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(C(C)C)c4)CC3)nc12  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(CC)c4)CC3)nc12  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(C(=O)C)c4)CC3)nc12  
+- CCc1cccc2sc(N3CC[NH+](CCNC(=O)c4cccc(C#N)c4)CC3)nc12
+Acc = 13/94
+Sim_hit = 8.347355257720679/94
+HV = 1.575267547588018*13/94
+----------------
+>>Sample 94
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)NC[C@@H]2CCCO2)cc1OC(F)F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(N(C(=O)C)C[C@@H]2CCCO2)cc1OC(F)F
+- COc1ccc(N(C(=O)CC)C[C@@H]2CCCO2)cc1OC(F)F
+- COc1ccc(N(C(=O)C(C)C)C[C@@H]2CCCO2)cc1OC(F)F
+- COc1ccc(N(C(=O)C1CC1)C[C@@H]2CCCO2)cc1OC(F)F
+- COc1ccc(N(C(=O)C1CCCC1)C[C@@H]2CCCO2)cc1OC(F)F
+Acc = 13/95
+Sim_hit = 8.347355257720679/95
+HV = 1.575267547588018*13/95
+----------------
+>>Sample 95
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCC[C@@H](C)[C@H]1CC[NH2+]C[C@@H]1Cc1ccccc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCC[C@@H](C)[C@H]1CC[C](C)(C)C[C@@H]1Cc1ccccc1  
+- CCC[C@@H](C)[C@H]1CC[C](C)(N)C[C@@H]1Cc1ccccc1  
+- CCC[C@@H](C)[C@H]1CC[C](O)(C)C[C@@H]1Cc1ccccc1  
+- CCC[C@@H](C)[C@H]1CC[C](C)(O)C[C@@H]1Cc1ccccc1  
+- CCC[C@@H](C)[C@H]1CC[C](C)(N)C[C@@H]1Cc1ccccc1
+Acc = 13/96
+Sim_hit = 8.347355257720679/96
+HV = 1.575267547588018*13/96
+----------------
+>>Sample 96
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CCOCC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1C#NCC1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1CC#NCC1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1C#NCCO1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1C#NCC(O)1
+- O=C(NCCc1cccc(O)c1)N1CCC[C@H]1CN1C#NCC(=O)1
+Acc = 13/97
+Sim_hit = 8.347355257720679/97
+HV = 1.575267547588018*13/97
+----------------
+>>Sample 97
+RL Suggestion 0: Replace Aliphatic Alcohol with Fluorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1OCC[C@@H]1[C@H](O)c1ccc(C(C)(C)C)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Aliphatic Alcohol with Fluorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1OCC[C@@H]1[C@H](F)c1ccc(C(C)(C)C)cc1  
+- C[C@@H]1OCC[C@@H]1[C@@H](F)c1ccc(C(C)(C)C)cc1  
+- C[C@@H]1OCC[C@@H]1[C@H](F)c1ccc(C(C)CO)cc1  
+- C[C@@H]1OCC[C@@H]1[C@@H](F)c1ccc(C(F)(F)F)cc1  
+- C[C@@H]1OCC[C@@H]1[C@H](F)c1ccc(C(C)(C)O)cc1
+Acc = 13/98
+Sim_hit = 8.347355257720679/98
+HV = 1.575267547588018*13/98
+----------------
+>>Sample 98
+RL Suggestion 0: Replace Ester with Ketone. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCN(CCC(=O)OC)C(=O)c1cnc2c(c1)c(C)nn2C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Ketone.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCN(CCC(=O)C)C(=O)c1cnc2c(c1)c(C)nn2C  
+- CCN(CCC(=O)C)C(=O)c1cnc2c(c1)c(C)nn2C  
+- CCN(CCC(=O)C)C(=O)c1cnc2c(c1)c(C)nn2C  
+- CCN(CCC(=O)C)C(=O)c1cnc2c(c1)c(C)nn2C  
+- CCN(CCC(=O)C)C(=O)c1cnc2c(c1)c(C)nn2C
+Acc = 13/99
+Sim_hit = 8.347355257720679/99
+HV = 1.575267547588018*13/99
+----------------
+>>Sample 99
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-n2cc(CNc3cccc[nH+]3)nn2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-n2cc(CNc3cccc(C(=O)O)cc3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cc(C(=O)O)cc[nH+]3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3c(C(=O)O)cccc3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cccc(C(=O)O)[nH+]3)nn2)cc1  
+- COc1ccc(-n2cc(CNc3cccc(C(=O)O)c3)nn2)cc1
+Acc = 13/100
+Sim_hit = 8.347355257720679/100
+HV = 1.575267547588018*13/100
+----------------
+>>Sample 100
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1occc1C(=O)N1CCCC1C(N)=O  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O  
+- Cc1occc1C(=O)N1CCCC1C(N)=O  
+- Cc1occc1C(=O)N1CCC[C@@H]1C(N)=O  
+- Cc1occc1C(=O)N1CCCC1C(N)=O
+Acc = 13/101
+Sim_hit = 8.347355257720679/101
+HV = 1.575267547588018*13/101
+----------------
+>>Sample 101
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1c(C(=O)N[C@H](C[S@@](C)=O)c2ccccc2)cnn1C(C)C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1c(C(=O)N[C@H](C[C@](C)=O)c2ccccc2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C[C@](C)=O)c2ccc(Br)cc2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C[C@](C)=O)c2cccc(F)c2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C[C@](C)=O)c2cc(Cl)ccc2)cnn1C(C)C  
+- Cc1c(C(=O)N[C@H](C[C@](C)=O)c2cc(C)ccc2)cnn1C(C)C
+Acc = 13/102
+Sim_hit = 8.347355257720679/102
+HV = 1.575267547588018*13/102
+----------------
+>>Sample 102
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](C)NC(=O)[C@H](C)OCCOC more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](C)N(Cl)C(=O)[C@H](C)OCCOC  
+- CC[C@@H](C)NC(Cl)[C@H](C)OCCOC  
+- CC[C@@H](C)N(Cl)C(Cl)[C@H](C)OCCOC  
+- CC[C@@H](C)NC(=O)[C@H](C(Cl))OCCOC  
+- CC[C@@H](C)N(Cl)C(=O)[C@@H](C)OCCOC
+Acc = 13/103
+Sim_hit = 8.347355257720679/103
+HV = 1.575267547588018*13/103
+----------------
+>>Sample 103
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H](C)NC(=O)[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H](C)N[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1
+- CC[C@H](C)N[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1Cl
+- CC[C@H](C)N[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1C
+- CC[C@H](C)N[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1F
+- CC[C@H](C)N[C@H](C)Nc1cc(C#N)c2cc(Cl)ccc2n1Br
+Acc = 13/104
+Sim_hit = 8.347355257720679/104
+HV = 1.575267547588018*13/104
+----------------
+>>Sample 104
+RL Suggestion 0: Replace Ester with Ketone. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Ketone.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)c1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)s1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)n1
+- CCOC(=O)c1ccc(CNC(=O)[C@H]2CCC[NH+](C)C2)o1
+Acc = 13/105
+Sim_hit = 8.347355257720679/105
+HV = 1.575267547588018*13/105
+----------------
+>>Sample 105
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC1(C)CCCC[C@H]1[NH2+]C[C@H](O)COc1ccccc1F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1(C)CCCC[C@H]1[C@H](O)COc1ccccc1F.NC(C)(C)C  
+- CC1(C)CCCC[C@H]1[C@H](O)COc1ccccc1F.NC(C)C  
+- CC1(C)CCCC[C@H]1[C@H](O)COc1ccccc1F.N1CCCC1  
+- CC1(C)CCCC[C@H]1[C@H](O)COc1ccccc1F.N1(C)CCCC1  
+- CC1(C)CCCC[C@H]1[C@H](O)COc1ccccc1F.N1(C)CCOC1
+Acc = 13/106
+Sim_hit = 8.347355257720679/106
+HV = 1.575267547588018*13/106
+----------------
+>>Sample 106
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)c(S(=O)(=O)Nc2ccc(O)c3ccccc23)c(C)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)c(Nc2ccc(O)c3ccccc23)c(C)c1  
+- Cc1cc(C)c(Nc2ccc(O)c3cc(O)ccc23)c(C)c1  
+- Cc1cc(C)c(Nc2ccc(O)c3cccc(C)c23)c(C)c1  
+- Cc1cc(C)c(Nc2ccc(O)c3cccnc23)c(C)c1  
+- Cc1cc(C)c(Nc2ccc(O)c3ccncc23)c(C)c1
+Acc = 13/107
+Sim_hit = 8.347355257720679/107
+HV = 1.575267547588018*13/107
+----------------
+>>Sample 107
+RL Suggestion 0: Replace Dialkylaminomethyleneimine with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Dialkylaminomethyleneimine with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)cc1C(=O)O  
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)C(=O)Oc1  
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)C(=O)OCC1  
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)C(=O)Oc1C  
+- CCc1ccc(NC(=O)CSC2=Nc3ccccc3C3=N[C@H](C)C(=O)N23)C(=O)Oc1CC
+Acc = 13/108
+Sim_hit = 8.347355257720679/108
+HV = 1.575267547588018*13/108
+----------------
+>>Sample 108
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)n3)CC2)cc1OC more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)cn3)CC2)cc1O
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)cc3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)nc3)CC2)cc1O
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)nc3)CC2)cc1OC
+- COc1ccc(C(=O)N2CCN(Cn3ccc(C(F)(F)F)oc3)CC2)cc1OC
+Acc = 13/109
+Sim_hit = 8.347355257720679/109
+HV = 1.575267547588018*13/109
+----------------
+>>Sample 109
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1
+- Cc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1C
+- Cc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1O
+- Cc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1F
+- Cc1cccc(NC(=O)C[C@H]2C[C@H]3CC[C@@H]2C3)c1Cl
+Acc = 13/110
+Sim_hit = 8.347355257720679/110
+HV = 1.575267547588018*13/110
+----------------
+>>Sample 110
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](NC(=O)CN1c2cccc3cccc(c23)S1(=O)=O)c1cc2ccccc2o1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](NC(=O)CN1c2cccc3cccc(c23)N1(=O)=O)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)O1(=O)=O)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)C1(=O)=O)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)Cl)c1cc2ccccc2o1  
+- C[C@@H](NC(=O)CN1c2cccc3cccc(c23)F)c1cc2ccccc2o1
+Acc = 13/111
+Sim_hit = 8.347355257720679/111
+HV = 1.575267547588018*13/111
+----------------
+>>Sample 111
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)C#N  
+- CCOC(=O)N[C@@H](C(=O)N1CCC(O)C1)C(C)C#N  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C(C)(C)C#N  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)C1)C#N  
+- CCOC(=O)N[C@@H](C(=O)N1CC[C@H](O)(C)C1)C#N
+Acc = 13/112
+Sim_hit = 8.347355257720679/112
+HV = 1.575267547588018*13/112
+----------------
+>>Sample 112
+RL Suggestion 0: Replace Ester with Carbamate. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Carbamate.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C  
+- CCOC(=O)c1c(NC(=O)c2cc(=O)c3cc(C)cc(C)c3o2)sc(C)c1C
+Acc = 13/113
+Sim_hit = 8.347355257720679/113
+HV = 1.575267547588018*13/113
+----------------
+>>Sample 113
+RL Suggestion 0: Replace Dialkylaminomethyleneimine with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@H]1CS/C(=N\\c2ccccc2Oc2ccccc2)N1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Dialkylaminomethyleneimine with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@H]1CS/C(=O\c2ccccc2Oc2ccccc2)N1
+- CC[C@H]1CS/C(=O\c2ccccc2Oc2ccc(O)cc2)N1
+- CC[C@H]1CS/C(=O\c2ccccc2Oc2cc(O)ccc2)N1
+- CC[C@H]1CS/C(=O\c2cc(O)ccc2Oc2ccccc2)N1
+- CC[C@H]1CS/C(=O\c2ccc(O)cc2Oc2ccccc2)N1
+Acc = 13/114
+Sim_hit = 8.347355257720679/114
+HV = 1.575267547588018*13/114
+----------------
+>>Sample 114
+RL Suggestion 0: Replace Bromine Atom with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccccc1-n1cccn1)c1ccc(Br)s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccccc1-n1cccn1)c1ccc(C)s1  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(C(C)C)s1  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(C(Cl)(Cl)Cl)s1  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(C(F)(F)F)s1  
+- O=C(Nc1ccccc1-n1cccn1)c1ccc(C#N)s1
+Acc = 13/115
+Sim_hit = 8.347355257720679/115
+HV = 1.575267547588018*13/115
+----------------
+>>Sample 115
+RL Suggestion 0: Replace Ester with Ketone. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Ketone.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)CC  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)C1CC1  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)CCN  
+- COC(=O)[C@](C)(c1cccc(Br)c1)N(C)CC(C)C
+Acc = 13/116
+Sim_hit = 8.347355257720679/116
+HV = 1.575267547588018*13/116
+----------------
+>>Sample 116
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)=O  
+- O=C(Nc1ccc(C(O)=Oc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1CO  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)=O  
+- O=C(Nc1ccc(C(O)=Oc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)=O  
+- O=C(Nc1ccc(COc2ccccc2)cc1)C(=O)N[C@H]1CCC[C@H]1C(O)=O
+Acc = 13/117
+Sim_hit = 8.347355257720679/117
+HV = 1.575267547588018*13/117
+----------------
+>>Sample 117
+RL Suggestion 0: Replace Oxygen Atom with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with N,N-Dimethylacrylamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1.CC(=O)N(C)C
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1.CC(=O)N(C)C=C
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1.CC(=O)N(C)C=CC
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1.CC(=O)N(C)C=C(C)C
+- Cn1cnc(CNC(=O)Nc2ccc3[nH]nnc3c2)n1.CC(=O)N(C)C=CC=C
+Acc = 13/118
+Sim_hit = 8.347355257720679/118
+HV = 1.575267547588018*13/118
+----------------
+>>Sample 118
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cn1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cc1C(=O)O  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)c(O)c1C(=O)O  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cc1C(=O)OC  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cc1C(=O)OCC  
+- COc1ccc(NC(=O)Cn2nc(C)c(N)c2C)cc1C(=O)OCC(=O)O
+Acc = 13/119
+Sim_hit = 8.347355257720679/119
+HV = 1.575267547588018*13/119
+----------------
+>>Sample 119
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)cn1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)nc1  
+- CCc1nc2n(n1)CCC[C@H]2NC(=O)c1cnc(C)nc1  
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)c(N)c1  
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)c(O)c1  
+- CCc1nc2n(n1)CCC[C@@H]2NC(=O)c1cnc(C)c(F)c1
+Acc = 13/120
+Sim_hit = 8.347355257720679/120
+HV = 1.575267547588018*13/120
+----------------
+>>Sample 120
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Cl more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1C  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1N  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1O  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1F  
+- COc1ccc(C(=O)C2=C([O-])C(=O)N(c3cc(C)on3)[C@H]2c2ccccc2OC)cc1Br
+Acc = 13/121
+Sim_hit = 8.347355257720679/121
+HV = 1.575267547588018*13/121
+----------------
+>>Sample 121
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CNC(=O)c1csc2c1CCCC2)c1cccs1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CNC(=O)c1csc2c1CCCC2)c1ccc(N)cs1  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1cccc(O)s1  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1ccc(Cl)cs1  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1ccc(F)cs1  
+- O=C(CNC(=O)c1csc2c1CCCC2)c1ccc(Br)cs1
+Acc = 13/122
+Sim_hit = 8.347355257720679/122
+HV = 1.575267547588018*13/122
+----------------
+>>Sample 122
+RL Suggestion 0: Replace Aromatic Amine with Aliphatic Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Nc1nc(Cc2nc3ccc(Br)cc3s2)cs1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Aromatic Amine with Aliphatic Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - NC1NC(Cc2nc3ccc(Br)cc3s2)CS1
+- NC1NC(Cc2nc3ccc(Br)cc3s2)CC1
+- NC1NC(Cc2nc3ccc(Br)cc3s2)C(C)C1
+- NC1NC(Cc2nc3ccc(Br)cc3s2)C(O)C1
+- NC1NC(Cc2nc3ccc(Br)cc3s2)C(N)C1
+Acc = 14/123
+Sim_hit = 8.819053370928225/123
+HV = 1.6258442633575356*14/123
+----------------
+>>Sample 123
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1C(=O)CCC1=O)NCCc1ccccc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cl=C(CN1C(=O)CCC1=O)NCCc1ccccc1  
+- Cl=C(CN1C(=O)CCC1=O)NCCc1ccc(O)cc1  
+- Cl=C(CN1C(=O)CCC1=O)NCCc1cc(C)ccc1  
+- Cl=C(CN1C(=O)CCC1=O)NCCc1ccc(F)cc1  
+- Cl=C(CN1C(=O)CCC1=O)NCCc1cc(Cl)ccc1
+Acc = 14/124
+Sim_hit = 8.819053370928225/124
+HV = 1.6258442633575356*14/124
+----------------
+>>Sample 124
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1OCC[C@@H]1C(=O)NCc1cccc(COCc2ccccc2)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1OCC[C@@H]1C(Cl)NCc1cccc(COCc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(Cl)N(C)Cc1cccc(COCc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(Cl)Nc1cccc(COCc2ccccc2)c1  
+- C[C@H]1OCC[C@@H]1C(Cl)NCc1ccc(COCc2ccccc2)cc1  
+- C[C@H]1OCC[C@@H]1C(Cl)NCc1cc(COCc2ccccc2)ccc1
+Acc = 14/125
+Sim_hit = 8.819053370928225/125
+HV = 1.6258442633575356*14/125
+----------------
+>>Sample 125
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(Oc2ccc(F)cc2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(C(=O)Oc2ccc(F)cc2)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(C(=O)Oc2ccc(F)c(OC)c2)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(C(=O)Oc2ccc(F)c(C)cc2)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(C(=O)Oc2ccc(F)c(Cl)cc2)cc1  
+- C[C@@H]1C[C@@H]1C(=O)NCC(=O)NCc1ccc(C(=O)Oc2ccc(F)c(Br)cc2)cc1
+Acc = 14/126
+Sim_hit = 8.819053370928225/126
+HV = 1.6258442633575356*14/126
+----------------
+>>Sample 126
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCCNC(=O)c1ccccc1)Nc1ccccc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCCNC(=O)c1ccccc1)Nc1cccnc1
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(F)cc1
+- O=C(NCCNC(=O)c1ccccc1)Nc1ccc(Br)cc1
+- O=C(NCCNC(=O)c1ccccc1)Nc1cc(C)cc1
+ SelbstO=C(NCCNC(=O)c1ccccc1)Nc1ccc(Cl)cc1
+Acc = 14/127
+Sim_hit = 8.819053370928225/127
+HV = 1.6258442633575356*14/127
+----------------
+>>Sample 127
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1noc(C)c1CN(C)C(=O)Nc1cccc(-c2nnc3n2CCC3)c1CN  
+- Cc1noc(C)c1CC#N(=O)Nc1cccc(-c2nnc3n2CCC3)c1  
+- Cc1noc(C)c1CC#N(=O)Nc1cccc(-c2nnc3n2CNC3)c1  
+- Cc1noc(C)c1CC#N(=O)Nc1cccc(-c2nnc3n2CCO3)c1  
+- Cc1noc(C)c1CC#N(=O)Nc1cccc(-c2nnc3n2CCN3)c1
+Acc = 14/128
+Sim_hit = 8.819053370928225/128
+HV = 1.6258442633575356*14/128
+----------------
+>>Sample 128
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCC(=O)Nc1cccc[n+]1Cc1ccccc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCC(Cl)Nc1cccc[n+]1Cc1ccccc1
+- CCCC(Cl)Nc1cccc[n+]1Cc1ccc(Br)cc1
+- CCCC(Cl)Nc1cccc[n+]1Cc1cc(C)ccc1
+- CCCC(Cl)Nc1cccc[n+]1Cc1ccc(Cl)cc1
+- CCCC(Cl)Nc1cccc[n+]1Cc1cc(F)ccc1
+Acc = 14/129
+Sim_hit = 8.819053370928225/129
+HV = 1.6258442633575356*14/129
+----------------
+>>Sample 129
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OCC
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OCO
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OCCN
+- COc1ccc(-c2cc(C(=O)Nc3nc4c(s3)CCCC4)no2)cc1OCC(=O)N
+Acc = 14/130
+Sim_hit = 8.819053370928225/130
+HV = 1.6258442633575356*14/130
+----------------
+>>Sample 130
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1  
+- CC(C)C#N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@@H]3C2)C1  
+- CC(C)C#N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCCC3C2)C1  
+- CC(C)C#N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC3C2)C1  
+- CC(C)C#N[C@@]1(C#N)CC[C@H](N2CC[NH+]3CCCC[C@H]3C2)C1
+Acc = 14/131
+Sim_hit = 8.819053370928225/131
+HV = 1.6258442633575356*14/131
+----------------
+>>Sample 131
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1cnc(CCClC[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(CClC[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(ClCC[C@H](C)C2CCCCC2)s1  
+- CCc1cnc(CCC[C@H](C)C2CCCCC2)Cl1  
+- CCc1cnc(CCNC(=O)C[C@H](C)C2CCCCC2)Cl1
+Acc = 14/132
+Sim_hit = 8.819053370928225/132
+HV = 1.6258442633575356*14/132
+----------------
+>>Sample 132
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc3C)CC2=O)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(Cl)cc3C)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(Cl)cc(C)cc3C)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(C)cc(Cl)C)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(C)cc(Cl)cc3Cl)CC2=O)c1
+- COc1cccc(N2C[C@@H](NC(=O)Nc3c(Cl)cc(Cl)cc3C)CC2=O)c1
+Acc = 14/133
+Sim_hit = 8.819053370928225/133
+HV = 1.6258442633575356*14/133
+----------------
+>>Sample 133
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CC[NH2+]C[C@@H]1NC(=O)N[C@@H]1CCOC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CC[N+](C)(C)C[C@@H]1NC(=O)N[C@@H]1CCOC1  
+- C[C@H]1CC[N+](C)(CC)C[C@@H]1NC(=O)N[C@@H]1CCOC1  
+- C[C@H]1CC[N+](C)(C(C)C)C[C@@H]1NC(=O)N[C@@H]1CCOC1  
+- C[C@H]1CC[N+](C)(C2CC2)C[C@@H]1NC(=O)N[C@@H]1CCOC1  
+- C[C@H]1CC[N+](C)(C3CCCC3)C[C@@H]1NC(=O)N[C@@H]1CCOC1
+Acc = 15/134
+Sim_hit = 9.419053370928225/134
+HV = 1.7093976561404298*15/134
+----------------
+>>Sample 134
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCCN1CC[NH+](C2CCC(C)(C)CC2)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCCN1CC[N+](C2CCC(C)(C)CC2)CC1C#N  
+- CCCN1CC[C](C2CCC(C)(C)CC2)CC1C#N  
+- CCCN1CC[N+](C2CCC(C)(C)CC2)C(C)C1C#N  
+- CCCN1CC[N+](C2CCC(C)(C)CC2)C(=O)C1C#N  
+- CCCN1CC[N+](C2CCC(C)(C)CC2)C(O)C1C#N
+Acc = 15/135
+Sim_hit = 9.419053370928225/135
+HV = 1.7093976561404298*15/135
+----------------
+>>Sample 135
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc(C2(CNS(=O)(=O)/C=C/c3ccccc3)CCCC2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc(C2(CNC(=O)/C=C/c3ccccc3)CCCC2)cc1
+- COc1ccc(C2(CN(C)C(=O)/C=C/c3ccccc3)CCCC2)cc1
+- COc1ccc(C2(CNC(=O)C=C/c3ccccc3)CCCC2)cc1
+- COc1ccc(C2(CNC(=O)/C=C\c3ccccc3)CCCC2)cc1
+- COc1ccc(C2(CNC(=O)/C=C/c3cc(C)ccc3)CCCC2)cc1
+Acc = 15/136
+Sim_hit = 9.419053370928225/136
+HV = 1.7093976561404298*15/136
+----------------
+>>Sample 136
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccccc3F)C2)c1  
+- CC(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccc(F)cc3)[C@@H](c3ccccc3)C2)c1  
+- CC(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccc(F)cc3)C2)c1  
+- CC(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccccc3)[C@@H](c3ccc(Cl)cc3)C2)c1  
+- CC(=O)Nc1cccc(C2=NN(S(=O)(=O)c3ccc(Cl)cc3)[C@@H](c3ccccc3)C2)c1
+Acc = 16/137
+Sim_hit = 10.185720037594892/137
+HV = 1.78869312773529*16/137
+----------------
+>>Sample 137
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1nnc2c(n1)O[C@H](c1cc(F)ccc1F)N(C(C)=O)c1ccc(Cl)cc1-2 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)N(c1ccc(Cl)cc1-2)c1cc(F)ccc1F.O[C@H]1c2cc(F)ccc2Fnc2nnc1-2
+- CC(=O)N(c1ccc(Cl)cc1-2)c1cc(F)ccc1F.O[C@H]1c2cc(F)ccc2Fnc2n[nH]c1-2
+- CC(=O)N(c1ccc(Cl)cc1-2)c1cc(F)ccc1F.O[C@H]1c2cc(F)ccc2Fnc2nnc1C
+- CC(=O)N(c1ccc(Cl)cc1-2)c1cc(F)ccc1F.O[C@H]1c2cc(F)ccc2Fnc2nnc1O
+- CC(=O)N(c1ccc(Cl)cc1-2)c1cc(F)ccc1F.O[C@H]1c2cc(F)ccc2Fnc2nnc1N
+Acc = 16/138
+Sim_hit = 10.185720037594892/138
+HV = 1.78869312773529*16/138
+----------------
+>>Sample 138
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2F)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2Cl)cc1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(Cl)cccc2F)cc1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cccc2Cl)cc1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)cc(Cl)c2F)cc1  
+- O=C1CCCN1c1ccc(C[NH2+]Cc2c(F)ccc(Cl)c2F)cc1
+Acc = 16/139
+Sim_hit = 10.185720037594892/139
+HV = 1.78869312773529*16/139
+----------------
+>>Sample 139
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCS(=O)(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OC  
+- CC(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCC  
+- CC(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCO  
+- CC(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCN  
+- CC(=O)N[C@@H](c1ccccc1)[C@@H](C)C(=O)OCCN
+Acc = 16/140
+Sim_hit = 10.185720037594892/140
+HV = 1.78869312773529*16/140
+----------------
+>>Sample 140
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1C(=O)O  
+- COc1ccc2c(CN(CCO)Cc3ccccc3C(=O)O)cc(=O)oc2c1  
+- COc1ccc2c(CN(CCOC(=O)O)Cc3ccccc3)cc(=O)oc2c1  
+- COc1ccc2c(CN(CCO)Cc3ccccc3)cc(=O)oc2c1CC(=O)O  
+- COc1ccc2c(CN(CCO)Cc3ccccc3C(=O)O)cc(=O)oc2c1C(=O)O
+Acc = 16/141
+Sim_hit = 10.185720037594892/141
+HV = 1.78869312773529*16/141
+----------------
+>>Sample 141
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nc(CC(C)C)c(NC(=O)NCc2ccccn2)s1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nc(CC(C)C)c(NC(=O)N(C)Cc2ccccn2)s1  
+- Cc1nc(CC(C)C)c(NC(=O)N(C(C)C)Cc2ccccn2)s1  
+- Cc1nc(CC(C)C)c(NC(=O)N(Cc2ccccc2)Cc3ccccn3)s1  
+- Cc1nc(CC(C)C)c(NC(=O)N(C(C)(C)C)Cc2ccccn2)s1  
+- Cc1nc(CC(C)C)c(NC(=O)N(Cc2cccnc2)Cc3ccccn3)s1
+Acc = 16/142
+Sim_hit = 10.185720037594892/142
+HV = 1.78869312773529*16/142
+----------------
+>>Sample 142
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc2nc(CNc3ncc(F)c(N4CCOCC4)n3)[nH]c2c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc2nc(CNc3ncc(F)c(N4CC(=O)CC4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CC(O)CC4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4C(O)CCOC4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4C(=O)CCOC4)n3)[nH]c2c1  
+- COc1ccc2nc(CNc3ncc(F)c(N4CC(O)=OCC4)n3)[nH]c2c1
+Acc = 16/143
+Sim_hit = 10.185720037594892/143
+HV = 1.78869312773529*16/143
+----------------
+>>Sample 143
+RL Suggestion 0: Replace Alkene with Amide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=C(C)C[C@@H](O)c1ncccn1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Alkene with Amide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=C(C)C[C@@H](O)c1ncccn1C(=O)N
+- C=C(C)C[C@@H](O)c1ncccn1C(=O)NC
+- C=C(C)C[C@@H](O)c1ncccn1C(=O)NCC
+- C=C(C)C[C@@H](O)c1ncccn1C(=O)NC(C)C
+- C=C(C)C[C@@H](O)c1ncccn1C(=O)NCC(C)C
+Acc = 16/144
+Sim_hit = 10.185720037594892/144
+HV = 1.78869312773529*16/144
+----------------
+>>Sample 144
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)O more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)OCC  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)OC  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)OCO  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)OCC(=O)O  
+- C[C@H](CNC(=O)c1ccnc(OC2CCC2)c1)C[C@@H](C)OC(=O)N
+Acc = 16/145
+Sim_hit = 10.185720037594892/145
+HV = 1.78869312773529*16/145
+----------------
+>>Sample 145
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H]1CCN(C(=O)CSCC(F)(F)F)[C@H]2CCCC[C@@H]21 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H]1CCN(C(=O)CCOC(F)(F)F)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CCl)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CCO)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CCN)[C@H]2CCCC[C@@H]21
+- C[C@@H]1CCN(C(=O)CC(F)(F)F)[C@H]2CCCC[C@@H]21
+Acc = 16/146
+Sim_hit = 10.185720037594892/146
+HV = 1.78869312773529*16/146
+----------------
+>>Sample 146
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H]1O more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](C(=O)O)[C@@H]1O  
+- OCC1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](C(=O)O)[C@@H](O)[C@@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](C(=O)O)[C@H](O)[C@@H]1O  
+- OCC1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H](C(=O)O)[C@@H]1O  
+- OC[C@@H]1O[C@H](Oc2c[nH]c3ccccc23)[C@H](O)[C@H](O)[C@@H](C(=O)O)[C@@H]1O
+Acc = 16/147
+Sim_hit = 10.185720037594892/147
+HV = 1.78869312773529*16/147
+----------------
+>>Sample 147
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CN1CCN([C@@H]2CCN(CC(F)(F)F)C2=O)CC1)NC1CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CN1CCN([C@@H]2CC(N#C)CC(F)(F)F)C2=O)NC1CC1  
+- O=C(CN1CCN([C@@H]2CC(N#C)CC(F)(F)F)C2=O)NC1CC1  
+- O=C(CN1CCN([C@@H]2CC(N#C)CC(F)(F)F)C2=O)NC1CC1  
+- O=C(CN1CCN([C@@H]2CC(N#C)CC(F)(F)F)C2=O)NC1CC1  
+- O=C(CN1CCN([C@@H]2CC(N#C)CC(F)(F)F)C2=O)NC1CC1
+Acc = 16/148
+Sim_hit = 10.185720037594892/148
+HV = 1.78869312773529*16/148
+----------------
+>>Sample 148
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)[O-] more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@](C)(NC(=O)CNC(=O)c1cccc(Cl)c1)C(=O)O  
+- CC[C@](C)(NC(=O)CNC(=O)c1cccc(Br)c1)C(=O)[O-]  
+- CC[C@](C)(NC(=O)CNC(=O)c1ccc(Cl)cc1)C(=O)[O-]  
+- CC[C@](C)(NC(=O)CNC(=O)c1cc(Cl)ccc1)C(=O)[O-]  
+- CC[C@](C)(NC(=O)CNC(=O)c1ccccc1Cl)C(=O)[O-]
+Acc = 16/149
+Sim_hit = 10.185720037594892/149
+HV = 1.78869312773529*16/149
+----------------
+>>Sample 149
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1O  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1F  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1Cl  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1Br  
+- CCc1ccc(CNC(=O)c2cc(-c3ccncc3)cn2C)cc1I
+Acc = 16/150
+Sim_hit = 10.185720037594892/150
+HV = 1.78869312773529*16/150
+----------------
+>>Sample 150
+RL Suggestion 0: Replace Nitro Group with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc([N+](=O)[O-])c2)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc(C)c2)CC1  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cc(C)cc2)CC1  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccc(C)cc2)CC1  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2ccccc2C)CC1  
+- C[C@@H](Cc1ccc(Cl)cc1Cl)C(=O)N1CCN(S(=O)(=O)c2cccc(C)c2C)CC1
+Acc = 17/151
+Sim_hit = 10.948431902001673/151
+HV = 1.9610190800840748*17/151
+----------------
+>>Sample 151
+RL Suggestion 0: Replace Nitro Group with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1cc(CNc2ccc(F)c(C)c2)cc([N+](=O)[O-])c1O more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitro Group with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1cc(CNc2ccc(F)c(C)c2)cc(C)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(C(C)=O)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(C#N)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(C(O)=O)c1O  
+- COc1cc(CNc2ccc(F)c(C)c2)cc(C(F)(F)F)c1O
+Acc = 18/152
+Sim_hit = 11.662717616287386/152
+HV = 2.131649198052119*18/152
+----------------
+>>Sample 152
+RL Suggestion 0: Replace Ester with Ketone. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(=O)oc(C)c1C(=O)O[C@@H](C)C(=O)N(C)c1ccccc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Ketone.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(=O)oc(C)c1C(=O)C[C@@H](C)C(=O)N(C)c1ccccc1  
+- Cc1cc(=O)oc(C)c1C(=O)C[C@@H](C)C(=O)N(C)c1ccc(C)cc1  
+- Cc1cc(=O)oc(C)c1C(=O)C[C@@H](C)C(=O)N(C)c1cccc(F)c1  
+- Cc1cc(=O)oc(C)c1C(=O)C[C@@H](C)C(=O)N(C)c1cc(C)ccc1  
+- Cc1cc(=O)oc(C)c1C(=O)C[C@@H](C)C(=O)N(C)c1cc(Cl)ccc1
+Acc = 18/153
+Sim_hit = 11.662717616287386/153
+HV = 2.131649198052119*18/153
+----------------
+>>Sample 153
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)CO1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C#N1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C#N1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C#N1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C#N1  
+- C[C@H]1CN(Cc2nc(CCc3ccccc3)no2)[C@H](C)C#N1
+Acc = 18/154
+Sim_hit = 11.662717616287386/154
+HV = 2.131649198052119*18/154
+----------------
+>>Sample 154
+RL Suggestion 0: Replace Ester with Ketone. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CCOC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Ketone.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CC(=O)C1  
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CC(=O)C1  
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CC(=O)C1  
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CC(=O)C1  
+- COC(=O)[C@]1(NC(=O)c2coc(-c3csc(C)n3)c2)CC(=O)C1
+Acc = 18/155
+Sim_hit = 11.662717616287386/155
+HV = 2.131649198052119*18/155
+----------------
+>>Sample 155
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\\c2ccc(OC)cc2OC)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(Cl)cc2OC)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2Cl)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2Cl)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(Cl)cc2Cl)CC1  
+- CCOC(=O)N1CCN(C(=O)C(=O)N/N=C\c2ccc(OC)cc2Cl)CC1
+Acc = 18/156
+Sim_hit = 11.662717616287386/156
+HV = 2.131649198052119*18/156
+----------------
+>>Sample 156
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CSc1ccccc1[C@@H]([NH3+])c1ccc(C)o1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC1=C(Oc2ccccc2[C@H]([NH3+])c2ccc(O)cc2)ccc(C)c1  
+- Cc1ccc(Oc2ccccc2[C@H]([NH3+])c2ccc(C)cc2)cc1  
+- Cc1cc(Oc2ccccc2[C@H]([NH3+])c2ccc(O)cc2)ccc1C  
+- Cc1ccc(Oc2ccccc2[C@H]([NH3+])c2ccc(C)o2)cc1  
+- Cc1ccc(Oc2ccccc2[C@H]([NH3+])c2cc(C)ccc2O)cc1
+Acc = 18/157
+Sim_hit = 11.662717616287386/157
+HV = 2.131649198052119*18/157
+----------------
+>>Sample 157
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccccc2C#N)N2CCOCC2)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COc1ccc([C@H](CNC(=O)c2ccccc2-c2ccc(N)cc2)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2cc(C)ccc2C)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2cc(C(=O)N)ccc2)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2cc(O)ccc2)N2CCOCC2)cc1  
+- COc1ccc([C@H](CNC(=O)c2ccccc2-c2cc(F)ccc2F)N2CCOCC2)cc1
+Acc = 18/158
+Sim_hit = 11.662717616287386/158
+HV = 2.131649198052119*18/158
+----------------
+>>Sample 158
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC[C@H](C)NC(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC[C@H](C)N(C#N)C(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)N(C#N)C(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)N(C#N)C(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)N(C#N)C(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1  
+- CC(C)CC[C@H](C)N(C#N)C(=O)CN1C[C@@H](C)C[C@H]([NH3+])C1
+Acc = 18/159
+Sim_hit = 11.662717616287386/159
+HV = 2.131649198052119*18/159
+----------------
+>>Sample 159
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)F  
+- CN(C)C[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)(F)Cl  
+- CN(C)C[C@@H](c1[nH]cc[nH+]1)c1ccccc1OC(F)Cl  
+- CN(C)C[C@@H](c1[nH]cc[nH+]1)c1ccccc1OCCl  
+- CN(C)C[C@@H](c1[nH]cc[nH+]1)c1ccccc1OCC(F)(F)F
+Acc = 18/160
+Sim_hit = 11.662717616287386/160
+HV = 2.131649198052119*18/160
+----------------
+>>Sample 160
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H](O)[C@@H](C)S[C@H](C(N)=O)c1ccccc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H](O)[C@@H](C)N[C@H](C(N)=O)c1ccccc1  
+- C[C@H](O)[C@@H](C)O[C@H](C(N)=O)c1ccccc1  
+- C[C@H](O)[C@@H](C)C[C@H](C(N)=O)c1ccccc1  
+- C[C@H](O)[C@@H](C)SC(C(N)=O)c1ccccc1  
+- C[C@H](O)[C@@H](C)CC(C(N)=O)c1ccccc1
+Acc = 18/161
+Sim_hit = 11.662717616287386/161
+HV = 2.131649198052119*18/161
+----------------
+>>Sample 161
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@H]1C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCO[C@@H]1C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCN[C@@H]1C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCSC[C@H]1C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CCN1C  
+- Cc1cc(C(=O)N2CCCC2)ccc1NC(=O)[C@@H]1CC(O)[C@H]1C
+Acc = 18/162
+Sim_hit = 11.662717616287386/162
+HV = 2.131649198052119*18/162
+----------------
+>>Sample 162
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(CCNC(=O)NCCC(=O)N2CCCCCC2)cn1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(CCNCC(=O)NCCC(=O)N2CCCCCC2)cn1
+- Cc1ccc(CCNCC(=O)NCCC(=Cl)N2CCCCCC2)cn1
+- Cc1ccc(CCNCC(=Cl)NCCC(=O)N2CCCCCC2)cn1
+- Cc1ccc(CCNCC(=Cl)NCCC(=Cl)N2CCCCCC2)cn1
+- Cc1ccc(CCNCC(=O)NCCC(=Cl)N2CCCCC2)cn1
+Acc = 18/163
+Sim_hit = 11.662717616287386/163
+HV = 2.131649198052119*18/163
+----------------
+>>Sample 163
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nsnc1COc1cccc(C(=O)NCCc2ccco2)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nsnc1COc1cccc(C(=O)NCCc2cccn2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccc(O)c2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccncc2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccsc2)c1  
+- Cc1nsnc1COc1cccc(C(=O)NCCc2ccnc(N)c2)c1
+Acc = 18/164
+Sim_hit = 11.662717616287386/164
+HV = 2.131649198052119*18/164
+----------------
+>>Sample 164
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COCCNC(=O)c1csc(COc2ccccc2Cl)n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COCCNC(=O)c1csc(COc2ccccc2Cl)n1C
+- COCCNC(=O)c1csc(COc2ccc(Cl)cc2)n1
+- COCCNC(=O)c1csc(COc2cc(Cl)ccc2)n1
+- COCCNC(=O)c1csc(COc2ccccc2F)n1
+- COCCNC(=O)c1csc(COc2cccc(Cl)c2)n1
+Acc = 18/165
+Sim_hit = 11.662717616287386/165
+HV = 2.131649198052119*18/165
+----------------
+>>Sample 165
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOC[C@H]1CCN(C(=O)/C=C/c2ccc(OCC#N)cc2)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOC[C@H]1CCN(C#N)C(=O)/C=C/c2ccc(OCC#N)cc2C1  
+- CCOC[C@H]1CCN(C#N)C(=O)/C=C/c2ccc(OCC#N)cc2C1  
+- CCOC[C@H]1CCN(C#N)C(=O)/C=C/c2ccc(OCC#N)cc2C1  
+- CCOC[C@H]1CCN(C#N)C(=O)/C=C/c2ccc(OCC#N)cc2C1  
+- CCOC[C@H]1CCN(C#N)C(=O)/C=C/c2ccc(OCC#N)cc2C1
+Acc = 18/166
+Sim_hit = 11.662717616287386/166
+HV = 2.131649198052119*18/166
+----------------
+>>Sample 166
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2S(=O)(=O)N1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccccc2N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cc(O)ccc2N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2ccc(O)cc2N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cc(O)c(O)cc2N1
+- CC(C)(CC(=O)N1CCc2ccccc2C1)CC1=Nc2cc(OC)ccc2N1
+Acc = 18/167
+Sim_hit = 11.662717616287386/167
+HV = 2.131649198052119*18/167
+----------------
+>>Sample 167
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[C@@H](NC(=O)N[C@H](CO)c1ccc(Cl)cc1)c1cccs1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[C@@H](NC(=O)C[C@H](CO)c1ccc(Cl)cc1)c1cccs1
+- CC[C@@H](NC(=O)C[C@H](CO)c1ccc(Cl)cc1)c1ccc(Cl)s1
+- CC[C@@H](NC(=O)C[C@H](CO)c1ccc(Cl)cc1)c1cccn1
+- CC[C@@H](NC(=O)C[C@H](CO)c1ccc(Cl)cc1)c1ccc(Br)s1
+- CC[C@@H](NC(=O)C[C@H](CO)c1ccc(Cl)cc1)c1ccco1
+Acc = 18/168
+Sim_hit = 11.662717616287386/168
+HV = 2.131649198052119*18/168
+----------------
+>>Sample 168
+RL Suggestion 0: Replace Bromine Atom with Carbon Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccoc1C(=O)Nc1ccc(F)cc1Br more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Bromine Atom with Carbon Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccoc1C(=O)Nc1ccc(F)cc1C  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1C(C)=O  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1C(O)  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1C=N  
+- Cc1ccoc1C(=O)Nc1ccc(F)cc1C#N
+Acc = 18/169
+Sim_hit = 11.662717616287386/169
+HV = 2.131649198052119*18/169
+----------------
+>>Sample 169
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)CC1(CNC(=O)c2ccccc2S(C)(=O)=O)CCCC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)CC1(CNC(=O)c2ccccc2O)CCCC1  
+- CC(C)CC1(CNC(=O)c2ccccc2N)CCCC1  
+- CC(C)CC1(CNC(=O)c2ccccc2C)CCCC1  
+- CC(C)CC1(CNC(=O)c2ccccc2F)CCCC1  
+- CC(C)CC1(CNC(=O)c2ccccc2Cl)CCCC1
+Acc = 18/170
+Sim_hit = 11.662717616287386/170
+HV = 2.131649198052119*18/170
+----------------
+>>Sample 170
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc21 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc2C(=O)O1  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc2CN1  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc2C(=O)N1  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc2C(=O)NC1  
+- Cn1c(C(=O)Nc2ccccc2Br)cc2c(F)cccc2C(=O)C1
+Acc = 19/171
+Sim_hit = 12.137293887473827/171
+HV = 2.18619887600707*19/171
+----------------
+>>Sample 171
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1O  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1CN  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1CC  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1OC  
+- Cc1ccc(NC(=O)c2nnn(-c3ccc(F)cc3)c2C)c(C)c1N
+Acc = 19/172
+Sim_hit = 12.137293887473827/172
+HV = 2.18619887600707*19/172
+----------------
+>>Sample 172
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)CS(=O)(=O)C2 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)C(=O)C2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)COC2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)C(N)C2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)C(F)C2  
+- CC(C)(C)CC(=O)Nc1c2c(nn1-c1ccc(Cl)cc1)C(Cl)C2
+Acc = 19/173
+Sim_hit = 12.137293887473827/173
+HV = 2.18619887600707*19/173
+----------------
+>>Sample 173
+RL Suggestion 0: Replace Ether with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(C)c(N2CCOCC2)c1CNC[C@@H]1CCC[NH+]1C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ether with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(C)c(N2CC(O)CC2)c1CNC[C@@H]1CCC[NH+]1C
+- Cc1nn(C)c(N2CC(=O)CC2)c1CNC[C@@H]1CCC[NH+]1C
+- Cc1nn(C)c(N2CC(O)=OCC2)c1CNC[C@@H]1CCC[NH+]1C
+- Cc1nn(C)c(N2C[C@@H](O)CC2)c1CNC[C@@H]1CCC[NH+]1C
+- Cc1nn(C)c(N2C[C@H](O)CC2)c1CNC[C@@H]1CCC[NH+]1C
+Acc = 19/174
+Sim_hit = 12.137293887473827/174
+HV = 2.18619887600707*19/174
+----------------
+>>Sample 174
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C=CCNS(=O)(=O)c1cccnc1Cl more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C=CCN(O)c1cccnc1Cl  
+- C=CCN(=O)c1cccnc1Cl  
+- C=CCN(=O)(O)c1cccnc1Cl  
+- C=CCN(O)(O)c1cccnc1Cl  
+- C=CCN(O)=Oc1cccnc1Cl
+Acc = 19/175
+Sim_hit = 12.137293887473827/175
+HV = 2.18619887600707*19/175
+----------------
+>>Sample 175
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1ccccc1NC(=O)[C@@H]1CC(c2ccccc2)=NO1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1ccccc1NCl[C@@H]1CC(c2ccccc2)=NO1  
+- CCOc1ccccc1Cl[C@@H]1CC(c2ccccc2)=NO1  
+- CCOc1ccccc1N(Cl)[C@@H]1CC(c2ccccc2)=NO1  
+- CCOc1ccccc1Cl[C@H]1CC(c2ccccc2)=NO1  
+- CCOc1ccccc1NCl[C@H]1CC(c2ccccc2)=NO1
+Acc = 19/176
+Sim_hit = 12.137293887473827/176
+HV = 2.18619887600707*19/176
+----------------
+>>Sample 176
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1cc(Br)c(C(=O)N/N=C/c2cc(Cl)ccc2O)n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1cc(Br)c(C(=O)NN=Cc2cc(Cl)ccc2O)n1  
+- Cn1cc(Br)c(C(=O)NN=Cc2cc(Cl)cc(O)c2)n1  
+- Cn1cc(Br)c(C(=O)NN=Cc2cc(Cl)c(O)cc2)n1  
+- Cn1cc(Br)c(C(=O)NN=Cc2ccc(Cl)cc2O)n1  
+- Cn1cc(Br)c(C(=O)NN=Cc2cc(Cl)c(O)c2)n1
+Acc = 19/177
+Sim_hit = 12.137293887473827/177
+HV = 2.18619887600707*19/177
+----------------
+>>Sample 177
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1#N  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1C#N  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1C(C#N)  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1CC#N  
+- CC[NH+](CC)[C@@H]1CCN(C(=O)C(=O)Nc2ccc(-c3nncn3C)cc2)C1C(C)(C#N)
+Acc = 19/178
+Sim_hit = 12.137293887473827/178
+HV = 2.18619887600707*19/178
+----------------
+>>Sample 178
+RL Suggestion 0: Replace Nitrogen Atom with Tertiary Amine. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O[C@H](C[NH2+]C[C@H]1COc2ccccc21)C1CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Nitrogen Atom with Tertiary Amine.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O[C@H](C[N+](C)(C)C[C@H]1COc2ccccc21)C1CC1  
+- O[C@H](C[N+](C)(CC)C[C@H]1COc2ccccc21)C1CC1  
+- O[C@H](C[N+](C)(C1CC1)C[C@H]1COc2ccccc21)C1CC1  
+- O[C@H](C[N+](C)(C1CCCC1)C[C@H]1COc2ccccc21)C1CC1  
+- O[C@H](C[N+](C)(C1CCCCC1)C[C@H]1COc2ccccc21)C1CC1
+Acc = 19/179
+Sim_hit = 12.137293887473827/179
+HV = 2.18619887600707*19/179
+----------------
+>>Sample 179
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)C#N
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)C#N
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)C#N
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)C#N
+- O=C(CC1CCCCC1)N1CCN(c2nc(-c3ccc(Cl)cc3)no2)C#N
+Acc = 19/180
+Sim_hit = 12.137293887473827/180
+HV = 2.18619887600707*19/180
+----------------
+>>Sample 180
+RL Suggestion 0: Replace Sulfur Atom with Ester. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cccc(N2C(=O)S/C(=C\\c3cccc(F)c3)C2=O)c1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Sulfur Atom with Ester.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cccc(N2C(=O)OC(=C\c3cccc(F)c3)C2=O)c1  
+- Cc1cccc(N2C(=O)OC(=C\c3cc(F)ccc3)C2=O)c1  
+- Cc1cccc(N2C(=O)OC(=C\c3ccc(F)cc3)C2=O)c1  
+- Cc1cccc(N2C(=O)OC(=C\c3cc(F)cc(F)c3)C2=O)c1  
+- Cc1cccc(N2C(=O)OC(=C\c3ccc(F)c(F)c3)C2=O)c1
+Acc = 19/181
+Sim_hit = 12.137293887473827/181
+HV = 2.18619887600707*19/181
+----------------
+>>Sample 181
+RL Suggestion 0: Replace Ester with Ketone. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)CNC(=O)C1CCN(C(=O)/C=C/c2ccccc2)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Ketone.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)CNC(=O)C1CCN(C(=O)C=Cc2ccccc2)CC1  
+- COC(=O)CNC(=O)C1CCN(C(=O)C=Cc2ccccc2)C(C)C1  
+- COC(=O)CNC(=O)C1CCN(C(=O)C=Cc2ccc(F)cc2)CC1  
+- COC(=O)CNC(=O)C1CCN(C(=O)C=Cc2cc(C)ccc2)CC1  
+- COC(=O)CNC(=O)C1CCN(C(=O)C=Cc2cc(O)ccc2)CC1
+Acc = 19/182
+Sim_hit = 12.137293887473827/182
+HV = 2.18619887600707*19/182
+----------------
+>>Sample 182
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[NH+](C)C more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[N+](C)C#N  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccccc1C[N+]C#N  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1cc(C)ccc1C[N+]C#N  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1ccc(C)cc1C[N+]C#N  
+- Cc1nnc2n1CCC[C@H]2NC(=O)NCc1cc(C)c(C)cc1C[N+]C#N
+Acc = 19/183
+Sim_hit = 12.137293887473827/183
+HV = 2.18619887600707*19/183
+----------------
+>>Sample 183
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(Cc1ccccc1)C2 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(C#N)c2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(C#N)C2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(C#N)C2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(C#N)C2  
+- Cn1c(C(=O)Nc2cccc(F)c2)cc2c1CCN(C#N)C2
+Acc = 19/184
+Sim_hit = 12.137293887473827/184
+HV = 2.18619887600707*19/184
+----------------
+>>Sample 184
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(CC2CC[NH+](Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC2CC[N+](#N)(Cc3cc(F)cc(F)c3)CC2)n[nH]c1=O  
+- CCn1c(CC2CC[N+](#N)(Cc3cc(F)cc(O)c3)CC2)n[nH]c1=O  
+- CCn1c(CC2CC[N+](#N)(Cc3cc(F)c(F)cc3)CC2)n[nH]c1=O  
+- CCn1c(CC2CC[N+](#N)(Cc3cc(O)cc(F)c3)CC2)n[nH]c1=O  
+- CCn1c(CC2CC[N+](#N)(Cc3ccc(F)cc3)CC2)n[nH]c1=O
+Acc = 19/185
+Sim_hit = 12.137293887473827/185
+HV = 2.18619887600707*19/185
+----------------
+>>Sample 185
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)Cl
+- O=C1C(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)Cl
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2Cl)C2(c3ccccc3)CCC2)Cl
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N1Cl
+- O=C1NC(=O)[C@@]2(CCC[C@@H]2CNC(=O)C2(c3ccccc3)CCC2)N(Cl)1
+Acc = 19/186
+Sim_hit = 12.137293887473827/186
+HV = 2.18619887600707*19/186
+----------------
+>>Sample 186
+RL Suggestion 0: Replace Ester with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)cc12 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Ester with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)C(=N)cc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)C#Ncc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)C#Nc12
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)C#Nc(c12)
+- COC(=O)c1n[nH]c2ccc(NC(=O)N3CCC[C@@H]4CCC[C@@H]43)C#Nc1c2
+Acc = 19/187
+Sim_hit = 12.137293887473827/187
+HV = 2.18619887600707*19/187
+----------------
+>>Sample 187
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCOc1cc(CNC(=O)N2CCCN(C(C)=O)CC2)ccn1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCOc1cc(CNC(=O)N2CCCN(C#N)CC2)ccn1
+- CCOc1cc(CNC(=O)N2CCCN(C#N)C(C)C2)ccn1
+- CCOc1cc(CNC(=O)N2CCCN(C#N)CC2)c(C)cn1
+- CCOc1cc(CNC(=O)N2CCCN(C#N)CC2)cc(C)n1
+- CCOc1cc(CNC(=O)N2CCCN(C#N)CC2)ccc1
+Acc = 19/188
+Sim_hit = 12.137293887473827/188
+HV = 2.18619887600707*19/188
+----------------
+>>Sample 188
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2#N  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2#N  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2#N  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2#N  
+- C[C@@]12CC3CC(N4CC[C@H]([NH3+])C4=O)(C1)C[C@](C)(C3)C2#N
+Acc = 19/189
+Sim_hit = 12.137293887473827/189
+HV = 2.18619887600707*19/189
+----------------
+>>Sample 189
+RL Suggestion 0: Replace Tertiary Amine with Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(C)n(-c2ccc(N3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(C)n(-c2ccc(O3CCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(O3CCCC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(O3CC[C@@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(O3CC[C@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1
+- Cc1cc(C)n(-c2ccc(O3CCC[C@@H](C(=O)N=c4[nH]c5ccccc5[nH]4)C3)nn2)n1
+Acc = 19/190
+Sim_hit = 12.137293887473827/190
+HV = 2.18619887600707*19/190
+----------------
+>>Sample 190
+RL Suggestion 0: Replace Dialkylaminomethyleneimine with Carboxylic Acid. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)N=N1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Dialkylaminomethyleneimine with Carboxylic Acid.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)C(=O)O[N]1=N
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)C(O)=O[N]1=N
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)C(=O)O[N]1=N2
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)C(O)=O[N]1=N2
+- Cc1ccccc1C1=C[C@@H]([C@H]2NC(c3ccccc3C)=NO2)C(=O)O[N]1=N3
+Acc = 19/191
+Sim_hit = 12.137293887473827/191
+HV = 2.18619887600707*19/191
+----------------
+>>Sample 191
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-] more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C#N
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C#N[C@@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C#N[C@H](C)C(=O)[O-]
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C#N[C@@H](C)C(=O)O
+- C[C@H]1C[NH+]2CCCC[C@@H]2CN1C(=O)NC[C@@H](C)C(=O)[O-]C#N[C@H](C)C(=O)O
+Acc = 19/192
+Sim_hit = 12.137293887473827/192
+HV = 2.18619887600707*19/192
+----------------
+>>Sample 192
+RL Suggestion 0: Remove a Aromatic Aldehyde. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Aromatic Aldehyde.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(=O)N)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)cc1C
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(=O)NC)cc1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(N)=O)c(C)c1
+- Cc1onc(-c2ccccc2Cl)c1C(=O)Nc1ccc(C(=O)N(C)C)cc1
+Acc = 19/193
+Sim_hit = 12.137293887473827/193
+HV = 2.18619887600707*19/193
+----------------
+>>Sample 193
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)C(C#N)C1
+- O=C(NCc1ccco1)C1CC(N)(c2cnc(N3CCCC3)nc2)C(C#N)C1
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)C(C#N)C(C#N)1
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)C(C#N)C1C#N
+- O=C(NCc1ccco1)C1CCN(c2cnc(N3CCCC3)nc2)C(C#N)C1C(C#N)
+Acc = 19/194
+Sim_hit = 12.137293887473827/194
+HV = 2.18619887600707*19/194
+----------------
+>>Sample 194
+RL Suggestion 0: Remove a Sulfur Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CCn1c(SCC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Remove a Sulfur Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CCn1c(CC(=O)N2CCN(c3ccc(OC)cc3)CC2)nnc1-c1ccco1  
+- CCn1c(CC(=O)N2CCN(c3ccc(OCC)cc3)CC2)nnc1-c1ccco1  
+- CCn1c(CC(=O)N2CCN(c3ccc(O)cc3)CC2)nnc1-c1ccco1  
+- CCn1c(CC(=O)N2CCN(c3cc(O)ccc3)CC2)nnc1-c1ccco1  
+- CCn1c(CC(=O)N2CCN(c3ccc(OC(C)C)cc3)CC2)nnc1-c1ccco1
+Acc = 20/195
+Sim_hit = 12.887293887473827/195
+HV = 2.262383080107683*20/195
+----------------
+>>Sample 195
+RL Suggestion 0: Replace Tertiary Amine with Ether. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1nn(-c2ccccn2)c(C)c1N1CCN(C(=O)NCc2cccc3ccccc23)CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Ether.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1nn(-c2ccccn2)c(C)c1N1CCOC(=O)NCc2cccc3ccccc23  
+- Cc1nn(-c2ccccn2)c(C)c1N1CC(O)CC(=O)NCc2cccc3ccccc23  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCOC(=O)NCc2ccc(O)c3ccccc23  
+- Cc1nn(-c2ccccn2)c(C)c1N1CC(O)C(=O)NCc2cccc3ccccc23  
+- Cc1nn(-c2ccccn2)c(C)c1N1CCOC(=O)NCc2ccc(F)c3ccccc23
+Acc = 20/196
+Sim_hit = 12.887293887473827/196
+HV = 2.262383080107683*20/196
+----------------
+>>Sample 196
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = N#CC1(NC(=O)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - N#CC1(NC(Cl)C2=NN(c3ccccc3)[C@@H](c3ccccc3)C2)CCCC1  
+- N#CC1(NC(Cl)C2=NN(c3ccccc3)[C@H](c3ccccc3)C2)CCCC1  
+- N#CC1(NC(Cl)C2=NN(c3ccc(F)cc3)[C@@H](c3ccccc3)C2)CCCC1  
+- N#CC1(NC(Cl)C2=NN(c3ccccc3)[C@@H](c3ccc(Cl)cc3)C2)CCCC1  
+- N#CC1(NC(Cl)C2=NN(c3cc(O)ccc3)[C@@H](c3ccccc3)C2)CCCC1
+Acc = 20/197
+Sim_hit = 12.887293887473827/197
+HV = 2.262383080107683*20/197
+----------------
+>>Sample 197
+RL Suggestion 0: Replace Tertiary Amine with Cyano. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Tertiary Amine with Cyano.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1#N  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C#N  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1CC#N  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C(C#N)C  
+- CN(C)C(=O)N1CCC[C@H]1C(=O)N1CC[NH2+]CC1C#NC
+Acc = 20/198
+Sim_hit = 12.887293887473827/198
+HV = 2.262383080107683*20/198
+----------------
+>>Sample 198
+RL Suggestion 0: Replace Oxygen Atom with N,N-Dimethylacrylamide. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)[O-] more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Oxygen Atom with N,N-Dimethylacrylamide.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)N(C)C=C  
+- CC(C)[C@@H](Nc1cc(C#N)ccn1)C(=O)N(C)C=C  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)N(C=C)C  
+- CC(C)[C@@H](Nc1cc(C#N)ccn1)C(=O)N(C=C)C  
+- CC(C)[C@H](Nc1cc(C#N)ccn1)C(=O)N(C)C=CC
+Acc = 21/199
+Sim_hit = 13.533127220807161/199
+HV = 2.3273187851968813*21/199
+----------------
+>>Sample 199
+RL Suggestion 0: Replace Amide with Chlorine Atom. 
+Message 0: [{'role': 'system', 'content': 'You are a helpful chemistry expert with extensive knowledge of drug design. '}, {'role': 'user', 'content': 'Can you make root_molecule = Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)no1 more like a drug and increase QED by at least 0.1. ? The output molecules should be similar to the input molecule. Replace Amide with Chlorine Atom.  Give me five new molecules different from root_molecule in SMILES only and list them using bullet points. No explanation is needed. '}]
+AI answer 0: - Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)nc(Cl)o1
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)nc(O)o1
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)nc(F)o1
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)nc(Br)o1
+- Cc1cc(NC(=O)CCc2cccc(Cl)c2Cl)nc(I)o1
+Acc = 21/200
+Sim_hit = 13.533127220807161/200
+HV = 2.3273187851968813*21/200
+----------------
+--------Final Acc--------
+Acc = 21/200
+----------------

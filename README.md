@@ -1,4 +1,4 @@
-# <p align=center> [ACL 2025] RL-Guider: Leveraging Historical Decisions and Feedback for Drug Editing with Large Language Models</p>
+# <p align=center> [ACL 2025] An LLM Agent for Molecular Optimization and Drug Pharmaceutical Improvement</p>
 
 <div align="center">
 

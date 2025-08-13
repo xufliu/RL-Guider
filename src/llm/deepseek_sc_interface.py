@@ -14,7 +14,7 @@ deepseek_client = None
 def init_deepseek():
     global deepseek_client
     if deepseek_client is None:
-        deepseek_client = AsyncOpenAI(api_key="sk-c587a4923103469eaf8224f4287ef9d4", base_url="https://api.deepseek.com")
+        deepseek_client = AsyncOpenAI(api_key="xx", base_url="https://api.deepseek.com")
         print("Client Successfully Initialized...")
 
         

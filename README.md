@@ -70,9 +70,10 @@ Released under the **MIT License**. See [LICENSE](LICENSE).
 If you find this work useful, please cite:
 
 ```bibtex
-@inproceedings{liu2025rlguider,
-  title     = {RL-Guider: Leveraging Historical Decisions and Feedback for Drug Editing with Large Language Models},
-  author    = {Liu, Xufeng and Ding, Yixuan and Qu, Jingxiang and Zhang, Yichi and Gao, Wenhan and Liu, Yi},
-  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)},
-  year      = {2025}
+@inproceedings{liu2025rl,
+  title={RL-Guider: Leveraging Historical Decisions and Feedback for Drug Editing with Large Language Models},
+  author={Liu, Xufeng and Ding, Yixuan and Qu, Jingxiang and Zhang, Yichi and Gao, Wenhan and Liu, Yi},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2025},
+  pages={13121--13138},
+  year={2025}
 }

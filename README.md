@@ -16,9 +16,12 @@
 >‡ Equal senior contribution. <br> 
 >ACL 2025 <br>
 
-> **Introduction:** Recent success of large language models (LLMs) in diverse domains showcases their potential to revolutionize scientific fields, including drug editing. Traditional drug editing relies on iterative conversations with domain experts, refining the drug until the desired property is achieved. This interactive and iterative process mirrors the strengths of LLMs, making them well-suited for drug editing. *In existing works, LLMs edit each molecule independently without leveraging knowledge from past edits.* 
-However, human experts develop intuition about effective modifications over time through historical experience; accumulating past knowledge is pivotal for human experts, and so it is for LLMs. *In this work, we propose RL-Guider — a reinforcement-learning agent to provide suggestions to LLMs; it uses the rich information provided from evaluating editing results made by the LLM based on the recommendations to improve itself over time.* 
-**RL-Guider** is the first work that leverages both the comprehensive **"world-level"** knowledge of LLMs and the knowledge accumulated from historical feedback. As a result, RL-Guider mitigates several shortcomings of existing approaches and demonstrates superior performance.
+> **Introduction:** Recent advances in large language models (LLMs) across diverse domains highlight their potential to transform scientific discovery, including drug editing. Traditional drug editing relies on iterative conversations with domain experts, refining a molecule until the desired property is achieved. This interactive process mirrors the strengths of LLMs. *However, existing approaches edit each molecule independently without leveraging knowledge from past edits.*  
+>
+> Human experts develop intuition about effective modifications over time by learning from historical experience. Accumulating past knowledge is pivotal for both humans and LLMs. *In this work, we propose RL-Guider — a reinforcement-learning agent that suggests edits to LLMs and improves over time by learning from evaluation feedback on past results.*  
+>
+> **RL-Guider** is the first framework to combine the comprehensive **"world-level"** knowledge of LLMs with knowledge accumulated from historical feedback. As a result, RL-Guider mitigates shortcomings of existing approaches and achieves superior performance.
+
 <hr />
 
 ## Framework
@@ -27,8 +30,49 @@ However, human experts develop intuition about effective modifications over time
 </p>
 
 ## Environment
-[Requirements.txt](requirements.txt)
+All dependencies are listed in [requirements.txt](requirements.txt). Install them with:
 
-## Running
+```bash
+pip install -r requirements.txt
+```
 
+## Quickstart
 
+Run an example to perform drug editing (small molecule) with LLaMA:
+
+```bash
+python run_ChatDrug.py --task_id=101 --C=0 --constraint='loose' --conversational_LLM='llama' --conversation_type='single'
+```
+
+Arguments:
+- `--task_id`: The task identifier.  
+- `--C`: Constraint strength.  
+- `--constraint`: Editing constraint type (e.g., `loose`, `strict`).  
+- `--conversational_LLM`: Choice of LLM (e.g., `llama`).  
+- `--conversation_type`: Mode of conversation (e.g., `single`, `multi`).
+
+### Using RL-Guider
+Follow these steps to use RL-Guider:
+
+1. Run the scripts in `gather_buffer/` to interact with LLMs and collect data.
+2. Run the scripts in `process_buffer/` to preprocess the collected data.
+3. Train RL models using the scripts in the `rl_train/` folder.
+4. Run `run_planner_tree.py` to perform drug editing with RL-Guider.
+
+## License
+
+Released under the **MIT License**. See [LICENSE](LICENSE).
+
+---
+
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@inproceedings{liu2025rlguider,
+  title     = {RL-Guider: Leveraging Historical Decisions and Feedback for Drug Editing with Large Language Models},
+  author    = {Liu, Xufeng and Ding, Yixuan and Qu, Jingxiang and Zhang, Yichi and Gao, Wenhan and Liu, Yi},
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2025}
+}
